@@ -1,0 +1,9 @@
+xterm*faceName:         DejaVu:style=Regular:size=11
+xterm*font:         DejaVu:style=Regular:size=11
+!xterm*font:             -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*charClass:        33:48,35:48,37:48,43:48,45-47:48,58:48,64:48,95:48,126:48
+xterm*saveLines:        10000
+xterm*ScrollTTYKeypress:true
+xterm*scrollttyoutput:  false
+xterm*bellIsUrgent:     true
+

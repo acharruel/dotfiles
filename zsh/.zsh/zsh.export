@@ -1,0 +1,2 @@
+export TERM=rxvt-unicode
+export VAULT_ADDR="https://vault.dvlt.io:8200"

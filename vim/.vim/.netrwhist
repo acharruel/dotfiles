@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/poky/meta-devialet/meta-dvlt-bsp/recipes-products/images'
+let g:netrw_dirhist_5='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/poky/meta-devialet/meta-dvlt-bsp/recipes-products'
+let g:netrw_dirhist_4='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/poky/meta-devialet/meta-dvlt-bsp'
+let g:netrw_dirhist_3='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/poky/meta-devialet/meta-dvlt-bsp/recipes-audio'
+let g:netrw_dirhist_2='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/hardware/qcom/audio/hal/msm8974'
+let g:netrw_dirhist_1='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/hardware/qcom/audio/hal'
+let g:netrw_dirhist_0='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/hardware/qcom/audio'
+let g:netrw_dirhist_9='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/hardware/qcom'
+let g:netrw_dirhist_8='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/hardware'
+let g:netrw_dirhist_7='/media/adrien/datadrien/tristram/diablo-spf1.3/qca/LE.UM.5.2.1/apps_proc/vendor/qcom/opensource/audio-kernel/asoc'

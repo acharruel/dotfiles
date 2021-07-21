@@ -1,0 +1,7 @@
+:set hlsearch
+:set selectedlinedisplay=block
+:set arrowstyle=short
+:set autosourcereload
+:set print=pretty
+:set ignorecase
+:set style enabled off

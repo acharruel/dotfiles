@@ -1,0 +1,162 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-plug
+call plug#begin('~/.vim/vimplug')
+
+" Languages support plugins
+Plug 'kergoth/vim-bitbake'
+Plug 'lervag/vimtex'
+Plug 'stfl/meson.vim'
+Plug 'vim-scripts/glib.vim'
+Plug 'adelarsq/vim-matchit'
+
+" Functionnalities plugins
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim', { 'do': 'git am ./0001-Add-cscope-command.patch' }
+Plug 'junegunn/vim-easy-align'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/a.vim'
+
+" Sort motion plugins
+Plug 'christoomey/vim-sort-motion'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'mcchrish/nnn.vim'
+Plug 'fladson/vim-kitty'
+
+" Initialize plugin system
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" config
+set nocompatible
+set autoindent              " Always set autoindenting on
+set autowrite               " Automatically write buffer before special actions
+set backspace=2             " Allow backspacing over everything in insert mode
+set formatprg=fmt           " My default format program
+set guioptions-=T           " Turn off useless toolbar
+set hidden                  " Only hide invisible buffers
+set history=50              " Keep 50 lines of command line history
+set hlsearch                " Highlight matches
+set ignorecase              " Ignore case
+set incsearch               " Do incremental searching
+set laststatus=2            " Always want statusline
+set lazyredraw              " Don't display macro steps
+set ruler                   " Show the cursor position all the time
+set showcmd                 " Display incomplete commands
+set showmatch               " Show matching brackets
+set smartcase               " Do not search everything
+set switchbuf=useopen,split " Want better buffer handling in quickfix mode
+set visualbell              " No beeps - don't want to annoy neighbours
+set whichwrap=<,>,[,]       " Allow to switch lines with arrows
+set bg=dark                 " Dark background
+set tags=./tags;/           " Load tags in each sub directories
+set mouse=a                 " Catch mouse events in all modes
+set nobackup                " don't backup automatically
+set writebackup             " backup in case of error
+set undodir=~/.vim/undodir  " undo directory for persistent undo
+set number relativenumber   " relative lines numbering (hybrid mode)
+
+colorscheme solarized
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Extra stuffs
+let $ADDED  = '~/.vim/added/'
+
+source $ADDED/indent.vim
+source $ADDED/keymap.vim
+
+" FileTypes specific settings
+if has("autocmd")
+    autocmd BufNewFile,BufRead *.{tex,txt} setlocal tw=80 ts=2 sts=2 sw=2 et
+    autocmd BufNewFile,BufRead *syslog* source $ADDED/syslog.vim
+    autocmd BufNewFile,BufRead *log* source $ADDED/ulog.vim
+    autocmd BufNewFile,BufRead *.c setlocal syn=glib
+endif
+
+" Use relative numbers when buffer has focus
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" airline
+let g:airline_skip_empty_sections = 1
+let g:airline_highlighting_cache = 1
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+    let g:airline_symbols.maxlinenr = ''
+endif
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#fugitiveline#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Better white space
+let g:better_whitespace_enabled=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+  \ 'cpp': ['clangd'],
+  \ 'c': ['clangd'],
+  \ }
+let g:LanguageClient_autoStart = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gitgutter
+highlight clear SignColumn
+highlight SignColumn ctermbg=Black
+highlight GitGutterAdd ctermfg=DarkGreen ctermbg=Black
+highlight GitGutterChange ctermfg=DarkYellow ctermbg=Black
+highlight GitGutterDelete ctermfg=DarkRed ctermbg=Black
+highlight GitGutterChangeDelete ctermfg=DarkRed ctermbg=Black
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" meson
+let meson_space_error_highlight = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimtex
+ let g:tex_flavor = 'latex'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nnn
+"let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6} }
+let g:nnn#layout = { 'left': '~30%' } " or right, up, down
+let g:nnn#action = {
+      \ '<c-t>': 'tab split',
+      \ '<c-x>': 'split',
+      \ '<c-v>': 'vsplit' }
+

@@ -1,0 +1,153 @@
+ Sensors Group - Samir Ammenouche to update
+
+ 
+
+Important PAROS/ Mykonos4
+
+US sensors :
+
+À faire Transducers :
+
+Prowave : 250ST240 and 250PT16P received.
+
+Tested : perf KO
+
+ 
+
+Audiowell : AW8T25-16OG00: ongoing / Received
+
+To be tested
+
+ 
+
+Massa : TR-89B: purchase requisition performed / Received
+
+Meeting with purchasing : Massa too expensive (4$) and heavy.
+
+Tested : Good US performance
+
+ 
+
+AmericanPiezo : APC 10-1011: ongoing
+
+Kobitone : 255-250ST16P-ROX: 15 week delay
+
+Manorshi : MSO-A1625H12R: ongoing
+
+Hurricane : TL002325T ET TL002525T: no contact
+
+ 
+
+À faire High THD : is it a real problem ? TDS to check : Fabien Remond.
+
+Reduced form 10% to 1,16% => acceptable by TDS.
+
+ 
+
+À faire Microphone : separated from Tx ? TDS to state.
+
+ 
+
+À faire New schematic with reduced ringing : for dual Tx / Rx, force capacitor discharge after Tx.
+
+Tested on Delos : 3,5ms to 1,5ms. Could be implemented for minidrone.
+
+ 
+
+Inertial Sensors :
+
+À faire Sensors sync with FIQ : waiting for NVIDIA non secure code on ARM7 with no jitter :
+
+À faire To test SW delivered by nVidia for SMBP : started with latest nvidia delivery.
+
+Jitter 4µs : unacceptable.
+
+À faire One more case FIQ Gyro 8kHz, Hcam @30fps, Vcam @80FPS, Gyro 1hkz
+
+Less than 1µs jitter (not measurable with our timer in fact)
+
+ 
+
+Important Use BPMP for FIQ
+
+ 
+
+À faire Tests of IMU Maxim 21100 performed on climatic chamber: done.
+
+More tests are required from TDS. 
+
+Last tests : in temperature. With right samples : OK.
+
+I2C high speed OK : 8kHz ok.
+
+Driver SPI under dev
+
+ 
+
+À faire Tests on Bebop with 2 IMU : 6500T and 6050
+
+Board OK. Received
+
+SPI Driver under dev by Samir.
+
+No high speed I²C.
+
+ 
+
+À faire Invensense ICM20608 : 2 samples received => to test
+
+Cheapest
+
+ 
+
+À faire Kernel bug : RCU preempt crash with lib HAL. Back trace to send to Matthieu.
+
+2 IMU synchronisation test => W17
+
+ 
+
+Important Evinrude
+
+Pitot sensor : one reference available.
+
+À faire Test to plan
+
+À faire Test equipement : GPS RTK or Ateq ADSE740 (would be needed in production test also)
+
+ 
+
+Important Jumping Sumo Evo:
+
+À faire Check implementation
+
+À faire Support TDS team for SW optimisation : Adrien Charruel / Samir
+
+Trace LTT on going : To reduce overconsuming process in memory
+
+ 
+
+Important Delos Evo :
+
+À faire Audiowell double source :
+
+À faire Feedback to get : requested a board and sent to Audiowell.
+
+ 
+
+Important Cardboard:
+
+À faire Combo accelero / Gyro / magneto :
+
+Invensense 9250 (with DSP) to evaluate on demo board => Matthieu Babel.
+
+ 
+
+Important SW Kernel:
+
+À faire Test of these commits ongoing with Lib IIO. Tested and validated OK.
+
+ 
+
+Important IMU Test bench :
+
+Localisation under discussion : 2eme centre

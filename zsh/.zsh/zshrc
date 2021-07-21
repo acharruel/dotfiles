@@ -1,0 +1,24 @@
+ZSHDIR=~/.zsh
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+source ${ZSHDIR}/zsh.config
+source ${ZSHDIR}/zsh.bindkeys
+source ${ZSHDIR}/zsh.alias
+source ${ZSHDIR}/zsh.prompt
+source ${ZSHDIR}/zsh.export
+source ${ZSHDIR}/zsh.nnn
+
+# fzf
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# launch gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+

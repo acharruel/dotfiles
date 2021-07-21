@@ -1,0 +1,14479 @@
+target remote :3333
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+k
+y
+load init-sc584-ezkit.elf 
+load init-sc584-ezkit.elf 
+q
+load init-sc584-ezkit.elf 
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+run
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+disasemble
+disass
+q
+y
+target remote :3333
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+load init-sc584-ezkit.elf 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+disassemble 
+c
+info registers 
+q
+y
+q
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+info registers 
+disassemble 
+q
+y
+target remote :3333
+load init-sc589-ezkit.elf 
+load u-boot-sc589-ezkit
+load init-sc584-ezkit.elf 
+load init-sc589-ezkit.elf 
+c
+q
+y
+q
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+disassemble 
+info registers 
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+disassemble 
+info registers 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+info registers 
+load u-boot-sc589-ezkit
+load u-boot-sc584-ezkit
+c
+info registers 
+disassemble 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+info registers 
+load u-boot-sc584-ezkit
+info registers 
+disassemble 
+disassemble 0x89200300
+c
+info registers 
+disassemble 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+info registers 
+disassemble 
+load ~/sc58x_dev/uboot/u-boot
+c
+ingo reg
+info registers 
+disassemble 
+load ~/sc58x_dev/uboot/u-boot
+load init-sc584-ezkit.elf 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+load ~/sc58x_dev/uboot/u-boot
+disassemble 
+si
+disassemble 
+si
+si
+disassemble 
+si
+b main
+y
+c
+bt
+info registers 
+disassemble 
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load ~/sc58x_dev/uboot/u-boot
+si
+bt
+info registers 
+si
+load ~/sc58x_dev/uboot/u-boot
+info registers 
+set $pc 0x89200000
+set $pc=0x89200000
+si
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load ~/sc58x_dev/uboot/u-boot
+si
+bt
+info symbol 
+info symbol $pc
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load ~/sc58x_dev/uboot/u-boot
+b lowlevel_init
+c
+si
+info registers 
+si
+info registers 
+x /4w 0x10818
+x /4w 0x10820
+x /4w 0x10800
+si
+info registers 
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+load ~/sc58x_dev/uboot/u-boot
+info b
+c
+si
+info registers 
+disassemble 
+si
+disassemble 
+info registers 
+si
+bt
+si
+s
+n
+si
+fin
+n
+target remote :3333
+load init-sc584-ezkit.elf 
+disassemble 
+si
+disassemble 
+si
+disassemble 
+info registers 
+c
+disassemble 0x20080010
+q
+y
+target remote :3333
+load init-sc589-ezkit.elf 
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+disassemble 
+quit
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+info registers 
+disassemble $pc
+bt
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+b main
+y
+c
+quit
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+info registers 
+load u-boot-sc584-ezkit
+c
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+bt
+info registers 
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+b board_init_r
+c
+file u-boot-sc584-ezkit
+y
+y
+n
+c
+load u-boot-sc584-ezkit
+load ~/sc58x_dev/uboot/uboot
+load ~/sc58x_dev/uboot/u-boot
+c
+info re
+info registers 
+bt
+c
+del 1
+info b
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+load ~/sc58x_dev/uboot/u-boot
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load ~/sc58x_dev/uboot/u-boot
+c
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load ~/sc58x_dev/uboot/u-boot
+c
+q
+target remote 192.168.0.15:5556
+set solib-search-path ~/sc58x_dev/dos/output/debug/staging 
+b main
+y
+c
+c
+q
+y
+sysroot
+show sysroot 
+show solib-search-path 
+set solib-search-path ~/sc58x_dev/dos/output/debug/staging 
+target remote 192.168.0.15:5556
+b main
+y
+c
+b main
+y
+c
+q
+y
+set sysroot output/debug/staging 
+target remote 192.168.0.15:5556
+b main
+y
+c
+c
+bt
+set solib-absolute-prefix 
+info sharedlibrary 
+set solib-search-path 
+set solib-search-path output/debug/staging 
+bt
+q
+y
+set sysroot output/debug/staging 
+b main
+c
+n
+run
+c
+c
+c
+target remote 192.168.0.15:5556
+c
+c
+n
+s
+n
+info b
+info registers 
+bt
+up
+down
+disassemble $pc
+disassemble $pc
+p header
+p pw
+p pw
+p *pw
+c
+p server_port
+p 1+1
+p build_local_name(local_name, sizeof(local_name), server_port);
+p build_local_name(local_name, sizeof(local_name), server_port)
+b usb_init 
+c
+bt
+up
+down
+up
+p fde
+set print pretty 
+p events
+p events[0]
+q
+y
+set sysroot output/debug/staging 
+target remote 192.168.0.15:5556
+b main
+c
+c
+n
+set signal
+print signal
+set sigaction
+sigaction
+set siggetmask 
+q
+y
+set sysroot output/debug/staging 
+target remote 192.168.0.15:5556
+b main
+c
+c
+n
+p argv
+p *argv
+n
+s
+n
+q
+y
+set sysroot output/debug/staging 
+target remote 192.168.0.15:5556
+b main
+c
+c
+n
+s
+n
+s
+,
+p s
+n
+p local_name
+p server_port 
+n
+p usb
+n
+s
+p thr
+n
+p HOST
+n
+n
+p is_daemon 
+n
+s
+p fd
+p fdz
+p fde
+n
+bt
+up
+p fde
+p *fde
+p rfd
+set print pretty 
+p rfd
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+load init-sc584-ezkit.elf 
+c
+q
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load /tftpboot/u-boot.ldr 
+load /home/adrien/sc58x_dev/uboot/u-boot
+c
+bt
+up
+up
+down
+down
+disassemble $pc
+info registers 
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+bt
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load u-boot-sc584-ezkit
+c
+target remote :3333
+y
+load init-sc584-ezkit.elf 
+c
+load /home/adrien/sc58x_dev/uboot/u-boot
+load /home/adrien/sc58x_dev/uboot/u-boot
+load u-boot-sc584-ezkit
+target remote :3333
+load init-sc584-ezkit.elf 
+c
+load /home/adrien/sc58x_dev/uboot/u-boot
+c
+y
+target remote :3333
+load /opt/analog/cces-linux-add-in/1.2.0/uboot-sc5xx-1.2.0/bin/init-sc584-ezkit.elf 
+c
+load u-boot
+b main
+y
+c
+bt
+info symbol $pc
+q
+y
+target remote :3333
+target remote :5556
+target remote 192.168.0.15:5556
+set sysroot output/debug/staging 
+b main
+c
+n
+p vol_change 
+p optarg
+n
+p volume 
+p vol_change 
+n
+s
+n
+s
+n
+p message
+n
+q
+y
+b main
+y
+target remote :3333
+c
+info registers 
+disassemble $pc
+q
+y
+target remote :3333
+q
+y
+target remote :3333
+c
+info registers 
+q
+y
+target remote :3333
+info registers 
+load u-boot
+info registers 
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+c
+info registers 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+info registers 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+b initcode
+y
+c
+info registers 
+x 0x20080000
+x 0x20000000
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+q
+y
+q
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+load arch/arm/cpu/armv7/sc58x/init
+n
+si
+n
+s
+n
+s
+n
+s
+s
+n
+n
+load u-boot
+file u-boot
+y
+y
+n
+info b
+info registers 
+si
+disassemble $pc
+load u-boot
+si
+disassemble 0x44
+disassemble 0x0
+disassemble 0x80000000
+info address main
+sharedlibrary 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load ub
+load u-boot
+file u-boot
+y
+y
+n
+info b
+info registers 
+up
+disassemble 0x89200000
+load u-boot
+x /32w 0x89200000
+x /32 0x89200000
+x /32x 0x89200000
+x /177548x 0x89200000
+x /177548x 0x80000000
+x /177548x 0x00000000
+load arch/arm/cpu/armv7/sc58x/init
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+n
+s
+q
+y
+target remote :3333
+n
+c
+load u-boot
+q
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+bt
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+s
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+s
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+n
+n
+q
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+file u-boot
+y
+y
+n
+info registers 
+disassemble $pc
+load u-boot
+info registers 
+disassemble $pc
+x /32x $pc
+si
+si
+si
+load arch/arm/cpu/armv7/sc58x/init
+c
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+b crt0.S:75
+file u-boot
+y
+y
+c
+load u-boot
+si
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot-sc584-ezkit
+load u-boot
+si
+p /128x 0x89200000
+x /128x 0x89200000
+q
+y
+target remote :3333
+x /128x 0x89200000
+load arch/arm/cpu/armv7/sc58x/init
+c
+x /128x 0x89200000
+load u-boot
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+x /128x 0x89200000
+info registers 
+load arch/arm/cpu/armv7/sc58x/init
+info registers 
+si
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+si
+n
+n
+s
+s
+n
+s
+n
+s
+n
+p i
+n
+p i
+fin
+s
+n
+c
+load u-boot
+x /128x 0x89200000
+si
+file u-boot
+y
+y
+si
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+si
+s
+vt
+bt
+up
+down
+info registers 
+disassemble $pc
+info $pc
+info registers 
+up
+p Clock_Diverders
+p Clock_Diverders1
+set print pretty 
+p Clock_Diverders1
+q
+y
+target remote :3333
+si
+load arch/arm/cpu/armv7/sc58x/init
+si
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+si
+si
+n
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+si
+n
+n
+si
+c
+load u-boot
+file u-boot
+y
+y
+si
+x /128x 0x89200000
+si
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-bootload u-boot
+load u-boot
+x /32x 0x89200000
+load arch/arm/cpu/armv7/sc58x/init
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+si
+s
+n
+s
+n
+n
+n
+c
+x /32x 0x89200000
+load u-boot
+x /32x 0x89200000
+x /32x 0x89200000
+x /32x 0x8925abdc
+x /32x 0x89200000
+set *((int *)0x89200000) = 0xcacacaca
+x /32x 0x89200000
+load /home/adrien/adi_uboot/uboot/u-boot
+x /32x 0x89200000
+x /32x 0x8925abdc
+x /32x 0x89267688
+info registers 
+disassemble $pc
+si
+disassemble $pc
+file u-boot
+y
+y
+up
+down
+si
+info registers 
+disassemble $pc
+info address _start
+info address reset
+si
+load u-boot
+info registers 
+disassemble $pc
+si
+si
+x /32x 0x89200000
+si
+si
+info registers 
+si
+info registers 
+si
+info registers 
+si
+b board_init_f
+c
+n
+s
+n
+fin
+n
+si
+fin
+info registers 
+bt
+si
+x /32x 0x89200000
+load arch/arm/cpu/armv7/sc58x/init
+info address _start
+target remote :3333
+file arch/arm/cpu/armv7/sc58x/init
+y
+si
+quit
+y
+target remote :3333
+si
+si
+n
+c
+load u-boot
+x /32x 0x89200000
+file u-boot
+y
+y
+si
+p reset
+info symbol reset
+info symbol 0x89200300
+info registers 
+set $pc 0x89200000
+set $pc=0x89200000
+si
+info registers 
+set $pc=0x89200000
+disassemble $pc
+si
+disassemble $pc
+q
+y
+target remote :3333
+si
+load arch/arm/cpu/armv7/sc58x/init
+si
+n
+p *pREG_DMC0_PHY_CTL0
+n
+c
+x /32x 0x89200000
+load u-boot
+x /32x 0x89200000
+file u-boot
+y
+y
+si
+disassemble $pc
+print $pc
+load u-boot
+print $pc
+disassemble $pc
+info registers 
+n
+n
+n
+bt
+info registers 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+s
+n
+c
+quit
+load u-boot
+file u-boot
+y
+y
+s
+load u-boot
+x /32x 0x89200000
+file u-boot
+y
+y
+info registers 
+s
+n
+s
+s
+n
+n
+s
+n
+s
+n
+s
+disp $r1
+disp $r2
+set output-radix 16
+s
+x /32x 0x8903efe0
+s
+n
+n
+disp
+n
+display none
+undisplay 1
+undisplay 2
+s
+fin
+bt
+n
+s
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+s
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+b _main
+c
+n
+c
+info registers 
+s
+info registers 
+up
+down
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+s
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+info b
+b _main 
+c
+n
+p $r9
+p /x $r9
+set print pretty 
+p *(gd_t *) $r9
+p /x *(gd_t *) $r9
+c
+p *(gd_t *) $r9
+p /x *(gd_t *) $r9
+p /x *(bd_t *) 0x89e34fb0
+p *(bd_t *) 0x89e34fb0
+q
+y
+target remote :3333
+load init-sc584-ezkit.elf 
+load arch/arm/cpu/armv7/sc58x/init
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+p gd
+set print pretty 
+p *gd
+p /x *gd
+info symbol gd
+info address gd
+info registers 
+info symbol 0x89e34f08
+n
+p /x *gd
+x /32x 0x89f37000
+x /32x 0x89f37000+0x1000000
+x /32x 0x89f37000+0x10000000
+x /32x 0x8a000000
+b _main 
+c
+c
+info registers 
+info b
+c
+info address _main
+x /32x 0x89201284
+x /32x 0x89f38284
+p /x $pc
+disassemble 0x8924e84c
+info registers 
+info symbol 0x89f8584c-0xd37000
+symbol-file 
+y
+add-symbol-file u-boot 0xd37000
+y
+bt
+disassemble $pc
+info registers 
+disassemble 0x89200000
+disassemble 0x89f37000
+add-symbol-file u-boot 0xd37000
+y
+n
+disassemble 0x89f37000
+b board_init_r 
+b hang
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+b _main
+b hang
+b 0x8924e82c + 0xd37000
+y
+info b
+c
+c
+bt
+info symbol 0x89f8582c-0xd37000
+info symbol 0x89f3e530-0xd37000
+disassemble board_init_r
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+c
+load u-boot
+file u-boot
+y
+y
+load u-boot
+n
+b board_init_r
+c
+bt
+info symbol 0x89f38308-0xd37000
+info symbol 0x89f3e518-0xd37000
+x /32x 89200000
+x /32x 0x89200000
+x /32x 0x89200000+0xd37000
+symbol-file 
+y
+add-symbol-file u-boot 0xd37000
+y
+bt
+info symbol 0x89f38308
+add-symbol-file u-boot 0x0x89f37000
+y
+info symbol 0x89f38308
+bt
+n
+bt
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+symbol-file 
+y
+add-symbol-file u-boot 0x89f370000
+y
+b board_init_r
+c
+load u-boot
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+c
+load u-boot
+n
+add-symbol-file u-boot 0x89f370000
+n
+y
+b board_init_r
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+c
+file u-boot
+y
+y
+load u-boot
+n
+symbol-file 
+y
+add-symbol-file u-boot 0x89f37000
+y
+b board_init_r
+c
+bt
+up
+down
+up
+info registers 
+p init_sequence_r
+set print pretty 
+p init_sequence_r
+info b
+up
+down
+up
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+x /32x 0x89200000
+n
+add-symbol-file u-boot 0x89f37000
+n
+file u-boot
+y
+y
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+x /32x 0x89200000
+n
+b relocate_code 
+c
+b 98
+c
+info registers 
+add-symbol-file u-boot 0x89f37000
+y
+b board_init
+c
+n
+bt
+up
+n
+p ret
+n
+info symbol init_fnc_ptr
+n
+info symbol *init_fnc_ptr
+info symbol init_fnc_ptr
+p init_fnc_ptr
+s
+n
+p ret
+n
+s
+n
+s
+n
+s
+n
+s
+n
+p load_addr
+p /x load_addr
+n
+s
+n
+s
+n
+s
+n
+n
+s
+n
+n
+p outputdev
+p *outputdev
+set print pretty 
+p *outputdev
+n
+s
+n
+s
+p array
+p *array
+n
+p ret
+n
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+n
+b relocate_code
+c
+b 98
+c
+add-symbol-file u-boot 0x89f37000
+y
+y
+b board_init
+c
+n
+b misc_init_r
+c
+n
+p ret
+q
+y
+target remote :3333
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+n
+add-symbol-file u-boot 0x89f37000
+y
+b board_init
+c
+b misc_init_r
+c
+n
+s
+n
+n
+s
+n
+s
+n
+p *bd
+set print pretty 
+p *bd
+n
+s
+n
+s
+n
+p *dev
+n
+p num_devices 
+n
+n
+s
+s
+n
+bt
+up
+p bootdelay
+fin
+fin
+bt
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+b relocate_code 
+c
+add-symbol-file u-boot 0x89f37000
+y
+c
+bt
+c
+bt
+up
+p cmdtp
+p *cmdtp
+p argc
+p argv[0]
+p argv[1]
+p argv[2]
+p argv[3]
+up
+down
+down
+up
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b board_eth_init
+c
+n
+s
+n
+p gpio
+n
+n
+n
+p ret
+n
+p ret
+n
+bt
+b phy_init
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+add-symbol-file u-boot 0x89f37000
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b phy_init
+c
+s
+s
+b get_phy_driver 
+c
+p *drv
+set print pretty 
+p *drv
+n
+p phy_drivers
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b phy_mscc_init 
+c
+s
+n
+p phy_driver
+p phy_drivers
+set print pretty 
+p phy_drivers
+p drv
+p *drv
+p &drv->list
+n
+s
+s
+,
+n
+p *drv
+n
+p *drv
+p phy_driver
+p phy_drivers
+n
+s
+n
+s
+p *head
+n
+p *head
+p phy_drivers
+n
+s
+n
+p &phy_drivers
+p phy_drivers
+s
+p head
+info symbol head
+p *head
+n
+p *phy_drivers
+p phy_drivers
+p list_empty(phy_drivers)
+n
+p phy_drivers
+p *phy_drivers
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b phy_init 
+c
+up
+bt
+bt
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+load u-boot
+add-symbol-file u-boot 0x89f39000
+y
+b phy_init 
+c
+bt
+target remote :3333
+y
+y
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+b relocate_code 
+c
+b 98
+c
+bt
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+x /32x 0x89200000
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+x /32x 0x89200000
+file u-boot
+y
+y
+load u-boot
+b relocate_code 
+c
+c
+info registers 
+set print pretty 
+p *gd
+p /x *gd
+add-symbol-file u-boot 0x89f39000
+y
+b phy_init 
+c
+s
+s
+p phy_drivers
+n
+p phy_drivers
+b get_phy_driver 
+n
+s
+n
+p phy_drivers
+n
+c
+n
+p *drv
+p phy_id
+p drv->mask
+p /x drv->mask
+n
+p *drv
+n
+p interface 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+b relocate_code 
+c
+c
+p *gd
+set print pretty 
+p *gd
+p /x *gd
+add-symbol-file u-boot 0x89f37000
+y
+b phy_init 
+c
+s
+b get_phy_driver 
+n
+c
+n
+n
+p *drv
+p /x *drv
+p drv->uid & drv->mask
+p (drv->uid & drv->mask)
+p /x (drv->uid & drv->mask)
+p phy_id
+p /x phy_id
+n
+p *drv
+p /x *drv
+p *phydev 
+up
+up
+p *dev
+down
+bt
+up
+down
+p *priv
+p dev->name
+down
+p *priv->bus
+p mask
+p /x mask
+p *priv->interface 
+p /x *priv->interface 
+p *priv
+down
+p phy_mask 
+down
+p bus
+p *bus
+p phy_mask 
+down
+p phy_mask 
+p phy_id 
+down
+down
+p ùphydev 
+p  *phydev 
+up
+up
+p devad
+down
+p (phy_id & drv->mask)
+p (drv->uid & drv->mask)
+p /x (drv->uid & drv->mask)
+p /x (drv->uid & drv->mask)
+p *drv
+n
+p *drv
+p /x (drv->uid & drv->mask)
+p /x (phy_id & drv->mask)
+up
+up
+up
+up
+up
+down
+up
+down
+up
+up
+p phy_id
+p /x phy_id
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f39000
+n
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id 
+b board_eth_init 
+c
+c
+p *bus
+set print pretty 
+p *bus
+p phy_id
+p *phy_id
+p /x *phy_id
+p addr
+p devad
+up
+up
+down
+down
+n
+p phy_reg
+n
+p phy_id
+p *phy_id
+n
+p phy_reg
+n
+p *phy_id
+c
+bt
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+info b
+c
+c
+p MII_PHYSID1
+up
+up
+p i
+down
+down
+fin
+fin
+p phydev 
+n
+p phydev 
+p *phydev
+p *phydev->drv
+down
+p phy_mask
+info b
+c
+bt
+q
+y
+target remote :3333
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id
+c
+bt
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id 
+c
+p addr
+p devad
+s
+target remote :3333
+y
+file arch/arm/cpu/armv7/sc58x/init
+y
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+target remote :3333
+y
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id
+c
+x /32x 0x89200000
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id
+c
+p *bus
+set print pretty 
+s
+s
+s
+s
+s
+s
+p dw_mdio_read 
+c
+dis 1
+c
+n
+bt
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b designware_initialize 
+c
+p base_addr
+p /x base_addr
+p interface
+n
+p dev
+n
+p ret
+n
+n
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b mem_malloc_init 
+c
+p start
+p /x start
+p size
+n
+b malloc
+c
+up
+up
+down
+down
+c
+bt
+fin
+p ptr
+n
+p ptr
+n
+c
+bt
+fin
+n
+p mem
+c
+bt
+fin
+n
+c
+fin
+n
+p mem
+bt
+p sz
+c
+fin
+n
+p new
+c
+del
+y
+b designware_initialize 
+c
+s
+n
+p bytes
+n
+n
+p nb
+n
+n
+p dev
+n
+p *dev
+set print pretty 
+p *dev
+n
+p *dev
+n
+p  *priv
+s
+n
+n
+p name
+n
+s
+n
+p *priv
+p *priv->bus
+s
+n
+p mask
+n
+p *phydev
+p *phydev->bus
+n
+s
+n
+s
+s
+n
+p phy_data 
+n
+n
+s
+n
+bt
+b get_phy_driver 
+c
+q
+y
+p /x start
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_driver 
+c
+bt
+b get_phy_id 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_id 
+b get_phy_driver 
+c
+p bus
+set print pretty 
+p *bus
+p addr
+s
+n
+p timeout
+n
+p miiaddr 
+p /x miiaddr 
+n
+p /x miiaddr 
+p *mac_p
+p /x *mac_p
+fin
+info registers 
+n
+p phy_re
+p phy_reg
+p *bus
+n
+s
+n
+info registers 
+bt
+up
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b get_phy_driver 
+b designware_initialize 
+c
+n
+s
+n
+s
+n
+p mask
+s
+s
+n
+s
+n
+p *phydev 
+set print pretty 
+p *phydev 
+p /x *phydev 
+p phy_mask 
+n
+n
+n
+n
+p *drv
+p (drv->uid & drv->mask)
+p (phy_id & drv->mask)
+n
+p *dev->drv
+n
+c
+bt
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+b designware_initialize 
+c
+add-symbol-file u-boot 0x89f37000
+y
+n
+n
+n
+c
+c
+del 1
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b designware_initialize 
+c
+n
+b get_phy_driver 
+c
+del 1
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+x /32x 0x89200000
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b designware_initialize 
+c
+n
+p *gd
+set print pretty 
+p *gd
+p /x *gd
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b dw_phy_init 
+c
+n
+p mask
+s
+n
+s
+s
+n
+p addr
+p bus->phymap 
+n
+p phy_mask 
+n
+s
+n
+s
+n
+p phy_reg
+n
+p phy_reg
+n
+p *phy_id
+p /x *phy_id
+n
+s
+s
+n
+s
+n
+p (drv->uid & drv->mask)
+p /x (drv->uid & drv->mask)
+p /x (phy_id & drv->mask)
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b dw_phy_init 
+c
+n
+p phydev 
+p ùphydev 
+set print pretty 
+p *phydev
+p mask
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b dw_phy_init 
+c
+n
+n
+p *phydev 
+set print pretty 
+p *phydev 
+n
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b board_phy_config 
+c
+n
+p phy_data 
+n
+n
+s
+n
+p retval 
+n
+s
+n
+p reg_val
+n
+p reg_val
+p /x reg_val
+n
+p timeout
+n
+p retval
+n
+p reg_val 
+n
+p ret
+n
+p eth_device
+p eth_devices
+n
+p dev->name
+n
+p num_devices 
+n
+n
+s
+s
+c
+bt
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+c
+bt
+up
+p argc
+p argv[0]
+p argv[1]
+p argv[2]
+down
+p load_addr 
+p /x load_addr 
+down
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+b serial_register 
+c
+up
+up
+down
+down
+p serial_devices
+p *serial_devices
+up
+up
+n
+down
+n
+add-symbol-file u-boot 0x89f37000
+y
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+file u-boot
+y
+y
+load u-boot
+add-symbol-file u-boot 0x89f37000
+y
+c
+bt
+fin
+p *desc_p
+set print pretty 
+q
+y
+file u-boot
+y
+add-symbol-file u-boot 0x89f37000
+y
+n
+target remote :3333
+n
+p desc_p
+p *desc_p
+set print pretty 
+p *desc_p
+set selectedlinedisplay block
+q
+y
+set print 
+show print 
+file u-boot
+y
+add-symbol-file u-boot 0x89f37000
+y
+n
+target remote :3333
+p *desc_p
+p /x *desc_p
+n
+b printf
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+q
+y
+q
+uboot.gdb 
+source uboot.gdb 
+b printf
+c
+bt
+x /32x 0x89200000
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+b printf
+c
+disp printbuffer 
+c
+del 1
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+disp printbuffer 
+c
+c
+q
+y
+source uboot.gdb 
+b spi_flash_probe
+c
+up
+bt
+down
+p busnum
+p cs
+p max_hz 
+p spi_mode 
+s
+n
+p sdev 
+p *sdev
+n
+fin
+s
+n
+p bus
+p *bus
+p *flash
+s
+n
+p ret
+n
+n
+p ret
+p idcode 
+p /x idcode 
+n
+s
+n
+p jedec
+p /x jedec
+n
+p /x ext_jedec 
+n
+p *params
+p (params->jedec >> 16)
+p /x (params->jedec >> 16)
+p idcode 
+p /x idcode 
+p /x idcode[0]
+c
+n
+p flash
+p *flash 
+n
+p env_fla
+p env_flash 
+ q
+y
+source uboot.gdb 
+b do_mem_mtest
+c
+p printf
+b printf
+c
+del 3
+disp printbuffer
+c
+c
+c
+bt
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+bt
+up
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+b relocate_code 
+n
+c
+c
+p /x *gd
+add-symbol-file u-boot 0x8ff37000
+y
+b do_mem_mtest 
+c
+p printf
+b printf
+c
+del 5
+disp printbuffer 
+c
+p ret
+p errs
+c
+q
+y
+source uboot.gdb 
+b spi_flash_probe
+c
+p busnum 
+p cs
+n
+p bus
+p *bus
+s
+n
+s
+n
+p ret
+n
+p ret
+info registers 
+p $r0
+p /d $r0
+p /s $r0
+p spi
+p *spi
+p idcode 
+p *flash 
+q
+y
+q
+q
+source uboot.gdb 
+b spi_flash_probe
+c
+n
+s
+n
+s
+n
+s
+n
+p jedec 
+p /x jedec 
+p /x ext_jedec 
+p idcode[0]
+p idcode[1]
+p idcode[2]
+p idcode[3]
+up
+p ret
+q
+y
+source uboot.gdb 
+b spi_flash_probe
+c
+n
+s
+n
+s
+n
+n
+p idcode[0]
+p idcode[1]
+p idcode[2]
+p /x idcode[2]
+p /x idcode[0]
+q
+y
+source uboot.gdb 
+b spi_flash_probe
+c
+n
+s
+n
+s
+n
+p ret
+p printbuffer
+q
+y
+source uboot.gdb 
+b spi_flash_probe
+c
+n
+s
+n
+s
+n
+p ret
+n
+p ret
+p idcode[0]
+p /x idcode[0]
+p /x idcode[1]
+p /x idcode[2]
+p /x idcode[3]
+q
+y
+source uboot.gdb 
+b printf
+c
+disp printbuffer 
+del 1
+c
+disp printbuffer 
+c
+q
+y
+q
+source uboot.gdb 
+b printf
+b dw_phy_init
+c
+del 1
+disp printbuffer 
+c
+disp printbuffer 
+c
+n
+n
+bt
+q
+y
+source uboot.gdb 
+b dw_phy_init 
+c
+n
+q
+y
+source uboot.gdb 
+b designware.c:410
+c
+s
+n
+p dev->name
+p phydev->drv->name 
+n
+s
+s
+n
+p phy_data 
+p /x phy_data 
+q
+y
+source uboot.gdb 
+b vsc8531_config 
+c
+n
+s
+n
+p reg_val 
+p /x reg_val 
+n
+p /x reg_val 
+n
+p /x reg_val 
+n
+p /x reg_val 
+n
+p /x reg_val 
+n
+p retval 
+n
+s
+n
+p reg_val 
+p /x reg_val 
+n
+p timeout
+n
+p retval
+n
+n
+n
+n
+s
+n
+p result
+n
+p ctl
+n
+p result
+n
+p ret
+n
+p eth_device
+p eth_devices
+n
+p dev->name
+n
+n
+p dev
+p *dev
+p dev->index 
+n
+s
+n
+p ret
+n
+c
+q
+y
+source uboot.gdb 
+b musb_init
+y
+b musb_platform_init 
+c
+bt
+n
+s
+n
+p musbr
+p *musbr
+n
+n
+fin
+p &musbr->power
+p *musbr
+bt
+q
+y
+source uboot.gdb 
+b musb_init
+y
+b musb_platform_init 
+c
+n
+s
+n
+p *musb
+p *musbr
+n
+c
+c
+q
+y
+source uboot.gdb 
+b printf
+c
+disp printbuffer 
+del 1
+c
+disp printbuffer 
+c
+bt
+c
+c
+c
+bt
+c
+c
+c
+c
+bt
+p timeout
+p musb_cfg 
+q
+y
+source uboot.gdb 
+b musb_platform_init 
+c
+bt
+fin
+fin
+p *musbr
+p musb_cfg 
+q
+y
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+p musb_cfg
+n
+p musb_cfg
+n
+p musb_cfg
+n
+p *musbr
+p musbr
+p musb_cfg 
+p musb_cfg.refs
+p musb_cfg.regs
+q
+y
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+bt
+disp musb_cfg 
+disp /x musb_cfg 
+disp 1
+undisplay 1
+undisplay 3
+n
+p musbr
+p /x musbr
+p /x *musbr
+n
+p *0x310c1000
+x /32x 0x310c1000
+q
+y
+source uboot.gdb 
+c
+p timeout 
+p /x timeout 
+p musb_cfg 
+c
+p timeout
+c
+c
+p timeout
+c
+p timeout
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+p readb(&musbr->devctl)
+call readb(&musbr->devctl)
+s
+info registers 
+disassemble $ps
+disassemble $pc
+q
+y
+source uboot.gdb 
+c
+p reg
+p /x reg
+q
+y
+source uboot.gdb 
+c
+p reg
+p /x reg
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+source uboot.gdb 
+c
+c
+q
+y
+quit
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+source uboot.gdb 
+q
+y
+q
+y
+q
+y
+q
+source uboot.gdb 
+c
+bt
+q
+y
+quit
+source uboot.gdb 
+c
+q
+source uboot.gdb source uboot.gdb 
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+bt
+up
+down
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b board_phy_config 
+c
+n
+p *phydev 
+bt
+n
+s
+n
+p rx_clk_skew 
+s
+n
+p reg_val
+p /x reg_val
+n
+p /x reg_val
+n
+p *phydev 
+s
+n
+p mac_if
+n
+s
+n
+p timeout
+n
+p reg_val 
+p /x reg_val 
+n
+s
+n
+s
+n
+p advertis
+p advertise
+p /x advertise
+n
+p oldadv
+n
+p adv
+n
+p changed
+p *phydev 
+p /x *phydev 
+p /x *phydev 
+n
+p changed
+n
+p ctl
+p /x ctl
+n
+p result
+n
+n
+n
+p ret
+n
+p eth_device
+p eth_devices
+n
+p ethprime 
+n
+n
+n
+p dev->index
+s
+n
+p base_name 
+p eth_number 
+p env_enetaddr 
+n
+p *dev
+n
+s
+n
+p macid_hi 
+p /x macid_hi 
+p /x macid_lo
+n
+p ret
+n
+p dev
+n
+s
+n
+p eth_current
+p *eth_current
+n
+bt
+q
+y
+source uboot.gdb 
+b eth_current_changed 
+c
+n
+p act
+n
+p eth_current->name
+n
+q
+y
+source uboot.gdb 
+b eth_current_changed 
+c
+fin
+n
+p interface 
+s
+n
+p mac_regs_p
+n
+s
+n
+p bus->name
+n
+p current_mii 
+p *current_mii 
+n
+p current_mii
+n
+p current_mii
+n
+p dev->name
+s
+n
+p *dev
+n
+s
+,
+n
+c
+c
+q
+y
+source uboot.gdb 
+b eth_current_changed 
+c
+fin
+n
+n
+s
+n
+c
+fin
+n
+p num_devices 
+n
+p ret
+p init_fnc_
+p init_fnc_ptr 
+info symbol init_fnc_ptr 
+n
+q
+y
+source uboot.gdb 
+c
+source init-uboot.gdb 
+source uboot.gdb 
+source uboot.gdb 
+source init-uboot.gdb 
+source uboot.gdb 
+q
+source uboot.gdb 
+c
+q
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+b mscc_startup 
+c
+bt
+s
+n
+p mii_reg 
+p /x mii_reg 
+p *phydev
+n
+p retval
+n
+s
+n
+p *phydev
+p mii_reg 
+p /x mii_reg 
+n
+p speed
+n
+s
+n
+p conf
+p /x conf
+p mac_p
+p *mac_p
+n
+p conf
+p /x conf
+n
+s
+n
+s
+n
+p /x status
+n
+c
+dis
+c
+q
+source uboot.gdb 
+b tx_descs_init 
+b rx_descs_init 
+c
+bt
+n
+p *priv
+p priv
+p *priv->dev
+p *priv->phydev
+p *priv
+n
+c
+n
+p *priv
+p /x *priv
+n
+n
+p idx
+c
+n
+p /x *priv
+c
+bt
+n
+s
+n
+s
+n
+n
+p desc_num 
+n
+p /x priv->rx_mac_descrtable 
+n
+p desc_p->dmamac_addr 
+n
+p status
+p /x status
+p /x *priv
+p /x priv->rx_mac_descrtable 
+q
+y
+q
+source uboot.gdb 
+b vsc8531_vsc8541_mac_config
+c
+n
+p mac_if
+n
+p reg_val
+p /x reg_val
+n
+p /x reg_val
+p mac_if
+n
+p /x reg_val
+p /x reg_val
+c
+fin
+fin
+fin
+n
+p status
+p /x status
+c
+n
+d
+n
+s
+n
+s
+n
+p /x status
+p *desc_p
+p /x *desc_p
+p /x *priv
+up
+b eth_tx
+y
+c
+b eth_send
+c
+bt
+n
+s
+n
+p /x *desc_p 
+n
+p /x *desc_p 
+n
+p /x *desc_p 
+p length 
+n
+p length 
+p /x *desc_p 
+n
+p /x *desc_p 
+n
+p desc_p
+c
+s
+s
+n
+p desc_p
+p *priv
+p /x *priv
+n
+fin
+n
+info registers 
+n
+dis
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b arp_raw_request 
+c
+n
+bt
+down
+q
+y
+source uboot.gdb 
+b arp_raw_request 
+c
+n
+q
+y
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b arp_raw_request 
+c
+n
+q
+source uboot.gdb 
+c
+b arp_raw_request 
+c
+n
+p NetArpWaitTry
+p /x NetArpWaitTry
+n
+p /x NetArpWaitTry
+p pkt
+n
+p eth_hdr_size 
+n
+p pkt
+n
+p *arp
+n
+s
+s
+n
+s
+n
+p *dma_p
+p /x *dma_p
+p /x *dma_p->currhosttxdesc 
+p /x *(struct dmamacdescr *)dma_p->currhosttxdesc 
+x /42x 0x8fe39d40
+n
+x /42x 0x8fe39d40
+n
+n
+c
+dis
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+up
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b mscc_phy_soft_reset
+c
+bt
+up
+up
+down
+n
+up
+n
+p tx_clk_skew
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+up
+up
+up
+down
+fin
+fin
+p *dev
+fin
+q
+y
+source uboot.gdb 
+b genphy_config_aneg
+c
+p *phydev 
+p /x *phydev 
+n
+s
+n
+p oldadv 
+n
+p adv
+n
+p changed 
+n
+p /x *phydev 
+n
+p ctl
+p /x ctl
+n
+n
+n
+q
+y
+source uboot.gdb 
+c
+up
+c
+q
+y
+source uboot.gdb 
+b board_eth_init
+c
+n
+p ret
+n
+n
+n
+s
+n
+n
+c
+b eth_rx
+c
+b eth_rx
+c
+n
+s
+n
+p /x *priv
+c
+dis
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+cc
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+output uboot.gdb 
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+p eth_rx
+c
+b eth_rx
+c
+n
+s
+n
+p length 
+n
+c
+n
+s
+n
+s
+n
+n
+p NetRxPacket
+n
+n
+q
+y
+source uboot.gdb 
+c
+b NetReceive 
+c
+n
+p eth_proto 
+n
+p ip
+p *ip
+p /x *ip
+n
+n
+s
+n
+p arp
+p *arp
+n
+dis
+c
+x /32x 0x3100c000
+q
+y
+source bu
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+b dw_adjust_link 
+c
+n
+p conf
+p /x conf
+n
+bt
+n
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+x 0x31004404
+c
+n
+c
+q
+y
+source uboot.gdb 
+c
+bt
+c
+bt
+p musbç_ctype 
+p musbç_cfg
+p musb_cfg 
+p /x musb_cfg 
+p musbr
+p *musbr
+p musbr
+q
+y
+q
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+p musb_cfg
+n
+s
+n
+n
+p devctl
+p /x devctl
+n
+n
+p timeout
+c
+p timeout
+c
+p timeout
+&musbr->devctl
+p &musbr->devctl
+p musbr
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+ usb
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+p timeout
+p /x timeout
+p musb_cfg 
+x &musbr->devctl
+x musbr->devctl
+c
+c
+c
+q
+y
+source uboot.gdb 
+c
+c
+p timeout
+c
+c
+q
+source uub$
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+x 0x310C1382
+set 0x310C1382 = 1
+set (int *)0x310C1382 = 1
+set *(int *)0x310C1382 = 1
+x 0x310C1382
+c
+x 0x310C1060
+x 0x310C1382
+x 0x310C1394
+set *(int *)0x310C1394 = 0
+x 0x310C1394
+set *(int *)0x310C1394 = 0x80
+x 0x310C1394
+c
+x 0x310C1382
+x 0x310C1060
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+p timeout
+source uboot.gdb 
+c
+x 0x310C1060
+x 0x310C1398
+c
+q
+y
+source uboot.gdb 
+c
+x 0x310C1398
+c
+x 0x310C1394
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+x 0x310C1060
+x 0x310C1060
+x 0x310C1060
+x 0x310C1060
+x 0x310C1060
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+file u-boot
+y
+y
+load u-boot
+b main
+y
+b relocate_code 
+b relocate_code 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source u-boot
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+q
+y
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+q
+y
+q
+y
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+bt
+c
+c
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p gc
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+b usb_lowlevel_init 
+c
+c
+c
+p timeout 
+p /x timeout 
+p musb_cfg 
+p /x musb_cfg 
+disassemble $pc
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+c
+bt
+p musb_cfg 
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+c
+p musb_cfg 
+x 0x310c1060
+q
+y
+source uboot.gdb 
+c
+q
+t
+y
+source uboot.gdb 
+c
+bt
+c
+x 0x310c1060
+q
+n
+c
+x 0x310c1060
+q
+y
+source uboot.gdb 
+c
+x 0x310c1060
+c
+x 0x310c1060
+c
+x 0x310c1060
+c
+x 0x310c1060
+c
+x 0x310c1060
+c
+x 0x310c1060
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+c
+bt
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+c
+bt
+c
+q
+y
+source  uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+c
+bt
+c
+q
+y
+c
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+c
+bt
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+q
+t
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+c
+c
+bt
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+b main
+y
+c
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p /x *gd
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+c
+target remote :5556
+target remote 192.168.1.100:5556
+c
+bt
+p c_cb
+p c_db
+q
+q
+y
+q
+y
+source uboot.gdb 
+q
+y
+q
+y
+q
+y
+q
+y
+q
+y
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p /x *gd
+del
+y
+c
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+c
+q
+y
+target remote 192.168.1.100:5557
+b main
+c
+n
+p *client
+n
+p ret
+n
+p fds[0]
+n
+s
+n
+n
+fin
+b client_pomp_event_cb 
+c
+q
+y
+q
+y
+b main
+target remote 192.168.1.100:5557
+c
+n
+s
+n
+p *client
+n
+n
+p ret
+n
+p ret
+n
+p fds[0]
+s
+s
+s
+n
+s
+c
+bt
+up
+c
+q
+y
+target remote 192.168.1.100:5556
+b dspctl.c:133
+c
+target remote 192.168.1.100:5556
+c
+q
+target remote 192.168.1.100:5556
+c
+s
+n
+p *ctx
+n
+k
+y
+q
+target remote 192.168.1.100:5556
+b lsound_stream_new
+c
+n
+p name
+n
+p ret
+k
+y
+target remote 192.168.1.100:5556
+c
+c
+s
+n
+disp dev_desc->name
+n
+disp dev_desc->devname
+n
+disp
+undisp
+y
+q
+y
+target remote 192.168.1.100:5556
+c
+b sound_prompt_stream_cb
+c
+target remote 192.168.1.100:5556
+c
+bt
+up
+up
+up
+up
+up
+up
+down
+q
+y
+set sysroot output/dolly_light/staging 
+target remote 192.168.1.100:5556
+b main
+c
+add-symbol-file u-boot 0x8ff37000
+n
+file output/dolly_light/build/dspctl-custom/server/dspctld
+y
+y
+bt
+n
+q
+y
+b main
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+p *ctx
+n
+p ret
+n
+p *ctx
+n
+s
+n
+p ctx
+n
+p *ctx
+n
+p *ctx
+q
+y
+b main
+c
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+q
+y
+set sysroot output/dolly_light/staging 
+target remote 192.168.1.100:5556
+c
+bt
+up
+p *ctx
+q
+y
+set sysroot output/dolly_light/staging 
+target remote 192.168.1.100:5556
+c
+bt
+up
+up
+down
+down
+k
+y
+target remote 192.168.1.100:5556
+c
+p *ctx
+n
+s
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+q
+y
+source uboot.gdb 
+c
+q
+y
+target remote 192.168.1.100:5556
+b main
+c
+b sound_prompt_stream_cb:
+b sound_prompt_stream_cb
+c
+bt
+up
+p fds
+b sound_start
+k
+y
+target remote 192.168.1.100:5556
+c
+c
+up
+down
+c
+n
+q
+y
+target remote 192.168.1.100:5556
+c
+up
+down
+p *ctx
+b sound_prompt_stream_cb
+target remote 192.168.1.100:5556
+y
+c
+n
+p tmpbuf
+n
+p *tmpbuf
+x /32dw tmpbuf 
+p ze
+psz
+p sz
+n
+p nb_req_samples 
+p size
+x /32xw tmpbuf 
+p /x tmpbuf[0]
+p /x tmpbuf[1]
+n
+p outputbuf[0]
+p outbuf[0]
+p buffer
+p tmpbuf[0] << 16
+p /x tmpbuf[0] << 16
+p /x tmpbuf[1] << 16
+p /x tmpbuf[2] << 16
+p /x tmpbuf[3] << 16
+n
+c
+p sz
+n
+fin
+dis 2
+fin
+n
+c
+dis 1
+en 2
+c
+q
+y
+target remote 192.168.1.100:5556
+b sound_prompt.c:225
+c
+n
+fin
+n
+p *parent
+n
+p *parent
+n
+p *parent
+b sound_start
+del 2
+b sound_stop_callback 
+y
+c
+bt
+q
+y
+c
+target remote 192.168.1.100:5556
+c
+bt
+b sound_prompt.c:225
+del
+y
+b sound_prompt_stream_cb 
+c
+target remote 192.168.1.100:5556
+c
+n
+p sz
+n
+c
+dis 2
+c
+c
+q
+target remote 192.168.1.100:5556
+c
+bt
+b sound_prompt_stream_cb 
+target remote 192.168.1.100:5556
+c
+n
+p *prompt 
+n
+p sz
+n
+fin
+n
+c
+n
+b sound_prompt_stream_close_cb
+y
+c
+dis 1
+c
+bt
+target remote 192.168.1.100:5556
+c
+p sz
+fin
+fq
+q
+y
+q
+y
+q
+y
+q
+y
+q
+y
+c
+q
+y
+load arch/arm/cpu/armv7/sc58x/init
+target remote :3333
+target remote :3333
+y
+target remote :3333
+y
+set remotetimeout 
+set remotetimeout unlimited 
+target remote :3333
+y
+set remotetimeout 
+set remotetimeout 1000
+set remotetimeout 
+get remotetimeout 
+show remotetimeout 
+set remotetimeout unlimited 
+show remotetimeout 
+target remote :3333
+y
+q
+y
+target remote :3333
+q
+y
+target remote :3333
+q
+target remote :3333
+show remotetimeout 
+set remotetimeout unlimited 
+show remotetimeout 
+target remote :3333
+y
+q
+y
+target remote :3333
+source init-uboot.gdb 
+q
+y
+q
+n
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+b main
+n
+c
+bt
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+c
+c
+q
+y
+q
+y
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+source uboot.gdb 
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+source uboot.gdb 
+b relocate_code 
+c
+bt
+up
+up
+up
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+c
+q
+y
+target remote :3333
+load arch/arm/cpu/armv7/sc58x/init
+n
+si
+n
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+c
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+c
+bt
+c
+q
+y
+target remote :5556
+target remote 192.168.1.184:5556
+q
+target remote 192.168.1.184:5556
+q
+set sysroot output/debug/staging 
+sharedlibrary 
+b main
+c
+target remote 192.168.1.117:5556
+c
+n
+s
+s
+n
+n
+s
+n
+s
+n
+n
+s
+bt
+s
+s
+n
+disassemble $pc
+s
+n
+n
+fin
+s
+n
+n
+target remote 192.168.1.117:5556
+c
+n
+n
+s
+bt
+n
+s
+n
+s
+n
+s
+n
+s
+disassemble $pc
+s
+s
+n
+disassemble $pc
+s
+n
+n
+s
+disassemble $pc
+s
+disassemble $pc
+s
+disassemble $pc
+fin
+n
+s
+n
+n
+s
+n
+fin
+n
+p result
+n
+s
+n
+fin
+s
+n
+s
+n
+s
+b Daemon::startup
+y
+c
+target remote 192.168.1.117:5556
+c
+sharedlibrary 
+b Devialet::Boss::ConfigurationPrivate::resolveContext
+c
+n
+c
+disassemble $pc
+s
+c
+target remote 192.168.1.117:5556
+b logMessage
+n
+c
+sharedlibrary 
+b logMessage
+n
+b Devialet::QtTools::Core::onEntry
+y
+b StateHelper.hpp:51
+c
+disassemble $pc
+s
+disassemble $pc
+n
+s
+s
+bt
+c
+c
+c
+c
+n
+c
+q
+b main
+set sysroot output/debug/staging 
+target remote 192.168.1.117:5556
+c
+b Devialet::SpotifyConnect::Daemon::Startup
+y
+sharedlibrary 
+b Devialet::SpotifyConnect::Daemon::startup
+n
+info b
+del 2
+b Devialet::SpotifyConnect::Daemon::Daemon::startup
+c
+target remote 192.168.1.117:5556
+c
+c
+q
+source uboot.gdb 
+b relocate_code 
+c
+c
+p /x sp
+p /x sd
+p /x bt
+bt
+p /x gd
+p /x *gd
+q
+y
+q
+source uboot.gdb 
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+bt
+q
+y
+source uboot.gdb 
+b boot_get_kernel
+c
+c
+c
+q
+y
+q
+source uboot.gdb 
+b board_eth_init 
+del
+y
+b boot_get_kernel 
+c
+c
+c
+c
+c
+c
+c
+c
+c
+q
+y
+source uboot.gdb 
+b boot_get_kernel 
+c
+bt
+c
+c
+c
+c
+c
+c
+c
+q
+y
+source uboot.gdb 
+b relocate_code
+c
+c
+b /x *gd
+n
+p /x *gd
+q
+y
+source uboot.gdb 
+b boot_get_kernel 
+c
+n
+s
+p img_addr 
+n
+p kernel_addr 
+p /x kernel_addr 
+n
+p img_addr 
+p /x img_addr 
+n
+n
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+p /x *gd
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+target remote 192.168.1.100:5556
+b main
+c
+c
+up
+p optarg
+p argc
+p argv[0]
+p argv[1]
+p argv[2]
+q
+y
+source uboot.gdb 
+q
+y
+q
+target remote 192.168.1.100:5556
+c
+q
+y
+target remote 192.168.1.100:5556
+b main
+c
+n
+s
+n
+p value
+p ret
+n
+n
+p sp
+p *sp
+q
+n
+c
+k
+y
+q
+target remote 192.168.1.100:5556
+b main
+c
+n
+s
+n
+p value
+n
+p *sp
+n
+s
+n
+p cfg
+p *cfg
+n
+p ret
+c
+k
+y
+q
+b lsound_dev_scan_card
+y
+target remote 192.168.1.100:5556
+c
+n
+disp device
+disp card
+n
+s
+n
+p ret
+p pcm
+p *pcm
+p name
+n
+n
+n
+p ret
+n
+s
+n
+p *dev_desc
+n
+p *dev_desc
+s
+n
+p ret
+q
+t
+y
+b lsound_dev_scan_card
+y
+target remote 192.168.1.100:5556
+c
+n
+n
+p ret
+c
+q
+b lsound_dev_scan_card
+y
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+s
+n
+s
+n
+p stream
+n
+p stream
+n
+p ret
+n
+p ret
+p *hwp
+n
+p ret
+n
+p ret
+n
+p ret
+p num
+n
+p *dev_desc
+q
+y
+b lsound_stream_new
+target remote 192.168.1.100:5556
+c
+target remote 192.168.1.100:5556
+b main
+c
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+k
+y
+target remote 192.168.1.100:5556
+b main
+c
+n
+s
+n
+p *ctx
+n
+q
+y
+target remote 192.168.1.100:5556
+c
+q
+y
+b main
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+s
+n
+p fifo
+n
+p fifo
+q
+y
+target remote 192.168.1.100:5556
+c
+q
+y
+b lsound_stream_new
+target remote 192.168.1.100:5556
+c
+p params
+p *params
+n
+s
+n
+p dev
+n
+p dev
+n
+p dev
+n
+fin
+n
+p *stream
+n
+q
+y
+b lsound_stream_new
+target remote 192.168.1.100:5556
+c
+q
+y
+b lsound_stream_new
+target remote 192.168.1.100:5556
+c
+n
+n
+p name
+n
+p ret
+n
+s
+n
+p devname
+n
+p direction 
+n
+p deb
+p dev
+n
+p *dev
+n
+n
+p ret
+n
+s
+n
+p ret
+n
+p num
+n
+p ret
+n
+p ret
+n
+p ret
+n
+p periods 
+n
+p ret
+n
+p ret
+p dev->frames
+n
+b snd_pcm_hw_params_set_period_size
+c
+c
+p val
+s
+n
+s
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+up
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+up
+p *dev
+p dev->refcount 
+up
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+up
+up
+down
+q
+y
+target remote 192.168.1.100:5556
+q
+y
+target remote 192.168.1.100:5556
+c
+q
+y
+b snd_pcm_hw_set_period_size
+y
+target remote 192.168.1.100:5556
+c
+b snd_pcm_hw_params_set_period_size
+target remote 192.168.1.100:5556
+c
+p pcm
+p *pcm
+p params
+p *params
+s
+n
+p mode
+n
+s
+n
+p i
+p *i
+n
+p changed
+n
+p err
+n
+s
+n
+s
+s
+n
+p res
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+p sparams 
+b lsound_dev_scan_device_info
+k
+y
+target remote 192.168.1.100:5556
+c
+n
+p num
+p dir
+p ret
+n
+p num
+p dir
+n
+p num
+p dir
+bt
+c
+bt
+c
+bt
+c
+bt
+c
+c
+dis
+b lsound_stream_start
+b lsound_stream_start
+target remote 192.168.1.100:5556
+c
+b lsound_stream_new
+target remote 192.168.1.100:5556
+c
+n
+s
+info b
+en
+c
+up
+del
+y
+b lsound_dev_set_params
+k
+y
+target remote 192.168.1.100:5556
+c
+p *params 
+n
+p num
+p dir
+n
+p ret
+n
+p num
+p dir
+n
+p ret
+p *dev->pcm
+n
+p periods 
+n
+p ret
+n
+p num
+p dir
+n
+n
+p ret
+n
+p ret
+k
+y
+q
+target remote 192.168.1.100:5556
+b lsound_dev_set_params
+y
+c
+n
+p ret
+p *dev
+n
+p frames
+n
+p ret
+n
+p ret
+q
+y
+b lsound_dev_stream_callbacks
+y
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+p size
+q
+y
+b lsound_dev_stream_callbacks
+y
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+p size
+n
+p ret
+c
+n
+s
+n
+p size
+n
+p ret
+n
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+n
+p *dev
+q
+y
+target remote 192.168.1.100:5556
+c
+b lsound_dev_stream_callbacks
+c
+b lsound_dev_callback
+c
+n
+p *dev
+q
+y
+target remote 192.168.1.100:5556
+b spotilight_new
+y
+c
+threads
+thread
+info threads 
+thread 2
+bt
+up
+up
+up
+up
+b sp_main_loop
+k
+y
+target remote 192.168.1.100:5556
+c
+n
+n
+p sp
+p *sp
+n
+p ret
+n
+p ret
+n
+c
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+b main
+target remote 192.168.1.100:5556
+c
+n
+n
+p ctx
+q
+y
+b main
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+p ctx->sound
+n
+q
+y
+target remote 192.168.1.100:5556
+b main
+c
+n
+p ctx
+k
+y
+y
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+s
+n
+s
+n
+q
+y
+b main
+target remote 192.168.1.100:5556
+c
+n
+s
+n
+n
+s
+n
+s
+n
+s
+n
+s
+n
+p ret
+n
+s
+n
+p ret
+n
+p ret
+q
+y
+target remote 192.168.1.100:5556
+c
+bt
+up
+p ctx
+p *ctx
+k
+y
+q
+b main
+sharedlibrary 
+c
+target remote 192.168.1.100:5556
+c
+n
+p argc
+n
+p pathToConfig 
+s
+n
+s
+fin
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+q
+y
+b main
+target remote 192.168.1.100:5556
+c
+sharedlibrary 
+n
+n
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+s
+s
+s
+s
+n
+s
+s
+n
+s
+s
+n
+s
+n
+q
+y
+b main
+target remote 192.168.1.100:5556
+q
+n
+q
+target remote 192.168.1.100:5556
+b main
+c
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+n
+p g_isInitialized 
+n
+p g_isInitialized 
+n
+n
+p config
+n
+p sampleAppConfig 
+n
+s
+n
+s
+n
+n
+s
+n
+s
+n
+s
+n
+s
+n
+info registers 
+n
+info registers 
+n
+p m_speakMediaPlayer 
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+n
+p m_audioMediaPlayer 
+n
+info b
+del 2
+n
+p m_notificationsMediaPlayer 
+n
+p audioFactory 
+n
+p alertStorage 
+n
+s
+n
+p authDelegate 
+n
+n
+p displayCardsSupported 
+s
+n
+s
+n
+s
+n
+s
+n
+n
+target remote 192.168.1.100:5556
+c
+n
+ k
+y
+target remote 192.168.1.100:5556
+y
+n
+target remote 192.168.1.100:5556
+b main
+c
+n
+s
+n
+s
+n
+n
+s
+n
+s
+n
+c
+s
+n
+s
+s
+n
+s
+s
+s
+n
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+n
+n
+p client
+n
+p /x &client
+n
+b DefaultClient::initialize
+y
+k
+y
+target remote 192.168.1.100:5556
+c
+c
+c
+b DefaultClient.cpp:126
+c
+target remote 192.168.1.100:5556
+c
+c
+c
+c
+target remote 192.168.1.100:5556
+info b
+del 1
+del 2
+del 3
+c
+p audioFactory 
+n
+n
+n
+n
+p m_connectionManager 
+n
+info registers 
+n
+p defaultClient 
+n
+k
+y
+del
+y
+b AVSConnectionManager.cpp:43
+c
+target remote 192.168.1.100:5556
+c
+n
+n
+p isEnabled 
+n
+p connectionManager 
+n
+n
+b CertifiedSender.cpp:91
+k
+y
+target remote 192.168.1.100:5556
+c
+c
+n
+s
+n
+bt
+up
+up
+p messageStorage 
+up
+up
+q
+y
+q
+source uboot.gdb 
+b relocate_code 
+c
+p sb
+up
+down
+p sp
+p sd
+p sb
+p gd
+p *gd
+p /x *gd
+q
+y
+q
+y
+q
+q
+q
+q
+source uboot.gdb 
+q
+y
+source uboot.gdb 
+c
+q
+y
+q
+q
+source uboot.gdb 
+c
+bt
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+u
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b spi_flash_validate_params
+c
+n
+c
+bt
+q
+y
+source uboot.gdb 
+b relocate_code 
+c
+p *gd
+p /x *gd
+q
+y
+source uboot.gdb 
+b spi_flash_validate_params
+c
+n
+p jedec 
+p /x jedec 
+n
+c
+p spi
+p *spi
+n
+p *flash
+n
+n
+p *flash
+n
+p *flash
+n
+p *flash
+n
+p *flash
+p /x *flash
+n
+n
+p cmd
+n
+p cmd
+n
+p *flash 
+n
+n
+n
+n
+p *flash
+n
+p ret
+n
+n
+n
+n
+p *flash
+p /x *flash
+n
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+b spi_flash_validate_params
+c
+c
+n
+p *flash 
+n
+p params
+p *params
+p /x *params
+n
+p cmd
+p params->e_rd_cmd
+n
+p cmd
+p /x cmd
+p flash->spi->op_mode_rx
+p /x flash->spi->op_mode_rx
+bt
+up
+down
+q
+y
+source uboot.gdb 
+c
+q
+y
+source uboot.gdb 
+c
+q
+y
+b main
+remote target 192.168.1.100:5556
+target remote 192.168.1.100:5556
+sharedlibrary 
+b Pa_OpenDefaultStream
+c
+c
+n
+s
+n
+p hostApi
+n
+p result 
+b Pa_Initialize 
+k
+y
+target remote 192.168.1.100:5556
+c
+c
+n
+s
+n
+p hostApis_
+p *hostApis_
+p **hostApis_
+n
+p result 
+n
+p hostApi
+p *hostApi
+n
+p defaultHostApiIndex_
+n
+q
+y
+b main
+run
+q
+y
+b main
+run
+c
+run
+n
+n
+s
+n
+s
+p s
+p *s
+n
+s
+n
+s
+n
+run
+y
+n
+p s
+n
+s
+n
+fin
+n
+q
+qy
+y
+n
+b main
+run
+n
+p s
+n
+q
+y
+target remote 192.168.1.100:5556
+q
+target remote 192.168.1.144:5556
+file staging/usr/bin/pup
+y
+y
+b main
+c
+b pup_read_version 
+c
+n
+s
+n
+fin
+n
+s
+n
+disp sz
+disp tot
+n
+disp ret
+n
+p tot
+c
+q
+target remote 192.168.1.144:5556
+c
+file staging/usr/bin/pup
+y
+y
+c
+q
+file staging/usr/bin/pup
+target remote 192.168.1.144:5556
+b main
+c
+n
+p *ctx
+s
+n
+p ret
+n
+p sz
+n
+s
+p *pup
+q
+y
+file staging/usr/bin/pup
+target remote 192.168.1.144:5556
+b up_decode_byte
+y
+c
+p *s
+n
+p b
+p /x b
+n
+p ret
+n
+n
+s
+c
+n
+p /x b
+n
+p ret
+n
+c
+n
+p /x b
+p *s
+n
+s
+p s->count
+n
+n
+p ret
+q
+y
+b status_update
+target remote 192.168.1.144:5556
+c
+c
+c
+n
+q
+y
+target remote 192.168.1.144:5556
+c
+b status_update 
+c
+p err
+up
+p choice
+del
+y
+b algos_activation_select_command 
+c
+q
+y
+target remote 192.168.1.144:5556
+c
+b status_update 
+c
+del
+y
+b algos_activation_select_command 
+c
+n
+s
+fin
+pret
+p ret
+n
+c
+c
+n
+s
+n
+p ret
+n
+p ret
+p pup->cmd
+p buf[0]
+p /x pup->cmd
+p /x buf[0]
+q
+y
+b main
+target remote 192.168.1.143:5556
+c
+n
+p ctx
+n
+b spotify_audio_init
+y
+c
+thread 
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+s
+n
+s
+n
+p sp
+p *sp
+n
+n
+p *sp
+n
+q
+y
+q
+b main
+y
+run
+file str2bin
+q
+b main
+y
+ru
+run
+file str2bin
+b main
+run
+n
+q
+y
+b main
+run
+n
+p fd
+n
+p ptr
+p line
+p fd
+q
+y
+b main
+c
+target remote 192.168.1.143:5556
+target remote 192.168.1.101:5556
+c
+n
+s
+s
+n
+q
+y
+target remote 192.168.1.101:5556
+b main
+y
+c
+file staging/usr/bin/optical
+y
+q
+y
+target remote 192.168.1.101:5556
+b main
+c
+n
+q
+target remote 192.168.1.101:5556
+c
+q
+n
+target remote 192.168.1.101:5556
+y
+b capture_cb 
+c
+n
+p fd
+n
+p size
+n
+p ret
+n
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+q
+target remote 192.168.1.101:5556
+c
+b fifo_push
+c
+p *fifo
+n
+p *fifo
+p fifo->buffer
+x /1024xw fifo->buffer
+dis
+b fifo_pull
+c
+c
+p *fifo
+n
+q
+y
+b optical.c :288
+target remote 192.168.1.101:5556
+c
+n
+p nfds
+k
+y
+target remote 192.168.1.101:5556
+c
+n
+p nfds
+n
+k
+c
+target remote 192.168.1.101:5556
+c
+p nfds
+n
+p *fds
+p fds
+n
+p fds[0]
+p fds[1]
+p fds[2]
+n
+p fds[2]
+p ret
+k
+y
+q
+target remote 192.168.1.101:5556
+p spdif_mixer_init 
+c
+b spdif_mixer_init 
+k
+y
+target remote 192.168.1.101:5556
+c
+n
+p *ctx
+n
+n
+p *ctx
+n
+p elem
+p *elem
+n
+p ret
+n
+s
+n
+p *ctx
+n
+q
+y
+target remote 192.168.1.101:5556
+b spdif_mixer_init 
+c
+n
+n
+c
+p *ctx
+n
+p ret
+n
+n
+p item
+p ret
+p idx
+k
+y
+target remote 192.168.1.101:5556
+c
+c
+n
+p *elem
+p *ctx->elem
+n
+p idx
+s
+p item
+p maxlen
+n
+s
+n
+p s->ctls
+p type
+n
+p item
+k
+y
+q
+k
+y
+target remote 192.168.1.101:5556
+k
+y
+target remote 192.168.1.101:5556
+b main
+c
+n
+q
+y
+b main
+c
+target remote 192.168.1.101:5556
+c
+n
+s
+n
+n
+up
+k
+y
+target remote 192.168.1.101:5556
+c
+n
+p *ctx
+n
+p *ctx
+n
+p *ctx
+n
+p *ctx
+n
+s
+n
+p gpio_read_dsp_fault 
+c
+b gpio_read_dsp_fault 
+c
+n
+p val
+n
+p val
+p ret
+n
+c
+p val
+n
+p ret
+k
+y
+q
+b gpio_read_dsp_fault 
+c
+target remote 192.168.1.101:5556
+c
+n
+p val
+n
+p ret
+p val
+n
+n
+c
+c
+n
+p ret
+n
+c
+n
+p val
+n
+p val
+p ret
+k
+y
+target remote 192.168.1.101:5556
+c
+n
+p val
+n
+p ret
+n
+n
+p ret
+n
+n
+q
+y
+target remote 192.168.1.143:5556
+b setup_colors
+y
+c
+p *ctx
+p ctx->ansi_color 
+n
+p colors
+q
+y
+b ledd_apply_pattern 
+target remote 192.168.1.143:5556
+c
+p patter
+p pattern
+p *pattern
+c
+p *pattern
+c
+c
+p *pattern
+n
+p ctx
+p *ctx
+p i
+p pattern->brightness[i]
+s
+n
+p id
+p brightness 
+n
+p path
+n
+s
+n
+p path
+n
+p fd
+n
+p brightness 
+q
+y
+target remote 192.168.1.143:5556
+b main
+c
+n
+s
+n
+p now
+n
+p *anim
+n
+s
+n
+s
+p brightness 
+n
+p path
+n
+n
+p ret
+p fd
+p brightness 
+n
+q
+y
+q
+target remote 192.168.1.143:5556
+k
+y
+target remote 192.168.1.143:5556
+b animation_progress 
+c
+p value
+n
+p nled
+n
+p animation
+p *animation
+n
+s
+n
+p loop
+n
+b schedule_animation 
+c
+n
+p pos
+n
+p i
+p anim->nsteps 
+p *anim
+q
+y
+target remote 192.168.1.143:5556
+c
+up
+p prio
+q
+y
+target remote 192.168.1.143:5556
+b main
+c
+n
+p argv[0]
+p argv[1]
+p argv[2]
+p argv[3]
+p argv[4]
+n
+p atoi(argv[2])
+p atoi(argv[3]) - 1
+s
+n
+fin
+s
+fin
+s
+n
+s
+n
+s
+n
+s
+n
+n
+s
+s
+p fmt
+n
+p c
+n
+p v
+n
+p v
+n
+p c
+n
+p c
+n
+q
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+p ctx
+p anim
+p *anim
+down
+q
+y
+b main
+c
+n
+target remote 192.168.1.143:5556
+n
+s
+n
+p err
+n
+c
+bt
+n
+s
+n
+p params
+n
+p err
+p stream
+p *stream
+n
+s
+n
+p err
+n
+n
+p err
+n
+p *ctx
+n
+c
+n
+p framesPerBuffer 
+n
+p inputBuff
+up
+p size
+up
+p inputBuffer
+p outputBuffer
+k
+y
+q
+target remote 192.168.1.143:5556
+c
+b capture_cb 
+c
+n
+x /32xw outputBuffer
+p inputBuffer
+p *timeInfo 
+bt
+up
+p userInput 
+p userOutput 
+down
+p inputBuffer
+up
+k
+y
+q
+c
+target remote 192.168.1.143:5556
+c
+p *ctx
+b pa_init
+n
+b context_new 
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+q
+y
+target remote 192.168.1.143:5556
+b pa_init
+c
+n
+p count
+q
+y
+target remote 192.168.1.143:5556
+b pa_init
+c
+n
+p err
+n
+p count
+n
+disp infos->name
+n
+p *ctx
+fin
+c
+q
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+p ret
+k
+y
+target remote 192.168.1.143:5556
+c
+up
+p ret
+p cmd
+p command_ops[cmd]
+p conn
+up
+down
+p ret
+down
+p conn
+p *conn
+p msg
+down
+p iobuf 
+down
+down
+down
+p conn
+up
+bt
+info registers 
+k
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+up
+down
+k
+y
+target remote 192.168.1.143:5556
+c
+up
+p *conn
+up
+b dspctld_pomp_event_cb
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+p msg
+p event
+c
+p event
+c
+k
+y
+del b
+b del
+n
+del
+y
+target remote 192.168.1.143:5556
+c
+k
+q
+target remote 192.168.1.143:5556
+c
+up
+k
+y
+target remote 192.168.1.143:5556
+c
+up
+k
+y
+c
+target remote 192.168.1.143:5556
+c
+k
+y
+c
+target remote 192.168.1.143:5556
+c
+up
+p msg
+p *msg
+k
+y
+target remote 192.168.1.143:5556
+c
+up
+p event
+down
+down
+p errno
+q
+y
+target remote 192.168.1.143:5556
+c
+up
+p cmd
+p ret
+up
+p msgf
+p msg
+p *msg
+down
+down
+k
+y
+quit
+b main
+run
+n
+c
+p *priv
+n
+s
+p *event_box
+n
+c
+c
+n
+p *priv
+n
+n
+k
+y
+quit
+b lsound_stream_create
+y
+c
+run
+c
+s
+n
+s
+n
+p name
+n
+p ret
+n
+p ret
+n
+s
+n
+p dev
+n
+p ret
+n
+p dev
+n
+k
+y
+q
+c
+c
+run
+up
+p *priv
+down
+p volume
+p *volume
+p volume->table
+q
+y
+run
+p volume
+p sample
+p *sample
+p s
+p volume_table[volume->index]
+up
+p i
+q
+y
+run
+up
+down
+k
+y
+q
+b main
+run
+n
+up
+q
+y
+b main
+run
+n
+q
+y
+q
+b main
+run
+n
+n
+q
+y
+target remote 192.168.1.143:5556
+b main
+c
+n
+k
+y
+q
+q
+b main
+c
+target remote 192.168.1.143:5556
+c
+bt
+s
+n
+c
+q
+b main
+target remote 192.168.1.143:5556
+y
+c
+q
+target remote 192.168.1.143:5556
+b main
+y
+c
+bt
+up
+q
+target remote 192.168.1.143:5556
+b main
+y
+q
+y
+target remote 192.168.1.143:5556
+b main
+target remote 192.168.1.143:5556
+y
+c
+n
+p default_ctrl 
+q
+y
+target remote 192.168.1.143:5556
+b adapter_new
+c
+p *proxy
+n
+p default_ctrl 
+n
+p default_ctrl 
+bt
+c
+q
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+p *client
+p proxy
+p *proxy
+down
+p address
+p str
+c
+target remote 192.168.1.143:5556
+c
+q
+y
+target remote 192.168.1.143:5556
+target remote 192.168.1.144:5556
+sharedlibrary 
+b snd_pcm_ioplug_poll_descriptors_count
+y
+b snd_pcm_ioplug_poll_descriptors
+y
+b snd_pcm_ioplug_poll_revents
+y
+c
+b snd_pcm_ioplug_create
+b snd_pcm_ioplug_poll_revents
+target remote 192.168.1.144:5556
+c
+n
+p *pcm
+p *pcm->fast_ops
+n
+bt
+up
+p *ctx
+q
+y
+target remote 192.168.1.144:5556
+b snd_pcm_poll_descriptors_revents
+y
+c
+info b
+bt
+target remote 192.168.1.144:5556
+sharedlibrary 
+b main
+c
+b snd_pcm_ioplug_ops 
+b snd_pcm_ioplug_writei 
+c
+q
+target remote 192.168.1.144:5556
+c
+b dive_alsa.c:306
+c
+n
+p nslavechan 
+n
+p ich
+disp ich
+p *ctx->map
+p ctx->map
+disp io_buf[i * nchanout + ctx->map[ich]]
+n
+c
+q
+y
+target remote 192.168.1.144:5556
+c
+b dive_alsa.c:306
+c
+c
+n
+disp io_buf[i * nchanout + ctx->map[ich]]
+nc
+c
+disp io_buf[i * nchanout + ctx->map[ich]]
+disp ich
+n
+c
+p i
+p nchanout
+p nslavechan 
+x /32w io_buf
+p *ctx
+p ctx->map
+q
+y
+target remote 192.168.1.144:5556
+c
+b dive_alsa.c:306
+c
+disp ich
+p ctx->map
+c
+del 3
+c
+del 2
+c
+x /256w slave_buf
+q
+y
+target remote 192.168.1.144:5556
+b dive_alsa.c:306
+c
+p ctx->map
+c
+q
+y
+target remote 192.168.1.144:5556
+c
+b dive_alsa.c :312
+c
+disp ich
+disp io_buf[i*nchanout + ctx->map[ich]]
+c
+p ctx->map
+c
+dis  1
+c
+x /128w io_buf 
+p ctx->map
+p ctx->map[0]
+p ctx->map[4]
+x /128w slave_buf 
+p ctx->slave
+p ctx->slave->name
+q
+y
+target remote 192.168.1.144:5556
+c
+b dive_alsa.c :323
+c
+s
+n
+s
+s
+n
+p fd
+n
+p fd
+n
+p fd
+dis
+b snd_pcm_hw_writei
+c
+dis 2
+c
+c
+p fd
+p size
+p buffer
+x /128w buffer
+q
+y
+target remote 192.168.1.144:5556
+b dive_transfer
+c
+info b
+target remote 192.168.1.144:5556
+sharedlibrary 
+b dive_transfer
+y
+info b
+c
+n
+s
+n
+n
+x /32w buffer
+n
+x /32w buffer
+n
+x /32w buffer
+fin
+p dst_areas
+p *dst_areas
+p *(dst_areas+1)
+p *(dst_areas+2)
+p *(dst_areas+3)
+p *(dst_areas+4)
+p *(dst_areas+5)
+p *(dst_areas+6)
+p *(dst_areas+7)
+p *(dst_areas+8)
+p *src_areas
+p *(src_areas+1)
+p *(src_areas+2)
+q
+y
+b dive_transfer
+y
+target remote 192.168.1.144:5556
+c
+n
+k
+y
+target remote 192.168.1.144:5556
+c
+n
+p ret
+n
+p ret
+n
+s
+n
+p i
+n
+p i
+n
+p n
+n
+x /32w ptr
+x /32w ptr
+b buffer_to_dst_areas
+dis 1
+c
+x /32w ptr
+n
+x /32w ptr
+p dive
+p *dive
+p max_chans 
+n
+p areas
+p areas[0]
+n
+disp i
+disp n
+n
+bt
+fin
+fin
+fin
+dis
+fin
+p size
+p slave_areas 
+p slave_offset 
+n
+p *slave
+c
+s
+up
+p slave_frames 
+n
+p size
+p *slave_sizep 
+p size
+n
+n
+p frames
+p slave_frames 
+p slave_offset 
+p slave_areas[0]
+p x/32w slave_areas[0].addr
+x /32w slave_areas[0].addr
+p slave_areas[1]
+p slave_areas[2]
+p slave_areas[3]
+p slave_areas[4]
+p slave_areas[5]
+p slave_areas[6]
+p slave_areas[7]
+p slave_areas[8]
+p *slave
+k
+y
+q
+target remote 192.168.1.144:5556
+b snd_pcm_extplug_create
+y
+c
+p name
+n
+s
+n
+p str
+n
+p str
+p conf
+n
+p conf
+p next
+p i
+n
+p id
+n
+p id
+n
+p id
+n
+p pcm_conf
+n
+p n
+p *n
+n
+p id
+n
+p id
+n
+k
+y
+q
+target remote 192.168.1.144:5556
+b dive_transfer
+y
+c
+n
+p *ext
+n
+p i
+n
+p size
+n
+p size
+n
+p frames
+n
+q
+y
+target remote 192.168.1.144:5556
+b dive_transfer
+y
+c
+fin
+n
+p *slave
+bt
+p slave_offset 
+p slave_frames 
+p *slave
+n
+p result
+n
+n
+s
+n
+c
+fin
+n
+n
+p snd_pcm_mmap_playback_avail(slave)
+p slave_frames 
+n
+s
+n
+s
+n
+p offset
+n
+s
+n
+s
+p *pcm
+n
+p appl_ptr 
+p frames
+n
+s
+s
+n
+target remote 192.168.1.144:5556
+y
+info b
+c
+target remote 192.168.1.144:5556
+c
+n
+p *dst_areas 
+p size
+p dst_offset
+p dst_areas[0]
+p dst_areas[1]
+p dst_areas[2]
+p src_areas[0]
+p src_areas[1]
+p dst_areas[0]
+p dst_areas[1]
+p dst_areas[2]
+p dst_areas[3]
+p dst_areas[4]
+p dst_areas[5]
+p dst_areas[6]
+p dst_areas[7]
+p dst_areas[8]
+s
+n
+s
+n
+p bitofs 
+n
+p src
+n
+p dst
+n
+p width
+n
+p src_area ->step
+n
+p src_step 
+p dst_step 
+p width 
+n
+p samples
+p src dst
+p src
+disp src
+disp dst
+n
+n
+n
+fin
+p size
+n
+s
+n
+s
+n
+s
+n
+s
+n
+s
+n
+fin
+n
+p result
+n
+n
+n
+p offset
+n
+p offset
+n
+p xfer
+p size
+n
+p size
+n
+p xfer
+n
+p state
+n
+p hw_avail 
+n
+p size
+n
+p r
+up
+up
+down
+n
+c
+q
+y
+q
+run
+q
+y
+run
+up
+down
+p *priv
+n
+q
+run
+up
+down
+bt
+down
+p *priv
+k
+y
+b update_wav_file 
+c
+run
+c
+n
+s
+s
+p priv->dirname
+p priv
+p *priv
+up
+up
+p priv
+q
+y
+b lsound_dev_set_params
+y
+c
+target remote 192.168.1.144:5556
+target remote 192.168.1.106:5556
+c
+p *dev
+c
+n
+p *dev
+n
+p num
+n
+p *params
+n
+n
+p fmt
+n
+n
+p ret
+n
+n
+p periods
+s
+s
+n
+up
+down
+n
+s
+n
+p *i
+n
+n
+s
+n
+s
+s
+n
+n
+n
+p err
+n
+p err
+n
+fin
+n
+p res
+n
+p periods
+n
+p dev->frames
+s
+s
+n
+s
+n
+p err
+n
+s
+n
+s
+s
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+n
+n
+p err
+n
+p err
+n
+p changed
+n
+fin
+info registers 
+n
+p err
+n
+p err
+n
+n
+p ret
+p frames
+n
+p frames
+p dev->frames
+n
+n
+p frames
+n
+s
+n
+s
+n
+p err
+n
+s
+n
+p err
+n
+p err
+n
+p err
+n
+n
+p slave
+p  *slave
+s
+n
+p err
+n
+s
+n
+p err
+n
+p err
+n
+p err
+n
+p slave
+p *slave
+s
+n
+p err
+n
+s
+n
+s
+n
+p err
+n
+n
+p err
+n
+p err
+n
+n
+s
+n
+p ret
+p dive->rate
+n
+p dive->format 
+n
+p ret
+n
+n
+p dive
+p *dive
+n
+p ret
+n
+p ret
+n
+p ret
+n
+n err
+p err
+n
+n
+p fb
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+n
+p fb
+n
+p err
+n
+p err
+n
+p err
+n
+p *pcm
+n
+p params->fifo_size 
+n
+p err
+n
+p err
+n
+p ret
+n
+p ret
+p swp
+p *swp
+n
+n
+p ret
+n
+p ret
+n
+p ret
+n
+n ret
+p ret
+n
+p ret
+n
+p ret
+n
+p ret
+n
+fin
+n
+c
+bt
+up
+up
+down
+n
+c
+p dev->frames
+n
+p ret
+n
+p ret
+n
+p *dev
+c
+dis 1
+c
+n
+p ret
+k
+y
+target remote 192.168.1.106:5556
+c
+s
+n
+s
+n
+p err
+n
+p err
+p var
+p val
+p dir
+y
+target remote 192.168.1.106:5556
+c
+s
+n
+s
+n
+n
+p changed
+n
+p err
+n
+p mode
+n
+s
+n
+s
+s
+n
+p err
+n
+p err
+n
+p err
+n
+p err
+dis 3
+k
+y
+target remote 192.168.1.106:5556
+c
+en 3
+c
+s
+p *pcm
+n
+s
+p *pcm
+n
+s
+n
+p *hw
+p *params
+s
+n
+n
+p res
+n
+n
+p err
+c
+p *pcm
+s
+n
+s
+p *pcm
+n
+s
+n
+n
+p res
+n
+p err
+c
+p *pcm
+s
+n
+s
+n
+s
+n
+p *hw
+n
+p err
+c
+p *pcm
+s
+n
+s
+n
+s
+n
+p *hw
+fin
+p res
+n
+p res
+n
+c
+n
+p err
+c
+n
+p err
+n
+c
+dis 3
+fin
+n
+p err
+en 3
+c
+p *pcm
+s
+n
+s
+n
+s
+s
+n
+p err
+n
+p err
+n
+n
+s
+p *pcm
+s
+n
+s
+n
+p err
+dis 3
+fin
+en 3
+n
+p err
+c
+p *pcm
+s
+n
+s
+n
+s
+n
+p err
+dis 3
+fin
+en 3
+c
+p *pcm
+s
+n
+s
+n
+s
+n
+dis 3
+c
+p *hw
+p *pcm
+p *params
+p errno
+n
+p err
+p hw->fd
+up
+p params
+p *params
+k
+y
+target remote 192.168.1.106:5556
+dis
+c
+target remote 192.168.1.106:5556
+c
+k
+target remote 192.168.1.106:5556
+c
+c
+k
+y
+q
+b setup_unit
+y
+c
+target remote 192.168.1.106:5556
+c
+n
+p *module
+p *unit
+info b
+condition 2 unit->id == 28
+c
+dis 1
+c
+p *unit
+p *module
+s
+n
+p *core_intf
+n
+s
+n
+p period_size 
+q
+y
+target remote 192.168.1.106:5556
+c
+up
+up
+down
+p msg
+down
+p cmd
+q
+y
+target remote 192.168.1.106:5556
+c
+bt
+up
+p msgid
+p conn
+down
+down
+down
+down
+down
+down
+p conn->fd
+p conn
+p *conn
+down
+down
+q
+y
+q
+p inst
+p *inst
+q
+b adapt_stereo_illusonic
+y
+c
+target remote 192.168.1.106:5556
+c
+bt
+q
+y
+target remote 192.168.1.182:5556
+c
+bt
+up
+k
+y
+target remote 192.168.1.182:5556
+b main
+c
+q
+y
+target remote 192.168.1.182:5556
+b main
+c
+bt
+up
+down
+disassemble $pc
+info registers 
+info b
+del
+y
+k
+y
+target remote 192.168.1.182:5556
+sharedlibrary 
+c
+q
+y
+target remote 192.168.1.106:5556
+c
+q
+y
+target remote 192.168.1.106:5556
+c
+bt
+up
+p cmd
+p value
+p client
+k
+y
+q
+target remote 192.168.1.106:5556
+c
+q
+y
+q
+target remote 192.168.1.106:5556
+c
+c
+c
+c
+q
+y
+target remote 192.168.1.107:5556
+b dive_overlay.c:188
+y
+c
+p io
+p d
+p *io
+p *io[0]
+p *io[1]
+k
+y
+q
+rtarget remote 192.168.1.193:5556
+target remote 192.168.1.193:5556
+c
+bt
+up
+b pcm_dive.c:536
+y
+k
+y
+target remote 192.168.1.193:5556
+c
+k
+y
+q
+target remote 192.168.1.193:5556
+b dive_pcm_printf
+y
+sharedlibrary 
+c
+b dive_set_printf
+target remote 192.168.1.193:5556
+info b
+b dive_set_printf
+y
+c
+k
+y
+q
+target remote 192.168.1.193:5556
+target remote 192.168.1.107:5556
+b dive_recorder.c:85
+y
+sharedlibrary 
+c
+k
+y
+target remote 192.168.1.107:5556
+info b
+c
+q
+y
+q
+q
+target remote 192.168.1.107:5556
+b dive_recorder.c:85
+y
+sharedlibrary 
+c
+p *ctx
+p nio
+n
+n
+info registers 
+c
+info registers 
+n
+p n
+n
+n
+info register
+dis
+c
+q
+target remote 192.168.1.106:5556
+b start_stream(context*) 
+c
+n
+p params
+s
+n
+q
+y
+b start_stream(context*) 
+b start_stream(context*) 
+c
+target remote 192.168.1.106:5556
+c
+n
+s
+n
+s
+p name
+n
+disp dev_desc->name
+n
+p found
+n
+p *dev_desc
+disp
+n
+p ret
+n
+s
+n
+p direction
+n
+n
+p direction
+n
+p dev
+n
+n
+p ret
+n
+p ret
+call strerror(22)
+k
+y
+b start_stream(context*) 
+b start_stream(context*) 
+target remote 192.168.1.106:5556
+c
+n
+del
+c
+y
+c
+k
+y
+target remote 192.168.1.106:5556
+c
+s
+n
+c
+s
+p params
+p *params
+s
+c
+s
+n
+n
+p dir
+p num
+n
+p num
+p dir
+n
+p periods
+n
+n
+p ret
+p dev->frames
+k
+y
+q
+target remote 192.168.1.106:5556
+b PaAlsaStream_HandleXrun
+y
+c
+bt
+up
+p xrun
+p pollPlayback 
+p pollCapture 
+p capturePfds
+p timeouts
+p pollResults 
+target remote 192.168.1.106:5556
+y
+target remote 192.168.1.106:5556
+info b
+c
+up
+p framesAvail 
+p *framesAvail 
+p xrun
+up
+target remote 192.168.1.106:5556
+y
+target remote 192.168.1.106:5556
+c
+up
+p xrun
+p *framesAvail 
+up
+p callbackResult 
+p xrun
+down
+fin
+p xrun
+n
+b stream_cb
+c
+c
+up
+up
+up
+bt
+up
+down
+up
+down
+down
+down
+c
+up
+b PaAlsaStream_WaitForFrames 
+c
+n
+p *self
+n
+p pollPlayback 
+p pollCapture 
+n
+n
+p capturePfds 
+p *self->pfds 
+n
+n
+p pollResults 
+k
+y
+target remote 192.168.1.106:5556
+info b
+del 2
+c
+n
+n
+p totalFds 
+n
+p pollResults 
+n
+n
+s
+n
+p self->pcm
+n
+p result
+p xrun
+p *xrun
+p revents
+p /x revents
+c
+c
+c
+n
+s
+n
+p st
+p *s
+p *st
+n
+p self->overrun 
+n
+n
+s
+n
+p result
+n
+up
+p *framesAvail 
+p framesAvail 
+down
+n
+k
+y
+q
+b fifo_push
+c
+target remote 192.168.1.106:5556
+c
+p size
+p *fifo
+q
+y
+target remote 192.168.1.106:5556
+c
+q
+y
+target remote 192.168.1.106:5556
+c
+p dinfos 
+k
+y
+q
+target remote 192.168.1.106:5556
+c
+up
+down
+down
+p ctx
+up
+p ctx
+k
+y
+target remote 192.168.1.106:5556
+c
+c
+q
+target remote 192.168.1.106:5556
+c
+c
+thread 
+info threads 
+thread 1
+bt
+thread 2
+bt
+k
+y
+target remote 192.168.1.106:5556
+c
+q
+target remote 192.168.1.106:5556
+c
+bt
+q
+y
+target remote 192.168.1.106:5556
+c
+k
+y
+target remote 192.168.1.106:5556
+c
+k
+y
+target remote 192.168.1.106:5556
+c
+up
+k
+y
+q
+c
+target remote 192.168.1.106:5556
+c
+bt
+p *ctx
+down
+bt
+thread 1
+bt
+up
+down
+p *ctx
+up
+p *ctx
+thread 2
+p *ctx
+k
+y
+q
+target remote 192.168.1.129:5556
+c
+up
+p argv[1]
+q
+y
+c
+target remote 192.168.1.129:5556
+c
+target remote 192.168.1.129:5556
+b context_new
+c
+bt
+s
+n
+p ret
+p ctx
+n
+p ctx
+n
+p ctx
+n
+q
+target remote 192.168.1.129:5556
+b FillInDevInfo
+y
+c
+p *deviceHwInfo 
+disp *deviceHwInfo 
+c
+k
+y
+target remote 192.168.1.129:5556
+c
+info disp
+c
+disp *deviceHwInfo 
+c
+k
+y
+target remote 192.168.1.129:5556
+c
+disp *deviceHwInfo 
+c
+k
+y
+target remote 192.168.1.144:5556
+c
+c
+target remote 192.168.1.144:5556
+target remote 192.168.1.129:5556
+c
+disp *deviceHwInfo 
+c
+n
+n
+dis 2
+k
+y
+target remote 192.168.1.129:5556
+c
+k
+y
+target remote 192.168.1.129:5556
+c
+disp *deviceHwInfo 
+c
+n
+s
+n
+p ret
+n
+s
+n
+p ret
+n
+p ret
+n
+p result
+c
+n
+s
+n
+n
+p ret
+n
+p ret
+p name
+up
+target remote 192.168.1.129:5556
+c
+disp *deviceHwInfo 
+c
+k
+y
+target remote 192.168.1.129:5556
+c
+disp *deviceHwInfo 
+c
+c
+dis
+c
+k
+y
+q
+q
+target remote 192.168.1.129:5556
+c
+b InProcessAttachmentReader.cpp :110
+c
+p numBytes 
+p wordSize 
+bt
+up
+up
+up
+infos thread
+infos threads
+info threads 
+down
+info threads 
+down
+down
+up
+p size
+up
+p size
+p m_bytesCopied 
+p bytes
+q
+y
+target remote 192.168.1.129:5556
+c
+bt
+up
+info threads 
+down
+p pollPlayback 
+p pollCapture 
+p *self
+down
+p self->playback
+p *self
+c
+target remote 192.168.1.129:5556
+c
+q
+k
+q
+target remote 192.168.1.106:5556
+b dive_volume.c:151
+y
+sharedlibrary 
+c
+bt
+up
+down
+c
+p *v
+s
+n
+p *ctx
+x /100w ctx->alpha
+x /100d ctx->alpha
+x /100f ctx->alpha
+x /101f ctx->alpha
+x /102f ctx->alpha
+q
+y
+b main
+run
+file dijkstra.cpp 
+y
+n
+q
+b main
+run
+n
+c
+p i
+n
+p v
+n
+p v
+n
+p v
+q
+y
+b main
+y
+run
+c
+file a.out 
+run
+n
+n
+c
+n
+p closed_set 
+p open_set
+n
+p v
+n
+p open_set
+n
+p open_set
+n
+p open_set
+p closed_set 
+n
+p closed_set 
+n
+p open_set
+p current_node 
+n
+p current_node 
+q
+y
+q
+run
+disp open_set
+disp closed_set 
+n
+p it
+n
+n
+p it
+n
+p append
+n
+p it
+n
+p i
+n
+dis
+c
+p current_node
+p i
+up
+p i
+p closed_set 
+q
+y
+run
+disp closed_set 
+disp open_set 
+c
+n
+k
+y
+run
+c
+disp open_set 
+disp closed_set 
+c
+q
+y
+run
+disp closed_set
+disp open_set
+c
+q
+run
+p q
+n
+p q
+n
+p q
+n
+p q
+n
+p q
+n
+p q
+n
+p q
+n
+p q
+n
+q
+y
+run
+s
+n
+p u
+p w
+n
+p m_closedSet 
+p m_openSet 
+n
+p curren
+p current_node 
+p m_closedSet 
+n
+p tmp
+disp m_openSet 
+n
+q
+y
+b ShortestPath::path(int, int) 
+run
+run
+n
+disp m_openSet 
+n
+q
+y
+b ShortestPath::path(int, int) 
+run
+n
+disp m_closedSet 
+disp m_openSet 
+n
+q
+y
+b ShortestPath::path(int, int) 
+disp m_openSet 
+disp m_closedSet 
+run
+n
+disp m_closedSet 
+disp m_openSet 
+c
+run
+y
+n
+p current_node 
+q
+y
+b ShortestPath::path(int, int) 
+run
+n
+disp m_closedSet 
+disp m_openSet 
+n
+p current_node 
+n
+q
+y
+b ShortestPath::path(int, int) 
+run
+disp m_closedSet 
+disp m_openSet 
+n
+p current_node 
+n
+p m_distance 
+n
+p m_distance 
+n
+q
+y
+b ShortestPath::path
+c
+run
+n
+disp m_closedSet 
+disp m_openSet 
+n
+p neighbor
+n
+p current_node 
+n
+p current_distance 
+n
+p neighbor 
+n
+p neighbor 
+n
+p current_distance 
+n
+p new_prio 
+n
+n
+p new_prio 
+n
+p neighbor 
+b changePriority(int, int) 
+run
+y
+c
+p element
+p new_prio 
+p m_queue 
+n
+p it
+n
+p it
+n
+k
+y
+run
+c
+p m_queue 
+up
+p m_openSet 
+p &m_openSet 
+down
+p &m_queue 
+p this
+p *this
+n
+p *this
+up
+p *m_openSet 
+p &m_openSet 
+p m_openSet 
+down
+p m_queue 
+p it
+q
+y
+b changePriority(int, int) 
+run
+n
+p m_openSet 
+q
+y
+q
+b is_connected
+y
+run
+q
+b is_connected() 
+c
+run
+n
+disp close_set
+disp closed_set
+disp open_s
+disp open_set 
+n
+n
+p neighbor 
+n
+p i
+n
+n
+p neighbor 
+p tmp
+n
+p tmp
+n
+q
+y
+q
+run
+disp m_parents 
+n
+p current_node 
+n
+p current_node 
+c
+n
+n
+c
+n
+c
+n
+n
+q
+y
+b is_connected() 
+disp m_parents
+c
+run
+del 2
+c
+disp m_parents 
+c
+q
+y
+c
+run
+disp m_parents 
+b addGraph(Graph const&) 
+k
+y
+run
+n
+p m_parents 
+p m_parents.size()
+n
+q
+y
+c
+disp m_pare
+disp m_parents
+p m_parents
+c
+run
+disp m_parents
+c
+c
+q
+y
+run
+disp m_parents 
+c
+q
+y
+b path_print(int) 
+run
+p w
+p m_parents[w]
+n
+q
+y
+run
+run
+disp m_parents 
+p neighbor 
+p current_node 
+n
+c
+p neighbor 
+n
+p neighbor 
+p m_closedSet 
+n
+n
+c
+c
+c
+dis
+c
+q
+q
+q
+b main
+run
+s
+disp m_matrix 
+n
+q
+y
+b main
+run
+s
+disp m_matrix 
+n
+run
+del
+y
+b Graph::Graph(int) 
+run
+y
+n
+q
+y
+b Graph::Graph(int) 
+run
+disp m_matrix
+n
+fin
+run
+y
+c
+q
+y
+c
+run
+p graph.m_matrix
+q
+y
+c
+run
+p graph.m_matrix 
+q
+y
+b neighbors(int, std::vector<int, std::allocator<int> >) const 
+run
+p u
+disp neighbors 
+n
+n
+q
+y
+b neighbors(int, std::vector<int, std::allocator<int> >) const 
+run
+n
+disp neighbors 
+n
+fin
+p neighbors 
+q
+y
+b isConnected() const 
+run
+n
+disp closedSet 
+disp openSet 
+n
+n
+n
+run
+c
+run
+y
+n
+q
+y
+run
+p m_elements 
+p pq.m_elements 
+disp pq.m_elements 
+disp pq.m_priorities 
+n
+c
+p i
+p j
+dis 1
+c
+c
+q
+b minPriority() 
+run
+disp m_elements 
+disp m_priorities 
+n
+q
+y
+b process() const 
+run
+run
+n
+p edges
+n
+p edges
+n
+p edges
+n
+p edges
+run
+y
+run
+run
+run
+run
+run
+run
+run
+n
+s
+n
+n
+p i
+p j
+n
+p j
+n
+disp m_matrix[i][j]
+n
+disp i
+disp j
+n
+p m_matrix
+q
+y
+b process
+run
+run
+n
+p edges
+q
+y
+b process
+run
+run
+run
+run
+run
+run
+run
+run
+n
+p edges
+q
+y
+b process
+run
+n
+disp m_edges 
+n
+n
+q
+y
+b process
+run
+run
+run
+run
+run
+n
+c
+p m_edges 
+n
+p currentEdge 
+p m_closedSet 
+n
+s
+q
+y
+b process
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+c
+n
+p currentEdge 
+n
+q
+y
+b process
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+c
+n
+p currentEdge 
+disp currentEdge 
+disp m_closedSet 
+n
+p mst
+p m_closedSet 
+c
+run
+run
+info b
+c
+p m_edges.size()
+n
+n
+n
+n
+q
+y
+b process
+run
+c
+n
+p currentEdge 
+n
+s
+n
+s
+p m_closedSet 
+p m_closedSet.size()
+n
+p i
+n
+c
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+c
+n
+p currentEdge 
+n
+s
+n
+p i
+p m_closedSet.size()
+info registers 
+n
+info registers 
+n
+n
+q
+y
+b process
+run
+ru
+run
+run
+run
+run
+run
+c
+n
+q
+y
+b process
+run
+run
+run
+run
+c
+n
+p currentEdge 
+n
+disp m_closedSet 
+disp currentEdge 
+n
+p m_edges.size()
+p tmp.size()
+q
+y
+q
+q
+b process
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+c
+disp mst
+c
+disp currentEdge 
+c
+q
+b process() 
+run
+run
+c
+disp currentEdge 
+p m_edges 
+n
+q
+y
+b Prim::process() 
+run
+n
+disp closedSet 
+disp openSet
+n
+p tmp
+n
+n
+p nextn
+p nextNode 
+n
+n
+s
+n
+p u
+p v
+p w
+up
+p nextNode 
+q
+y
+b Prim::process() 
+run
+n
+disp closedSet 
+disp openSet 
+n
+n
+c
+n
+p nextNode 
+n
+p dist
+n
+p dist
+n
+p mst
+c
+p currentNode 
+n
+n
+p tmp
+n
+p tmp
+n
+p currentNode 
+n
+p it
+p neighbor 
+run
+y
+run
+run
+run
+run
+run
+y
+n
+p currentNode 
+n
+p neighbor 
+n
+p neighbor 
+n
+p currentNode 
+n
+p neighbor 
+n
+p neighbor 
+n
+n
+p nextNode 
+n
+p currentNode 
+p nextNode 
+n
+p currentNode 
+n
+p neighbor 
+n
+p neighbor 
+n
+p neighbor 
+n
+n
+n
+p currentNode 
+n
+p currentNode 
+n
+p neighbor 
+n
+p neighbor 
+n
+q
+y
+run
+run
+run
+up
+p currentNode 
+p neighbor 
+p dist
+p openSet 
+p currentNode 
+p nextNode o
+p nextNode 
+p tmp
+p neighbor 
+p dist
+down
+p u
+p w
+p m_matrix[u][w]
+p m_matrix 
+up
+p m_graph 
+q
+y
+b changePriority(int, int) 
+run
+p element
+p new_prio 
+p m_queue
+p m_elements 
+p m_priorities 
+n
+p i
+n
+n
+p m_elements 
+p m_priorities 
+q
+y
+b Prim::process() 
+run
+n
+p currentNode 
+disp closedSet 
+disp openSet 
+n
+p dist
+n
+p currentNode 
+n
+p dist
+n
+p currentNode 
+n
+p neighbor 
+n
+p dist
+n
+p currentNode 
+n
+p neighbor 
+n
+p i
+n
+p neighbor 
+n
+p dist
+n
+p mst
+n
+p currentn
+p currentNode 
+n
+p neighbor 
+n
+p currentNode 
+n
+p neighbor 
+n
+p neighbor 
+n
+p i
+n
+p currentNode 
+n
+p currentNode 
+p nextNode 
+n
+p dist
+n
+q
+y
+b PaAlsaStream_HandleXrun
+n
+b Prim::process() 
+run
+n
+disp closedSet 
+disp openSet 
+n
+p currentNode 
+n
+disp parentSet 
+n
+q
+y
+b Graph::Graph(char const*) 
+run
+p m_graph
+p this
+p *this
+q
+y
+b Graph::Graph(char const*) 
+run
+n
+p n
+n
+p m_matrix 
+n
+c
+p m_matrix 
+n
+s
+q
+y
+b graph.cpp: 32
+c
+run
+n
+p u
+p w
+n
+p line
+q
+n
+b main
+run
+n
+p graph
+n
+nq
+q
+y
+b main
+run
+s
+n
+p n
+c
+p m_matrix 
+p this
+p *this
+q
+y
+b main
+n
+run
+s
+s
+n
+p this
+p *this
+s
+n
+p size
+p m_graph 
+s
+n
+up
+down
+c
+bt
+up
+down
+p m_graph 
+q
+y
+b buildGraph() 
+run
+n
+disp i
+n
+p m_boardSize 
+n
+q
+y
+b addMove(int, int, Color) 
+run
+B
+B
+q
+y
+file hex
+b addMove(int, int, Color) 
+run
+p *this
+n
+p *this
+p row
+p col
+n
+p *this
+n
+p *this
+n
+c
+p *this
+q
+y
+target remote 192.168.1.106:5556
+c
+bt
+up
+q
+y
+target remote 192.168.1.106:5556
+b dive_read_integer
+y
+run
+c
+bt
+up
+q
+y
+target remote 192.168.1.106:5556
+b pcm_dive.c:637
+y
+c
+n
+p *dive
+n
+p dive->period_size 
+q
+y
+b pcm_dive.c:637
+y
+target remote 192.168.1.106:5556
+c
+n
+p ret
+n
+p attr
+n
+threads
+info threads
+n
+thread 2
+n
+b dive_pomp_loop 
+k
+y
+target remote 192.168.1.106:5556
+c
+c
+n
+n
+c
+bt
+k
+y
+target remote 192.168.1.106:5556
+c
+c
+n
+s
+n
+c
+bt
+info threads
+thread 2
+bt
+up
+q
+y
+c
+target remote 192.168.1.106:5556
+c
+infos threads
+info threads 
+thread 2
+up
+b pomp_ctx_process_fd
+thread 1
+up
+c
+k
+y
+q
+c
+target remote 192.168.1.106:5556
+c
+info threads 
+thread 2
+up
+b pomp_ctx_process_fd
+c
+q
+target remote 192.168.1.106:5556
+b pony_alsa_probe
+y
+c
+up
+down
+p *plug
+up
+k
+y
+q
+c
+target remote 192.168.1.180:5556
+run
+c
+target remote 192.168.1.180:5556
+c
+b tInfo
+y
+c
+set solib-absolute-prefix staging/
+b Devialet::TellMeMore::Logging::MessageLogger
+y
+c
+target remote 192.168.1.180:5556
+c
+bt
+info b
+sharedlibrary 
+c
+bt
+up
+c
+c
+set solib-search-path 
+set solib-absolute-prefix 
+set solib-absolute-prefix staging/
+sharel
+sharedlibrary 
+target remote 192.168.1.180:5556
+c
+info b
+c
+b Player.cpp:144
+c
+c
+c
+target remote 192.168.1.180:5556
+c
+bt
+up
+down
+s
+s
+del
+y
+b MessageLogger.cpp:14
+target remote 192.168.1.180:5556
+c
+target remote 192.168.1.180:5556
+y
+q
+n
+b MessageLogger.cpp:14
+y
+target remote 192.168.1.180:5556
+c
+target remote 192.168.1.180:5556
+b MessageLoggerPrivate.cpp:10
+y
+c
+c
+c
+target remote 192.168.1.180:5556
+c
+info b
+c
+q
+y
+target remote 192.168.1.180:5556
+c
+c
+up
+up
+bt
+up
+k
+y
+q
+target remote 192.168.1.180:5556
+b Daemon.cpp:74
+c
+b Daemon.cpp:37
+del 1
+c
+bt
+down
+s
+s
+s
+s
+s
+n
+n
+c
+up
+down
+s
+s
+n
+c
+s
+n
+b MessageLogger::MessageLogger
+y
+c
+c
+c
+c
+c
+c
+c
+c
+c
+b Devialet::TellMeMore::Logging::MessageLogger
+y
+c
+sharedlibrary 
+c
+s
+c
+s
+k
+y
+target remote 192.168.1.180:5556
+c
+s
+s
+disassemble $pc
+c
+disassemble $pc
+si
+si
+si
+disassemble $pc
+b 0x00012a28
+n
+info symbol 0x00012a28
+b *0x00012a28
+c
+disassemble $pc
+c
+info b
+k
+y
+q
+target remote 192.168.1.180:5556
+k
+y
+q
+target remote 192.168.1.180:5556
+set sysroot staging 
+b Devialet::TellMeMore::Logging::MessageLogger::MessageLogger(char const*, int, char const*, Devialet::TellMeMore::Logging::Category&, Devialet::TellMeMore::Logging::LogLevel)
+c
+disassemble $pc
+s
+disassemble $pc
+s
+c
+s
+c
+s
+c
+s
+q
+y
+target remote 192.168.1.193:5556
+c
+bt
+up
+p ret
+up
+down
+p *dive
+k
+y
+q
+target remote 192.168.1.193:5556
+c
+up
+p *deviceInfos 
+p *deviceHwInfo 
+up
+up
+k
+y
+q
+b main
+run
+q
+y
+b main
+run
+n
+p data_vec 
+n
+p q
+n
+p q
+n
+q
+y
+b main
+run
+n
+p data
+n
+n
+p data
+n
+q
+y
+b main
+run
+n
+p list
+p data
+n
+p foobar
+n
+p foobar 
+p *foobar
+n
+disp data
+n
+q
+y
+b evaluatePosition(int, Color) const 
+run
+B
+q
+y
+b main
+run
+n
+s
+n
+up
+p size
+up
+q
+y
+b main
+run
+b computerPlays() 
+c
+n
+p subNodes 
+n
+p freeNodes 
+n
+p nbNodes 
+n
+disp subNodes 
+n
+run
+y
+c
+n
+q
+y
+run
+up
+down
+p subNodes 
+q
+y
+target remote 192.168.1.106:5556
+c
+up
+down
+p state
+p c
+p *c
+p ctx
+p *ctx
+up
+down
+up
+p ctx
+p *ctx
+down
+up
+p *ctx
+down
+p c
+p *c
+down
+down
+p g
+p *g
+p *ctx
+up
+up
+q
+y
+target remote 192.168.1.106:5556
+b main
+c
+k
+y
+q
+target remote 192.168.1.106:5556
+b main
+c
+n
+s
+n
+p *ctx
+n
+s
+n
+p *mngr
+n
+n
+s
+n
+s
+n
+n
+target remote 192.168.1.106:5556
+c
+n
+s
+n
+s
+n
+k
+y
+target remote 192.168.1.106:5556
+c
+n
+s
+n
+s
+n
+s
+n
+p *mngr
+p *net
+n
+q
+y
+target remote 192.168.1.106:5556
+c
+up
+k
+y
+target remote 192.168.1.106:5556
+c
+k
+y
+target remote 192.168.1.106:5556
+b control_publisher_new
+c
+n
+p *lngr
+p *mngr
+n
+s
+p aloop
+p *aloop
+s
+n
+p avahi_client_cb 
+c
+b watch_new
+k
+y
+target remote 192.168.1.106:5556
+c
+c
+bt
+up
+down
+n
+p *aloop
+n
+p w
+p *w
+n
+p fd
+n
+p events
+n
+p callback 
+n
+p userdata 
+n
+p w
+n
+p avahi_watch 
+p *avahi_watch 
+k
+y
+q
+target remote 192.168.1.106:5556
+c
+bt
+up
+p *net
+down
+info symbol 0x276a0
+k
+y
+target remote 192.168.1.106:5556
+c
+up
+down
+p *net
+p *userdata
+b control_net_start_listen
+k
+y
+b control_net_start_listen
+c
+r
+run
+target remote 192.168.1.106:5556
+c
+p *cbs
+info symbol 0x276a0
+up
+p ctx
+down
+up
+p net_cbs
+p ctx
+p *ctx
+p net_cbs
+p pub_cbs
+q
+y
+target remote 192.168.1.106:5556
+c
+up
+p *ctx
+p *ctx->mngr
+k
+y
+target remote 192.168.1.106:5556
+c
+up
+p *ctx->mngr
+c
+up
+p *ctx->mngr
+c
+q
+y
+target remote 192.168.1.106:5556
+c
+up
+p *ctx->mngr 
+c
+p *ctx->mngr 
+up
+up
+p *ctx->mngr 
+c
+up
+p *ctx->mngr 
+c
+q
+y
+target remote 192.168.1.157:5556
+c
+up
+q
+y
+target remote 192.168.1.157:5556
+b service_added 
+c
+p disc
+p *disc
+p name
+p type
+p addr
+p port
+up
+p port
+p htonl(port)
+p txtdata 
+down
+q
+y
+target remote 192.168.1.157:5556
+b service_added 
+c
+p port
+p htons(port)
+p htons(2242)
+q
+y
+b service_added
+c
+run
+n
+s
+n
+p dev
+s
+n
+p *mngr
+n
+p device
+n
+p item
+n
+p dev
+p *dev
+p *ctx->mng
+p *ctx->mngr 
+k
+y
+run
+n
+s
+n
+s
+n
+p device
+p item
+n
+p item
+p *mngr
+p *item
+q
+u
+y
+q
+b control_mngr_get_next_device
+run
+p devices
+n
+p dev
+n
+s
+n
+p *device
+p *mngr
+s
+p item->next
+p list
+n
+pdev
+p dev
+n
+c
+up
+q
+y
+b control_mngr_get_next_device
+ru
+n
+s
+n
+s
+p item
+p *item 
+p item->next
+p list
+s
+p item
+s
+p dev
+n
+c
+bt
+dis
+c
+q
+y
+q
+b control_mngr_get_next_device
+c
+run
+c
+n
+p device
+c
+p device
+n
+n
+p *dev
+n
+s
+n
+s
+p item->next
+q
+y
+run
+up
+p *disc->mngr
+down
+down
+down
+q
+y
+run
+q
+run
+up
+p *ctx->mngr
+down
+p *net
+q
+y
+b control_mngr_clear_devices_of_type
+y
+run
+p *ngr
+p *mngr
+n
+p *dev
+n
+s
+n
+s
+n
+p dev
+p *dev
+n
+p *dev
+n
+p *dev
+n
+p *dev
+* mngr
+p *mngr
+n
+p *dev
+p *mngr
+n
+p *mngr
+n
+c
+p *mngr
+n
+up
+q
+y
+q
+run
+up
+p *mngr
+p *ctx->mngr
+c
+p *ctx->mngr
+up
+p *ctx->mngr
+c
+q
+y
+run
+up
+down
+p dev
+p *dev
+q
+y
+run
+up
+q
+y
+run
+up
+p dev
+p type
+up
+down
+p name
+p type
+p *disc->mngr
+down
+p *dev
+q
+y
+run
+up
+p *ctx->mngr
+c
+p *ctx->mngr
+up
+p *ctx->mngr
+q
+y
+run
+up
+p *mngr
+p *ctx->mngr
+c
+q
+y
+attach 16349
+up
+down
+up
+p a
+p *a.m_manager 
+p w
+p w.ui
+p *w.ui
+q
+y
+target remote 192.168.1.157:5556
+c
+up
+down
+p n
+p max_chans 
+p map[n]
+p map
+k
+y
+q
+target remote 192.168.1.157:5556
+b src_areas_to_buffer
+y
+c
+s
+n
+p map
+n
+k
+y
+target remote 192.168.1.157:5556
+c
+n
+p dive->chainin
+p dive->chanin
+n
+p map
+n
+p map
+n
+disp n
+disp map[n]
+n
+p dive->ext.channels
+q
+y
+b network_send 
+run
+b net_listen_parse_command 
+c
+n
+p peer
+p *peer
+n
+p msgid
+up
+p msg
+p *msg
+down
+q
+y
+run
+bt
+up
+down
+bt
+q
+y
+target remote 192.168.1.157:5556
+target remote 192.168.1.147:5556
+c
+up
+down
+down
+up
+p *peer
+p userdata
+p *ctx
+p command
+k
+y
+target remote 192.168.1.147:5556
+c
+up
+bt
+up
+down
+p msg
+p *msg
+down
+down
+p control_peer_get_addr(peer)
+p control_cmd_to_str(command)
+p command
+q
+y
+b dive_spllim.c:108
+c
+run
+b main
+run
+n
+q
+y
+b main
+y
+run
+file tcandy
+run
+n
+p fpin
+p fpout
+n
+p argv[0]
+p argv[1]
+p argv[2]
+q
+y
+b ain
+b main
+y
+file tcandy 
+run
+p argc
+p argv[[0]
+p argv[[0]
+p argv[0]
+p argv[1]
+p argv[2]
+q
+y
+b main
+run
+n
+n
+s
+n
+s
+p ctx->units 
+p *ctx
+p *ctx->units[0]
+p ctx->units[0]
+p ctx->units[1]
+p ctx->units[2]
+n
+s
+n
+s
+n
+p *ctx
+p scratch
+x /32fb scratch
+x /32f scratch
+n
+fin
+n
+p spllim_config 
+b *ctx
+del 2
+p *ctx
+q
+y
+b dive_loudness:205
+y
+run
+b main
+run
+n
+s
+n
+n
+c
+p *unit
+c
+c
+p *unit
+s
+n
+p fd
+n
+p rùs
+p rùms
+p *rms
+p rms
+n
+q
+y
+q
+b dive_pipeline_inquiry 
+run
+n
+s
+n
+p ctx
+n
+p mem_ptr
+p *ctx
+n
+p uifs
+p uids 
+n
+p nunits 
+n
+s
+s
+n
+p is_ctx 
+n
+s
+n
+p *ctx
+n
+p mchanin 
+p /x mchanin 
+p *mbufs 
+n
+p mchanout 
+p *mbufs 
+n
+p mem_ptr 
+p z
+n
+p mem_ptr 
+n
+s
+n
+s
+n
+p nbiquads 
+n
+p *ctx_size 
+n
+p *ctx_size 
+n
+p ctx
+p *ctx
+n
+p *ctx
+n
+n
+p n0
+n
+p nio
+p nbufs 
+p n1
+n
+n
+p z
+p mem_ptr 
+n
+n
+p bufs
+p nbufs 
+n
+p mem_ptr 
+p ctx
+n
+p ret
+p *ctxx_s
+p *ctx_size 
+n
+p *ctx_size 
+n
+n
+q
+y
+b dive_smooth2_i 
+run
+up
+down
+p smooth
+p *smooth
+q
+y
+q
+b dive_loudness.c:136
+run
+q
+y
+b dive_loudness.c:136
+run
+p *alpha
+n
+p *alpha
+q
+y
+q
+b peakamp_process
+run
+p *peakamp
+n
+p *peakamp
+n
+n
+p g
+dis 1
+c
+p *peakamp
+n
+p *peakamp
+n
+p *peakamp
+n
+p *peakamp
+s
+n
+c
+condition 2 s > 0.001
+c
+p s
+p *peakamp
+n
+p *peakamp
+n
+p *peakamp
+n
+p g
+n
+p thres
+q
+y
+c
+target remote 192.168.1.147:5556
+target remote 192.168.1.143:5556
+run
+c
+k
+y
+target remote 192.168.1.143:5556
+c
+up
+p *dive
+p ret
+down
+k
+y
+q
+target remote 192.168.1.143:5556
+c
+up
+q
+y
+target remote 192.168.1.143:5556
+c
+up
+q
+y
+target remote 192.168.1.143:5556
+c
+up
+q
+y
+c
+target remote 192.168.1.143:5556
+target remote 192.168.1.144:5556
+c
+up
+p *ctx
+p *ctx
+p *ctx
+p *_ctx
+up
+up
+p *dive
+p *dive->axee 
+up
+up
+up
+up
+up
+b dive_pipeline_setup
+b dive_pipeline_inquiry
+k
+y
+target remote 192.168.1.144:5556
+c
+c
+c
+p unit
+up
+up
+k
+y
+target remote 192.168.1.144:5556
+c
+c
+c
+bt
+up
+up
+up
+p *dive->axee 
+down
+p *axee
+down
+p ctx
+p *ctx
+p ctx->uids
+p *_ctx
+k
+y
+k
+y
+target remote 192.168.1.144:5556
+c
+dis
+c
+q
+target remote 192.168.1.144:5556
+c
+up
+down
+p *ctx
+b dive_axee_initialize
+k
+y
+target remote 192.168.1.144:5556
+c
+p *_ctx 
+up
+p *dive
+down
+p _ctx
+p *_ctx
+p period_
+p period_size 
+p sample
+p sample_rate 
+up
+p dive->rate
+down
+p format
+p sample_rate 
+up
+down
+n
+p rerty
+p rert
+p ret
+p ctx_size 
+k
+y
+target remote 192.168.1.144:5556
+c
+s
+s
+p period_size 
+n
+up
+down
+p *ctx
+p *pipeline 
+p period_
+p period_size 
+p fd
+p fs
+n
+p nunits 
+n
+up
+c
+p nunits 
+nc
+c
+up
+info thread s
+info threads
+target remote 192.168.1.144:5556
+c
+c
+p mchanout 
+n
+k
+y
+target remote 192.168.1.144:5556
+c
+c
+c
+n
+n
+n
+p ctx_size 
+p *ctx_size 
+n
+p ret
+n
+p ret
+n
+p ctxx_s
+p ctx_size 
+n
+s
+n
+c
+n
+p nbufs 
+n
+c
+n
+c
+p ctx_size 
+n
+p *ctx
+n
+p *_ctx
+p *_ctx->dive_ctx 
+n
+c
+q
+target remote 192.168.1.144:5556
+c
+up
+k
+y
+q
+b main
+run
+n
+q
+b main
+run
+n
+s
+n
+s
+n
+p nchanin 
+p nchanout 
+n
+p uid
+p *uid
+n
+p ret
+n
+run
+y
+n
+s
+n
+s
+n
+s
+n
+p *module
+n
+p config
+n
+p *ctx
+p *unit
+q
+y
+b main
+run
+n
+q
+b main
+run
+n
+q
+b main
+run
+n
+p argc
+n
+p *ctx
+q
+y
+q
+b main
+q
+b main
+run
+c
+up
+p *ctx
+down
+p *ctx
+up
+down
+p _ctx
+p *_ctx
+b dive_axee_initialize
+run
+y
+c
+n
+p ret
+n
+n
+p ctx
+n
+n
+p *_ctx
+n
+n
+p *ctx
+q
+y
+b main
+run
+n
+q
+y
+b main
+run
+n
+q
+y
+b main
+run
+n
+q
+b main
+c
+run
+b dive_recorder.c:81
+c
+p nio
+n
+p *ctx
+n
+q
+y
+b main
+run
+q
+y
+b dive_pipeline_inquiry 
+run
+n
+s
+n
+p mem_ptr 
+p *ctx
+p nunits 
+p ctx->nunits 
+n
+p uids
+n
+p uid
+p mem_ptr 
+s
+n
+p *module
+n
+n
+s
+n
+p *config
+p nbiquads 
+n
+p ctx_size 
+p *ctx_size 
+n
+p mbufs 
+p *mbufs 
+p mchanin 
+p /x mchanin 
+n
+p ctx
+p *ctx
+n
+p is_ctx 
+n
+p *ctx
+n
+p *nio
+n
+p *nbufs 
+p *unit
+p mchanout 
+n
+p nio
+p n0
+n
+p n1
+p nbufs 
+n
+p mem_ptr 
+p z
+n
+p mem_ptr
+n
+p nbufs
+n
+p mem_ptr
+n
+p ctx_size
+p *ctx_size
+p memp_tr
+p mem_ptr
+p ctx
+n
+p ret
+p *ctx_size 
+n
+p *ctx_size 
+p ret
+n
+p ctx_size
+q
+y
+b dive_pipeline_inquiry 
+c
+run
+n
+s
+n
+p nbufs 
+p mbufs
+n
+p mem_ptr
+n
+p uids
+p uids[0]
+p uids[1]
+n
+p nunits 
+n
+p uid
+s
+n
+p *ctx
+n
+p *nio
+n
+p *nbufs 
+n
+p nio
+p n0
+n
+p nbufs 
+n
+p nbufs 
+p mdata
+n
+p mem_ptr
+n
+p ctx_size
+p *ctx_size
+n
+p *ctx_size
+n
+n
+x /32w context
+x /32xw context
+p ctx_size
+p ctx_size*2
+x /1984xw context
+x /1984xb context
+p ctx_size/2
+x /496xw context
+x /497xw context
+n
+x /497xw context
+n
+x /497xw context
+p argv[0]
+p argv[1]
+q
+y
+n
+b main
+ru
+n
+p ctx_size
+n
+x /497xw context
+p ctx_size
+x /992xb context
+b dive_pipeline_inquiry 
+run
+y
+n
+c
+n
+s
+n
+s
+n
+b dive_eq.c:42
+run
+y
+c
+c
+n
+p *ctx_size
+p sizeof(struct dive_module_context)
+p sizeof(dive_biquad_t)
+p nbiquads 
+p sizeof(dive_biquad_t)
+n
+fin
+fin
+fin
+n
+p ctx_size
+n
+x /994xb context
+x /998xb context
+p ctx_size
+p ctx_size*2
+x /1985xb context
+n
+fin
+fin
+fin
+fin
+x /1985xb context
+p ctx_siz
+p ctx_size
+p ctx_size/2
+n
+x /1985xb context
+c
+x /1985xb context
+p ctx_size
+q
+y
+n
+b main
+run
+n
+p ctx_size
+n
+x /1985xb context
+p ctx_size*2
+x /1376xb context 
+x /1377xb context 
+p ctx_size
+q
+y
+b dive_pipeline.c:350
+run
+p bufs
+p nbufs
+p period_size 
+p  nbufs * (1 + period_size)
+p bufs + nbufs * (1 + period_size)
+q
+y
+b main
+target remote 192.168.1.157:5556
+c
+n
+p command_op
+p command_ops
+n
+b pup_set_format
+c
+k
+y
+q
+b dive_dump
+y
+target remote 192.168.1.157:5556
+c
+b dive_axee_print_sha1
+c
+s
+n
+q
+y
+target remote 192.168.1.157:5556
+b dive_init_sha1
+c
+y
+c
+s
+n
+s
+p ret
+q
+y
+b main
+target remote 192.168.1.157:5556
+target remote 192.168.1.175:5556
+c
+b pup_tx_send 
+c
+n
+p sz
+q
+y
+target remote 192.168.1.175:5556
+b pup_tx_send 
+y
+c
+n
+p ret
+p buffer
+n
+p sz
+n
+p sz
+n
+p ret
+n
+n
+p ret
+n
+p pup->cmd
+c
+up
+down
+n
+p ret
+n
+p sz
+n
+p sz
+n
+p ret
+n
+p ret
+n
+n
+p pup ->cmd
+p pup->answer
+n
+p ret
+n
+q
+y
+target remote 192.168.1.157:5556
+b dive_axee_initialize
+y
+c
+p *_ctx
+up
+down
+up
+k
+y
+q
+target remote 192.168.1.157:5556
+b main
+c
+n
+s
+n
+s
+s
+n
+p sv
+p *sv
+n
+p storage
+p adb_external_storage 
+n
+p server_port 
+n
+q
+y
+target remote 192.168.1.102:5556
+b main
+c
+n
+b usb_init
+c
+up
+down
+n
+n
+p dummy_fd 
+n
+s
+n
+p *h
+n
+p fd
+n
+s
+fi
+fin
+info threads 
+thread 2
+n
+info thread 
+thread 3
+bt
+thread 1
+n
+k
+y
+q
+target remote 192.168.1.102:5556
+target remote 192.168.1.157:5556
+c
+bt
+up
+b pomp_ctx_process_fd
+c
+c
+c
+c
+c
+c
+q
+y
+target remote 192.168.1.157:5556
+c
+bt
+up
+down
+info threads 
+thread 2
+bt
+up
+p dive
+p *dive
+q
+y
+target remote 192.168.1.157:5556
+c
+bt
+up
+k
+y
+target remote 192.168.1.157:5556
+b set_params 
+c
+n
+b snd_pcm_hw_params_any
+c
+s
+n
+s
+fin
+s
+s
+fin
+s
+fin
+n
+fin
+s
+info registers 
+n
+s
+n
+s
+s
+n
+q
+y
+b main
+c
+run
+n
+n
+s
+n
+s
+n
+s
+n
+p nio
+p *ctx
+p *ctx->chan
+n
+b dive_setup_delay
+k
+y
+run
+c
+up
+p buffer
+p *config
+s
+n
+p count
+n
+p buffer
+n
+n
+p *delay
+q
+y
+b dive_setup_delay
+y
+run
+n
+p *delay
+n
+p *delay
+c
+up
+up
+down
+k
+y
+run
+c
+n
+up
+p *chan
+q
+y
+b dive_setup_delay
+y
+run
+n
+p *delay
+x /144w delay->buffer
+x /144xw delay->buffer
+p buffer
+x /144fw
+q
+y
+b dive_setup_delay
+y
+run
+n
+x /144fw
+x /144fw buffer
+x /145fw buffer
+up
+p count
+n
+p buffer
+p ctx
+p sizeof(struct dive_channel_context )
+p delay_count
+q
+y
+run
+b dive_setup_delay
+run
+y
+n
+p *delay
+n
+p *delay
+up
+p sizeof(struct dive_module_context)
+q
+y
+b dive_setup_delay
+y
+c
+run
+n
+p *delay
+n
+p *delay
+x /145fw buffer
+c
+q
+target remote 192.168.1.157:5556
+run
+c
+bt
+up
+down
+p pipeline
+p *pipeline
+down
+b client.c:405
+k
+y
+run
+target remote 192.168.1.157:5556
+run
+c
+info b
+b join_session
+k
+y
+target remote 192.168.1.157:5556
+c
+sharedlibrary 
+c
+info b
+del 2
+info b
+c
+k
+y
+target remote 192.168.1.157:5556
+c
+up
+p pipeline
+k
+y
+target remote 192.168.1.157:5556
+c
+up
+p pipeline
+k
+y
+target remote 192.168.1.157:5556
+c
+up
+p pipeline
+p *pipeline
+k
+y
+target remote 192.168.1.157:5556
+c
+up
+p *ctx
+p *rtpbin
+p rtpbin
+p session
+p ssrc
+p udata
+del
+y
+k
+y
+target remote 192.168.1.157:5556
+c
+k
+y
+q
+target remote 192.168.1.143:5556
+c
+bt
+up
+down
+p _ctx
+p *_ctx
+up
+p *dive
+b src_areas_to_buffer
+down
+down
+k
+y
+target remote 192.168.1.143:5556
+c
+s
+p map
+n
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+p map
+n
+p map
+n
+n
+p map[n]
+n
+p map[n]
+p n
+n
+p n
+p map[2]
+p map[n]
+n
+p sample
+n
+fin
+n
+c
+c
+c
+c
+sid
+dis
+c
+k
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+b dive_common_close 
+k
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+p *dive
+down
+p *_ctx
+p *_ctx->product
+p *_ctx->dive_ctx
+k
+y
+target remote 192.168.1.143:5556
+c
+k
+y
+target remote 192.168.1.143:5556
+c
+p n
+p i
+p map[n]
+k
+y
+target remote 192.168.1.143:5556
+c
+q
+y
+target remote 192.168.1.101:5556
+target remote 192.168.1.199:5556
+b main
+c
+n
+p *cfg
+n
+s
+s
+n
+p *cgi
+n
+p type
+n
+s
+n
+p servo
+n
+p *c
+n
+p tmp
+n
+p timestamp
+p timestamping
+n
+p iface
+p *iface
+n
+p *iface
+n
+p *iface
+p required_modes
+p /x required_modes
+q
+y
+target remote 192.168.1.199:5556
+c
+up
+up
+p audiorate
+p *audiorate
+down
+down
+p name
+o *obje
+p *object
+p first_property_name 
+k
+y
+q
+target remote 192.168.1.199:5556
+c
+target remote 192.168.1.199:5556
+c
+bt
+p argc
+p fd
+up
+k
+y
+target remote 192.168.1.199:5556
+c
+y
+bt
+up
+down
+c
+k
+y
+target remote 192.168.1.199:5556
+c
+bt
+up
+b main
+target remote 192.168.1.199:5556
+y
+target remote 192.168.1.199:5556
+c
+n
+p ret
+p path
+n
+p fd
+n
+p timerfd
+n
+s
+n
+b timer_callback 
+c
+n
+p value
+n
+p fd
+p value
+p &value
+k
+y
+target remote 192.168.1.199:5556
+c
+c
+n
+dis
+c
+k
+y
+q
+b main
+c
+target remote 192.168.1.143:5556
+c
+s
+b liszt_config_init 
+c
+n
+p *self
+n
+disp file
+n
+p ret
+n
+p ret
+p *self->kfile 
+n
+k
+y
+target remote 192.168.1.143:5556
+c
+p *self->kfile
+n
+p *self->kfile
+q
+y
+target remote 192.168.1.143:5556
+b main
+b liszt_config_init 
+c
+s
+s
+n
+p *self
+p *self->keyfile
+p *self->kfile
+n
+p *config_file_list 
+n
+p *self->kfile
+n
+p *self->kfile
+b liszt_config_dispose
+n
+k
+y
+b liszt_config_dispose
+y
+c
+target remote 192.168.1.143:5556
+c
+c
+c
+n
+p *seld
+p *self
+n
+p *self
+s
+n
+fin
+n
+fin
+p *config
+n
+q
+y
+target remote 192.168.1.143:5556
+b setup_ghost_src 
+b liszt_server_finalize 
+c
+n
+p *src_pad
+p *bin_pad 
+n
+p *bin_pad 
+n
+p *bin_pad 
+c
+n
+s
+n
+p *session
+p *session->input
+n
+q
+y
+target remote 192.168.1.143:5556
+b liszt_audio_session_new 
+c
+bt
+up
+down
+b liszt_audio_session_init
+n
+down
+up
+down
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+p *self
+k
+y
+target remote 192.168.1.143:5556
+b liszt_audio_session_constructed 
+c
+c
+c
+n
+p *self
+n
+fin
+fin
+n
+fin
+n
+c
+c
+c
+c
+dis
+c
+bt
+j
+k
+t
+y
+q
+b liszt_server_init
+target remote 192.168.1.143:5556
+c
+n
+p *self
+k
+y
+q
+target remote 192.168.1.143:5556
+b install_net_clock 
+c
+bt
+n
+p *net_clock
+n
+p *net_clock
+n
+p *net_clock
+n
+p id
+pd *id
+p *id
+n
+n
+p *net_clock
+c
+p *net_clock
+n
+p *net_clock
+n
+ky
+k
+y
+target remote 192.168.1.143:5556
+c
+n
+p *net_clock
+x net_clock
+c
+p *(GstClock *) 0xff6b8
+n
+x net_clock
+n
+p *net_clock
+c
+p *(GstClock *) 0xff6b8
+thread 
+info threads 
+k
+y
+q
+target remote 192.168.1.199:5556
+c
+b main
+target remote 192.168.1.199:5556
+c
+n
+info b
+target remote 192.168.1.199:5556
+c
+n
+n
+c
+k
+y
+q
+target remote 192.168.1.199:5556
+b device_connect_event_cb
+y
+b control_dev_start_connect
+c
+bt
+up
+c
+up
+q
+y
+b control_dev_start_connect
+n
+target remote 192.168.1.199:5556
+c
+up
+down
+p *plug
+up
+p *ctx
+k
+y
+target remote 192.168.1.199:5556
+c
+up
+o *ctx
+p *ctx
+p *ctx->plug
+down
+p *drv
+down
+p *plug
+q
+y
+target remote 192.168.1.101:5556
+b get_tsf
+c
+n
+p *ctx
+n
+p errno
+c
+c
+c
+c
+c
+n
+p *ctx
+q
+y
+target remote 192.168.1.199:5556
+c
+up
+q
+y
+target remote 192.168.1.199:5556
+target remote 192.168.1.198:5556
+c
+up
+p queue
+p *queue
+down
+p first_property_name 
+p var_args 
+down
+p name
+p pspec_pool 
+p *pspec_pool 
+p *object
+q
+y
+target remote 192.168.1.143:5556
+c
+bt
+up
+p nb_frames 
+up
+down
+p i
+down
+q
+y
+target remote 192.168.1.143:5556
+target remote 192.168.1.184:5556
+c
+up
+down
+k
+y
+target remote 192.168.1.184:5556
+q
+y
+target remote 192.168.1.183:5556
+b process_blob_table
+c
+bt
+k
+y
+target remote 192.168.1.183:5556
+info b
+del
+y
+b c
+n
+c
+b process_blob_table 
+c
+c
+s
+q
+y
+b main
+c
+target remote 192.168.1.183:5556
+c
+c
+target remote 192.168.1.183:5556
+c
+del 1
+c
+n
+del 2
+c
+n
+p buf
+p *buf
+n
+s
+n
+s
+n
+p fd
+n
+n
+fin
+p buf
+p *buf
+q
+y
+target remote 192.168.1.183:5556
+target remote 192.168.1.184:5556
+c
+up
+up
+down
+down
+p config
+up
+b override_config_with_cmdline 
+k
+y
+target remote 192.168.1.184:5556
+c
+b liszt_options_init 
+k
+y
+target remote 192.168.1.184:5556
+c
+b main
+k
+y
+target remote 192.168.1.184:5556
+c
+info b
+k
+y
+q
+b main
+sharedlibrary 
+target remote 192.168.1.184:5556
+c
+k
+y
+target remote 192.168.1.184:5556
+c
+n
+s
+c
+up
+down
+k
+y
+target remote 192.168.1.184:5556
+c
+c
+q
+y
+target remote 192.168.1.184:5556
+b liszt_options_get_clients
+y
+c
+k
+target remote 192.168.1.184:5556
+info b
+b main
+c
+n
+p g_clients
+p g_clients[0]
+p g_clients[1]
+p g_clients[2]
+p g_clients[3]
+n
+target remote 192.168.1.184:5556
+y
+del 2
+info b
+c
+p g_clients
+n
+p g_clients
+n
+up
+b override_config_with_cmdline 
+k
+y
+target remote 192.168.1.184:5556
+c
+p g_clients
+n
+p baseport
+p ret
+n
+n
+up
+k
+y
+target remote 192.168.1.184:5556
+c
+n
+p baseport
+n
+p ret
+n
+n
+p ret
+n
+n
+p ret
+p g_clients
+p g_clients[0]
+p g_clients[1]
+p g_clients[2]
+n
+p *clients
+up
+k
+y
+target remote 192.168.1.184:5556
+c
+n
+info b
+del 2
+c
+p clients_array 
+n
+p clients_array 
+clients_array[0]
+p clients_array[0]
+p clients_array[1]
+p clients_array[2]
+p clients_array[3]
+n
+p clients
+k
+y
+y
+target remote 192.168.1.184:5556
+c
+c
+n
+p clients
+p clients[0]
+p clients[1]
+n
+q
+y
+target remote 192.168.1.184:5556
+c
+q
+y
+target remote 192.168.1.184:5556
+b liszt-config.c:87
+y
+c
+k
+y
+target remote 192.168.1.184:5556
+c
+b liszt_config_set_property
+y
+k
+y
+q
+q
+target remote 192.168.1.184:5556
+b gst_rtp_base_depayload_handle_buffer
+y
+c
+bt
+k
+y
+c
+del
+y
+k
+y
+target remote 192.168.1.184:5556
+c
+q
+y
+target remote 192.168.1.184:5556
+c
+bt
+up
+down
+down
+p name
+down
+p param_name 
+q
+y
+target remote 192.168.1.184:5556
+c
+up
+p prop
+down
+p first_property_name 
+down
+p name
+down
+p param_name 
+up
+p first_property_name 
+k
+y
+q
+target remote 192.168.1.184:5556
+c
+up
+p self
+p *self
+down
+p clock
+k
+y
+target remote 192.168.1.184:5556
+c
+p clock
+up
+up
+k
+y
+q
+target remote 192.168.1.184:5556
+c
+up
+p clock
+p *clock
+up
+q
+y
+target remote 192.168.1.184:5556
+k
+y
+q
+target remote 192.168.1.184:5556
+c
+p *priv
+p priv
+p *self
+q
+y
+q
+b gst_dvlt_asrc_start
+y
+b gst_dvlt_asrc_start
+n
+target remote 192.168.1.184:5556
+c
+n
+p *self
+n
+p clock
+p self->priv
+p *self->priv
+k
+y
+target remote 192.168.1.184:5556
+c
+n
+p *self
+k
+y
+q
+target remote 192.168.1.183:5556
+b gst_dvlt_asrc_set_caps
+y
+c
+n
+p in
+p out
+n
+c
+k
+y
+q
+b gst_dvlt_asrc_set_caps
+y
+target remote 192.168.1.183:5556
+c
+n
+p in
+p out
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+b gst_dvlt_asrc_update_filter
+del 1
+k
+y
+target remote 192.168.1.183:5556
+c
+s
+n
+p options
+k
+y
+target remote 192.168.1.183:5556
+c
+s
+p options
+q
+y
+target remote 192.168.1.183:5556
+b gst_dvlt_asrc_update_filter
+y
+c
+s
+s
+n
+p in
+p out
+n
+p options
+n
+p *priv->convert
+p *priv->converter
+n
+p *priv->converter
+q
+q
+y
+target remote 192.168.1.183:5556
+b gst_dvlt_asrc_set_caps
+y
+c
+n
+s
+n
+p structure
+p *structure
+n
+p rate
+n
+p rate
+p *caps
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+s
+n
+p rate
+n
+p *priv
+n
+p *priv
+n
+p *priv
+n
+p *priv
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+p *priv
+down
+b gst_dvlt_asrc_update_filter
+k
+y
+target remote 192.168.1.183:5556
+c
+c
+c
+p priv
+p *priv
+c
+p *priv
+bt
+b gstdvltasrc.c:393
+k
+y
+target remote 192.168.1.183:5556
+c
+dis 1
+c
+s
+n
+k
+y
+target remote 192.168.1.183:5556
+c
+di
+dis
+c
+k
+y
+target remote 192.168.1.183:5556
+del
+y
+c
+b gst_audio_resampler_get_out_frames
+c
+p *resampler
+c
+p *resampler
+n
+p in_frames 
+n
+p out
+n
+p out
+n
+n
+p out
+n
+p out
+k
+y
+q
+target remote 192.168.1.183:5556
+c
+c
+k
+y
+target remote 192.168.1.183:5556
+c
+up
+down
+up
+p resampler
+p *resampler
+target remote 192.168.1.183:5556
+y
+c
+target remote 192.168.1.183:5556
+c
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+p sbuf
+p samples_avail 
+p out
+p out_frames 
+p consumed 
+disassemble $pc
+info registers 
+down
+disassemble $pc
+info registers 
+k
+y
+target remote 192.168.1.183:5556
+c
+disassemble $pc
+infos regi
+info registers 
+bt
+k
+y
+target remote 192.168.1.183:5556
+c
+disassemble $pc
+up
+p full
+up
+p *resampler
+p samples_avail 
+p out
+p out_frames 
+p consumed 
+info symbol resample->resample
+p resample->resample
+p resampler->resample
+down
+q
+y
+target remote 192.168.1.183:5556
+c
+target remote 192.168.1.183:5556
+y
+c
+target remote 192.168.1.183:5556
+c
+k
+y
+target remote 192.168.1.183:5556
+c
+k
+y
+target remote 192.168.1.183:5556
+target remote 192.168.1.183:5556
+target remote 192.168.1.183:5556
+c
+k
+y
+target remote 192.168.1.183:5556
+c
+k
+k
+y
+target remote 192.168.1.183:5556
+c
+bt
+up
+p in_len
+p out_len
+p *priv
+p out_map
+p *outbuf
+k
+y
+q
+target remote 192.168.1.183:5556
+c
+p audiorate
+p *audiorate
+p *audiorate->clock
+target remote 192.168.1.183:5556
+c
+y
+c
+target remote 192.168.1.183:5556
+c
+p gst_element_get_clock(audiorate)
+b install_tsf
+y
+k
+y
+target remote 192.168.1.183:5556
+c
+b install_tsf_clock 
+k
+y
+target remote 192.168.1.183:5556
+c
+target remote 192.168.1.183:5556
+del
+y
+b install_tsf_clock 
+c
+n
+p *ctx
+n
+c
+b gst_alsasink_write
+c
+n
+p clock
+p *clock
+target remote 192.168.1.183:5556
+y
+y
+y
+target remote 192.168.1.183:5556
+c
+c
+c
+c
+dis
+c
+q
+b sink_slaving_cb
+target remote 192.168.1.183:5556
+c
+n
+c
+q
+y
+target remote 192.168.1.183:5556
+c
+p *priv
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+down
+p *sink
+p addr
+p port
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+p sink
+p addr
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+p addr
+down
+down
+down
+p bool_p
+p value
+down
+p value->data[0]
+q
+y
+target remote 192.168.1.183:5556
+b liszt_server_pomp_new 
+b liszt_server_pomp_init
+c
+up
+dpwn
+down
+n
+p *self
+n
+p *self
+n
+p *semf
+p *sel
+p *self
+n
+n
+c
+k
+y
+target remote 192.168.1.183:5556
+c
+dis 2
+n
+p sockaddr
+n
+q
+y
+target remote 192.168.1.183:5556
+k
+y
+q
+target remote 192.168.1.183:5556
+c
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+up
+down
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+down
+down
+p *source
+down
+p *message
+p *message->src
+down
+down
+down
+down
+q
+y
+target remote 192.168.1.183:5556
+b gstlisztcompsink.c:151
+y
+c
+info b
+up
+q
+y
+target remote 192.168.1.183:5556
+b gst_liszt_comp_sink_probe_buffer
+y
+c
+n
+p *info
+n
+p buffer
+n
+p bpf
+n
+p newbuf
+n
+p map
+n
+p map
+p newbuf
+p *newbuf
+n
+p map
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p buffer
+p info
+p *info
+n
+p size
+n
+p newbuf
+p *newbuf
+p *buffer
+p gst_buffer_get_size(newbuf)
+n
+p map
+p newsize
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p newbuf
+p *newbuf
+p gst_buffer_get_size(newbuf)
+p newsize
+dis
+c
+c
+q
+y
+target remote 192.168.1.183:5556
+k
+y
+q
+target remote 192.168.1.183:5556
+b gst_liszt_comp_sink_probe_buffer
+y
+c
+n
+p size
+n
+p append
+p *append
+gst_buffer_get_size(append)
+p gst_buffer_get_size(append)
+n
+p newbuf
+p gst_buffer_get_size(newbuf)
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p gst_buffer_get_size(apped)
+p gst_buffer_get_size(append)
+n
+p gst_buffer_get_size(newbuf)
+n
+p map
+n
+c
+k
+y
+q
+target remote 192.168.1.183:5556
+c
+up
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+down
+k
+y
+target remote 192.168.1.183:5556
+c
+b gst_liszt_comp_sink_probe_buffer
+c
+n
+p newsize 
+n
+p map
+n
+p map
+n
+p ptr
+p ptr[0]
+p ptr[newsize]
+p ptr[newsize-1]
+p ptr[newsize-2]
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p map
+p newsize - 2 * bpf
+p map.data
+k
+y
+target remote 192.168.1.183:5556
+dis
+c
+p map.data + newsize - 2 * bpf
+up
+p map.data + newsize - 2 * bpf
+up
+down
+p map
+en
+ck
+y
+k
+y
+target remote 192.168.1.183:5556
+c
+target remote 192.168.1.183:5556
+y
+c
+n
+dis 1
+c
+p map
+p newsize - 1 * bpf
+p newsize - 2 * bpf
+p newsize / bpf
+x §/232w map.data
+x map.data
+x /232w map.data
+p newsize
+x /233w map.data
+target remote 192.168.1.183:5556
+k
+y
+target remote 192.168.1.183:5556
+dis
+c
+q
+y
+target remote 192.168.1.183:5556
+b gst_hwtune_clock_init
+y
+c
+n
+n
+fin
+k
+y
+k
+y
+k
+q
+target remote 192.168.1.183:5556
+b periodic_callback
+c
+n
+p sampletime
+n
+p sampletime
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p sampletime 
+n
+p sampletime
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p sampletime 
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p sampletime 
+k
+y
+target remote 192.168.1.183:5556
+c
+n
+p sampletime 
+n
+p skew
+n
+p skew
+p sampletime
+p ctx->avg_skw
+p ctx->avg_skew
+p ctx->skew_avg 
+k
+y
+q
+target remote 192.168.1.183:5556
+c
+bt
+up
+down
+p *element
+down
+p *bin
+p *child
+down
+p *element
+down
+p *child
+down
+p *element
+down
+p *pad
+down
+p *parent
+p *pad
+down
+p *chunk
+p chunk
+p *magazine_chunks 
+p **magazine_chunks 
+up
+up
+up
+up
+up
+p *event
+up
+p *event
+q
+y
+target remote 192.168.1.183:5556
+c
+up
+p *element
+down
+p *element
+down
+target remote 192.168.1.183:5556
+c
+y
+target remote 192.168.1.183:5556
+c
+up
+p *bin
+q
+y
+q
+target remote 192.168.1.197:5556
+b main
+c
+n
+up
+q
+y
+b on_warnings_callback_server
+target remote 192.168.1.197:5556
+c
+up
+c
+k
+y
+target remote 192.168.1.197:5556
+c
+k
+y
+target remote 192.168.1.197:5556
+c
+info b
+c
+bt
+bt
+up
+c
+c
+q
+target remote 192.168.1.197:5556
+c
+b on_warnings_callback_server
+c
+y
+target remote 192.168.1.197:5556
+c
+n
+p message
+p *message
+n
+p *error
+q
+y
+target remote 192.168.1.197:5556
+b dive_role_minipony.c:28
+y
+c
+info b
+sharedlibrary 
+info b
+target remote 192.168.1.197:5556
+sharedlibrary 
+b dive_role_minipony.c:19
+y
+c
+target remote 192.168.1.197:5556
+c
+c
+del 2
+p *config
+p module_name 
+p preset_19
+p *config->preset
+p config->preset[0]
+p config->preset[1]
+p config->preset[2]
+p config->preset[3]
+k
+y
+target remote 192.168.1.197:5556
+c
+target remote 192.168.1.197:5556
+info b
+del
+y
+b dive_role.c:56
+c
+y
+c
+p module_name 
+n
+b dive_role_minipony_process
+c
+up
+down
+down
+n
+c
+dis
+c
+q
+target remote 192.168.1.198:5556
+b gstliszthwcompsink.c:413
+y
+c
+p fsize
+n
+p *src
+p src
+n
+p newpath 
+n
+p dst
+n
+k
+y
+target remote 192.168.1.198:5556
+c
+n
+p *priv
+n
+p newpath 
+k
+y
+target remote 192.168.1.198:5556
+c
+n
+p newpath 
+k
+y
+target remote 192.168.1.198:5556
+c
+n
+p newpath 
+k
+y
+target remote 192.168.1.198:5556
+c
+n
+p newpath 
+k
+y
+target remote 192.168.1.198:5556
+c
+del 1
+c
+n
+p newpath 
+n
+c
+k
+y
+target remote 192.168.1.198:5556
+c
+c
+k
+target remote 192.168.1.198:5556
+c
+c
+n
+p *priv
+p newpath 
+n
+sid
+dis
+c
+k
+y
+target remote 192.168.1.198:5556
+b gst_liszt_hwcomp_sink_move_file_incr
+y
+c
+n
+p index
+n
+p newpath 
+n
+k
+target remote 192.168.1.198:5556
+k
+y
+target remote 192.168.1.198:5556
+c
+n
+p error
+p *error
+n
+k
+y
+q
+target remote 192.168.1.198:5556
+target remote 192.168.1.197:5556
+b ctl_dive.c:915
+y
+c
+q
+target remote 192.168.1.197:5556
+c
+b ctl_dive.c:915
+target remote 192.168.1.197:5556
+c
+p *dive
+p *dive->sem
+p dive->sem
+s
+b sem_post
+dis 1
+target remote 192.168.1.197:5556
+c
+up
+p dive->ack
+down
+c
+q
+target remote 192.168.1.197:5556
+c
+up
+down
+p fec_seq 
+down
+p info
+p ctx
+down
+disassemble $pc
+info registers 
+down
+up
+k
+y
+target remote 192.168.1.197:5556
+c
+target remote 192.168.1.197:5556
+y
+c
+target remote 192.168.1.197:5556
+c
+p len
+p length 
+up
+p dst
+p dst_offset 
+p src
+p src_offset 
+up
+p info
+p *info
+p fec_mask_long 
+p packet_mask 
+p /x packet_mask 
+p *ctx
+up
+p fec
+p pt
+p seq
+p fec_packets_pushed 
+p timestamp
+p ssrc
+p /x ssrc
+bt
+q
+y
+target remote 192.168.1.197:5556
+c
+bt
+up
+up
+q
+y
+target remote 192.168.1.198:5556
+target remote 192.168.1.198:5556
+c
+target remote 192.168.1.198:5556
+c
+bt
+up
+q
+y
+b dive_pipeline.c:120
+y
+c
+target remote 192.168.1.198:5556
+c
+p module
+k
+y
+q
+target remote 192.168.1.197:5556
+b gstspandsp.c:34
+y
+c
+q
+target remote 192.168.1.197:5556
+target remote 192.168.1.198:5556
+bt
+threads
+info threads 
+bt
+up
+p *pad
+p pad->parent
+up
+down
+p new_mode 
+up
+up
+p element
+p *element
+k
+y
+q
+q
+run
+p *cup
+up
+up
+p *ctx
+run
+y
+s
+n
+p cup
+n
+p *cup
+n
+p ret
+q
+y
+target remote 192.168.1.68:5556
+target remote 192.168.1.69:5556
+c
+bt
+up
+k
+y
+q
+q
+target remote 192.168.1.76:5556
+c
+up
+bt
+down
+bt
+b main
+y
+k
+y
+target remote 192.168.1.76:5556
+c
+q
+q
+y
+b main
+y
+target remote 192.168.1.76:5556
+c
+info b
+file output/pony/target/usr/bin/dspctld
+y
+file output/pony/target/usr/bin/dspctld
+target remote 192.168.1.76:5556
+q
+target remote 192.168.1.76:5556
+b main
+c
+n
+q
+y
+sharedlibrary 
+b main 
+b spotify_new 
+target remote 192.168.1.76:5556
+c
+c
+fin
+q
+y
+target remote 192.168.1.76:5556
+b main
+c
+n
+q
+y
+target remote 192.168.1.76:5556
+b main
+c
+n
+s
+n
+s
+s
+n
+fin
+n
+s
+n
+p *sp
+n
+p sp->name
+n
+k
+y
+q
+q
+target remote 192.168.1.76:5556
+b spotilight_new
+y
+c
+q
+y
+b main
+target remote 192.168.1.76:5556
+c
+q
+y
+b main
+target remote 192.168.1.76:5556
+c
+q
+y
+b main
+target remote 192.168.1.76:5556
+c
+n
+s
+n
+c
+b spotify_sdk_init
+k
+y
+target remote 192.168.1.76:5556
+c
+c
+p *sp
+n
+p ret
+q
+y
+target remote 192.168.1.76:5556
+b spotify_sdk_init
+c
+n
+p ret
+n
+bt
+q
+y
+b spotify_sdk_init
+target remote 192.168.1.76:5556
+c
+n
+p ret
+n
+k
+y
+target remote 192.168.1.76:5556
+c
+s
+n
+p ret
+p cfg
+p *cfg
+p client_id
+p spotify_get_mac_address 
+p spotify_get_mac_address() 
+n
+c
+k
+y
+q
+target remote 192.168.1.197:5556
+b gst_liszt_net_sink_constructed
+y
+c
+n
+p *priv
+n
+p pad
+n
+b gst_liszt_net_sink_link
+k
+y
+target remote 192.168.1.197:5556
+c
+n
+k
+y
+target remote 192.168.1.197:5556
+c
+k
+y
+target remote 192.168.1.197:5556
+c
+n
+c
+n
+p *pad
+n
+p *element
+q
+y
+target remote 192.168.1.197:5556
+b gstlisztnetsink.c:293
+y
+c
+n
+p *priv
+s
+n
+p fec
+n
+n
+up
+c
+n
+s
+n
+c
+k
+y
+k
+y
+q
+target remote 192.168.1.197:5556
+b gst_fecenc_replace_encoder
+y
+b gstfecenc.c:249
+y
+c
+s
+p method
+p method_name 
+n
+p *fecenc 
+n
+c
+k
+y
+q
+target remote 192.168.1.145:5556
+b main
+c
+n
+k
+y
+target remote 192.168.1.145:5556
+c
+n
+b spotify_sdk_init
+c
+n
+p cfg
+p *cfg
+p client_id
+n
+s
+p ret
+p cfg->host_name 
+k
+y
+target remote 192.168.1.145:5556
+c
+n
+q
+y
+target remote 192.168.1.146:5556
+c
+up
+down
+up
+q
+y
+target remote 192.168.1.146:5556
+c
+up
+down
+p source
+p callback
+down
+k
+y
+target remote 192.168.1.146:5556
+b on_power_callback
+c
+n
+p hostname
+n
+p name
+n
+p name
+n
+p name
+n
+p name
+n
+p name
+n
+p ret
+n
+c
+up
+down
+down
+bt
+k
+y
+q
+target remote 192.168.1.149:5556
+b set_default_device
+c
+p proxy
+p attr
+p attribute
+n
+n
+p ret
+p desc
+k
+y
+target remote 192.168.1.149:5556
+c
+n
+p address
+p *environ 
+printf("%s", environ)
+printf("%s", *environ)
+p getenv("BLUETOOTH_DEVICE")
+q
+y
+q
+target remote 192.168.1.197:5556
+b dive_space.c:926
+y
+c
+p n
+p nio
+n
+p *ctx
+k
+y
+target remote 192.168.1.197:5556
+c
+p *ctx
+s
+n
+s
+n
+p *ctx
+n
+k
+y
+target remote 192.168.1.197:5556
+c
+n
+s
+n
+p *ctx
+n
+q
+y
+target remote 192.168.1.197:5556
+b dive_space.c:929
+y
+c
+p nio
+n
+c
+p hub
+p *hub
+p NUM_HUB_CHANNELS
+n
+c
+p i
+k
+y
+target remote 192.168.1.197:5556
+del
+y
+b adapt_stereo_illusonic_mini
+y
+c
+n
+p *ctx
+n
+c
+dis 4
+c
+target remote 192.168.1.197:5556
+q
+y
+b box_2ch_process
+y
+c
+target remote 192.168.1.197:5556
+c
+k
+y
+target remote 192.168.1.197:5556
+del
+y
+c
+k
+y
+q
+target remote 192.168.1.197:5556
+b setup_ubufs
+y
+c
+sharedlibrary 
+b dive_pipeline_inquiry
+y
+b dive_pipeline_setup
+y
+k
+y
+target remote 192.168.1.197:5556
+c
+c
+c
+up
+p *ctx
+up
+up
+down
+down
+k
+y
+rtarget remote 192.168.1.197:5556
+rtarget remote 192.168.1.197:5556
+target remote 192.168.1.197:5556
+c
+c
+p *ctx
+n
+p bufs
+p mem_ptr 
+p nbufs
+p **p_io
+p *p_io
+p p_io
+p *ctx
+dis
+b setup_context 
+k
+y
+target remote 192.168.1.197:5556
+c
+p cyx
+p ctx
+n
+p ùbufs
+p mbufs
+p mchanin
+p *pipeline
+up
+up
+down
+p /x *pipeline
+p /b *pipeline
+p /t *pipeline
+n
+p nio
+n
+p ctx
+p ùemem_ptr
+p mem_pter
+p mem_ptr
+n
+p mem_ptr
+p ctx->units
+p ctx
+p nunint
+p nunits
+p mem_ptr
+n
+p uids
+n
+p uids
+c
+n ctx
+p ctx
+p mem_ptr
+p mchanout 
+p /t mchanout 
+p mbufs
+p /t ~lbufs
+p /t ~mbufs
+p /t ~mbufs & mchanout 
+n
+p nbufs
+p mdata
+p dive_btc(mdata)
+p bufs
+p mem_ptr
+n
+p nio
+p /x nio
+n
+n
+p *ctx_size 
+n
+p *ctx_size 
+c
+n
+p *ctx
+n
+n
+p mem_ptr
+n
+p nunits
+p uids
+p *uids
+p *ctx
+n
+p *ctx
+c
+c
+n
+p nbufs
+n
+p mem_ptr
+p p_io
+n
+p pbufs
+p p_bufs
+n
+p nchanin
+p nchanou
+p nchanout
+p nio
+n
+p bufs
+p nbufs
+n
+p bufs
+p *bufs
+p bufs[0]
+p bufs[1]
+n
+p i
+n
+p i
+p mdata
+nn
+n
+s
+n
+p *ctx
+up
+down
+n
+p *ctx
+n
+p j
+up
+down
+n
+p *ctx
+p p_io
+n
+p p_io
+n
+n
+n
+k
+y
+q
+target remote 192.168.1.197:5556
+c
+target remote 192.168.1.108:5556
+c
+up
+p *self
+p *self->elem
+down
+p channel
+p elem
+down
+up
+b gst_hwtune_clock_new
+k
+y
+target remote 192.168.1.108:5556
+c
+n
+target remote 192.168.1.108:5556
+y
+c
+target remote 192.168.1.108:5556
+c
+n
+p mixer
+n
+target remote 192.168.1.108:5556
+c
+n
+p mixer
+n
+p mixer
+p *mixer
+n
+p snd_mixer_selem_id_get_name(sid)
+n
+n
+p snd_mixer_selem_id_get_name(sid)
+disp snd_mixer_selem_id_get_name(sid)
+n
+c
+p *self->elem
+n
+k
+y
+q
+target remote 192.168.1.183:5556
+b gst_hwtune_clock_adjust
+y
+c
+p eps
+p epsilon
+n
+target remote 192.168.1.183:5556
+c
+target remote 192.168.1.183:5556
+c
+b gst_hwtune_clock_adjust
+y
+c
+q
+y
+target remote 192.168.1.197:5556
+b gst_hwtune_clock_adjust
+y
+c
+n
+p value
+p epsilon
+k
+y
+k
+y
+q
+target remote 192.168.1.197:5556
+b snd_hw_params
+y
+c
+b dive_hw_params
+info b
+target remote 192.168.1.197:5556
+c
+fin
+n
+p err
+n
+bt
+n
+n
+p err
+n
+n
+n
+n
+n
+n
+q
+b dive_hw_params
+y
+target remote 192.168.1.197:5556
+c
+q
+y
+q
+target remote 192.168.1.197:5556
+b dive_hw_params
+y
+c
+fin
+n
+bt
+fin
+fin
+n
+p err
+n
+q
+y
+target remote 192.168.1.197:5556
+b dive_hw_params
+y
+c
+fin
+p result
+n
+p result
+n
+p res
+n
+p result
+n
+p ret
+n
+fin
+p ret
+fin
+bt
+q
+y
+target remote 192.168.1.197:5556
+b pcm_dive.c:1071
+y
+c
+b dive_refresh_mode
+y
+del 1
+target remote 192.168.1.197:5556
+c
+target remote 192.168.1.197:5556
+c
+q
+target remote 192.168.1.197:5556
+b dive_transfer
+y
+c
+q
+y
+target remote 192.168.1.197:5556
+b dive_transfer
+y
+c
+fin
+n
+q
+y
+target remote 192.168.1.197:5556
+b dive_transfer
+t
+y
+c
+n
+s
+b dive_process
+c
+s
+n
+b box_2ch_init
+c
+c
+c
+c
+del 1
+del 2
+c
+c
+target remote 192.168.1.197:5556
+c
+n
+p handle
+p config
+p rt_config
+n
+p config
+p rt_config
+n
+p rt_config
+p rt_config
+p config
+n
+s
+disassemble 
+disassemble $pc
+n
+p ret
+n
+fin
+p ret
+n
+p *conf
+up
+b setup_box_2ch 
+c
+up
+c
+bt
+c
+bt
+n
+p *box_2ch
+up
+q
+y
+target remote 192.168.1.197:5556
+b inquiry_illusonic_mini
+y
+c
+bt
+up
+c
+up
+c
+b dive_space.c:785
+y
+target remote 192.168.1.197:5556
+c
+c
+c
+c
+del
+y
+b dive_space.c:845
+c
+s
+n
+p *ctx
+n
+p ret
+p *ctx
+k
+y
+target remote 192.168.1.197:5556
+c
+c
+k
+y
+target remote 192.168.1.197:5556
+c
+s
+n
+p box_2ch
+s
+n
+fin
+p box_2ch
+n
+p *ctx
+s
+n
+p config
+p rt_config
+n
+c
+p config
+p rt_config 
+n
+p *ctx
+n
+c
+q
+target remote 192.168.1.103:5556
+b main
+c
+n
+q
+y
+target remote 192.168.1.103:5556
+b _snd_pcm_plug_open
+y
+c
+bt
+up
+down
+n
+p i
+n
+p i
+n
+p id
+p *n
+n
+p id
+up
+p name
+n
+p n
+p *n
+p i
+up
+p pcm_conf
+p *pcm_conf
+k
+y
+target remote 192.168.1.103:5556
+c
+c
+k
+y
+quit
+target remote 192.168.1.109:5556
+b gst_liszt_base_audio_sink_get_property
+y
+b gst_liszt_base_audio_sink_set_property
+y
+c
+sharedlibrary 
+info b
+k
+y
+target remote 192.168.1.109:5556
+c
+q
+y
+target remote 192.168.1.104:5556
+b liszt_server_start
+c
+n
+b gstvalue.c:1164
+y
+sharedlibrary 
+k
+y
+dis 1
+b liszt_server_start
+dis 3
+target remote 192.168.1.104:5556
+c
+q
+y
+target remote 192.168.1.180:5556
+b gstvalue.c:1164
+y
+c
+target remote 192.168.1.104:5556
+c
+q
+target remote 192.168.1.105:5556
+b gstvalue.c:1164
+y
+c
+up
+p media_type
+bt
+threads
+info threads 
+down
+p structure
+p *structure
+p firstfield 
+p *firstfield 
+up
+p media_type 
+p fieldname 
+bt
+down
+p field.value 
+p type
+p varargs
+p err
+down
+p *value
+p n_collect_values 
+p collect_values[0].v_int
+p collect_values[1].v_int
+k
+target remote 192.168.1.105:5556
+c
+bt
+k
+y
+q
+target remote 192.168.1.149:5556
+b snd_mixer_selem_has_playback_volume
+y
+sharedlibrary 
+c
+up
+bt
+q
+y
+target remote 192.168.1.144:5556
+c
+bt
+up
+k
+y
+target remote 192.168.1.145:5556
+c
+bt
+up
+p *self
+p self->iface_name 
+k
+y
+q
+q
+run
+s
+n
+p *a
+q
+y
+b main
+c
+run
+q
+y
+b main
+run
+n
+p *a
+q
+y
+b animation_new
+run
+n
+p *a
+n
+p *a
+[?2004lset print 
+set print=pretty
+[?2004lset print pretty 
+prin
+n
+s
+n
+p *a
+p *a->steps
+n
+p *a->steps
+[?2004lp *a->steps.brightness 
+p *a->steps.brightness 
+n
+p *a->steps.brightness 
+n
+p *a->steps[0].brightness 
+q
+y
+b animation_new
+run
+n
+s
+n
+p *a->steps[0].brightness 
+p *a->steps[1].brightness 
+n
+q
+y
+run
+bt
+bt
+b main
+run
+n
+s
+p *a
+n
+p *s
+n
+p *a
+n
+q
+q
+y
+run
+[?2004lb scheduler_sched_animation 
+b scheduler_sched_animation 
+run
+n
+p anim
+n
+n
+p cur
+p animation_get_nbsteps(anim)
+n
+p next
+n
+q
+y
+[?2004lb parser_new 
+b parser_new 
+run
+n
+p *parser
+p filename
+q
+[?2004lb parser_parse_pattern 
+run
+b parser_parse_pattern
+run
+n
+p json_cur
+p *json_cur
+p json_cur
+n
+p json_cur
+n
+p key
+n
+p key
+2
+q
+y
+[?2004lb animation_get_nbsteps 
+b animation_get_nbsteps 
+run
+q
+q
+b twix_probe
+y
+run
+n
+p *priv
+n
+p *priv
+p *priv
+n
+p i
+p j
+n
+fin
+n
+p ret
+p *a
+p *a->plug
+b twix_set_led_brightness
+c
+n
+q
+run
+bt
+up
+down
+p i
+p *led
+down
+up
+p led->id
+p led->color
+p colorstr[led->color]
+q
+y
+q
+b diablo_probe
+y
+run
+n
+p *priv
+q
+y
+b diablo_probe
+y
+run
+n
+p *priv
+q
+y
+b diablo_probe
+y
+run
+p priv->leds
+q
+y
+b diablo_probe
+y
+run
+n
+p *priv
+p priv->leds
+p priv->leds[0]
+p priv->leds[1]
+p priv->leds[2]
+p priv->leds[4]
+p priv->leds[5]
+p priv->leds[6]
+p priv->leds[7]
+p priv->leds[8]
+p priv->leds[23]
+p priv->leds[24]
+n
+p *priv
+n
+fin
+p *priv
+run
+y
+c
+p *priv
+p *priv->leds[0]
+p priv->leds[0]
+p priv->leds[1]
+p priv->leds[2]
+p priv->leds[3]
+p priv->leds[4]
+q
+y
+run
+up
+p *led
+q
+y

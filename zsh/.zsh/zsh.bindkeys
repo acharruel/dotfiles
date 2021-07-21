@@ -1,0 +1,4 @@
+bindkey '[5~' history-search-backward # PgUp
+bindkey '[6~' history-search-forward  # PgDn
+bindkey ';5D' backward-word
+bindkey ';5C' forward-word
