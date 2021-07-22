@@ -1,9 +1,8 @@
 export NNN_OPENER=~/.config/nnn/plugins/nuke
 export NNN_BMS='d:~/Documents;D:~/Téléchargements;m:~/Musique'
 export NNN_PLUG='m:-mediainf;o:fzopen;p:preview-tui;i:imgview;j:autojump;c:fzcd;m:nmount'
-#set --export NNN_FIFO "/tmp/nnn.fifo"
 export NNN_FIFO='/tmp/nnn.fifo'
-export TERMINAL='urxvt'
+export TERMINAL='xterm-kitty'
 export PAGER='less'
 export EDITOR='vim'
 alias nnn='nnn -e'
