@@ -39,3 +39,7 @@ alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(maste
 
 # chrome
 alias chrome='google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland'
+
+# nvim
+alias vim='nvim'
+alias vi='nvim'
