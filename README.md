@@ -87,6 +87,12 @@ cd ~
 ln -s .vim/vimrc .vimrc
 ```
 
+Install plugin stuff for neovim
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
 Launch vim and install plugins
 
 ```
