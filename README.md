@@ -20,6 +20,14 @@ https://github.com/dunst-project/dunst
 stow dunst
 ```
 
+### gtkwave ()
+
+http://gtkwave.sourceforge.net/
+
+```
+stow gtkwave
+```
+
 ### i3 (improved tiling wm)
 
 https://i3wm.org/docs/userguide.html
