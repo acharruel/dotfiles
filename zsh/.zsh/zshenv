@@ -1,8 +1,8 @@
 typeset -U path
 path=(/sbin $path)
 path=(/usr/sbin $path)
-path=(~/.bin $path)
-path=(~/repo $path)
 path=($(python3 -m site --user-base)/bin $path)
 path=(/snap/bin $path)
 path=(/usr/local/go/bin $path)
+
+eval $(keychain --eval --quiet adrien-tagheuer acharruel)
