@@ -13,7 +13,7 @@
 # variables
 ################################################################################
 set $mod Mod1
-set $wallpaper $HOME/Images/wallpaper.jpg
+set $wallpaper $HOME/.i3/wallpaper.jpg
 set $scriptdir $HOME/.i3/scripts
 
 ################################################################################
@@ -215,8 +215,8 @@ bindsym $mod+Delete exec /usr/bin/i3lock-fancy -g
 bindsym XF86Sleep exec /usr/bin/i3lock-fancy -g
 
 # brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 10%-
 
 # music supermenu
 bindsym $mod+m exec /home/adrien/.i3/i3play
@@ -232,6 +232,7 @@ exec blueman-applet
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 exec feh --bg-scale $wallpaper
 exec pasystray
+exec blueman-applet
 
 ################################################################################
 # windows
