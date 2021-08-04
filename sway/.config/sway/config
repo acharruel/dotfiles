@@ -16,7 +16,7 @@ set $term kitty
 font "Monospace Bold 11"
 
 # wallpaper
-set $wallpaper $HOME/Images/wallpaper.jpg
+set $wallpaper $HOME/.config/sway/wallpaper.jpg
 
 # configuration files
 include $HOME/.config/sway/config.d/*
@@ -26,7 +26,7 @@ include $HOME/.config/sway/config.d/*
 output * bg $wallpaper fill
 
 output eDP-1 pos 0 0 res 1920x1080
-output DP-1 pos 1920 0 res 2560x1440
+output DP-6 pos 1920 0 res 3840x2160 scale 1.50
 
 ### Idle configuration
 # exec swayidle -w \
@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
-    font "Source Code Pro Bold 11"
+    font "Monospace Bold 12"
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
