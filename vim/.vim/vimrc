@@ -20,6 +20,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
+Plug 'mfulz/cscope.nvim'
 
 " Sort motion plugins
 Plug 'christoomey/vim-sort-motion'
@@ -81,6 +82,8 @@ set undodir=~/.vim/undodir  " undo directory for persistent undo
 set number relativenumber   " relative lines numbering (hybrid mode)
 
 colorscheme solarized
+
+vnoremap <LeftRelease> "*ygv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Extra stuffs
