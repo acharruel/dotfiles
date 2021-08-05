@@ -13,7 +13,7 @@ set $mod Mod1
 set $term kitty
 
 # default font to use
-font "Monospace Bold 11"
+font "DejaVuSansMono Nerd Font Mono Bold"
 
 # wallpaper
 set $wallpaper $HOME/.config/sway/wallpaper.jpg
@@ -27,6 +27,10 @@ output * bg $wallpaper fill
 
 output eDP-1 pos 0 0 res 1920x1080
 output DP-6 pos 1920 0 res 3840x2160 scale 1.50
+
+gaps inner 2
+gaps outer 1
+default_border pixel 2
 
 ### Idle configuration
 # exec swayidle -w \
@@ -198,23 +202,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom
-    font "Monospace Bold 12"
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command SCRIPT_DIR=/home/adrien/.i3/scripts i3blocks -c /home/adrien/.i3/i3blocks.conf
-
-    colors {
-        background  #323232
-        statusline  #aaaaaa
-        separator   #bbbbbb
-
-        focused_workspace  #4c7899 #285577 #dddddd
-        active_workspace   #333333 #5f676a #dddddd
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-    }
+    swaybar_command waybar
 }
 
 # colors
