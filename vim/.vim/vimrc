@@ -81,9 +81,12 @@ set writebackup             " backup in case of error
 set undodir=~/.vim/undodir  " undo directory for persistent undo
 set number relativenumber   " relative lines numbering (hybrid mode)
 
+" colors
 colorscheme solarized
 
+" clipboard
 vnoremap <LeftRelease> "*ygv
+set clipboard=unnamedplus
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Extra stuffs
