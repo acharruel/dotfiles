@@ -1,3 +1,1 @@
-# prompt
-autoload -U colors && colors
-export PROMPT="%{$fg[cyan]%}%T %{$fg[red]%}%n%{$reset_color%}@%{$reset_color%}%{$fg[green]%}%m %{$fg[yellow]%}%~ %{$reset_color%}"
+PROMPT="%{$fg_bold[red]%}➜ %{$fg[cyan]%}%T %{$fg[red]%}%n%{$reset_color%}@%{$reset_color%}%{$fg[green]%}%m %{$fg[yellow]%}%~ %{$reset_color%}"

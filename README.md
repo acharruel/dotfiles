@@ -143,6 +143,31 @@ zprezto (https://github.com/sorin-ionescu/prezto).
 ```
 stow zsh
 cd -
-ln -s .zsh/zshrc .zshrc
+```
+
+With prezto:
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+
+`.zshrc` customization:
+```
+# Customize to your needs...
+export ZSHDIR="/home/adrien/.zsh"
+
+source ${ZSHDIR}/zsh.config
+source ${ZSHDIR}/zsh.bindkeys
+source ${ZSHDIR}/zsh.alias
+source ${ZSHDIR}/zsh.prompt
+source ${ZSHDIR}/zshenv
+source ${ZSHDIR}/zsh.nnn
+
+# fzf
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
