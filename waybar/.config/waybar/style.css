@@ -303,5 +303,5 @@
     /* No styles */
 }
 #tray {
-    background: @nord_bg;
+    background: @nord_bg_blue;
 }
