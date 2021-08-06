@@ -1,5 +1,5 @@
-export NNN_OPENER=~/.config/nnn/plugins/nuke
-export NNN_BMS='d:~/Documents;D:~/Téléchargements;m:~/Musique'
+export NNN_OPENER=/home/adrien/.config/nnn/plugins/nuke
+export NNN_BMS='d:~/documents'
 export NNN_PLUG='m:-mediainf;o:fzopen;p:preview-tui;i:imgview;j:autojump;c:fzcd;m:nmount'
 export NNN_FIFO='/tmp/nnn.fifo'
 export TERMINAL='xterm-kitty'
