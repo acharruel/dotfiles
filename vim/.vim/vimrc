@@ -12,15 +12,16 @@ Plug 'adelarsq/vim-matchit'
 " Functionnalities plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim', { 'do': 'git am ./0001-Add-cscope-command.patch' }
 Plug 'junegunn/vim-easy-align'
+Plug 'mfulz/cscope.nvim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
-Plug 'mfulz/cscope.nvim'
 
 " Sort motion plugins
 Plug 'christoomey/vim-sort-motion'
@@ -82,7 +83,7 @@ set undodir=~/.vim/undodir  " undo directory for persistent undo
 set number relativenumber   " relative lines numbering (hybrid mode)
 
 " colors
-colorscheme solarized
+colorscheme nord
 
 " clipboard
 vnoremap <LeftRelease> "*ygv
