@@ -3,11 +3,12 @@
 call plug#begin('~/.vim/vimplug')
 
 " Languages support plugins
+Plug 'adelarsq/vim-matchit'
+Plug 'fladson/vim-kitty'
 Plug 'kergoth/vim-bitbake'
 Plug 'lervag/vimtex'
 Plug 'stfl/meson.vim'
 Plug 'vim-scripts/glib.vim'
-Plug 'adelarsq/vim-matchit'
 
 " Functionnalities plugins
 Plug 'airblade/vim-gitgutter'
@@ -16,6 +17,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim', { 'do': 'git am ./0001-Add-cscope-command.patch' }
 Plug 'junegunn/vim-easy-align'
+Plug 'mcchrish/nnn.vim'
 Plug 'mfulz/cscope.nvim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
@@ -33,21 +35,12 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
+" Completion plugins
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-Plug 'mcchrish/nnn.vim'
-Plug 'fladson/vim-kitty'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Initialize plugin system
 call plug#end()
