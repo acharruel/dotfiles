@@ -9,7 +9,7 @@ selection=${NNN_SEL:-${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection}
 export selection
 
 ## Set CUR_CTX to 1 to open directory in current context
-CUR_CTX=1
+CUR_CTX=0
 export CUR_CTX
 
 ## Ask nnn to switch to directory $1 in context $2.
@@ -33,6 +33,6 @@ nnn_cd () {
 }
 
 cmd_exists () {
-	which "$1" > /dev/null 2>&1
-	echo $?
+    type "$1" > /dev/null 2>&1
+    echo $?
 }
