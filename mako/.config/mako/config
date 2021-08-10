@@ -1,43 +1,35 @@
-markup=1
-actions=1
+# Take a look at the mako manpage with the command:
+#   man 5 mako
+# To view all configuration options.
 
-# Format
-font=Monospace Bold 11
-border-color=#002028
+font=DejaVuSansMono Nerd Font Mono 12
+format=<b>%a ⏵</b> %s\n%b
+sort=-time
+layer=overlay
+anchor=top-right
+width=300
+height=110
+margin=5
+padding=0,5,10
 border-size=2
-background-color=#002b36
-text-color=#fdf6e3
-format=<b>%s</b> <span color="#93a1a1">(%a)</span>\n%b
-
-# icons
-icon-path=/usr/share/icons/Adwaita
-
-# Hidden format
-[hidden]
-format=Hidden: %h [%t]
+border-radius=3
+icons=1
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
 
 [urgency=low]
-text-color=#93a1a1
+border-color=#2E3440
+background-color=#4C566A
+text-color=#D8DEE9
 
-[urgency=low actionable]
-border-color=#93a1a1
-
-[urgency=normal actionable]
-border-color=#268bd2
+[urgency=normal]
+border-color=#4C566A
+background-color=#E5E9F0
+text-color=#4C566A
 
 [urgency=high]
-border-color=#9c2220
+border-color=#4C566A
+background-color=#bf616a
+default-timeout=0
 
-[urgency=high actionable]
-border-color=#6c71c4
-
-[app-name=playerctl]
-max-icon-size=96
-
-[app-name=clementine]
-max-icon-size=96
-
-[app-name=i3-hint]
-max-icon-size=48
-format=%s\n%b
-width=150
