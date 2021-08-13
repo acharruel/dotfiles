@@ -1,60 +1,48 @@
-/**
- * Selenized dark variant Wofi Color theme
- **/
-
+* {
+  font-family: "DejaVuSansMono Nerd Font";
+  font-size: 14px;
+}
 
 window {
-    margin: 1px;
-    border: 1px solid #adbcbc;
-    background-color: #103c48;
+  margin: 0px;
+  border: 2px solid #81a1c1;
+  background-color: #2e3440;
+  border-radius: 4;
 }
 
 #input {
-    margin: 1px;
-    border: 2px dashed #268bd2;
-    border-top-color: #103c48;
-    border-left-color: #103c48;
-    border-right-color: #103c48;
-    border-bottom-color: #268bd2;
-    background-color: #103c48;
-    color: #adbcbc;
-    font: 14px DejaVu Sans Mono;
+  margin: 5px;
+  color: #e5e9f0;
+  background-color: #2e3440;
+  border: 1px solid #8fbcbb;
 }
 
 #inner-box {
-    margin: 1px;
-    border: 2px none #103c48;
-    background-color: #103c48;
+  margin: 5px;
+  border: none;
+  background-color: #2e3440;
 }
 
 #outer-box {
-    margin: 1px;
-    border: 2px none #103c48;
-    background-color: #103c48;
+  margin: 5px;
+  border: none;
+  background-color: #2e3440;
 }
 
 #scroll {
-    margin: 1px;
-    border: 2px solid #103c48;
-    background-color: #103c48;
-    color: #adbcbc;
+  margin: 0px;
+  border: none;
 }
 
 #text {
-    margin: 1px;
-    border: 1px none #103c48;
-    font: 14px DejaVu Sans Mono;
+  margin: 5px;
+  border: none;
+  color: #d8dee9;
 }
 
-#selected {
-    margin: 0px;
-    border: 2px none #325b66;
-    background-color: #325b66;
-    color: #d33682;
-}
-
-#entry {
-    margin: 1px;
-    border: 1px none #103c48;
-    background-color: #103c48;
+#entry:selected {
+  font-weight: bold;
+  border-radius: 0;
+  outline: none;
+  background-color: #3b4252;
 }
