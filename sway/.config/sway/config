@@ -84,7 +84,7 @@ input type:touchpad {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t custom -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
 
 #
 # Moving around:
