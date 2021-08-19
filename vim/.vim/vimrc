@@ -78,9 +78,12 @@ set number relativenumber   " relative lines numbering (hybrid mode)
 " colors
 colorscheme nord
 
-" clipboard
-vnoremap <LeftRelease> "*ygv
-set clipboard=unnamedplus
+" Paste with middle mouse click
+vmap <LeftRelease> "*ygv
+vmap <RightRelease> "*ygv
+
+" Paste with <Shift> + <Insert>
+imap <S-Insert> <C-R>*
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Extra stuffs
