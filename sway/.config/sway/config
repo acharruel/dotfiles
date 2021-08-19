@@ -32,6 +32,8 @@ gaps inner 2
 gaps outer 1
 default_border pixel 2
 
+mouse_warping container
+
 ### Idle configuration
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
