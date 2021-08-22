@@ -44,7 +44,7 @@ window#waybar {
     opacity: 1;
 }
 
-#custom-date, #custom-clock, #battery, #pulseaudio, #network, #tray, #disk, #cpu {
+#custom-date, #custom-clock, #battery, #pulseaudio, #network, #tray, #disk, #cpu, #mpd {
     background-color: #24283b;
     padding: 5px 10px;
     margin: 5px 0px;
@@ -90,7 +90,6 @@ window#waybar {
 
 #pulseaudio {
     color: #e0af68;
-    border-radius: 5px 0px 0px 5px;
 }
 
 #disk {
@@ -99,4 +98,9 @@ window#waybar {
 
 #cpu {
     color: #a9b1d6;
+}
+
+#mpd {
+    color: #7dcfff;
+    border-radius: 5px 0px 0px 5px;
 }
