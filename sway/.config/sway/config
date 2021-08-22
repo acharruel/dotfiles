@@ -32,7 +32,7 @@ gaps inner 2
 gaps outer 1
 default_border pixel 2
 
-mouse_warping container
+#mouse_warping container
 
 ### Idle configuration
 # exec swayidle -w \
