@@ -38,6 +38,12 @@ window#waybar {
     border-radius: 5px;
 }
 
+#workspaces button.urgent {
+    color: #24283b;
+    background-color: #c9545d;
+    opacity: 1;
+}
+
 #custom-date, #custom-clock, #battery, #pulseaudio, #network, #tray, #disk, #cpu {
     background-color: #24283b;
     padding: 5px 10px;
