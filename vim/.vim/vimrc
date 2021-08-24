@@ -12,8 +12,6 @@ Plug 'vim-scripts/glib.vim'
 
 " Functionnalities plugins
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
-Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim', { 'do': 'git am ./0001-Add-cscope-command.patch' }
 Plug 'junegunn/vim-easy-align'
@@ -34,6 +32,12 @@ Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+
+" colorscheme
+Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
+Plug 'EdenEast/nightfox.nvim'
+
 
 " Completion plugins
 Plug 'autozimu/LanguageClient-neovim', {
