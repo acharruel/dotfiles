@@ -12,7 +12,7 @@
 
 @keyframes blink-critical {
     70% {
-      color: @light;
+        color: @light;
     }
 
     to {
@@ -152,7 +152,7 @@
 /* Workspaces stuff */
 
 #workspaces {
- /*   color: #D8DEE9;
+    /*   color: #D8DEE9;
     margin-right: 10px;*/
 }
 
