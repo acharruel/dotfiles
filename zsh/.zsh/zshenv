@@ -7,3 +7,7 @@ path=(/usr/local/go/bin $path)
 path=(/home/adrien/.bin $path)
 
 eval $(keychain --eval --quiet adrien-tagheuer acharruel)
+
+# android-studio
+path=(/usr/local/android-studio/bin $path)
+export _JAVA_AWT_WM_NONREPARENTING=1
