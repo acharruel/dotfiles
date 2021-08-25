@@ -8,6 +8,7 @@ Plug 'fladson/vim-kitty'
 Plug 'kergoth/vim-bitbake'
 Plug 'lervag/vimtex'
 Plug 'stfl/meson.vim'
+Plug 'udalov/kotlin-vim'
 Plug 'vim-scripts/glib.vim'
 
 " Functionnalities plugins
@@ -167,4 +168,3 @@ let g:nnn#action = {
       \ '<c-t>': 'tab split',
       \ '<c-x>': 'split',
       \ '<c-v>': 'vsplit' }
-
