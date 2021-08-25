@@ -1,0 +1,147 @@
+From 08df30a0336cdcd5d13df3dae5b0c8c095d97cd7 Mon Sep 17 00:00:00 2001
+From: Adrien Charruel <adrien.charruel@tagheuer.com>
+Date: Wed, 25 Aug 2021 18:38:13 +0200
+Subject: [PATCH] Add Cscope to fzf plugin
+
+---
+ autoload/fzf/vim.vim | 77 ++++++++++++++++++++++++++++++++++++++++++++
+ bin/preview.sh       |  6 +++-
+ plugin/fzf.vim       |  3 +-
+ 3 files changed, 84 insertions(+), 2 deletions(-)
+
+diff --git a/autoload/fzf/vim.vim b/autoload/fzf/vim.vim
+index 0bfe59e..b7d7f3d 100644
+--- a/autoload/fzf/vim.vim
++++ b/autoload/fzf/vim.vim
+@@ -1282,6 +1282,83 @@ function! fzf#vim#buffer_commits(...) range
+   return s:commits(s:given_range(a:firstline, a:lastline), 1, a:000)
+ endfunction
+ 
++" ------------------------------------------------------------------
++" Cscope
++" ------------------------------------------------------------------
++function! s:cscope_source(tag_cmds)
++  if !filereadable(expand('%'))
++    throw 'Save the file first'
++  endif
++
++  for cmd in a:tag_cmds
++    let lines = split(system(cmd), "\n")
++    if !v:shell_error && len(lines)
++      break
++    endif
++  endfor
++  if v:shell_error
++    throw get(lines, 0, 'Failed to extract tags')
++  elseif empty(lines)
++    throw 'No instances found'
++  endif
++  return map(s:align_lists(map(lines, 'split(v:val, "\t")')), 'join(v:val, "\t")')
++endfunction
++
++function! s:cscope_sink(lines)
++  if len(a:lines) < 2
++    return
++  endif
++  normal! m'
++  let cmd = s:action_for(a:lines[0], 'e')
++  for line in a:lines[1:]
++    let dst = split(line, "\t")[0]
++    let file = split(dst, ":")[0]
++    let line = split(dst, ":")[1]
++    " TODO Handle if the target file is the current one, and it's not saved
++    execute 'silent' cmd file
++    execute line
++  endfor
++  normal! zz
++endfunction
++
++" option, query, [[tag commands], options]
++function! fzf#vim#cscope(option, query, ...)
++  let cscopefile = "cscope.out"
++
++  if empty(glob(cscopefile))
++    call inputsave()
++    echohl WarningMsg
++    let gen = input('cscope files not found. Generate? (y/N) ')
++    echohl None
++    call inputrestore()
++    redraw
++    if gen =~? '^y'
++      call s:warn('Preparing cscope files')
++      call system('cscope -s . -R -q -b')
++      if empty(glob(cscopefile))
++        return s:warn('Failed to generate cscope files')
++      endif
++    else
++      return s:warn('No cscope file found')
++    endif
++  endif
++
++  let args = copy(a:000)
++
++  let format = '{ f = $1; $1 = ""; l = $3; $3 = ""; p = $2; $2 = ""; printf "\033[35m%s:\033[31m%s\t\033[0m%s\t\033[0m%s\n", f,     l, p, $0; }'
++  let tag_cmds = [printf("cscope -dL%s %s | awk \'%s\'", a:option, a:query, format)]
++  try
++    return s:fzf('cscope', {
++    \ 'source':  s:cscope_source(tag_cmds),
++    \ 'sink*':   s:function('s:cscope_sink'),
++    \ 'options': ['--ansi', '--prompt', a:query . '> ',
++    \             '--multi', '--bind', 'alt-a:select-all,alt-d:deselect-all',
++    \             '--color', 'hl:2,hl+:12']}, args)
++  catch
++    return s:warn(v:exception)
++  endtry
++endfunction
++
+ " ------------------------------------------------------------------
+ " fzf#vim#maps(mode, opts[with count and op])
+ " ------------------------------------------------------------------
+diff --git a/bin/preview.sh b/bin/preview.sh
+index 5ea4edc..9046c84 100755
+--- a/bin/preview.sh
++++ b/bin/preview.sh
+@@ -18,6 +18,7 @@ IFS=':' read -r -a INPUT <<< "$1"
+ FILE=${INPUT[0]}
+ CENTER=${INPUT[1]}
+ 
++
+ if [[ $1 =~ ^[A-Za-z]:\\ ]]; then
+   FILE=$FILE:${INPUT[1]}
+   CENTER=${INPUT[2]}
+@@ -57,6 +58,9 @@ fi
+ 
+ if [ -z "$CENTER" ]; then
+   CENTER=0
++  RANGE_OPT=
++else
++  RANGE_OPT="--line-range=$(($CENTER-5)):$(($CENTER+20))"
+ fi
+ 
+ # Sometimes bat is installed as batcat.
+@@ -68,7 +72,7 @@ fi
+ 
+ if [ -z "$FZF_PREVIEW_COMMAND" ] && [ "${BATNAME:+x}" ]; then
+   ${BATNAME} --style="${BAT_STYLE:-numbers}" --color=always --pager=never \
+-      --highlight-line=$CENTER "$FILE"
++      --highlight-line=$CENTER $RANGE_OPT "$FILE"
+   exit $?
+ fi
+ 
+diff --git a/plugin/fzf.vim b/plugin/fzf.vim
+index ac0177b..cab4bea 100644
+--- a/plugin/fzf.vim
++++ b/plugin/fzf.vim
+@@ -66,7 +66,8 @@ call s:defs([
+ \'command! -bar -bang -range=% BCommits                  let b:fzf_winview = winsaveview() | <line1>,<line2>call fzf#vim#buffer_commits(fzf#vim#with_preview({ "placeholder": "" }), <bang>0)',
+ \'command! -bar -bang Maps                               call fzf#vim#maps("n", <bang>0)',
+ \'command! -bar -bang Filetypes                          call fzf#vim#filetypes(<bang>0)',
+-\'command!      -bang -nargs=* History                   call s:history(<q-args>, fzf#vim#with_preview(), <bang>0)'])
++\'command!      -bang -nargs=* History                   call s:history(<q-args>, fzf#vim#with_preview(), <bang>0)',
++\'command!      -bang -nargs=+ Cscope                    call fzf#vim#cscope(<f-args>, fzf#vim#with_preview({ "placeholder": "{1}", "options": ["-d", "\t"] }), <bang>0)'])
+ 
+ function! s:history(arg, extra, bang)
+   let bang = a:bang || a:arg[len(a:arg)-1] == '!'
+-- 
+2.32.0
+

@@ -44,6 +44,9 @@ endfunction
 
 nnoremap <silent> <Leader>u :Cscope 3 <c-r>=expand("<cword>")<cr><cr>
 nnoremap <silent> <Leader>i :Cscope 4 <c-r>=expand("<cword>")<cr><cr>
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/vimplug/fzf.vim/bin/preview.sh {}']}, <bang>0)
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LanguageClient
