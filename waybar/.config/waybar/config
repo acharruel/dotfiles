@@ -9,8 +9,10 @@
     ],
     "modules-center": ["sway/window"],
     "modules-right": [
+        "custom/media",
         "pulseaudio",
         "disk",
+        "disk#tag",
         "battery",
         "network",
         "cpu",
@@ -115,5 +117,21 @@
         "path": "/home",
         "format": "⛁ {free}",
     },
+    "disk#tag": {
+        "path": "/media/adrien/adrien-tagheuer",
+        "format": "⛁ {free}",
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
 }
 
