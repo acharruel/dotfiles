@@ -9,7 +9,6 @@
     ],
     "modules-center": ["sway/window"],
     "modules-right": [
-        "custom/media",
         "pulseaudio",
         "disk",
         "disk#tag",
