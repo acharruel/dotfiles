@@ -7,6 +7,7 @@ source ${ZSHDIR}/zsh.prompt
 source ${ZSHDIR}/zsh.nnn
 
 # fzf
+export FZF_CTRL_T_OPTS="--preview 'batcat {}'"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
