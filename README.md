@@ -107,6 +107,15 @@ Launch vim and install plugins
 :PlugInstall
 ```
 
+### udiskie
+
+Automounter for removable media.
+https://github.com/coldfix/udiskie
+
+```
+stow waybar
+```
+
 ### waybar (customizable waylan bar)
 
 https://github.com/Alexays/Waybar

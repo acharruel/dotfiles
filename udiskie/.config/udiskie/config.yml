@@ -1,0 +1,19 @@
+program_options:
+  tray:       auto    # [bool] Enable the tray icon. "auto"
+                      # means auto-hide the tray icon when
+                      # there are no handled devices.
+
+  menu:       flat    # ["flat" | "nested"] Set the
+                      # systray menu behaviour.
+
+  automount:  true    # [bool] Enable automatic mounting.
+
+  notify:     true    # [bool] Enable notifications.
+
+terminal:   'kitty -d'
+
+device_config:
+  - device_file: /dev/mmcblk0p1
+    automount:  false
+  - device_file: /dev/mmcblk0p2
+    automount: false
