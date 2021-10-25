@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-set -x
-
 # Description: Terminal based file previewer
 #
 # Note: This plugin needs a "NNN_FIFO" to work. See man.
@@ -137,7 +135,7 @@ start_preview() {
                      FIFOPID="$FIFOPID" FIFO_UEBERZUG="$FIFO_UEBERZUG" $TERMINAL -e "$0" "$1" &
             fi ;;
     esac
-}
+} >/dev/null 2>&1
 
 toggle_preview() {
     if exists QuickLook.exe; then
@@ -154,7 +152,7 @@ toggle_preview() {
     else
         start_preview "$1" "$QLPATH"
     fi
-}
+} >/dev/null 2>&1
 
 exists() {
     type "$1" >/dev/null
@@ -190,7 +188,7 @@ fifo_pager() {
 
 # Binary file: show file info inside the pager
 print_bin_info() {
-    printf -- "-------- Binary file --------\n"
+    printf -- "-------- \033[1;31mBinary file\033[0m --------\n"
     if exists mediainfo; then
         mediainfo "$1"
     else
