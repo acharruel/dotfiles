@@ -36,7 +36,6 @@ Plug 'tpope/vim-surround'
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
-Plug 'EdenEast/nightfox.nvim'
 
 
 " Completion plugins
@@ -137,7 +136,7 @@ let g:LanguageClient_serverCommands = {
   \ 'cpp': ['clangd'],
   \ 'c': ['clangd'],
   \ }
-let g:LanguageClient_autoStart = 1
+let g:LanguageClient_autoStart = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " deoplete

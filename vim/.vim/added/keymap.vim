@@ -9,8 +9,8 @@ nmap <Leader>w       :StripWhitespace<CR>   " Remove white spaces at EOL
 nmap <Leader>eol     :%s///gc<CR>         " Remove Windows EOL symbols
 nmap <Leader><left>  :tabprevious<CR>       " map tab previous to ,LEFTARROW
 nmap <Leader><right> :tabnext<CR>           " map tab next to ,RIGHTARROW
-nmap <Leader>n       :tabnew<CR>            " map tab new to ,n
-nmap <Leader>nn      :tabnew %<CR>          " map tab new with same buffer to ,nn
+nmap <Leader>nt      :tabnew<CR>            " map tab new to ,nt
+nmap <Leader>nnt     :tabnew %<CR>          " map tab new with same buffer to ,nnt
 
 " threadx
 nmap <Leader>tx :setlocal tw=100 ts=4 sts=4 sw=4 et colorcolumn=100 list<CR>
