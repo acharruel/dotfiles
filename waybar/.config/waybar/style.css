@@ -30,9 +30,7 @@
 
 /* Nord */
 @define-color bg #2E3440;
-/*@define-color bg #353C4A;*/
 @define-color light #D8DEE9;
-/*@define-color dark @nord_dark_font;*/
 @define-color warning #ebcb8b;
 @define-color critical #BF616A;
 @define-color mode #434C5E;
@@ -41,16 +39,9 @@
 /*@define-color workspacesfocused #434C5E;*/
 @define-color workspacesfocused #4C566A;
 @define-color tray @workspacesfocused;
-@define-color sound #EBCB8B;
-@define-color network #5D7096;
-@define-color memory #546484;
-@define-color cpu #596A8D;
-@define-color temp #4D5C78;
 @define-color layout #5e81ac;
-@define-color battery #88c0d0;
 @define-color date #434C5E;
-@define-color time #434C5E;
-@define-color backlight #434C5E;
+
 @define-color nord_bg #434C5E;
 @define-color nord_bg_blue #546484;
 @define-color nord_light #D8DEE9;
@@ -218,9 +209,6 @@
     font-weight: bold;
     padding: 0 0.6em;
 }
-#custom-alsa {
-    background: @sound;
-}
 
 #network {
     background: @nord_bg;
@@ -289,18 +277,21 @@
 }
 
 #pulseaudio { /* Unsused but kept for those who needs it */
-    background: @nord_bg_blue;
-    color: @nord_light_font;
+    background: @warning;
+    color: @nord_dark_font;
 }
 #pulseaudio.source-muted {
     background: @nord_bg;
+    color: @nord_light_font;
 }
 #pulseaudio.bluetooth {
     background: @nord_bg_blue;
+    color: @nord_light_font;
 }
 #pulseaudio.muted,
 #pulseaudio.bluetooth-muted {
     background: @critical;
+    color: @nord_light_font;
 }
 
 #tray {
