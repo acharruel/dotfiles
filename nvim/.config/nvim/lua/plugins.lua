@@ -23,17 +23,19 @@ return require('packer').startup(function()
 
     -- Functionnalities plugins
     use 'farmergreg/vim-lastplace'
-    use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
-    use 'junegunn/fzf.vim'
+    use {
+        'junegunn/fzf.vim',
+        requires = {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
+    }
     use 'junegunn/vim-easy-align'
     use 'luukvbaal/nnn.nvim'
     use 'ntpeters/vim-better-whitespace'
     use 'vim-scripts/a.vim'
+
+    -- git
     use {
         'lewis6991/gitsigns.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        },
+        requires = {'nvim-lua/plenary.nvim'},
     }
 
     --Sort motion plugins
@@ -53,8 +55,7 @@ return require('packer').startup(function()
     }
 
     -- treesitter
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -66,7 +67,7 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {
             {'nvim-lua/plenary.nvim'},
-            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
         }
     }
 
