@@ -20,9 +20,6 @@ vim.opt.relativenumber = true                  -- relative lines numbering
 vim.opt.clipboard = {'unnamed', 'unnamedplus'} -- clipboard config for copy/paste
 vim.opt.colorcolumn = '80'                     -- set column to 80 chars
 
--- colorscheme
-vim.cmd 'colorscheme nord'
-
 -- indent linux style
 vim.opt.shiftwidth = 8  -- tabs are 8 chars wide
 vim.opt.tabstop = 8

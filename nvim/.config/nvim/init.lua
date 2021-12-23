@@ -20,9 +20,13 @@ require('mappings')
 -- vim autocommands
 require('autocommands')
 
+-- colors
+require('colors')
+
 -- plugins configs
-require('nnn-loader')
-require('lualine-loader')
-require('treesitter-loader')
+require('gitsigns-loader')
 require('lsp-loader')
+require('lualine-loader')
+require('nnn-loader')
 require('telescope-loader')
+require('treesitter-loader')

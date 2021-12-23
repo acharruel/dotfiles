@@ -17,6 +17,8 @@ return require('packer').startup(function()
     -- colorschemes
     use 'altercation/vim-colors-solarized'
     use 'arcticicestudio/nord-vim'
+    use 'EdenEast/nightfox.nvim'
+    use 'folke/tokyonight.nvim'
     use 'sainnhe/everforest'
 
     -- Functionnalities plugins
@@ -27,6 +29,12 @@ return require('packer').startup(function()
     use 'luukvbaal/nnn.nvim'
     use 'ntpeters/vim-better-whitespace'
     use 'vim-scripts/a.vim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+    }
 
     --Sort motion plugins
     use 'christoomey/vim-sort-motion'
