@@ -1,10 +1,12 @@
-local lsp = require 'lspconfig'
-local lspfuzzy = require 'lspfuzzy'
+-- setup lsp installer
+local lsp_installer = require("nvim-lsp-installer")
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    server:setup(opts)
+end)
 
--- setup servers
-lsp.clangd.setup {}     -- clangd for C/C++
-lsp.pylsp.setup {}      -- python
-lsp.gopls.setup {}      -- go
+-- lsp fuzzy
+local lspfuzzy = require 'lspfuzzy'
 lspfuzzy.setup {}
 
 -- toggle diagnostics

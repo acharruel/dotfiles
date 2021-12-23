@@ -58,7 +58,10 @@ return require('packer').startup(function()
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- lsp
-    use 'neovim/nvim-lspconfig'
+    use {
+        'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
+    }
     use 'ojroques/nvim-lspfuzzy'
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 
