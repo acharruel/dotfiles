@@ -64,6 +64,7 @@ return require('packer').startup(function()
     }
     use 'ojroques/nvim-lspfuzzy'
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
+    use 'onsails/lspkind-nvim'
 
     -- telescope
     use {
@@ -73,6 +74,13 @@ return require('packer').startup(function()
             {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
         }
     }
+
+    -- cmp
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
 
     if packer_bootstrap then
         require('packer').sync()

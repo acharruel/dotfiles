@@ -24,6 +24,7 @@ require('autocommands')
 require('colors')
 
 -- plugins configs
+require('cmp-loader')
 require('gitsigns-loader')
 require('lsp-loader')
 require('lualine-loader')
