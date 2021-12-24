@@ -15,20 +15,20 @@ telescope.setup{
 telescope.load_extension('fzf')
 
 -- file pickers
-map('n', '<leader>fs', "<cmd>lua require('telescope.builtin').grep_string()<CR>")
-map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>")
-map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>")
+map('n', '<leader>s', "<cmd>lua require('telescope.builtin').grep_string()<CR>")
+map('n', '<leader>g', "<cmd>lua require('telescope.builtin').live_grep()<CR>")
+map('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files()<CR>")
 
 -- vim pickers
-map('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>")
-map('n', '<leader>fo', "<cmd>lua require('telescope.builtin').oldfiles()<CR>")
-map('n', '<leader>fs', "<cmd>lua require('telescope.builtin').search_history()<CR>")
-map('n', '<leader>ft', "<cmd>lua require('telescope.builtin').tags()<CR>")
+map('n', '<leader>ht', "<cmd>lua require('telescope.builtin').help_tags()<CR>")
+map('n', '<leader>of', "<cmd>lua require('telescope.builtin').oldfiles()<CR>")
+-- map('n', '<leader>sh', "<cmd>lua require('telescope.builtin').search_history()<CR>")
+map('n', '<leader>t', "<cmd>lua require('telescope.builtin').tags()<CR>")
 
 -- lsp pickers
 map('n', 'gd', "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>")
 map('n', 'gr', "<cmd>lua require('telescope.builtin').lsp_references()<CR>")
-map('n', '<leader>fd', "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>")
+map('n', '<leader>ds', "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>")
 
 -- git pickers
 map('n', '<leader>gc', "<cmd>lua require('telescope.builtin').git_bcommits()<CR>")

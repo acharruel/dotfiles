@@ -14,12 +14,12 @@ vim.api.nvim_exec('xmap ga <Plug>(EasyAlign)', false)
 vim.api.nvim_exec('nmap ga <Plug>(EasyAlign)', false)
 
 -- fzf
-map('n', '<leader>f', '<cmd>GFiles<CR>')
-map('n', '<leader>F', '<cmd>Files<CR>')
-map('n', '<leader>t', '<cmd>BTags<CR>')
-map('n', '<leader>T', '<cmd>Tags<CR>')
-map('n', '<leader>c', '<cmd>BCommits<CR>')
-map('n', '<leader>C', '<cmd>Commits<CR>')
+map('n', '<leader>ff', '<cmd>GFiles<CR>')
+map('n', '<leader>fF', '<cmd>Files<CR>')
+map('n', '<leader>ft', '<cmd>BTags<CR>')
+map('n', '<leader>fT', '<cmd>Tags<CR>')
+map('n', '<leader>fc', '<cmd>BCommits<CR>')
+map('n', '<leader>fC', '<cmd>Commits<CR>')
 
 -- packer sync plugins
 map('n', '<leader>u', '<cmd>PackerSync<CR>')

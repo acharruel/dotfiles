@@ -58,10 +58,8 @@ return require('packer').startup(function()
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- lsp
-    use {
-        'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
-    }
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
     use 'ojroques/nvim-lspfuzzy'
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
     use 'onsails/lspkind-nvim'
@@ -81,6 +79,11 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+    use "saadparwaiz1/cmp_luasnip"
+    use 'hrsh7th/cmp-nvim-lua'
+
+    -- snippets
+    use "L3MON4D3/LuaSnip"
 
     if packer_bootstrap then
         require('packer').sync()
