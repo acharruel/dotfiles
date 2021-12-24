@@ -3,7 +3,6 @@ path=(/sbin $path)
 path=(/usr/sbin $path)
 path=($(python3 -m site --user-base)/bin $path)
 path=(/snap/bin $path)
-path=(/usr/local/go/bin $path)
 path=(/home/adrien/.bin $path)
 
 eval $(keychain --eval --quiet adrien-tagheuer acharruel)
