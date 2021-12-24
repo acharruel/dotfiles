@@ -40,4 +40,9 @@ require('gitsigns').setup {
     yadm = {
         enable = false
     },
+    keymaps = {
+        -- Default keymap options
+        noremap = true,
+        ['n <leader>gb'] = '<cmd>Gitsigns blame_line<CR>',
+    },
 }
