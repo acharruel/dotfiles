@@ -17,7 +17,3 @@ require("nnn").setup({
         { "<C-e>", require("nnn").builtin.populate_cmdline },  -- populate cmdline (:) with file(s)
     },
 })
-
--- nnn bindings
-map('n', '<leader>n', '<cmd>NnnPicker<CR>')
-map('n', '<leader>N', '<cmd>NnnExplorer<CR>')

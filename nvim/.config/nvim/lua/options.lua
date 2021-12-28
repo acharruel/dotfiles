@@ -1,3 +1,6 @@
+-- leader key for custom actions
+vim.g.mapleader = ','
+
 -- Global vim configs
 vim.opt.autoindent = true                      -- Always set autoindenting on
 vim.opt.autowrite = true                       -- Automatically write buffer before special actions

@@ -87,6 +87,8 @@ local mappings = {
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["g"] = { "<cmd>Telescope grep_string<cr>", "Grep String" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["n"] = { "<cmd>NnnPicker<CR>", "nnn Picker" },
+    ["N"] = { "<cmd>NnnExplorer<CR>", "nnn Explorer" },
     ["w"] = { "<cmd>StripWhitespace<cr>", "Strip White Spaces" },
 
     G = {
