@@ -85,6 +85,9 @@ return require('packer').startup(function()
     -- snippets
     use "L3MON4D3/LuaSnip"
 
+    -- which key
+    use 'folke/which-key.nvim'
+
     if packer_bootstrap then
         require('packer').sync()
     end

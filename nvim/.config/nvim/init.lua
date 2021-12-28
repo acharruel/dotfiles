@@ -26,8 +26,11 @@ require('colors')
 -- plugins configs
 require('cmp-loader')
 require('gitsigns-loader')
-require('lsp-loader')
 require('lualine-loader')
 require('nnn-loader')
 require('telescope-loader')
 require('treesitter-loader')
+require('which-key-loader')
+
+-- lsp
+require("lsp")
