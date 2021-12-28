@@ -60,7 +60,6 @@ return require('packer').startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
-    use 'ojroques/nvim-lspfuzzy'
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
     use 'onsails/lspkind-nvim'
 
