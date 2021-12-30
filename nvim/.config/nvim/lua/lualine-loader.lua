@@ -1,17 +1,22 @@
+local status, lualine = pcall(require, "lualine")
+if not status then
+    return
+end
+
 -- lualine plugin config
-require'lualine'.setup {
+lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
-    section_separators = '',
-    component_separators = '',
+    theme = "auto",
+    section_separators = "",
+    component_separators = "",
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch'},
-    lualine_c = {'filename'},
-    lualine_x = {'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_a = {"mode"},
+    lualine_b = {"branch"},
+    lualine_c = {"filename"},
+    lualine_x = {"filetype"},
+    lualine_y = {"progress"},
+    lualine_z = {"location"}
   },
 }

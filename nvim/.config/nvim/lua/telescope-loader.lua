@@ -1,4 +1,7 @@
-local telescope = require("telescope")
+local status, telescope = pcall(require, "telescope")
+if not status then
+    return
+end
 
 telescope.setup{
     extensions = {
@@ -12,4 +15,4 @@ telescope.setup{
     }
 }
 
-telescope.load_extension('fzf')
+telescope.load_extension("fzf")

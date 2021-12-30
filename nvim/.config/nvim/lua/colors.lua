@@ -1,8 +1,12 @@
--- colorscheme
+-- Nightfox config
+local status, nightfox = pcall(require, "nightfox")
+if not status then
+    return
+end
+
+-- set colorscheme
 vim.cmd 'colorscheme nightfox'
 
--- Nightfox config
-local nightfox = require("nightfox")
 nightfox.setup({
     fox = "nordfox",
     alt_nc = true,
@@ -17,3 +21,4 @@ nightfox.setup({
     },
 })
 nightfox.load()
+

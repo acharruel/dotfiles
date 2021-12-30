@@ -1,5 +1,10 @@
+local status, nnn = pcall(require, "nnn")
+if not status then
+    return
+end
+
 -- nnn plugin config
-require("nnn").setup({
+nnn.setup({
     explorer = {
         width = 36,
     },
