@@ -32,6 +32,8 @@ return require('packer').startup(function()
     use "luukvbaal/nnn.nvim"
     use "ntpeters/vim-better-whitespace"
     use "vim-scripts/a.vim"
+    use "lewis6991/impatient.nvim"
+
 
     -- git
     use {
