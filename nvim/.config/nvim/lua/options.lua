@@ -29,7 +29,6 @@ vim.opt.wrap = false				  -- do not wrap long lines
 vim.opt.writebackup = false                       -- if a file is being edited by another program it's not allowed to be edited
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
 
 -- indent linux style
 vim.opt.colorcolumn = '80'                        -- set column to 80 chars
