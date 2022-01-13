@@ -15,4 +15,6 @@ telescope.setup{
     }
 }
 
+-- extensions
 telescope.load_extension("fzf")
+telescope.load_extension("harpoon")

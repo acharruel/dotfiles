@@ -90,6 +90,9 @@ return require('packer').startup(function()
     -- which key
     use "folke/which-key.nvim"
 
+    -- harpoon
+    use "ThePrimeagen/harpoon"
+
     if packer_bootstrap then
         require("packer").sync()
     end
