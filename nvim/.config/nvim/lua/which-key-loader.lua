@@ -83,6 +83,7 @@ local mappings = {
         "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Buffers",
     },
+    ["c"] = { "<cmd>set cursorline!<cr>", "Toggle cursorline" },
     ["f"] = {
         "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Find files",
