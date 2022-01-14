@@ -16,10 +16,10 @@ set $term kitty
 font "DejaVuSansMono Nerd Font Mono Bold"
 
 # wallpaper
-#set $wallpaper $HOME/.config/sway/wallpaper.jpg
-set $wallpaper $HOME/documents/ZOOM_5.jpg
+set $wallpaper $HOME/Images/wallpaper.jpg
 
 # configuration files
+include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
 
 ### Output configuration
@@ -112,8 +112,8 @@ input type:touchpad {
     bindsym $mod+quotedbl workspace 3
     bindsym $mod+apostrophe workspace 4
     bindsym $mod+parenleft workspace 5
-    bindsym $mod+minus workspace 6
-    bindsym $mod+egrave workspace 7
+    bindsym $mod+egrave workspace 6
+    bindsym $mod+minus workspace 7
     bindsym $mod+underscore workspace 8
     bindsym $mod+ccedilla workspace 9
     bindsym $mod+agrave workspace 10
@@ -124,8 +124,8 @@ input type:touchpad {
     bindsym $mod+Shift+quotedbl move container to workspace 3
     bindsym $mod+Shift+apostrophe move container to workspace 4
     bindsym $mod+Shift+parenleft move container to workspace 5
-    bindsym $mod+Shift+minus move container to workspace 6
-    bindsym $mod+Shift+egrave move container to workspace 7
+    bindsym $mod+Shift+egrave move container to workspace 6
+    bindsym $mod+Shift+minus move container to workspace 7
     bindsym $mod+Shift+underscore move container to workspace 8
     bindsym $mod+Shift+ccedilla move container to workspace 9
     bindsym $mod+Shift+agrave move container to workspace 10
