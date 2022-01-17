@@ -20,9 +20,3 @@ map("n", "J", "mzJ`z")
 
 -- Make Y yank to end of the line
 map("n", "Y", "y$")
-
-map("n", "ghh", "<cmd>lua require('harpoon.mark').add_file()<cr>")
-map("n", "gh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>")
-map("n", "gH", "<cmd>Telescope harpoon marks<cr>")
-map("n", "ghp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>")
-map("n", "ghn", "<cmd>lua require('harpoon.ui').nav_next()<cr>")

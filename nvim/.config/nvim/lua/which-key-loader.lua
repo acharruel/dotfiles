@@ -90,7 +90,7 @@ local mappings = {
     },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["g"] = { "<cmd>Telescope grep_string<cr>", "Grep String" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["H"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["n"] = { "<cmd>NnnPicker<CR>", "nnn Picker" },
     ["N"] = { "<cmd>NnnExplorer<CR>", "nnn Explorer" },
     ["w"] = { "<cmd>StripWhitespace<cr>", "Strip White Spaces" },
@@ -104,17 +104,20 @@ local mappings = {
         r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
         R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
         s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-        u = {
-            "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-            "Undo Stage Hunk",
-        },
+        u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
         o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-        d = {
-            "<cmd>Gitsigns diffthis HEAD<cr>",
-            "Diff",
-        },
+        d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
+    },
+
+    h = {
+        name = "Harpoon",
+        a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
+        h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle Quick Menu" },
+        t = { "<cmd>Telescope harpoon marks<cr>", "Telescope Harpoon Marks" },
+        p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Navigate Previous" },
+        n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Navigate Next" },
     },
 
     i = {
