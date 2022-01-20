@@ -65,6 +65,7 @@ return require('packer').startup(function()
     use "williamboman/nvim-lsp-installer"
     use "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
     use "onsails/lspkind-nvim"
+    use "jose-elias-alvarez/null-ls.nvim"
 
     -- telescope
     use {
