@@ -33,6 +33,8 @@ return require('packer').startup(function()
     use "ntpeters/vim-better-whitespace"
     use "vim-scripts/a.vim"
     use "lewis6991/impatient.nvim"
+    use "sunjon/shade.nvim"
+    use "ellisonleao/glow.nvim"
 
 
     -- git
