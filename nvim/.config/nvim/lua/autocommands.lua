@@ -26,6 +26,9 @@ local autocmds = {
         { 'BufEnter,FocusGained,InsertLeave', '*', 'set relativenumber' };
         { 'BufLeave,FocusLost,InsertEnter', '*', 'set norelativenumber' };
     };
+    highlight_yank = {
+        { 'TextYankPost', '*', 'lua vim.highlight.on_yank({higroup="Visual", timeout="200"})' };
+    };
 }
 
 -- load autocommands
