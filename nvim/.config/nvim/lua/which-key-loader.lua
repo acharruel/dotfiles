@@ -84,6 +84,7 @@ local mappings = {
         "Buffers",
     },
     ["c"] = { "<cmd>set cursorline!<cr>", "Toggle cursorline" },
+    ["C"] = { "<cmd>lua require('togglecolumn').toggle_colorcolumn()<cr>", "Toggle colorcolumn" },
     ["f"] = {
         "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Find files",
