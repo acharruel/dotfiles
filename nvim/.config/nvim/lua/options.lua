@@ -53,3 +53,4 @@ vim.opt.listchars:append({
 
 -- enable better whitespace
 vim.g.better_whitespace_enabled = 1
+vim.g.better_whitespace_operator = ""
