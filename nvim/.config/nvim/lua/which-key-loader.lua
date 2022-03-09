@@ -94,6 +94,7 @@ local mappings = {
     ["n"] = { "<cmd>NnnPicker<CR>", "nnn Picker" },
     ["N"] = { "<cmd>NnnExplorer<CR>", "nnn Explorer" },
     ["w"] = { "<cmd>StripWhitespace<cr>", "Strip White Spaces" },
+    ["x"] = { "<cmd>source %<cr>", "Source current file" },
 
     G = {
         name = "Git",
@@ -153,6 +154,7 @@ local mappings = {
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
+        d = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
