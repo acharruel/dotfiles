@@ -19,6 +19,13 @@ local filetype = {
     colored = false,
 }
 
+local location = function()
+    local line = vim.fn.line(".")
+    local total_line = vim.fn.line("$")
+    local column = vim.fn.col(".")
+    return tostring(line) .. "/".. tostring(total_line) .. ":" .. tostring(column)
+end
+
 -- lualine plugin config
 lualine.setup {
   options = {
@@ -33,6 +40,6 @@ lualine.setup {
     lualine_c = { "filename" },
     lualine_x = { filetype },
     lualine_y = { "progress" },
-    lualine_z = { "location" }
+    lualine_z = { location }
   },
 }
