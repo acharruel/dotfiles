@@ -13,7 +13,6 @@ return require('packer').startup(function()
     use "adelarsq/vim-matchit"
     use "fladson/vim-kitty"
     use "kergoth/vim-bitbake"
-    use "stfl/meson.vim"
 
     -- colorschemes
     use "altercation/vim-colors-solarized"
@@ -35,7 +34,7 @@ return require('packer').startup(function()
     use "lewis6991/impatient.nvim"
     use "sunjon/shade.nvim"
     use "ellisonleao/glow.nvim"
-
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- git
     use {

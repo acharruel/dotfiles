@@ -13,18 +13,17 @@ end
 
 -- list of autocommands
 local autocmds = {
-    text_files = {
-        { 'BufNewFile,BufRead', '*.{tex,txt}', 'setlocal tw=80 ts=2 sts=2 sw=2 et list' };
-    };
-    html_files = {
+    indentation = {
+        { 'BufNewFile,BufRead', '*.{tex,txt,text}', 'setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=0' };
         { 'BufNewFile,BufRead', '*.{html,xml,htm}', 'setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=120' };
+        { 'BufNewFile,BufRead', '*.{c,h,cpp,hpp}',  'setlocal tw=80  ts=8 sts=8 sw=8 et! nolist colorcolumn=80' };
     };
     packer = {
         { 'BufWritePost', 'plugins.lua', 'PackerCompile' };
     };
     number_toggle = {
-        { 'BufEnter,FocusGained,InsertLeave', '*', 'set relativenumber' };
-        { 'BufLeave,FocusLost,InsertEnter', '*', 'set norelativenumber' };
+        { 'BufEnter, FocusGained,InsertLeave', '*', 'set relativenumber' };
+        { 'BufLeave, FocusLost,InsertEnter', '*', 'set norelativenumber' };
     };
     highlight_yank = {
         { 'TextYankPost', '*', 'lua vim.highlight.on_yank({higroup="Visual", timeout="200"})' };
