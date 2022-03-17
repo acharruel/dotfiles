@@ -5,20 +5,23 @@ if not status then
 end
 
 -- set colorscheme
-vim.cmd 'colorscheme nightfox'
+vim.cmd 'colorscheme nordfox'
 
-nightfox.setup({
-    fox = "nordfox",
-    alt_nc = true,
+local options = {
+    dim_inactive = false,
     styles = {
         comments = "italic",
         -- keywords = "bold",
         functions = "bold",
     },
-    hlgroups = {
-        TSProperty = { fg = "#b9bfca" },        -- struct fields in white
-        ExtraWhiteSpace = { bg = "#bf616a" },   -- extra whitespaces in nord red
-    },
-})
-nightfox.load()
+}
 
+local groups = {
+	TSProperty = { fg = "#b9bfca" },        -- struct fields in white
+	ExtraWhiteSpace = { bg = "#bf616a" },   -- extra whitespaces in nord red
+}
+
+nightfox.setup({
+	options = options,
+	groups = groups,
+})

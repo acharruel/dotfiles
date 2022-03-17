@@ -30,7 +30,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "nightfox",
     section_separators = "",
     component_separators = "",
   },
