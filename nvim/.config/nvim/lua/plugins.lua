@@ -15,9 +15,10 @@ return require('packer').startup(function()
     use "kergoth/vim-bitbake"
 
     -- colorschemes
+	use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
     use "altercation/vim-colors-solarized"
     use "arcticicestudio/nord-vim"
-    use "EdenEast/nightfox.nvim"
     use "folke/tokyonight.nvim"
     use "sainnhe/everforest"
 
