@@ -109,7 +109,7 @@
 
     "custom/clock": {
         "exec": "date +'%a %d %b %Y - %H:%M'",
-        "interval": 1
+        "interval": 60
     },
 
     "disk": {
