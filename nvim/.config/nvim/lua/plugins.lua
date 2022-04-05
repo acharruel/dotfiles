@@ -95,6 +95,10 @@ return require('packer').startup(function()
     -- harpoon
     use "ThePrimeagen/harpoon"
 
+	-- dressing
+	use "stevearc/dressing.nvim"
+
+
     if packer_bootstrap then
         require("packer").sync()
     end
