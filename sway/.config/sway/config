@@ -13,7 +13,7 @@ set $mod Mod1
 set $term kitty
 
 # default font to use
-font "DejaVuSansMono Nerd Font Mono Bold"
+font "DejaVuSansMono Nerd Font Mono Bold 12"
 
 # wallpaper
 set $wallpaper $HOME/Images/wallpaper.jpg
