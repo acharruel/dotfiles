@@ -59,7 +59,10 @@ return require('packer').startup(function()
     }
 
     -- treesitter
-    use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
+    use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ':TSUpdate',
+	}
 
     -- lsp
     use "neovim/nvim-lspconfig"
@@ -74,7 +77,7 @@ return require('packer').startup(function()
         requires = {
             {"nvim-lua/plenary.nvim"},
             {"nvim-telescope/telescope-fzf-native.nvim", run = 'make'}
-        }
+        },
     }
 
     -- cmp
