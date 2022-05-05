@@ -1,34 +1,51 @@
--- autocommands helper function
-local function nvim_create_augroups(definitions)
-    for group_name, definition in pairs(definitions) do
-        vim.api.nvim_command('augroup '..group_name)
-        vim.api.nvim_command('autocmd!')
-        for _, def in ipairs(definition) do
-            local command = table.concat(vim.tbl_flatten{'autocmd', def}, ' ')
-            vim.api.nvim_command(command)
-        end
-        vim.api.nvim_command('augroup END')
-    end
-end
+local group = vim.api.nvim_create_augroup("CustomIndentGroup", { clear = true })
+vim.api.nvim_create_autocmd(
+	{ "BufNewFile", "BufRead" },
+	{
+		command = "setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=0",
+		pattern = "*.{tex,txt,text}",
+		group = group,
+	})
+vim.api.nvim_create_autocmd(
+	{ "BufNewFile", "BufRead" },
+	{
+		command = "setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=120",
+		pattern = "*.{html,xml,htm}",
+		group = group,
+	})
+vim.api.nvim_create_autocmd(
+	{ "BufNewFile", "BufRead" },
+	{
+		command = "setlocal tw=80 ts=8 sts=8 sw=8 et! nolist colorcolumn=80",
+		pattern = "*.{c,h,cpp,hpp}",
+		group = group,
+	})
 
--- list of autocommands
-local autocmds = {
-    indentation = {
-        { 'BufNewFile,BufRead', '*.{tex,txt,text}', 'setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=0' };
-        { 'BufNewFile,BufRead', '*.{html,xml,htm}', 'setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=120' };
-        { 'BufNewFile,BufRead', '*.{c,h,cpp,hpp}',  'setlocal tw=80  ts=8 sts=8 sw=8 et! nolist colorcolumn=80' };
-    };
-    packer = {
-        { 'BufWritePost', 'plugins.lua', 'PackerCompile' };
-    };
-    number_toggle = {
-        { 'BufEnter, FocusGained,InsertLeave', '*', 'set relativenumber' };
-        { 'BufLeave, FocusLost,InsertEnter', '*', 'set norelativenumber' };
-    };
-    highlight_yank = {
-        { 'TextYankPost', '*', 'lua vim.highlight.on_yank({higroup="Visual", timeout="200"})' };
-    };
-}
+local group = vim.api.nvim_create_augroup("CustomPackerGroup", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost",
+	{
+		command = "PackerCompile",
+		pattern = "plugins.lua",
+		group = group
+	})
 
--- load autocommands
-nvim_create_augroups(autocmds)
+local group = vim.api.nvim_create_augroup("CustomNumberGroup", { clear = true })
+vim.api.nvim_create_autocmd(
+	{ "BufEnter", "FocusGained", "InsertLeave" },
+	{
+		command = "set relativenumber",
+		group = group,
+	})
+vim.api.nvim_create_autocmd(
+	{ "BufLeave", "FocusLost", "InsertEnter" },
+	{
+		command = "set norelativenumber",
+		group = group,
+	})
+
+local group = vim.api.nvim_create_augroup("CustomYankGroup", { clear = true })
+vim.api.nvim_create_autocmd({ "TextYankPost" },
+	{
+		command = "lua vim.highlight.on_yank({higroup='Visual', timeout='200'})",
+		group = group,
+	})
