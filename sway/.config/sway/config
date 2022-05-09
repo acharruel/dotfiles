@@ -10,7 +10,7 @@
 set $mod Mod1
 
 # Your preferred terminal emulator
-set $term kitty
+set $term /home/adrien/.local/bin/kitty
 
 # default font to use
 font "DejaVuSansMono Nerd Font Mono Bold 12"
