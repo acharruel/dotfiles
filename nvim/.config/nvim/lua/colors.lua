@@ -17,8 +17,10 @@ local options = {
 }
 
 local groups = {
-	TSProperty = { fg = "#b9bfca" },        -- struct fields in white
-	ExtraWhiteSpace = { bg = "#bf616a" },   -- extra whitespaces in nord red
+	all = {
+		TSProperty = { fg = "#b9bfca" },        -- struct fields in white
+		ExtraWhiteSpace = { bg = "#bf616a" },   -- extra whitespaces in nord red
+	},
 }
 
 nightfox.setup({
