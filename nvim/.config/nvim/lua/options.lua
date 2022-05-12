@@ -27,7 +27,6 @@ vim.opt.timeoutlen = 200                          -- timeout of mapped sequence
 vim.opt.undofile = true                           -- enable persistent undo
 vim.opt.wrap = false                              -- do not wrap long lines
 vim.opt.writebackup = false                       -- if a file is being edited by another program it's not allowed to be edited
-vim.opt.wrapscan = false                          -- do not wrap searches
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 
