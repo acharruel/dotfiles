@@ -26,6 +26,18 @@ local location = function()
     return tostring(line) .. "/".. tostring(total_line) .. ":" .. tostring(column)
 end
 
+local filename = {
+	"filename",
+	file_status = true,
+	path = 1,
+	shorting_target = 40,
+	symbols = {
+		modified = "[+]",
+		readonly = "[-]",
+		unnamed = "[No Name]",
+	}
+}
+
 -- lualine plugin config
 lualine.setup {
   options = {
@@ -38,8 +50,8 @@ lualine.setup {
   sections = {
     lualine_a = { "mode" },
     lualine_b = { "branch", diff },
-    lualine_c = { "filename" },
-    lualine_x = { filetype },
+    lualine_c = { filename },
+    lualine_x = { "encoding", filetype },
     lualine_y = { "progress" },
     lualine_z = { location }
   },
