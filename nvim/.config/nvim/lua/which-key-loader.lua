@@ -79,6 +79,7 @@ local opts = {
 }
 
 local mappings = {
+    ["a"] = { "<cmd>:b#<cr>", "Alternate File Switch" },
     ["b"] = {
         "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Buffers",
