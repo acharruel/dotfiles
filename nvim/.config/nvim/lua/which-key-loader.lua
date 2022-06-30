@@ -125,8 +125,9 @@ local mappings = {
 
     i = {
         name = "Indentation",
-        s = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=100 list<CR>", "Shell style" },
         g = { "<cmd>setlocal tw=100 ts=2 sw=2 et colorcolumn=100 list<CR>", "Glib style" },
+        s = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=100 list<CR>", "Shell style" },
+        t = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=80 list<CR>", "Tag Heuer style" },
     },
 
     l = {
