@@ -44,10 +44,10 @@ return require('packer').startup(function()
 
     --Sort motion plugins
     use "christoomey/vim-sort-motion"
-    use "kana/vim-textobj-entire"
-    use "kana/vim-textobj-function"
-    use "kana/vim-textobj-indent"
-    use "kana/vim-textobj-user"
+    use {
+		"kana/vim-textobj-entire",
+		requires = { use "kana/vim-textobj-user" },
+	}
     use "tpope/vim-commentary"
     use "tpope/vim-repeat"
     use "tpope/vim-surround"
@@ -63,6 +63,9 @@ return require('packer').startup(function()
 		"nvim-treesitter/nvim-treesitter",
 		run = ':TSUpdate',
 	}
+	use "nvim-treesitter/nvim-treesitter-textobjects"
+	use "nvim-treesitter/nvim-treesitter-context"
+	use "nvim-treesitter/playground"
 
     -- lsp
     use "neovim/nvim-lspconfig"
