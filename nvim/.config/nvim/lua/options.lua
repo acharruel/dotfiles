@@ -24,6 +24,7 @@ vim.opt.smartindent = true                        -- smarter indent
 vim.opt.swapfile = false                          -- do not create swap file
 vim.opt.tags = "./tags;/"                         -- Load tags in each sub directories
 vim.opt.timeoutlen = 200                          -- timeout of mapped sequence
+vim.opt.title = true							  -- set terminal title to current filename
 vim.opt.undofile = true                           -- enable persistent undo
 vim.opt.wrap = false                              -- do not wrap long lines
 vim.opt.writebackup = false                       -- if a file is being edited by another program it's not allowed to be edited
