@@ -4,6 +4,6 @@ export NNN_PLUG='m:-mediainf;o:fzopen;p:preview-tui;i:imgview;j:autojump;c:fzcd;
 export NNN_FIFO='/tmp/nnn.fifo'
 export TERMINAL='xterm-kitty'
 export PAGER='less -R'
-export EDITOR='vim'
+export EDITOR='nvim'
 export GUI=1
 alias nnn='nnn -e'
