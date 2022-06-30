@@ -235,3 +235,5 @@ client.unfocused	$nord3	$nord0	$nord8	$nord9    $nord0
 client.urgent		$nord11 $nord11 $nord6	$nord11	  $nord11
 client.placeholder	$nord0	$nord0	$nord6	$nord0    $nord0
 client.background	$nord0
+
+for_window [app_id = "xdg-desktop-portal-gtk"] floating enable;
