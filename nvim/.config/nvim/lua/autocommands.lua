@@ -49,3 +49,17 @@ vim.api.nvim_create_autocmd({ "TextYankPost" },
 		command = "lua vim.highlight.on_yank({higroup='Visual', timeout='200'})",
 		group = group,
 	})
+
+local group = vim.api.nvim_create_augroup("PresentingGroup", { clear = true })
+vim.api.nvim_create_autocmd("Filetype",
+	{
+		command = "nnoremap <buffer> <F10> :PresentingStart<CR>",
+		pattern = "markdown",
+		group = group,
+	})
+vim.api.nvim_create_autocmd("Filetype",
+	{
+		command = "nnoremap <buffer> <F12> :.!toilet -w 200 -f term -F border<CR>",
+		pattern = "markdown",
+		group = group,
+	})

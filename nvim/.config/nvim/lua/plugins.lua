@@ -35,6 +35,8 @@ return require('packer').startup(function()
     use "lewis6991/impatient.nvim"
     use "ellisonleao/glow.nvim"
     use "lukas-reineke/indent-blankline.nvim"
+	use "vimwiki/vimwiki"
+	use "sotte/presenting.vim"
 
     -- git
     use {
