@@ -171,6 +171,13 @@ local mappings = {
         n = { "<cmd>tabnew<cr>", "New tab" },
     },
 
+    W = {
+        name = "Vimwiki",
+        g = { "<cmd>lua require('vimwiki-loader').launch_browser()<cr>", "Run Google Chrome" },
+        p = { "<cmd>lua require('auto-pandoc').run_pandoc()<cr>", "Run Pandoc" },
+        w = { "<cmd>VimwikiIndex<cr>", "Vimwiki Index" },
+    },
+
     z = {
         name = "FZF",
         C = { "<cmd>Commits<CR>", "Commits" },

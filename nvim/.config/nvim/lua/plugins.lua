@@ -37,6 +37,13 @@ return require('packer').startup(function()
     use "lukas-reineke/indent-blankline.nvim"
 	use "vimwiki/vimwiki"
 	use "sotte/presenting.vim"
+	use {
+		'jghauser/auto-pandoc.nvim',
+		requires = 'nvim-lua/plenary.nvim',
+		config = function()
+			require('auto-pandoc')
+		end
+	}
 
     -- git
     use {
