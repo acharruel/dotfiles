@@ -10,29 +10,12 @@ alias ll='ls -lF'
 alias lla='ls -alhF'
 alias c='clear'
 alias s='cd ..'
-alias sx='screen -rdaA'
 
 # git helpers
 alias gitlog='git log --graph --abbrev-commit --pretty=oneline --decorate'
 
-# Generic Colorizer
-alias cl='/usr/bin/grc -es --colour=auto'
-alias configure='cl ./configure'
-alias diff='cl diff'
-alias gcc='cl gcc'
-alias g++='cl g++'
-alias as='cl as'
-alias gas='cl gas'
-alias ld='cl ld'
-alias netstat='cl netstat'
-alias ping='cl ping'
-alias traceroute='cl /usr/sbin/traceroute'
-
 # Source highlight
 alias ccat='source-highlight --out-format esc -i '
-
-# chrome resized
-#alias google-chrome=" google-chrome --force-device-scale-factor=1.5"
 
 # git delete merged branches
 alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
