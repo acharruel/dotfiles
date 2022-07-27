@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd(
 vim.api.nvim_create_autocmd(
 	{ "BufNewFile", "BufRead" },
 	{
-		command = "setlocal tw=80 ts=8 sts=8 sw=8 et! nolist colorcolumn=80",
+		command = "setlocal tw=80 ts=8 sts=8 sw=8 et nolist colorcolumn=80",
 		pattern = "*.{c,h,cpp,hpp}",
 		group = group,
 	})

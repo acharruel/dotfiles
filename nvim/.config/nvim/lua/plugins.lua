@@ -2,7 +2,7 @@ local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system({"git", "clone", "--depth", "1",
-		"https://github.com/wbthomason/packer.nvim", install_path})
+    "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
 return require('packer').startup(function()
@@ -10,12 +10,12 @@ return require('packer').startup(function()
     use "wbthomason/packer.nvim"
 
     -- Language support plugins
-    use "adelarsq/vim-matchit"
-    use "fladson/vim-kitty"
-    use "kergoth/vim-bitbake"
+    -- use "adelarsq/vim-matchit"
+    -- use "fladson/vim-kitty"
+    -- use "kergoth/vim-bitbake"
 
     -- colorschemes
-	use "rebelot/kanagawa.nvim"
+    use "rebelot/kanagawa.nvim"
     use "EdenEast/nightfox.nvim"
     use "altercation/vim-colors-solarized"
     use "arcticicestudio/nord-vim"
@@ -29,43 +29,70 @@ return require('packer').startup(function()
         requires = {"junegunn/fzf", run = function() vim.fn["fzf#install"]() end}
     }
     use "junegunn/vim-easy-align"
-    use "luukvbaal/nnn.nvim"
+    use {
+        "luukvbaal/nnn.nvim",
+        config = function()
+            require "loader.nnn"
+        end,
+    }
     use "ntpeters/vim-better-whitespace"
     use "vim-scripts/a.vim"
-    use "lewis6991/impatient.nvim"
-    use "ellisonleao/glow.nvim"
+    use {
+        "lewis6991/impatient.nvim",
+        config = function()
+            require "loader.impatient"
+        end,
+    }
+    use {
+        "ellisonleao/glow.nvim",
+        config = function()
+            require "loader.glow"
+        end,
+    }
     use "lukas-reineke/indent-blankline.nvim"
-	use "vimwiki/vimwiki"
-	use "sotte/presenting.vim"
-	use {
-		'jghauser/auto-pandoc.nvim',
-		requires = 'nvim-lua/plenary.nvim',
-		config = function()
-			require('auto-pandoc')
-		end
-	}
-	use {
-		'rmagatti/auto-session',
-		config = function()
-			require('auto-session').setup {
-				log_level = 'info',
-				auto_session_suppress_dirs = {'~'},
-			}
-		end
-	}
+    use {
+        "vimwiki/vimwiki",
+        config = function()
+            require "loader.vimwiki"
+        end,
+    }
+    use "sotte/presenting.vim"
+    use {
+        'jghauser/auto-pandoc.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+        config = function()
+            require('auto-pandoc')
+        end
+    }
+    use {
+        "rmagatti/auto-session",
+        config = function()
+            require('auto-session').setup {
+                log_level = 'info',
+                auto_session_suppress_dirs = {'~'},
+            }
+        end
+    }
 
     -- git
     use {
         "lewis6991/gitsigns.nvim",
-        requires = {"nvim-lua/plenary.nvim"},
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require "loader.gitsigns"
+        end
     }
 
     --Sort motion plugins
     use "christoomey/vim-sort-motion"
     use {
-		"kana/vim-textobj-entire",
-		requires = { use "kana/vim-textobj-user" },
-	}
+        "kana/vim-textobj-entire",
+        requires = {
+            "kana/vim-textobj-user",
+        },
+    }
     use "tpope/vim-commentary"
     use "tpope/vim-repeat"
     use "tpope/vim-surround"
@@ -73,17 +100,26 @@ return require('packer').startup(function()
     -- lualine
     use {
         "nvim-lualine/lualine.nvim",
-        requires = {"kyazdani42/nvim-web-devicons", opt = true}
+        requires = {
+            "kyazdani42/nvim-web-devicons",
+            opt = true
+        },
+        config = function()
+            require "loader.lualine"
+        end,
     }
 
     -- treesitter
     use {
-		"nvim-treesitter/nvim-treesitter",
-		run = ':TSUpdate',
-	}
-	use "nvim-treesitter/nvim-treesitter-textobjects"
-	use "nvim-treesitter/nvim-treesitter-context"
-	use "nvim-treesitter/playground"
+        "nvim-treesitter/nvim-treesitter",
+        run = ':TSUpdate',
+        config = function()
+            require "loader.telescope"
+        end,
+    }
+    use "nvim-treesitter/nvim-treesitter-textobjects"
+    use "nvim-treesitter/nvim-treesitter-context"
+    use "nvim-treesitter/playground"
 
     -- lsp
     use "neovim/nvim-lspconfig"
@@ -97,31 +133,45 @@ return require('packer').startup(function()
         "nvim-telescope/telescope.nvim",
         requires = {
             {"nvim-lua/plenary.nvim"},
-            {"nvim-telescope/telescope-fzf-native.nvim", run = 'make'}
+            {"nvim-telescope/telescope-fzf-native.nvim", run = 'make'},
         },
+        config = function()
+            require "loader.telescope"
+        end,
     }
 
     -- cmp
-    use "hrsh7th/nvim-cmp"
-    use 'hrsh7th/cmp-nvim-lsp'
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-cmdline"
-    use "saadparwaiz1/cmp_luasnip"
-    use "hrsh7th/cmp-nvim-lua"
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-nvim-lua",
+        },
+        config = function()
+            require "loader.cmp"
+        end,
+    }
 
     -- snippets
     use "L3MON4D3/LuaSnip"
 
     -- which key
-    use "folke/which-key.nvim"
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require "loader.which-key"
+        end,
+    }
 
     -- harpoon
     use "ThePrimeagen/harpoon"
 
-	-- dressing
-	use "stevearc/dressing.nvim"
-
+    -- dressing
+    use "stevearc/dressing.nvim"
 
     if packer_bootstrap then
         require("packer").sync()

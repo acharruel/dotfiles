@@ -127,7 +127,7 @@ local mappings = {
         name = "Indentation",
         g = { "<cmd>setlocal tw=100 ts=2 sw=2 et colorcolumn=100 list<CR>", "Glib style" },
         s = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=100 list<CR>", "Shell style" },
-        t = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=80 list<CR>", "Tag Heuer style" },
+        t = { "<cmd>setlocal tw=100 ts=8 sw=8 et colorcolumn=80 list<CR>", "Tag Heuer style" },
     },
 
     l = {
@@ -173,7 +173,7 @@ local mappings = {
 
     W = {
         name = "Vimwiki",
-        g = { "<cmd>lua require('vimwiki-loader').launch_browser()<cr>", "Run Google Chrome" },
+        g = { "<cmd>lua require('loader.vimwiki').launch_browser()<cr>", "Run Google Chrome" },
         p = { "<cmd>lua require('auto-pandoc').run_pandoc()<cr>", "Run Pandoc" },
         w = { "<cmd>VimwikiIndex<cr>", "Vimwiki Index" },
     },
