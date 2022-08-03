@@ -181,6 +181,9 @@ return require('packer').startup(function()
 			require("toggleterm").setup {
 				hide_numbers = true,
 				shade_terminals = false,
+				float_opts = {
+					border = "double",
+				},
 			}
 			require "loader.toggleterm"
 		end
