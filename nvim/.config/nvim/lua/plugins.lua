@@ -173,6 +173,19 @@ return require('packer').startup(function()
     -- dressing
     use "stevearc/dressing.nvim"
 
+	-- toggle term
+	use {
+		"akinsho/toggleterm.nvim",
+		tag = 'v2.*',
+		config = function()
+			require("toggleterm").setup {
+				hide_numbers = true,
+				shade_terminals = false,
+			}
+			require "loader.toggleterm"
+		end
+	}
+
     if packer_bootstrap then
         require("packer").sync()
     end

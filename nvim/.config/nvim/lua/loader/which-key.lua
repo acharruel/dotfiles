@@ -167,6 +167,12 @@ local mappings = {
     },
 
     t = {
+        name = "Toggle Term",
+        g = { "<cmd>lua lazygit_toggle()<cr>", "Toggle lazygit" },
+        t = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
+    },
+
+    T = {
         name = "Tabs",
         n = { "<cmd>tabnew<cr>", "New tab" },
     },
