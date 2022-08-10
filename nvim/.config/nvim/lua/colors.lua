@@ -19,7 +19,6 @@ local options = {
 local groups = {
 	all = {
 		TSProperty = { fg = "#b9bfca" },        -- struct fields in white
-		ExtraWhiteSpace = { bg = "#bf616a" },   -- extra whitespaces in nord red
 	},
 }
 

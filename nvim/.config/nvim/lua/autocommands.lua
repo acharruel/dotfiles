@@ -63,3 +63,15 @@ vim.api.nvim_create_autocmd("Filetype",
 		pattern = "markdown",
 		group = group,
 	})
+
+local group = vim.api.nvim_create_augroup("TerminalGroup", { clear = true })
+vim.api.nvim_create_autocmd("TermEnter",
+	{
+		command = "DisableWhitespace",
+		group = group,
+	})
+vim.api.nvim_create_autocmd("TermLeave",
+	{
+		command = "EnableWhitespace",
+		group = group,
+	})
