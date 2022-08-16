@@ -70,7 +70,11 @@ stow poke
 
 ### rofi (window switcher application)
 
+Use rofi wayland fork.
 https://github.com/davatorium/rofi
+
+Configs are from:
+https://github.com/adi1090x/rofi.git
 
 ```
 stow rofi
