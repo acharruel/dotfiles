@@ -16,13 +16,6 @@ local options = {
     },
 }
 
-local groups = {
-	all = {
-		TSProperty = { fg = "#b9bfca" },        -- struct fields in white
-	},
-}
-
 nightfox.setup({
 	options = options,
-	groups = groups,
 })

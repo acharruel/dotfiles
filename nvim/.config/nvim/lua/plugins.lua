@@ -10,9 +10,9 @@ return require('packer').startup(function()
     use "wbthomason/packer.nvim"
 
     -- Language support plugins
-    -- use "adelarsq/vim-matchit"
-    -- use "fladson/vim-kitty"
-    -- use "kergoth/vim-bitbake"
+    use "adelarsq/vim-matchit"
+    use "fladson/vim-kitty"
+    use "kergoth/vim-bitbake"
 
     -- colorschemes
     use "rebelot/kanagawa.nvim"
