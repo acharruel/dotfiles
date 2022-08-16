@@ -74,8 +74,8 @@ input type:touchpad {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+Shift+p exec $menu
-    bindsym $mod++p exec $menu_alt
+    bindsym $mod+p exec $menu
+    bindsym $mod+Shift+p exec $menu_alt
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
