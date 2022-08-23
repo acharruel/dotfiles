@@ -167,9 +167,6 @@ return require('packer').startup(function()
         end,
     }
 
-    -- harpoon
-    use "ThePrimeagen/harpoon"
-
     -- dressing
     use "stevearc/dressing.nvim"
 
@@ -188,6 +185,9 @@ return require('packer').startup(function()
 			require "loader.toggleterm"
 		end
 	}
+
+	-- edit quickfix content
+	use "itchyny/vim-qfedit"
 
     if packer_bootstrap then
         require("packer").sync()

@@ -92,7 +92,7 @@ local mappings = {
     },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["g"] = { "<cmd>Telescope grep_string<cr>", "Grep String" },
-    ["H"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["n"] = { "<cmd>NnnPicker<CR>", "nnn Picker" },
     ["N"] = { "<cmd>NnnExplorer<CR>", "nnn Explorer" },
     ["w"] = { "<cmd>StripWhitespace<cr>", "Strip White Spaces" },
@@ -112,15 +112,6 @@ local mappings = {
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
         d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
-    },
-
-    h = {
-        name = "Harpoon",
-        a = {"<cmd>lua require('harpoon.mark').add_file()<cr><cmd>echo 'Harpooned: '@%<cr>", "Add File" },
-        h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle Quick Menu" },
-        t = { "<cmd>Telescope harpoon marks<cr>", "Telescope Harpoon Marks" },
-        p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Navigate Previous" },
-        n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Navigate Next" },
     },
 
     i = {
