@@ -180,6 +180,25 @@ return require('packer').startup(function()
 	-- edit quickfix content
 	use "itchyny/vim-qfedit"
 
+	-- windows maximizer
+	use {
+		"anuvyklack/windows.nvim",
+		requires = {
+			"anuvyklack/middleclass",
+			"anuvyklack/animation.nvim"
+		},
+		config = function()
+			vim.o.winwidth = 10
+			vim.o.winminwidth = 10
+			vim.o.equalalways = false
+			require('windows').setup({
+				animation = {
+					duration = 100,
+				}
+			})
+		end
+	}
+
     if packer_bootstrap then
         require("packer").sync()
     end
