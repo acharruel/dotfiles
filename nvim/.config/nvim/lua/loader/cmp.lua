@@ -88,7 +88,7 @@ cmp.setup {
         { name = 'nvim_lua' },
         { name = 'buffer' },
         { name = 'path' },
-        { name = 'cmdline' },
+        -- { name = 'cmdline' },
     },
     formatting = {
         fields = { "kind", "abbr", "menu" },
