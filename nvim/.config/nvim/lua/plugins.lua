@@ -114,10 +114,17 @@ return require('packer').startup(function()
 
     -- lsp
     use "neovim/nvim-lspconfig"
-    use "williamboman/nvim-lsp-installer"
+    use {
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	}
+    use "williamboman/mason-lspconfig.nvim"
+    use "jose-elias-alvarez/null-ls.nvim"
     use "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
     use "onsails/lspkind-nvim"
-    use "jose-elias-alvarez/null-ls.nvim"
+    use "mfussenegger/nvim-dap"
 
     -- telescope
     use {

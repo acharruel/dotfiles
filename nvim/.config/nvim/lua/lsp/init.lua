@@ -2,7 +2,7 @@
 require("lspconfig")
 
 -- lsp helpers
-require("lsp/lsp-installer")
+require("lsp/mason-loader")
 require("lsp/handlers").setup()
 
 -- toggle diagnostics
