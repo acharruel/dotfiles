@@ -161,24 +161,43 @@ return require('packer').startup(function()
     -- dressing
     use "stevearc/dressing.nvim"
 
-	-- toggle term
-	use {
-		"akinsho/toggleterm.nvim",
-		tag = 'v2.*',
-		config = function()
-			require("toggleterm").setup {
-				hide_numbers = true,
-				shade_terminals = false,
-				float_opts = {
-					border = "double",
-				},
-			}
-			require "loader.toggleterm"
-		end
-	}
+    -- toggle term
+    use {
+        "akinsho/toggleterm.nvim",
+        tag = 'v2.*',
+        config = function()
+            require("toggleterm").setup {
+                hide_numbers = true,
+                shade_terminals = false,
+                float_opts = {
+                    border = "double",
+                },
+            }
+            require "loader.toggleterm"
+        end
+    }
 
-	-- edit quickfix content
-	use "itchyny/vim-qfedit"
+    -- edit quickfix content
+    use "itchyny/vim-qfedit"
+
+    -- illuminate
+    use {
+        "RRethy/vim-illuminate",
+        config = function()
+            require('illuminate').configure({
+                -- providers: provider used to get references in the buffer, ordered by priority
+                providers = {
+                    'lsp',
+                    'treesitter',
+                    'regex',
+                },
+                -- delay: delay in milliseconds
+                delay = 300,
+                -- under_cursor: whether or not to illuminate under the cursor
+                under_cursor = true,
+            })
+        end
+    }
 
     if packer_bootstrap then
         require("packer").sync()
