@@ -1,3 +1,4 @@
+@import "nord.css";
 
 @keyframes blink-warning {
     70% {
@@ -21,32 +22,6 @@
     }
 }
 
-
-/* -----------------------------------------------------------------------------
- * Styles
- * -------------------------------------------------------------------------- */
-
-/* COLORS */
-
-/* Nord */
-@define-color bg #2E3440;
-@define-color light #D8DEE9;
-@define-color warning #ebcb8b;
-@define-color critical #BF616A;
-@define-color mode #434C5E;
-/*@define-color workspaces @bg;*/
-/*@define-color workspaces @nord_dark_font;*/
-/*@define-color workspacesfocused #434C5E;*/
-@define-color workspacesfocused #4C566A;
-@define-color tray @workspacesfocused;
-@define-color layout #5e81ac;
-@define-color date #434C5E;
-
-@define-color nord_bg #434C5E;
-@define-color nord_bg_blue #546484;
-@define-color nord_light #D8DEE9;
-@define-color nord_light_font #D8DEE9;
-@define-color nord_dark_font #434C5E;
 
 /* Reset all styles */
 * {
@@ -125,7 +100,7 @@
 #temperature.warning,
 #battery.warning {
     background: @warning;
-    color: @nord_dark_font;
+    color: @dark_font;
 }
 
 /* Each warning that should blink */
@@ -136,13 +111,13 @@
 
 /* And now modules themselves in their respective order */
 
-#mode { /* Shown current Sway mode (resize etc.) */
+#mode {
+	/* Shown current Sway mode (resize etc.) */
     color: @light;
     background: @mode;
 }
 
 /* Workspaces stuff */
-
 #workspaces {
     /*   color: #D8DEE9;
     margin-right: 10px;*/
@@ -154,19 +129,19 @@
     opacity: 0.3;
     background: none;
     font-size: 1em;
-    color: #D8DEE9;
+    color: @light_font;
 }
 
 #workspaces button.focused {
     background: @workspacesfocused;
-    color: #D8DEE9;
+    color: @dark_font;
     opacity: 1;
     padding: 0 0.4em;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: @critical;
+    color: @critical;
     opacity: 1;
 }
 
@@ -175,79 +150,44 @@
     margin-left: 40px;
     font-weight: normal;
 }
+
 #bluetooth {
-    background: @nord_bg_blue;
+    background: @bluetooth_bg;
     font-size: 1.2em;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#custom-gpu {
-    background: @nord_bg;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#custom-weather {
-    background: @mode;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#custom-pacman {
-    background: @nord_light;
-    color: @nord_dark_font;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#custom-scratchpad-indicator {
-    background: @nord_light;
-    color: @nord_dark_font;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#idle_inhibitor {
-    background: @mode;
-    /*font-size: 1.6em;*/
     font-weight: bold;
     padding: 0 0.6em;
 }
 
 #network {
-    background: @nord_bg;
+    background: @element_bg;
 }
 
 #memory {
-    background: @nord_bg;
+    background: @element_bg;
 }
 
 #disk {
-    background: @nord_bg;
-    color: #D8DEE9;
+    background: @element_bg;
+    color: @light_font;
 }
 #disk.critical {
-    color: @nord_dark_font;
+    color: @dark_font;
 }
 
 #cpu {
-    background: @nord_bg;
-    color: #D8DEE9;
+    background: @element_bg;
+    color: @light_font;
 }
 #cpu.critical {
-    color: @nord_dark_font;
+    color: @dark_font;
 }
-#language {
-    background: @nord_bg_blue;
-    color: #D8DEE9;
-    padding: 0 0.4em;
-}
-#custom-cpugovernor {
-    background-color: @nord_light;
-    color: @nord_dark_font;
-}
+
 #custom-cpugovernor.perf {
 
 }
 #temperature {
-    background-color: @nord_bg;
-    color: #D8DEE9;
+    background-color: @element_bg;
+    color: @light_font;
 }
 #temperature.critical {
     background:  @critical;
@@ -257,55 +197,46 @@
 }
 
 #battery {
-    background: @nord_bg;
+    background: @element_bg;
 }
 
 #backlight {
     background: @backlight;
 }
 
-#clock {
-    background: @nord_bg_blue;
-    color: #D8DEE9;
-}
-#clock.date {
-    background: @date;
-}
-
-#clock.time {
-    background: @mode;
-}
-
-#pulseaudio { /* Unsused but kept for those who needs it */
-    background: @warning;
-    color: @nord_dark_font;
+#pulseaudio {
+    background: @green_bg;
+    color: @dark_font;
 }
 #pulseaudio.source-muted {
-    background: @nord_bg;
-    color: @nord_light_font;
+    background: @element_bg;
+    color: @light_font;
 }
 #pulseaudio.bluetooth {
-    background: @nord_bg_blue;
-    color: @nord_light_font;
+    background: @bluetooth_bgh;
+    color: @light_font;
 }
 #pulseaudio.muted,
 #pulseaudio.bluetooth-muted {
     background: @critical;
-    color: @nord_light_font;
+    color: @light_font;
 }
 
 #tray {
-    background: @nord_bg_blue;
+    background: @tray;
 }
 
 #custom-media {
-    background: @nord_bg;
-    color: #D8DEE9;
+    background: @element_bg;
+    color: @light_font;
 }
 
 #custom-logo {
 	background-image: url("/home/adrien/.config/waybar/debian.svg");
+	/* background-image: url("/home/adrien/Documents/tag_heuer_logo_color.svg"); */
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
