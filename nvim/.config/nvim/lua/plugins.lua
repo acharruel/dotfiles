@@ -21,6 +21,7 @@ return require('packer').startup(function()
     use "arcticicestudio/nord-vim"
     use "folke/tokyonight.nvim"
     use "sainnhe/everforest"
+    use  "ellisonleao/gruvbox.nvim"
 
     -- Functionnalities plugins
     use "farmergreg/vim-lastplace"
