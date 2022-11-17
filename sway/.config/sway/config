@@ -29,10 +29,13 @@ output * bg $wallpaper fill
 output eDP-1 pos 0 0 res 1920x1080
 output DP-6 pos 1920 0 res 3840x2160 scale 1.50
 
-smart_gaps on
+smart_gaps off
 gaps inner 2
 gaps outer 1
 default_border pixel 2
+
+# swayfx
+corner_radius 5
 
 mouse_warping container
 
