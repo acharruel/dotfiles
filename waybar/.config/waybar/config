@@ -40,7 +40,6 @@
   },
 
   "tray": {
-    // "icon-size": 15,
     "spacing": 5
   },
 
@@ -55,7 +54,6 @@
 
   "battery": {
     "states": {
-      // "good": 95,
       "warning": 30,
       "critical": 15
     },
@@ -63,8 +61,6 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
 
@@ -122,11 +118,19 @@
   "disk": {
     "path": "/home",
     "format": "⛁ {free}",
+	"states": {
+		"warning": 80,
+		"critical": 90
+    },
   },
 
   "disk#tag": {
     "path": "/media/adrien/adrien-tagheuer",
     "format": "⛁ {free}",
+	"states": {
+		"warning": 80,
+		"critical": 90
+    },
   },
 
   "custom/media": {
@@ -141,4 +145,3 @@
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
   }
 }
-

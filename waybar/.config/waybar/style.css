@@ -1,23 +1,23 @@
 @import "nord.css";
 
 @keyframes blink-warning {
-    70% {
-        color: @light;
-    }
-    to {
-        color: @light;
-        background-color: @warning;
-    }
+	70% {
+		color: @light;
+	}
+	to {
+		color: @light;
+		background-color: @warning;
+	}
 }
 
 @keyframes blink-critical {
-    70% {
-        color: @light;
-    }
-    to {
-        color: @light;
-        background-color: @critical;
-    }
+	70% {
+		color: @light;
+	}
+	to {
+		color: @light;
+		background-color: @critical;
+	}
 }
 
 /* Reset all styles */
@@ -36,12 +36,10 @@ window#waybar {
 	transition-property: background-color;
 	transition-property: color;
 	transition-duration: 0.25s;
-	/* background: @bg; */
-	/* color: @light; */
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+	opacity: 0.2;
 }
 
 window {
@@ -66,36 +64,35 @@ window box > box {
 /* All modules */
 window > box > box > widget > * {
 	/* padding: 0 8px; */
-    padding-left: 0.6em;
-    padding-right: 0.6em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
 }
 
 /* Each module that should blink */
 #mode,
 #memory,
-#temperature,
 #battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 /* Each critical module */
 #memory.critical,
 #cpu.critical,
 #disk.critical,
-#temperature.critical,
 #battery.critical {
-    color: @critical;
+	background: @critical;
 }
 
 /* Each critical that should blink */
 #mode,
 #memory.critical,
-#temperature.critical,
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+	animation-name: blink-critical;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
 }
 
 /* Each warning */
@@ -103,125 +100,104 @@ window > box > box > widget > * {
 #memory.warning,
 #cpu.warning,
 #disk.warning,
-#temperature.warning,
 #battery.warning {
-    background: @warning;
-    color: @dark_font;
+	background: @warning;
+	color: @dark_font;
 }
 
 /* Each warning that should blink */
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+	animation-name: blink-warning;
+	animation-duration: 3s;
 }
 
 /* And now modules themselves in their respective order */
 
 #mode {
 	/* Shown current Sway mode (resize etc.) */
-    color: @light;
-    background: @mode;
+	color: @light;
+	background: @mode;
 }
 
 #workspaces button {
-    padding: 0;
-    opacity: 0.3;
-    background: none;
-    font-size: 1em;
-    color: @light_font;
+	padding: 0;
+	opacity: 0.3;
+	background: none;
+	font-size: 1em;
+	color: @light_font;
 }
 
 #workspaces button.focused {
-    background: @workspacesfocused;
-    color: @dark_font;
-    opacity: 1;
-    padding: 0 0.4em;
+	background: @workspacesfocused;
+	color: @dark_font;
+	opacity: 1;
+	padding: 0 0.4em;
 }
 
 #workspaces button.urgent {
-    border-color: @critical;
-    color: @critical;
-    opacity: 1;
+	border-color: @critical;
+	color: @critical;
+	opacity: 1;
 }
 
 #bluetooth {
-    background: @bluetooth_bg;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 0 0.6em;
+	background: @bluetooth_bg;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0 0.6em;
 }
 
 #network {
-    background: @element_bg;
+	background: @element_bg;
 }
 
 #memory {
-    background: @element_bg;
+	background: @element_bg;
 }
 
 #disk {
-    background: @element_bg;
-    color: @light_font;
-}
-#disk.critical {
-    color: @dark_font;
+	background: @element_bg;
+	color: @light_font;
 }
 
 #cpu {
-    background: @element_bg;
-    color: @light_font;
-}
-#cpu.critical {
-    color: @dark_font;
+	background: @element_bg;
+	color: @light_font;
 }
 
-#custom-cpugovernor.perf {
-
-}
-#temperature {
-    background-color: @element_bg;
-    color: @light_font;
-}
-#temperature.critical {
-    background:  @critical;
-}
 #custom-layout {
-    background: @layout;
+	background: @layout;
 }
 
 #battery {
-    background: @element_bg;
-}
-
-#backlight {
-    background: @backlight;
+	background: @element_bg;
 }
 
 #pulseaudio {
-    background: @green_bg;
-    color: @dark_font;
+	background: @green_bg;
+	color: @dark_font;
 }
 #pulseaudio.source-muted {
-    background: @element_bg;
-    color: @light_font;
+	background: @element_bg;
+	color: @light_font;
 }
 #pulseaudio.bluetooth {
-    background: @bluetooth_bgh;
-    color: @light_font;
+	background: @bluetooth_bgh;
+	color: @light_font;
 }
 #pulseaudio.muted,
 #pulseaudio.bluetooth-muted {
-    background: @critical;
-    color: @light_font;
+	background: @critical;
+	color: @light_font;
 }
 
 #tray {
-    background: @tray;
+	background: @tray;
 }
 
 #custom-media {
-    background: @element_bg;
-    color: @light_font;
+	background: @element_bg;
+	color: @light_font;
 }
 
 #custom-logo {
