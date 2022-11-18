@@ -182,7 +182,7 @@ window > box > box > widget > * {
 	color: @light_font;
 }
 #pulseaudio.bluetooth {
-	background: @bluetooth_bgh;
+	background: @bluetooth_bg;
 	color: @light_font;
 }
 #pulseaudio.muted,
