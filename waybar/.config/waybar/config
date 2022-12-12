@@ -23,7 +23,7 @@
   "custom/logo": {
     "format": "    ",
     "tooltip": false,
-    "on-click": "kitty --hold neofetch",
+    "on-click": "/home/adrien/.local/bin/kitty --hold neofetch",
   },
 
   "keyboard-state": {
@@ -71,7 +71,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "tooltip-format-wifi": "{ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+    "tooltip-format-wifi": "{ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n⭱  {bandwidthUpBits} ⭳ {bandwidthDownBits}",
     "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}\n⭱ {bandwidthUpBits} ⭳ {bandwidthDownBits}"
   },
 

@@ -15,12 +15,8 @@ return require('packer').startup(function()
     use "kergoth/vim-bitbake"
 
     -- colorschemes
-    use "rebelot/kanagawa.nvim"
     use "EdenEast/nightfox.nvim"
-    use "altercation/vim-colors-solarized"
     use "arcticicestudio/nord-vim"
-    use "folke/tokyonight.nvim"
-    use "sainnhe/everforest"
 
     -- Functionnalities plugins
     use "farmergreg/vim-lastplace"
@@ -105,7 +101,7 @@ return require('packer').startup(function()
         "nvim-treesitter/nvim-treesitter",
         run = ':TSUpdate',
         config = function()
-            require "loader.telescope"
+            require "loader.treesitter"
         end,
     }
     use "nvim-treesitter/nvim-treesitter-textobjects"
