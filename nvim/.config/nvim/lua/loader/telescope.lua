@@ -12,7 +12,19 @@ telescope.setup{
             case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
                                             -- the default case_mode is "smart_case"
         }
-    }
+    },
+    pickers = {
+        buffers = {
+            show_all_buffers = true,
+            sort_mru = true,
+            theme = "dropdown",
+            mappings = {
+                i = {
+                    ["<c-d>"] = "delete_buffer",
+                },
+            },
+        },
+    },
 }
 
 -- extensions

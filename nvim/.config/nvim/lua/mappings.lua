@@ -21,5 +21,6 @@ map("n", "J", "mzJ`z")
 -- Make Y yank to end of the line
 map("n", "Y", "y$")
 
--- windows maximizer
-vim.keymap.set('n', '<C-w>z', '<Cmd>WindowsMaximaze<CR>')
+-- gitsigns
+map("n", "[g", "<cmd>lua require 'gitsigns'.next_hunk()<cr>")
+map("n", "]g", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>")
