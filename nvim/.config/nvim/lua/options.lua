@@ -21,6 +21,7 @@ vim.opt.showmode = false                          -- no need to display current 
 vim.opt.signcolumn = "yes"                        -- always show sign column
 vim.opt.smartcase = true                          -- Do not search everything
 vim.opt.smartindent = true                        -- smarter indent
+vim.opt.breakindent = true                        -- break indent
 vim.opt.swapfile = false                          -- do not create swap file
 vim.opt.tags = "./tags;/"                         -- Load tags in each sub directories
 vim.opt.timeoutlen = 200                          -- timeout of mapped sequence

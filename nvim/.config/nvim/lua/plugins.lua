@@ -1,16 +1,15 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({"git", "clone", "--depth", "1",
+    is_bootstrap = fn.system({"git", "clone", "--depth", "1",
     "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
 return require('packer').startup(function()
-    -- Packer can manage itself
+    -- Packer itself
     use "wbthomason/packer.nvim"
 
     -- Language support plugins
-    use "adelarsq/vim-matchit"
     use "fladson/vim-kitty"
     use "kergoth/vim-bitbake"
 
@@ -18,40 +17,53 @@ return require('packer').startup(function()
     use "EdenEast/nightfox.nvim"
     use "arcticicestudio/nord-vim"
 
-    -- Functionnalities plugins
-    use "farmergreg/vim-lastplace"
-    use {
-        "junegunn/fzf.vim",
-        requires = {"junegunn/fzf", run = function() vim.fn["fzf#install"]() end}
-    }
+	-- easy alignment
     use "junegunn/vim-easy-align"
+
+	-- nnn support
     use {
         "luukvbaal/nnn.nvim",
         config = function()
             require "loader.nnn"
         end,
     }
+
+	-- highlight whitespaces
     use "ntpeters/vim-better-whitespace"
-    use "vim-scripts/a.vim"
+
+	-- speed up plugins load time
     use {
         "lewis6991/impatient.nvim",
         config = function()
             require "loader.impatient"
         end,
     }
+
+	-- markdown interpreter
     use {
         "ellisonleao/glow.nvim",
         config = function()
             require "loader.glow"
         end,
     }
-    use "lukas-reineke/indent-blankline.nvim"
+
+	-- nices blank lines
+    use {
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require "loader.indent-blankline"
+		end,
+	}
+
+	-- take notes
     use {
         "vimwiki/vimwiki",
         config = function()
             require "loader.vimwiki"
         end,
     }
+
+	-- powerpoint style presentation
     use "sotte/presenting.vim"
     use {
         'jghauser/auto-pandoc.nvim',
@@ -97,9 +109,12 @@ return require('packer').startup(function()
     }
 
     -- treesitter
+    -- Highlight, edit, and navigate code
     use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ':TSUpdate',
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            pcall(require('nvim-treesitter.install').update { with_sync = true })
+        end,
         config = function()
             require "loader.treesitter"
         end,
@@ -121,6 +136,13 @@ return require('packer').startup(function()
     use "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
     use "onsails/lspkind-nvim"
     use "mfussenegger/nvim-dap"
+    -- Useful status updates for LSP
+    use {
+        "j-hui/fidget.nvim",
+        config = function()
+            require("fidget").setup()
+        end,
+    }
 
     -- telescope
     use {
@@ -202,7 +224,10 @@ return require('packer').startup(function()
         end
     }
 
-    if packer_bootstrap then
+	-- Detect tabstop and shiftwidth automatically
+	use 'tpope/vim-sleuth'
+
+    if is_bootstrap then
         require("packer").sync()
     end
 end)

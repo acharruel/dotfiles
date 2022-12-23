@@ -5,7 +5,7 @@ if not status then
 end
 
 -- set colorscheme
-vim.cmd 'colorscheme nordfox'
+vim.cmd [[colorscheme nordfox]]
 
 local options = {
     dim_inactive = false,

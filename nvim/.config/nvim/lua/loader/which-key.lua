@@ -79,6 +79,15 @@ local opts = {
 }
 
 local mappings = {
+	["/"] = {
+		function()
+			require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+				winblend = 10,
+				previewer = false,
+			})
+		end,
+		"Word Search",
+	},
     ["a"] = { "<cmd>:b#<cr>", "Alternate File Switch" },
     ["b"] = {
         "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
