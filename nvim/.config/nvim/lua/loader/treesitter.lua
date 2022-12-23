@@ -15,10 +15,10 @@ treesitter_configs.setup {
     incremental_selection = {
         enable = true,
         keymaps = {
-            init_selection = '<c-space>',
-            node_incremental = '<c-space>',
-            scope_incremental = '<c-s>',
-            node_decremental = '<c-backspace>',
+            init_selection = "<CR>",
+            node_incremental = "<CR>",
+            scope_incremental = "<Tab>",
+            node_decremental = "<S-Tab>",
         },
     },
     textobjects = {
@@ -68,18 +68,18 @@ treesitter_context.setup {
     max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
     trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
     patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-    default = {
-        'class',
-        'function',
-        'method',
-        -- 'for', -- These won't appear in the context
-        -- 'while',
-        -- 'if',
-        -- 'switch',
-        -- 'case',
+        default = {
+            'class',
+            'function',
+            'method',
+            -- 'for', -- These won't appear in the context
+            -- 'while',
+            -- 'if',
+            -- 'switch',
+            -- 'case',
+        },
     },
-},
 
-zindex = 20, -- The Z-index of the context window
-mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+    zindex = 20, -- The Z-index of the context window
+    mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
 }
