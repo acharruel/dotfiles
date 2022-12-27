@@ -3,7 +3,7 @@ if not status then
     return
 end
 
-telescope.setup{
+telescope.setup {
     extensions = {
         fzf = {
             fuzzy = true,                   -- false will only do exact matching
@@ -17,12 +17,23 @@ telescope.setup{
         buffers = {
             show_all_buffers = true,
             sort_mru = true,
+            previewer = false,
             theme = "dropdown",
             mappings = {
                 i = {
                     ["<c-d>"] = "delete_buffer",
                 },
             },
+            layout_config = { width = 0.8 },
+        },
+        find_files = {
+            theme = "dropdown",
+            previewer = false,
+            width = 0.8,
+            layout_config = { width = 0.8 },
+        },
+        live_grep = {
+            theme = "ivy",
         },
     },
 }
