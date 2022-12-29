@@ -1,7 +1,9 @@
+-- leader key for custom actions
+vim.g.mapleader = ','
+
+-- plugins manager
+require "lazy_bootstrap"
+
 require "autocommands"
-require "colors"
-require "globals"
-require "lsp"
-require "mappings"
+require "helpers"
 require "options"
-require "plugins"

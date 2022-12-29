@@ -1,6 +1,3 @@
--- leader key for custom actions
-vim.g.mapleader = ','
-
 -- Global vim configs
 vim.opt.autoindent = true                         -- Always set autoindenting on
 vim.opt.autowrite = true                          -- Automatically write buffer before special actions
@@ -32,17 +29,6 @@ vim.opt.writebackup = false                       -- if a file is being edited b
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 
--- indent linux style
-vim.opt.colorcolumn = '100'                       -- set column to 100 chars
-vim.opt.shiftwidth = 4                            -- insert 4 spaces for a tab
-vim.opt.tabstop = 4                               -- tab are 4 spaces wide
-vim.opt.softtabstop = 4
-vim.opt.textwidth = 0
-vim.opt.cino:append({
-        '(0',   -- nicely indent function args after parenthesis
-        ':0'    -- place case statement on same column as switch
-})
-
 -- nicer blank chars display
 vim.opt.listchars:append({
     tab = "»·",
@@ -52,9 +38,17 @@ vim.opt.listchars:append({
     precedes = "⟨",
 })
 
--- enable better whitespace
-vim.g.better_whitespace_enabled = 1
-vim.g.better_whitespace_operator = ""
-vim.g.show_spaces_that_precede_tabs = 1
-vim.g.better_whitespace_guicolor = "#bf616a"
+-- visual selection yanked to " register
+vim.keymap.set("v", "<LeftRelease>", "*ygv")
+vim.keymap.set("v", "<RightRelease>", "*ygv")
 
+-- Keep search results centred
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- Make Y yank to end of the line
+vim.keymap.set("n", "Y", "y$")
+
+-- set colorscheme
+vim.cmd [[colorscheme nordfox]]
