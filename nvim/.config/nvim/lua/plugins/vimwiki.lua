@@ -2,7 +2,6 @@ local M = {
     "vimwiki/vimwiki",
 }
 
-
 local opts = {
     mode = "n", -- NORMAL mode
     prefix = "<leader>",
@@ -21,16 +20,18 @@ local mappings = {
     },
 }
 
-vim.g.vimwiki_list = {
-    {
-        path = "~/Documents/vimwiki",
-        syntax = "markdown",
-        ext = ".md",
+function M.init()
+    vim.g.vimwiki_list = {
+        {
+            path = "~/Documents/vimwiki",
+            syntax = "markdown",
+            ext = ".md",
+        }
     }
-}
-vim.g.vimwiki_global_ext = 0
 
-function M.config()
+    vim.g.vimwiki_global_ext = 0
+
+    -- mappings
     local wk = require("which-key")
     wk.register(mappings, opts)
 end

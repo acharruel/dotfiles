@@ -1,5 +1,6 @@
 local M = {
     "luukvbaal/nnn.nvim",
+    cmd = "NnnExplorer",
 }
 
 local opts = {
@@ -12,7 +13,7 @@ local opts = {
 }
 
 local mappings = {
-    ["n"] = { "<cmd>NnnExplorer<CR>", "[n]nn Explorer" },
+    ["n"] = { "<cmd>NnnExplorer<CR>", "[N]nn Explorer" },
 }
 
 function M.init()

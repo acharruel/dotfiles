@@ -34,6 +34,7 @@ function M.config()
                 scope_incremental = "<Tab>",
                 node_decremental = "<S-Tab>",
             },
+            disable = { "markdown" },
         },
         textobjects = {
             select = {

@@ -14,4 +14,22 @@ vim.opt.runtimepath:prepend(lazypath)
 -- Automatically source all configs in plugins directory.
 require("lazy").setup("plugins", {
     install = { colorscheme = { "nordfox" } },
+    ui = {
+        icons = {
+            cmd = "⌘",
+            config = "🛠",
+            event = "📅",
+            ft = "📂",
+            init = "⚙",
+            keys = "🗝",
+            plugin = "🔌",
+            runtime = "💻",
+            source = "📄",
+            start = "🚀",
+            task = "📌",
+        },
+    },
 })
+
+-- map lazy
+vim.keymap.set("n", "<leader>L", "<cmd>:Lazy<cr>")

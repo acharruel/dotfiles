@@ -1,5 +1,6 @@
 local M = {
-    "ellisonleao/glow.nvim"
+    "ellisonleao/glow.nvim",
+    cmd = "Glow",
 }
 
 function M.config()
