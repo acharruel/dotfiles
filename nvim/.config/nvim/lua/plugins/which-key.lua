@@ -99,12 +99,12 @@ function M.config()
         ["h"] = { "<cmd>nohlsearch<CR>", "No [H]ighlight" },
         ["x"] = { "<cmd>source %<cr>", "Source current file" },
 
-        -- i = {
-        --     name = "Indentation",
-        --     g = { "<cmd>setlocal tw=100 ts=2 sw=2 et colorcolumn=100 list<CR>", "Glib style" },
-        --     s = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=100 list<CR>", "Shell style" },
-        --     t = { "<cmd>setlocal tw=100 ts=8 sw=8 et colorcolumn=80 list<CR>", "Tag Heuer style" },
-        -- },
+        i = {
+            name = "Indentation",
+            g = { "<cmd>setlocal tw=100 ts=2 sw=2 et colorcolumn=100 list<CR>", "Glib style" },
+            s = { "<cmd>setlocal tw=100 ts=4 sw=4 et colorcolumn=100 list<CR>", "Shell style" },
+            t = { "<cmd>setlocal tw=100 ts=8 sw=8 et colorcolumn=80 list<CR>", "Tag Heuer style" },
+        },
     }
 
     wk.setup(setup)

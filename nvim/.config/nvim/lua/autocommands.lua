@@ -1,3 +1,27 @@
+-- Basic indent settings for know filetypes
+local group = vim.api.nvim_create_augroup("CustomIndentGroup", { clear = true })
+vim.api.nvim_create_autocmd(
+    { "BufNewFile", "BufRead" },
+    {
+            command = "setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=0",
+            pattern = "*.{tex,txt,text}",
+            group = group,
+    })
+vim.api.nvim_create_autocmd(
+    { "BufNewFile", "BufRead" },
+    {
+            command = "setlocal tw=120 ts=2 sts=2 sw=2 et list colorcolumn=120",
+            pattern = "*.{html,xml,htm}",
+            group = group,
+    })
+vim.api.nvim_create_autocmd(
+    { "BufNewFile", "BufRead" },
+    {
+            command = "setlocal tw=80 ts=8 sts=8 sw=8 et nolist colorcolumn=80",
+            pattern = "*.{c,h,cpp,hpp}",
+            group = group,
+    })
+
 -- Handle relative numbers (enable only when buffer has focus)
 local group = vim.api.nvim_create_augroup("CustomNumberGroup", { clear = true })
 vim.api.nvim_create_autocmd(
