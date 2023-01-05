@@ -96,7 +96,6 @@ function M.config()
         ["a"] = { "<cmd>:b#<cr>", "[A]lternate File Switch" },
         ["c"] = { "<cmd>set cursorline!<cr>", "Toggle [C]ursorline" },
         ["C"] = { "<cmd>lua require('togglecolumn').toggle_colorcolumn()<cr>", "Toggle [C]olorcolumn" },
-        ["h"] = { "<cmd>nohlsearch<CR>", "No [H]ighlight" },
         ["x"] = { "<cmd>source %<cr>", "Source current file" },
 
         i = {
