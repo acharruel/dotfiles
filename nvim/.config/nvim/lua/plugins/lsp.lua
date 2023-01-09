@@ -34,13 +34,22 @@ local mappings = {
 }
 
 function M.init()
+    -- lsp main plugin
+    require("lspconfig")
+
+    -- lsp helpers
+    require("lsp/mason-loader")
+    require("lsp/handlers").setup()
+
+    -- toggle diagnostics
+    require("toggle_lsp_diagnostics").init({ start_on = false })
+
     -- register mappings
     local wk = require("which-key")
     wk.register(mappings, opts)
 end
 
 function M.config()
-    require("lsp")
     require("fidget").setup()
 end
 
