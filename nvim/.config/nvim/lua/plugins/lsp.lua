@@ -23,7 +23,13 @@ local mappings = {
     l = {
         name = "[L]SP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code [A]ction" },
-        d = { "<cmd>ToggleDiag<cr>", "Toggle [D]iagnostics" },
+        d = {
+            function()
+                require("toggle_lsp_diagnostics").toggle_diagnostics()
+                vim.diagnostic.config({ virtual_text = false })
+            end,
+            "Toggle [D]iagnostics"
+        },
         D = { "<cmd>Telescope diagnostics<cr>", "[D]ocument Diagnostics" },
         f = { "<cmd>lua vim.lsp.buf.format()<cr>", "[F]ormat" },
         i = { "<cmd>LspInfo<cr>", "LSP [I]nfo" },
