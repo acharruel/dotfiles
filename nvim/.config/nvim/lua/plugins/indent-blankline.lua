@@ -12,6 +12,7 @@ local M = {
             "NvimTree",
             "neo-tree",
             "Trouble",
+            "text",
         },
         char = "│",
         use_treesitter_scope = false,

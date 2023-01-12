@@ -15,6 +15,18 @@ function M.config()
         delay = 300,
         -- under_cursor: whether or not to illuminate under the cursor
         under_cursor = true,
+        filetypes_denylist = {
+            "help",
+            "startify",
+            "dashboard",
+            "packer",
+            "neogitstatus",
+            "NvimTree",
+            "neo-tree",
+            "Trouble",
+            "text",
+        },
+        large_file_overrides = nil,
     })
 end
 
