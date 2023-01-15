@@ -12,14 +12,6 @@ https://cgdb.github.io/
 stow cgdb
 ```
 
-### dunst (notification dameon)
-
-https://github.com/dunst-project/dunst
-
-```
-stow dunst
-```
-
 ### gtkwave ()
 
 http://gtkwave.sourceforge.net/
@@ -28,12 +20,12 @@ http://gtkwave.sourceforge.net/
 stow gtkwave
 ```
 
-### i3 (improved tiling wm)
+### kanshi (autorandr wayland equivalent)
 
-https://i3wm.org/docs/userguide.html
+https://sr.ht/~emersion/kanshi/
 
 ```
-stow i3
+stow kanshi
 ```
 
 ### kitty ( The fast, feature-rich, GPU based terminal emulator)
@@ -68,7 +60,7 @@ https://www.gnu.org/software/poke/
 stow poke
 ```
 
-### rofi (window switcher application)
+### rofi (window switcher application wayland compatible fork)
 
 Use rofi wayland fork.
 https://github.com/davatorium/rofi
@@ -88,27 +80,12 @@ https://github.com/swaywm/sway
 stow sway
 ```
 
-### vim or neovim
+### neovim
 
-https://www.vim.org/
 https://neovim.io/
 
 ```
-stow vim
-cd ~
-ln -s .vim/vimrc .vimrc
-```
-
-Install plugin stuff for neovim
-```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
-
-Launch vim and install plugins
-
-```
-:PlugInstall
+stow nvim
 ```
 
 ### udiskie
@@ -128,22 +105,18 @@ https://github.com/Alexays/Waybar
 stow waybar
 ```
 
-### wofi (wayland application launcher)
+### wireplumber
 
-https://hg.sr.ht/~scoopta/wofi
-
-```
-stow wofi
-```
-
-### Xresources
-
-Xorg graphical configuration files (urxvt...)
+Extra configs for wireplumber pipewire session manager.
 
 ```
-stow xresources
-cd ~
-ln -s .Xresources.d/Xresources .Xresources
+stow wireplumber
+```
+
+### zathura
+
+```
+stow zathura
 ```
 
 ### zsh

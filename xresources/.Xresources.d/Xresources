@@ -1,6 +1,0 @@
-! http://www.xcolors.net/
-#include ".Xresources.d/colors/solarized.dark"
-
-#include ".Xresources.d/urxvt"
-#include ".Xresources.d/xterm"
-#include ".Xresources.d/xscreensaver"
