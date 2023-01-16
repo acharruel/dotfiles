@@ -26,8 +26,7 @@ include $HOME/.config/sway/config.d/*
 # Default wallpaper
 output * bg $wallpaper fill
 
-output eDP-1 pos 0 0 res 1920x1080
-output DP-6 pos 1920 0 res 3840x2160 scale 1.50
+output eDP-1 pos 0 0 res 1920x1200
 
 smart_gaps off
 gaps inner 2

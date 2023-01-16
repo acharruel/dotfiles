@@ -1,10 +1,21 @@
-# external monitor Dell
+# laptop home display
+# profile laptop {
+#     output eDP-1 enable mode 1920x1080
+# }
+
+# external monitor Dell at home
 profile home-office {
     output eDP-1 disable
     output DP-1 mode 2560x1440
 }
 
-# laptop display
-profile laptop {
-    output eDP-1 enable mode 1920x1080
+# laptop office display
+profile laptop-office {
+    output 'Sharp Corporation 0x14D1 0x00000000' enable mode 1920x1200
+}
+
+# external monitor Dell at office
+profile office {
+    output 'Sharp Corporation 0x14D1 0x00000000' enable mode 1920x1200
+    output 'Dell Inc. DELL U2720Q 9CLYS83' mode 3840x2160 scale 1.50 position 1920,0
 }
