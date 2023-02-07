@@ -34,4 +34,23 @@ function M.config()
     })
 end
 
+local opts = {
+    mode = "n", -- NORMAL mode
+    prefix = "<leader>",
+    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+    silent = true, -- use `silent` when creating keymaps
+    noremap = true, -- use `noremap` when creating keymaps
+    nowait = true, -- use `nowait` when creating keymaps
+}
+
+local mappings = {
+    ["M"] = { "<cmd>Mason<CR>", "[M]ason LSP Manager" },
+}
+
+function M.init()
+    -- register mappings
+    local wk = require("which-key")
+    wk.register(mappings, opts)
+end
+
 return M

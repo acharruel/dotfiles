@@ -39,8 +39,8 @@ vim.opt.listchars:append({
 })
 
 -- visual selection yanked to " register
-vim.keymap.set("v", "<LeftRelease>", "*ygv")
-vim.keymap.set("v", "<RightRelease>", "*ygv")
+vim.keymap.set("v", "<LeftRelease>", '"*ygv')
+vim.keymap.set("v", "<RightRelease>", '"*ygv')
 
 -- Keep search results centred
 vim.keymap.set("n", "n", "nzzzv")

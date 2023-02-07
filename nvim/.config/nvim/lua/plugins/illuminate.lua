@@ -16,15 +16,17 @@ function M.config()
         -- under_cursor: whether or not to illuminate under the cursor
         under_cursor = true,
         filetypes_denylist = {
-            "help",
-            "startify",
-            "dashboard",
-            "packer",
-            "neogitstatus",
+            "",
             "NvimTree",
-            "neo-tree",
             "Trouble",
+            "dashboard",
+            "help",
+            "neo-tree",
+            "neogitstatus",
+            "packer",
+            "startify",
             "text",
+            "vimwiki",
         },
         large_file_overrides = nil,
     })
