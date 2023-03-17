@@ -36,7 +36,7 @@ default_border pixel 2
 # swayfx
 corner_radius 5
 shadows on
-default_dim_inactive 0.5
+default_dim_inactive 0.1
 
 mouse_warping container
 
