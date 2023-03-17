@@ -11,3 +11,5 @@ export FZF_CTRL_T_OPTS="--preview 'batcat {}'"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# systemd import SSH env for sshfs mount services
+systemctl --user import-environment SSH_AUTH_SOCK
