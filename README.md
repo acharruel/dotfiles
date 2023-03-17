@@ -76,6 +76,12 @@ stow rofi
 
 https://github.com/swaywm/sway
 
+Requires swayfx for more fancyness!
+https://github.com/WillPower3309/swayfx
+
+For swaylock, use screenshot corrupter
+https://github.com/r00tman/corrupter
+
 ```
 stow sway
 ```
@@ -163,3 +169,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
+### Misc.
+
+* Graphite GTK theme:
+https://github.com/vinceliuice/Graphite-gtk-theme
+
+* Tela circle icon theme
+https://github.com/vinceliuice/Tela-circle-icon-theme
