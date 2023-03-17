@@ -1,27 +1,27 @@
-# laptop home display
-profile laptop {
-    output 'Sharp Corporation 0x1449 0x00000000' enable mode 1920x1080
+# Dell XPS 13 laptop single display
+profile dell-xps13-single-display {
+    output 'Sharp Corporation 0x1449' enable mode 1920x1080
 }
 
-# external monitor Dell at home
-profile home {
-    output 'Sharp Corporation 0x1449 0x00000000' disable
-    output 'Dell Inc. DELL S2722DC 3F4XGD3' mode 2560x1440
+# Dell XPS 13 laptop dual display at home
+profile dell-xps13-dual-display-home {
+    output 'Sharp Corporation 0x1449' disable
+    output 'Dell Inc. DELL S2722DC' mode 2560x1440
 }
 
-# laptop office display
-profile laptop-office {
-    output 'Sharp Corporation 0x14D1 0x00000000' enable mode 1920x1200
+# Dell Precision 5550 laptop single display
+profile dell-precision5550-single-display {
+    output 'Sharp Corporation 0x14D1' enable mode 1920x1200
 }
 
-# external monitor Dell at office
-profile office {
-    output 'Sharp Corporation 0x14D1 0x00000000' enable mode 1920x1200
-    output 'Dell Inc. DELL U2720Q 9CLYS83' mode 3840x2160 scale 1.50 position 1920,0
+# Dell Precision 5550 laptop dual display at office
+profile dell-precision5550-dual-display-office {
+    output 'Sharp Corporation 0x14D1' enable mode 1920x1200
+    output 'Dell Inc. DELL U2720Q' mode 3840x2160 scale 1.50 position 1920,0
 }
 
-# external monitor Dell at home-office
-profile office {
-    output 'Sharp Corporation 0x14D1 0x00000000' enable mode 1920x1200
-    output 'Dell Inc. DELL S2722DC 3F4XGD3' mode 2560x1440 position 1920,0
+# Dell Precision 5550 laptop dual display at home
+profile dell-precision5550-dual-display-home {
+    output 'Sharp Corporation 0x14D1' enable mode 1920x1200
+    output 'Dell Inc. DELL S2722DC' mode 2560x1440 position 1920,0
 }
