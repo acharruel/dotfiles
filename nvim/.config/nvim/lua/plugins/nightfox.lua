@@ -7,20 +7,29 @@ local M = {
 function M.config()
     local status, nightfox = pcall(require, "nightfox")
     if not status then
-	return
+        return
     end
 
     local options = {
-	dim_inactive = false,
-	styles = {
-	    comments = "italic",
-	    -- keywords = "bold",
-	    functions = "bold",
-	},
+        dim_inactive = false,
+        styles = {
+            comments = "italic",
+            -- keywords = "bold",
+            functions = "bold",
+        },
+    }
+
+    local groups = {
+        all = {
+            LineNr = { fg = "palette.yellow" },
+            LineNrAbove = { },
+            LineNrBelow = { },
+        },
     }
 
     nightfox.setup({
-	options = options,
+        options = options,
+        groups = groups,
     })
 end
 
