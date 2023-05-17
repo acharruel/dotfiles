@@ -29,7 +29,7 @@ function M.config()
 
     nightfox.setup({
         options = options,
-        groups = groups,
+        -- groups = groups,
     })
 end
 
