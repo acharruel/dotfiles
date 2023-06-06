@@ -26,7 +26,7 @@ local location = function()
     local line = vim.fn.line(".")
     local total_line = vim.fn.line("$")
     local column = vim.fn.col(".")
-    return tostring(line) .. "/".. tostring(total_line) .. ":" .. tostring(column)
+    return tostring(line) .. "/" .. tostring(total_line) .. ":" .. tostring(column)
 end
 
 local filename = {
@@ -53,7 +53,15 @@ function M.config()
         sections = {
             lualine_a = { "mode" },
             lualine_b = { "branch", diff },
-            lualine_c = { filename },
+            lualine_c = {
+                {
+                    require("nvim-possession").status,
+                    cond = function()
+                        return require("nvim-possession").status() ~= nil
+                    end,
+                },
+                filename,
+            },
             lualine_x = { "encoding", filetype },
             lualine_y = { "progress" },
             lualine_z = { location }
