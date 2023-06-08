@@ -23,31 +23,40 @@ function M.config()
     end
 
     local kind_icons = {
-        Text = "",
-        Method = "m",
-        Function = "",
-        Constructor = "",
-        Field = "",
-        Variable = "",
-        Class = "",
-        Interface = "",
-        Module = "",
-        Property = "",
-        Unit = "",
-        Value = "",
-        Enum = "",
-        Keyword = "",
-        Snippet = "",
-        Color = "",
-        File = "",
-        Reference = "",
-        Folder = "",
-        EnumMember = "",
-        Constant = "",
-        Struct = "",
-        Event = "",
-        Operator = "",
-        TypeParameter = "",
+        Array = "",
+        Boolean = "",
+        Class = "",
+        Color = "",
+        Constant = "",
+        Constructor = "",
+        Enum = "",
+        EnumMember = "",
+        Event = "",
+        Field = "",
+        File = "",
+        Folder = "󰉋",
+        Function = "",
+        Interface = "",
+        Key = "",
+        Keyword = "",
+        Method = "",
+        Module = "",
+        Namespace = "",
+        Null = "󰟢",
+        Number = "",
+        Object = "",
+        Operator = "",
+        Package = "",
+        Property = "",
+        Reference = "",
+        Snippet = "",
+        String = "",
+        Struct = "",
+        Text = "",
+        TypeParameter = "",
+        Unit = "",
+        Value = "",
+        Variable = "",
     }
 
     cmp.setup {
@@ -124,11 +133,11 @@ function M.config()
         },
         enabled = function()
             local in_prompt = vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt'
-            if in_prompt then  -- this will disable cmp in the Telescope window (taken from the default config)
+            if in_prompt then -- this will disable cmp in the Telescope window (taken from the default config)
                 return false
             end
             local context = require("cmp.config.context")
-            return not(context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
+            return not (context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
         end
     }
 end
