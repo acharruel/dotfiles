@@ -13,7 +13,7 @@ set $mod Mod1
 set $term /home/adrien/.local/bin/kitty
 
 # default font to use
-font "DejaVuSansM Nerd Font Mono Bold 12"
+font "Hack Nerd Font Bold 12"
 
 # wallpaper
 set $wallpaper $HOME/Images/wallpaper.jpg

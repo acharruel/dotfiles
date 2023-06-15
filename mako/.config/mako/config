@@ -2,7 +2,7 @@
 #   man 5 mako
 # To view all configuration options.
 
-font=DejaVuSansMono Nerd Font Mono 12
+font=Hack Nerd Font Mono 12
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
 layer=overlay
