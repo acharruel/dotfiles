@@ -1,0 +1,6 @@
+[Unit]
+Description=swayped
+
+[Service]
+ExecStart=/home/adrien/.cargo/bin/swayped
+Restart=on-failure

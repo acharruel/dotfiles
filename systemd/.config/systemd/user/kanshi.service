@@ -1,0 +1,6 @@
+[Unit]
+Description=kanshi
+
+[Service]
+ExecStart=/usr/local/bin/kanshi
+Restart=on-failure
