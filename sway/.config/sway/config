@@ -213,6 +213,13 @@ bar {
     swaybar_command waybar
 }
 
+# set GTK theme
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Graphite'
+    gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-nord-dark'
+    gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
+}
+
 # nord
 include $HOME/.config/sway/nord.conf
 
