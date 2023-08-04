@@ -41,6 +41,40 @@ local filename = {
     }
 }
 
+local context = {
+    lsp_clients = {
+    }
+}
+
+local function get_lsp_client_state(buffer)
+    local key = tostring(buffer)
+    return context.lsp_clients[key] or false
+end
+
+local function set_lsp_client_state(buffer, state)
+    local key = tostring(buffer)
+    context.lsp_clients[key] = state
+    require('lualine').refresh()
+end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args) set_lsp_client_state(args.buf, true) end
+})
+
+vim.api.nvim_create_autocmd({ "BufDelete", "LspDetach" }, {
+    callback = function(args) set_lsp_client_state(args.buf, nil) end
+})
+
+local function lsp()
+    local buffer = vim.api.nvim_get_current_buf()
+    local lsp_client = get_lsp_client_state(buffer)
+    if lsp_client then
+        return ""
+    else
+        return ""
+    end
+end
+
 function M.config()
     require("lualine").setup({
         options = {
@@ -62,7 +96,7 @@ function M.config()
                 },
                 filename,
             },
-            lualine_x = { "encoding", filetype },
+            lualine_x = { lsp, "encoding", filetype },
             lualine_y = { "progress" },
             lualine_z = { location }
         },

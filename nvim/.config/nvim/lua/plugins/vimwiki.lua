@@ -14,7 +14,7 @@ local opts = {
 local mappings = {
     W = {
         name = "Vimwiki",
-        g = { "<cmd>lua launch_browser()<cr>", "Run Google Chrome" },
+        g = { "<cmd>lua LaunchBrowser()<cr>", "Run Google Chrome" },
         p = { "<cmd>lua require('auto-pandoc').run_pandoc()<cr>", "Run Pandoc" },
         w = { "<cmd>VimwikiIndex<cr>", "Vimwiki Index" },
     },

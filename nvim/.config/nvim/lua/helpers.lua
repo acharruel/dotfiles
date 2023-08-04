@@ -12,7 +12,7 @@ R = function(name)
     return require(name)
 end
 
-launch_browser = function()
+LaunchBrowser = function()
     local filename = vim.api.nvim_buf_get_name(0)
     local html = filename.gsub(filename, ".md", ".html")
     if filename ~= html then
