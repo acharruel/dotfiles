@@ -21,9 +21,8 @@ local opts = {
 local mappings = {
     ["b"] = { "<cmd>Telescope buffers<cr>", "[B]uffers" },
     ["f"] = { "<cmd>Telescope find_files<cr>", "[F]ind files" },
-    ["F"] = { "<cmd>Telescope live_grep<cr>", "[F]ind Text" },
-    -- ["g"] = { "<cmd>Telescope grep_string<cr>", "[G]rep String" },
-    ["g"] = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "[G]rep String" },
+    ["F"] = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "[G]rep String" },
+    ["g"] = { "<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>", "[G]rep String" },
 
     s = {
         name = "Telescope [S]earch",
@@ -36,6 +35,8 @@ local mappings = {
         r = { "<cmd>Telescope oldfiles<cr>", "Open [R]ecent File" },
         R = { "<cmd>Telescope registers<cr>", "[R]egisters" },
     },
+
+    ["r"] = { "<cmd>Telescope resume<cr>", "[R]esume Telescope Search" },
 }
 
 function M.init()
