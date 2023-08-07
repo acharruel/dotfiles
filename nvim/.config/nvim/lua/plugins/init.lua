@@ -11,9 +11,6 @@ return {
     "tpope/vim-repeat",
     "tpope/vim-surround",
 
-    -- comments
-    "tpope/vim-commentary",
-
     -- snippets
     "L3MON4D3/LuaSnip",
 
