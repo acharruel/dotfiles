@@ -9,21 +9,24 @@ local M = {
 
 
 local opts = {
-    mode = "n", -- NORMAL mode
+    mode = "n",     -- NORMAL mode
     prefix = "<leader>",
-    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true, -- use `silent` when creating keymaps
+    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+    silent = true,  -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
-    nowait = true, -- use `nowait` when creating keymaps
+    nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local mappings = {
     d = {
         name = "[D]ebugger",
         b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle [B]reakpoint" },
-        B = { "<cmd>lua require('dapui').float_element('breakpoints')<cr>", "[B]reakpoints Floating Window" },
-        s = { "<cmd>lua require('dapui').float_element('scopes')<cr>", "[S]copes Floating Window" },
-        t = { "<cmd>lua require('dapui').float_element('stacks')<cr>", "S[t]acks Floating Window" },
+        B = { ":Telescope dap list_breakpoints", "List [B]reakpoints" },
+        q = { function()
+            require("dapui").close()
+            require("dap").terminate()
+        end, "[Q]uit DAP UI" },
+        r = { "<cmd>lua require('dap').restart()<cr>", "[R]estart Session" },
     },
 }
 
@@ -37,7 +40,7 @@ function M.init()
     local wk = require("which-key")
     wk.register(mappings, opts)
 
-    vim.fn.sign_define('DapBreakpoint',{ text ='⏺', texthl ='', linehl ='', numhl =''})
+    vim.fn.sign_define('DapBreakpoint', { text = '⏺', texthl = '', linehl = '', numhl = '' })
 end
 
 function M.config()
@@ -94,14 +97,8 @@ function M.config()
         },
     })
 
-    dap.listeners.after.event_initialized["dapui_config"] = function ()
+    dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
-    end
-    dap.listeners.before.event_terminated["dapui_config"] = function ()
-        dapui.close()
-    end
-    dap.listeners.before.event_exited["dapui_config"] = function ()
-        dapui.close()
     end
 end
 
