@@ -30,6 +30,26 @@ function M.config()
         },
         large_file_overrides = nil,
     })
+
+    -- change the highlight style
+    vim.api.nvim_set_hl(0, "IlluminatedWord", { underline = true })
+    vim.api.nvim_set_hl(0, "IlluminatedCurWord", { underline = true })
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { underline = true })
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { underline = true })
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { underline = true })
+
+    -- auto update the highlight style on colorscheme change
+    vim.api.nvim_create_autocmd({ "ColorScheme" },
+        {
+            pattern = { "*" },
+            callback = function(ev)
+                vim.api.nvim_set_hl(0, "IlluminatedWord", { underline = true })
+                vim.api.nvim_set_hl(0, "IlluminatedCurWord", { underline = true })
+                vim.api.nvim_set_hl(0, "IlluminatedWordText", { underline = true })
+                vim.api.nvim_set_hl(0, "IlluminatedWordRead", { underline = true })
+                vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { underline = true })
+            end
+        })
 end
 
 return M
