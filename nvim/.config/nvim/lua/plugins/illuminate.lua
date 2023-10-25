@@ -28,6 +28,7 @@ function M.config()
             "text",
             "vimwiki",
         },
+        large_file_cutoff = 2000,
         large_file_overrides = nil,
     })
 
@@ -42,7 +43,7 @@ function M.config()
     vim.api.nvim_create_autocmd({ "ColorScheme" },
         {
             pattern = { "*" },
-            callback = function(ev)
+            callback = function(_)
                 vim.api.nvim_set_hl(0, "IlluminatedWord", { underline = true })
                 vim.api.nvim_set_hl(0, "IlluminatedCurWord", { underline = true })
                 vim.api.nvim_set_hl(0, "IlluminatedWordText", { underline = true })
