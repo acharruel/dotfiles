@@ -55,3 +55,17 @@ vim.keymap.set("n", "<ESC>", ":noh<cr>")
 
 -- set colorscheme
 vim.cmd [[colorscheme nordfox]]
+
+-- Force nvim to use OSC 52 clipboard provider
+vim.g.clipboard = {
+    name = 'OSC 52',
+    copy = {
+	['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+	['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+	['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+	['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    },
+}
+
