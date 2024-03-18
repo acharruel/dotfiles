@@ -25,4 +25,7 @@ return {
 
     -- Hex editing
     "fidian/hexmode",
+
+    -- just files highlighting
+    "NoahTheDuke/vim-just",
 }
