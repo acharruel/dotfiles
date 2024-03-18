@@ -226,4 +226,12 @@ exec_always {
 # nord
 include $HOME/.config/sway/nord.conf
 
-for_window [app_id = "xdg-desktop-portal-gtk"] floating enable;
+for_window {
+    [shell="xwayland"] title_format "[X] %title"
+    [app_id="mpv"] inhibit_idle focus
+    [window_role="pop-up"] floating enable
+    [window_role="bubble"] floating enable
+    [window_role="dialog"] floating enable
+    [window_type="dialog"] floating enable
+    #[app_id="org.gnome.Nautilus"] floating enable, resize set 1800 1600, move position center
+}
