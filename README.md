@@ -119,6 +119,14 @@ Extra configs for wireplumber pipewire session manager.
 stow wireplumber
 ```
 
+### yazi
+
+Blazing fast terminal file manager written in Rust, based on async I/O.
+
+```
+stow yazi
+```
+
 ### zathura
 
 ```
