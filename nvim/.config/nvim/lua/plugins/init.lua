@@ -20,9 +20,6 @@ return {
     -- edit quickfix content
     "itchyny/vim-qfedit",
 
-    -- Detect tabstop and shiftwidth automatically
-    "tpope/vim-sleuth",
-
     -- Hex editing
     "fidian/hexmode",
 
