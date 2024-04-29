@@ -16,7 +16,7 @@ style = "blue bold"
 fish_style_pwd_dir_length = 1
 
 [character]
-success_symbol = "[❯](green bold)"
+success_symbol = "[❯](yellow bold)"
 error_symbol = "[❯](red bold)"
 vimcmd_symbol = "[❮](purple bold)"
 
@@ -35,14 +35,16 @@ style = "bright-black"
 [time]
 disabled = false
 format = '[$time]($style) '
-style = "yellow bold"
+style = "bright-cyan bold"
+time_format = '%H:%M'
 
 [username]
 disabled = false
 show_always = false
-style_user = "red"
-format = '[$user]($style) '
+style_user = "red bold"
+format = '[$user]($style)'
 
 [hostname]
 ssh_only = true
-format = '[@$hostname]($style) '
+format = '@[$hostname]($style) '
+style = "green"
