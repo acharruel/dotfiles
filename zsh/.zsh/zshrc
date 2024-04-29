@@ -13,3 +13,6 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # systemd import SSH env for sshfs mount services
 systemctl --user import-environment SSH_AUTH_SOCK
+
+# starship prompt
+eval "$(starship init zsh)"
