@@ -1,0 +1,48 @@
+format = """
+$time\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$cmd_duration\
+$line_break\
+$python\
+$character"""
+
+command_timeout = 1000
+
+[directory]
+style = "blue bold"
+fish_style_pwd_dir_length = 1
+
+[character]
+success_symbol = "[❯](green bold)"
+error_symbol = "[❯](red bold)"
+vimcmd_symbol = "[❮](purple bold)"
+
+[git_branch]
+format = "[ $branch]($style)"
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "red"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = "yellow bold"
+
+[username]
+disabled = false
+show_always = false
+style_user = "red"
+format = '[$user]($style) '
+
+[hostname]
+ssh_only = true
+format = '[@$hostname]($style) '
