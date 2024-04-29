@@ -21,7 +21,7 @@ error_symbol = "[❯](red bold)"
 vimcmd_symbol = "[❮](purple bold)"
 
 [git_branch]
-format = "[ $branch]($style)"
+format = "[ $branch ]($style)"
 style = "bright-black"
 
 [cmd_duration]
