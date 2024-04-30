@@ -15,7 +15,7 @@ local opts = {
 local mappings = {
         T = {
             name = "Toggle [T]erm",
-            g = { "<cmd>lua LazygitToggle()<cr>", "Toggle lazy[g]it" },
+            g = { "<cmd>lua GituiToggle()<cr>", "Toggle [g]itui" },
             t = { "<cmd>ToggleTerm<cr>", "Toggle [T]erminal" },
         },
 }
@@ -35,10 +35,10 @@ function M.config()
         },
     }
     local terminal = require("toggleterm.terminal").Terminal
-    local lazygit = terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+    local gitui = terminal:new({ cmd = "gitui", hidden = true, direction = "float" })
 
-    function LazygitToggle()
-        lazygit:toggle()
+    function GituiToggle()
+        gitui:toggle()
     end
 end
 
