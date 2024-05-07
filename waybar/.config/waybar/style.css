@@ -36,12 +36,6 @@ tooltip label {
   border-radius: 5px;
 }
 
-.modules-center {
-  background-color: @nord0;
-  border: 0px solid @nord0;
-  border-radius: 5px;
-}
-
 .modules-left {
   background-color: @nord0;
   border: 0px solid @nord0;
@@ -66,6 +60,7 @@ tooltip label {
   border-bottom: 2px solid @nord7;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  transition: all 200ms ease-in-out;
 }
 
 #workspaces button.urgent {
