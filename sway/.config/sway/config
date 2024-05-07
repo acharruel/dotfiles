@@ -234,4 +234,5 @@ for_window {
     [window_role="dialog"] floating enable
     [window_type="dialog"] floating enable
     #[app_id="org.gnome.Nautilus"] floating enable, resize set 1800 1600, move position center
+    [app_id="clipse"] floating enable, resize set 80ppt 80ppt, move position center
 }
