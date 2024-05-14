@@ -13,6 +13,7 @@
   "margin-right": 8,
   "modules-left": [
     "sway/workspaces",
+    "sway/mode",
     "custom/media"
   ],
   "modules-center": [

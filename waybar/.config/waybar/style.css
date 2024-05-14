@@ -11,6 +11,15 @@
   margin-bottom: 1px;
 }
 
+@keyframes blink {
+  70% {
+    color: @nord4;
+  }
+  to {
+    color: @nord1;
+  }
+}
+
 window#waybar {
   background: rgba(0, 0, 0, 0);
 }
@@ -86,6 +95,7 @@ tooltip label {
 #disk,
 #language,
 #memory,
+#mode,
 #network,
 #tray,
 #pulseaudio,
@@ -105,12 +115,6 @@ tooltip label {
   background-color: @nord11;
 }
 
-@keyframes blink {
-  to {
-    color: @nord11;
-  }
-}
-
 #taskbar button.active {
   background-color: @nord3;
 }
@@ -126,4 +130,12 @@ tooltip label {
 
 #custom-recorder {
   color: @nord4;
+}
+
+#mode {
+  animation-timing-function: linear;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
