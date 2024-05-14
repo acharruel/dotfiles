@@ -235,4 +235,6 @@ for_window {
     [window_type="dialog"] floating enable
     #[app_id="org.gnome.Nautilus"] floating enable, resize set 1800 1600, move position center
     [app_id="clipse"] floating enable, resize set 80ppt 80ppt, move position center
+    [title="Bitwarden"] floating enable
+    [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
 }
