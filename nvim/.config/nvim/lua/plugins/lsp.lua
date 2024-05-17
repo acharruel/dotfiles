@@ -25,6 +25,7 @@ local mappings = {
         D = { "<cmd>Telescope diagnostics<cr>", "[D]ocument Diagnostics" },
         f = { "<cmd>lua vim.lsp.buf.format()<cr>", "[F]ormat" },
         i = { "<cmd>LspInfo<cr>", "LSP [I]nfo" },
+        I = { "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>", "LSP [I]nlays Hints" },
         l = { "<cmd>:LspStart<cr>", "Start [L]SP", },
         L = { "<cmd>:LspStop<cr>", "Start [L]SP", },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "[R]ename" },
