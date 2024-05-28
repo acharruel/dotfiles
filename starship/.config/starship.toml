@@ -4,7 +4,6 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$cmd_duration\
 $line_break\
 $python\
 $character"""
