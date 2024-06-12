@@ -119,6 +119,14 @@ Extra configs for wireplumber pipewire session manager.
 stow wireplumber
 ```
 
+### wlogout
+
+Logout menu for wayland
+
+```
+stow wlogout
+```
+
 ### yazi
 
 Blazing fast terminal file manager written in Rust, based on async I/O.

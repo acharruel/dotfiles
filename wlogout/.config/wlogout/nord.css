@@ -1,0 +1,60 @@
+/*
+ * Nord theme colors definitions
+ * https://www.nordtheme.com/docs/colors-and-palettes
+ */
+
+/*
+ * Polar Night:
+ * Polar Night is made up of four darker colors that are commonly used for base
+ * elements like backgrounds or text color in bright ambiance designs.
+ */
+@define-color nord0 #2E3440;
+@define-color nord1 #3B4252;
+@define-color nord2 #434C5E;
+@define-color nord3 #4C566A;
+
+/*
+ * Snow Storm:
+ * Snow Storm is made up of three bright colors that are commonly used for text
+ * colors or base UI elements in bright ambiance designs.
+ */
+@define-color nord4 #D8DEE9;
+@define-color nord5 #E5E9F0;
+@define-color nord6 #ECEFF4;
+
+/*
+ * Frost:
+ * Frost can be described as the heart palette of Nord, a group of four bluish
+ * colors that are commonly used for primary UI component and text highlighting
+ * and essential code syntax elements.
+ */
+@define-color nord7 #8FBCBB;
+@define-color nord8 #88C0D0;
+@define-color nord9 #81A1C1;
+@define-color nord10 #5E81AC;
+
+/*
+ * Aurora:
+ * Aurora consists of five colorful components reminiscent of the „Aurora borealis“,
+ * sometimes referred to as polar lights or northern lights.
+ */
+@define-color nord11 #BF616A;
+@define-color nord12 #D08770;
+@define-color nord13 #EBCB8B;
+@define-color nord14 #A3BE8C;
+@define-color nord15 #B48EAD;
+
+/* waybar styles */
+@define-color bg @nord0;
+@define-color light @nord4;
+@define-color warning @nord13;
+@define-color critical @nord11;
+@define-color workspacesfocused @nord4;
+@define-color tray @nord3;
+@define-color layout @nord10;
+
+@define-color element_bg @nord2;
+@define-color bluetooth_bg @nord9;
+@define-color light_font @nord6;
+@define-color dark_font @nord2;
+@define-color green_bg @nord14;
