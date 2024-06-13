@@ -38,6 +38,9 @@ bindkey ';5D' backward-word
 bindkey ';5C' forward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[[3~" delete-char
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
 
 # History
 HISTSIZE=5000
