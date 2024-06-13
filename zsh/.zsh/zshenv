@@ -10,9 +10,12 @@ path=(/home/adrien/.bin/platform-tools $path)
 eval $(keychain --eval --quiet acharruel)
 eval $(keychain --eval --quiet adrien-tagheuer)
 
+export BAT_THEME="Nord"
+
 # android-studio
 path=(/home/adrien/.local/android-studio/bin $path)
 export _JAVA_AWT_WM_NONREPARENTING=1
+export STUDIO_JDK=/usr/lib/jvm/java-14-openjdk
 export ANDROID_HOME=/home/adrien/Android/Sdk
 
 export ARMLMD_LICENSE_FILE=8224@10.47.147.199

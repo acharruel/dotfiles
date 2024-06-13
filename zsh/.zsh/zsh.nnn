@@ -1,9 +1,0 @@
-export NNN_OPENER=/home/adrien/.config/nnn/plugins/nuke
-export NNN_BMS='d:~/documents'
-export NNN_PLUG='m:-mediainf;o:fzopen;p:preview-tui;i:imgview;j:autojump;c:fzcd;m:nmount'
-export NNN_FIFO='/tmp/nnn.fifo'
-export TERMINAL='xterm-kitty'
-export PAGER='less -R'
-export EDITOR='nvim'
-export GUI=1
-alias nnn='nnn -e'

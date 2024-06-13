@@ -144,39 +144,10 @@ stow zathura
 ### zsh
 
 https://www.zsh.org/
-
-May be used with oh-my-zsh (https://ohmyz.sh/) or
-zprezto (https://github.com/sorin-ionescu/prezto).
+Configuration driven by zinit plugin manager.
 
 ```
 stow zsh
-cd -
-```
-
-With prezto:
-```
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-```
-
-`.zshrc` customization:
-```
-# Customize to your needs...
-export ZSHDIR="/home/adrien/.zsh"
-
-source ${ZSHDIR}/zsh.config
-source ${ZSHDIR}/zsh.bindkeys
-source ${ZSHDIR}/zsh.alias
-source ${ZSHDIR}/zsh.prompt
-source ${ZSHDIR}/zshenv
-source ${ZSHDIR}/zsh.nnn
-
-# fzf
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
 Install fzf:
