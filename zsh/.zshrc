@@ -1,3 +1,6 @@
+# Environment
+source ~/.zsh/zshenv
+
 # Starship prompt
 eval "$(starship init zsh)"
 
@@ -17,6 +20,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
@@ -34,8 +38,8 @@ bindkey -e
 bindkey '^[w' kill-region
 bindkey '[5~' history-search-backward # PgUp
 bindkey '[6~' history-search-forward  # PgDn
-bindkey ';5D' backward-word
-bindkey ';5C' forward-word
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
@@ -55,6 +59,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Redefine wordchars delimiters to none
 WORDCHARS=
 
 # Completion styling
@@ -69,5 +74,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Aliases
 source ~/.zsh/zsh.alias
 
-# Environment
-source ~/.zsh/zshenv
+# Export kitty TERM environment when using SSH
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
