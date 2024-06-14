@@ -27,6 +27,16 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
+zinit snippet PZT::modules/completion/init.zsh
+
+# zprezto directory module
+zstyle ':prezto:module:directory:alias' skip 'yes'
+zinit snippet PZT::modules/directory/init.zsh
+
+# zprezto editor module
+zstyle ':prezto:module:editor' wordchars ''
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+zinit snippet PZT::modules/editor/init.zsh
 
 # Load completions
 autoload -Uz compinit && compinit
