@@ -16,18 +16,9 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-history-substring-search
-zinit light Aloxaf/fzf-tab
-
-# Add in snippets
-zinit snippet OMZP::git
+# Add in Oh-my-zsh snippets
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
-zinit snippet PZT::modules/completion/init.zsh
 
 # zprezto directory module
 zstyle ':prezto:module:directory:alias' skip 'yes'
@@ -37,6 +28,16 @@ zinit snippet PZT::modules/directory/init.zsh
 zstyle ':prezto:module:editor' wordchars ''
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 zinit snippet PZT::modules/editor/init.zsh
+
+# zprezto completion module
+zinit snippet PZT::modules/completion/init.zsh
+
+# Add in zsh plugins (order is important)
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
+zinit light Aloxaf/fzf-tab
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -53,8 +54,8 @@ bindkey '^[[B' history-substring-search-down
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
+bindkey  "^[[H" beginning-of-line
+bindkey  "^[[F" end-of-line
 
 # History
 HISTSIZE=5000
@@ -69,11 +70,11 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Redefine wordchars delimiters to none
-WORDCHARS=
-
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' matcher-list \
+    'm:{[:lower:]}={[:upper:]}' \
+    '+r:|[._-]=* r:|=*' \
+    '+l:|=*'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
