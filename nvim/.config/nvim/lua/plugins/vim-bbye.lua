@@ -1,5 +1,5 @@
 local M = {
-    "/moll/vim-bbye",
+    "moll/vim-bbye",
 }
 
 local opts = {
