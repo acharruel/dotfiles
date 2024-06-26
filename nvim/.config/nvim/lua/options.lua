@@ -53,9 +53,6 @@ vim.keymap.set("n", "Y", "y$")
 -- Make Y yank to end of the line
 vim.keymap.set("n", "<ESC>", ":noh<cr>")
 
--- set colorscheme
-vim.cmd [[colorscheme nordfox]]
-
 -- Force nvim to use OSC 52 clipboard provider
 vim.g.clipboard = {
     name = 'OSC 52',

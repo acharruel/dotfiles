@@ -3,9 +3,6 @@ return {
     "fladson/vim-kitty",
     "kergoth/vim-bitbake",
 
-    -- colorschemes
-    "arcticicestudio/nord-vim",
-
     -- sort motion plugins
     "christoomey/vim-sort-motion",
     "tpope/vim-repeat",

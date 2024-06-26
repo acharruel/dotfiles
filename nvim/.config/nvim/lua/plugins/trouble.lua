@@ -2,28 +2,25 @@ local M = {
     "folke/trouble.nvim",
     cmd = "Trouble",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
-}
-
-local key_opts = {
-    mode = "n",     -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true,  -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true,  -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-    t = {
-        ["d"] = { "<cmd>Trouble diagnostics toggle focus=false<cr>", "[T]rouble [D]iagnostics" },
-        ["s"] = { "<cmd>Trouble symbols toggle pinned=true results.win.relative=win resuls.win.position=right<cr>", "[T]rouble [S]ymbols" },
-    },
+    keys = {
+        {
+            "<leader>td",
+            "<cmd>Trouble diagnostics toggle focus=false<cr>",
+            desc = "[T]rouble [D]iagnostics"
+        },
+        {
+            "<leader>ts",
+            "<cmd>Trouble symbols toggle pinned=true results.win.relative=win resuls.win.position=right<cr>",
+            desc = "[T]rouble [S]ymbols"
+        },
+    }
 }
 
 function M.init()
-    -- register mappings
-    local wk = require("which-key")
-    wk.register(mappings, key_opts)
+    local status, wk = pcall(require, "which-key")
+    if not status then return end
+    wk.register({ t = { name = "[T]rouble" } },
+        { prefix = "<leader>" })
 end
 
 return M

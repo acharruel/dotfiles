@@ -19,18 +19,11 @@ function M.config()
         },
     }
 
-    local groups = {
-        all = {
-            LineNr = { fg = "palette.yellow" },
-            LineNrAbove = { },
-            LineNrBelow = { },
-        },
-    }
-
     nightfox.setup({
         options = options,
-        -- groups = groups,
     })
+
+    vim.cmd([[colorscheme nordfox]])
 end
 
 return M

@@ -8,50 +8,40 @@ local M = {
         { "nvim-telescope/telescope-live-grep-args.nvim" },
         { "nvim-telescope/telescope-ui-select.nvim" },
     },
-}
+    keys = {
+        { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "[B]uffers" },
+        { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find [F]iles" },
+        {
+            "<leader>g", "<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>",
+            desc = "[G]rep Word Under Cursor",
+        },
+        {
+            "<leader>G", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+            desc = "[G]rep String",
+        },
+        { "<leader>r", "<cmd>Telescope resume<cr>", desc = "[R]esume Telescope Search" },
 
-local opts = {
-    mode = "n",     -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true,  -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true,  -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-    ["b"] = { "<cmd>Telescope buffers<cr>", "[B]uffers" },
-    ["f"] = { "<cmd>Telescope find_files<cr>", "[F]ind files" },
-    ["F"] = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "[G]rep String" },
-    ["g"] = { "<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>", "[G]rep String" },
-
-    s = {
-        name = "Telescope [S]earch",
-        c = { "<cmd>Telescope colorscheme<cr>", "[C]olorscheme" },
-        C = { "<cmd>Telescope commands<cr>", "[C]ommands" },
-        d = { "<cmd>Telescope diagnostics<cr>", "[D]iagnostics" },
-        h = { "<cmd>Telescope help_tags<cr>", "Find [H]elp" },
-        k = { "<cmd>Telescope keymaps<cr>", "[K]eymaps" },
-        M = { "<cmd>Telescope man_pages<cr>", "[M]an Pages" },
-        r = { "<cmd>Telescope oldfiles<cr>", "Open [R]ecent File" },
-        R = { "<cmd>Telescope registers<cr>", "[R]egisters" },
+        { "<leader>sc", "<cmd>Telescope colorscheme<cr>", desc = "[C]olorscheme Search" },
+        { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "[C]ommands Search" },
+        { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "[D]iagnostics Search" },
+        { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "[H]elp Search" },
+        { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "[K]eymaps Search" },
+        { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "[M]an Pages Search" },
+        { "<leader>sr", "<cmd>Telescope oldfiles<cr>", desc = "[R]ecently Opened Files Search" },
+        { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "[R]egisters Search" },
     },
-
-    ["r"] = { "<cmd>Telescope resume<cr>", "[R]esume Telescope Search" },
 }
 
 function M.init()
-    -- register mappings
-    local wk = require("which-key")
-    wk.register(mappings, opts)
+    local status, wk = pcall(require, "which-key")
+    if not status then return end
+    wk.register({ s = { name = "Telescope [S]earch" } },
+        { prefix = "<leader>" })
 end
 
 function M.config()
-    local status_actions, actions = pcall(require, "telescope.actions")
-    if not status_actions then return end
-
+    local actions = require("telescope.actions")
     local transform_mod = require('telescope.actions.mt').transform_mod
-
     local local_actions = {}
 
     local_actions.open_trouble_quickfix = function()

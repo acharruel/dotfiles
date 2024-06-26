@@ -1,42 +1,28 @@
 local M = {
     "lewis6991/gitsigns.nvim",
-    event = "BufReadPre",
-}
+    keys = {
+        { "<leader>Gb", "<cmd>Telescope git_branches<cr>", desc = "Show [B]ranches" },
+        { "<leader>Gc", "<cmd>Telescope git_commits<cr>", desc = "Show [C]ommits" },
+        { "<leader>Gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "[D]iff" },
+        { "<leader>Gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "B[l]ame" },
+        { "<leader>Gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "[P]review Hunk" },
+        { "<leader>Gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "[R]eset Hunk" },
+        { "<leader>GR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "[R]eset Buffer" },
+        { "<leader>Gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "[S]tage Hunk" },
+        { "<leader>GS", "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", desc = "[S]tage Buffer" },
+        { "<leader>Gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "[U]ndo Stage Hunk" },
+        { "<leader>Go", "<cmd>Telescope git_status<cr>", desc = "[O]pen changed file" },
 
-local opts = {
-    mode = "n", -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true, -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true, -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-        G = {
-            name = "[G]it",
-            b = { "<cmd>Telescope git_branches<cr>", "Checkout [B]ranch" },
-            c = { "<cmd>Telescope git_commits<cr>", "Checkout [C]ommit" },
-            d = { "<cmd>Gitsigns diffthis HEAD<cr>", "[D]iff" },
-            l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "B[l]ame" },
-            p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "[P]review Hunk" },
-            r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "[R]eset Hunk" },
-            R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "[R]eset Buffer" },
-            s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "[S]tage Hunk" },
-            S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "[S]tage Buffer" },
-            u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "[U]ndo Stage Hunk" },
-            o = { "<cmd>Telescope git_status<cr>", "[O]pen changed file" },
-        }
+        { "[g", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "Next Hunk" },
+        { "]g", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Previous Hunk" },
+    },
 }
 
 function M.init()
-    -- register mappings
-    local wk = require("which-key")
-    wk.register(mappings, opts)
-
-    -- gitsigns mappings
-    vim.keymap.set("n", "[g", "<cmd>lua require 'gitsigns'.next_hunk()<cr>")
-    vim.keymap.set("n", "]g", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>")
+    local status, wk = pcall(require, "which-key")
+    if not status then return end
+    wk.register({ G = { name = "[G]it" } },
+        { prefix = "<leader>" })
 end
 
 function M.config()

@@ -1,26 +1,9 @@
 local M = {
     "luukvbaal/nnn.nvim",
-    cmd = "NnnExplorer",
+    keys = {
+        { "<leader>n", "<cmd>NnnExplorer<CR>", desc = "[N]nn Explorer" },
+    },
 }
-
-local opts = {
-    mode = "n", -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true, -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true, -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-    ["n"] = { "<cmd>NnnExplorer<CR>", "[N]nn Explorer" },
-}
-
-function M.init()
-    -- register mappings
-    local wk = require("which-key")
-    wk.register(mappings, opts)
-end
 
 function M.config()
     require("nnn").setup({

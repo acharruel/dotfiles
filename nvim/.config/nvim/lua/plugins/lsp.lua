@@ -6,31 +6,19 @@ local M = {
         "onsails/lspkind-nvim",
         -- Useful status updates for LSP
         "j-hui/fidget.nvim",
-    }
-}
-
-local opts = {
-    mode = "n",     -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true,  -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true,  -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-    l = {
-        name = "[L]SP",
-        a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code [A]ction" },
-        D = { "<cmd>Telescope diagnostics<cr>", "[D]ocument Diagnostics" },
-        f = { "<cmd>lua vim.lsp.buf.format()<cr>", "[F]ormat" },
-        i = { "<cmd>LspInfo<cr>", "LSP [I]nfo" },
-        I = { "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>", "LSP [I]nlays Hints" },
-        l = { "<cmd>:LspStart<cr>", "Start [L]SP", },
-        L = { "<cmd>:LspStop<cr>", "Start [L]SP", },
-        r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "[R]ename" },
-        s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document [S]ymbols" },
-        S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace [S]ymbols", },
+    },
+    keys = {
+        { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code [A]ction" },
+        { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "[F]ormat Code" },
+        { "<leader>li", "<cmd>LspInfo<cr>", desc = "LSP [I]nfos" },
+        {
+            "<leader>lI",
+            "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
+            desc = "LSP [I]nlays Hints",
+        },
+        { "<leader>ll", "<cmd>LspStart<cr>", desc = "LSP [S]tart" },
+        { "<leader>lL", "<cmd>LspStop<cr>", desc = "LSP [S]top" },
+        { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "[R]ename" },
     }
 }
 
@@ -42,9 +30,10 @@ function M.init()
     require("lsp/mason-loader")
     require("lsp/handlers").setup()
 
-    -- register mappings
-    local wk = require("which-key")
-    wk.register(mappings, opts)
+    local status, wk = pcall(require, "which-key")
+    if not status then return end
+    wk.register({ l = { name = "[L]SP" } },
+        { prefix = "<leader>" })
 end
 
 function M.config()
