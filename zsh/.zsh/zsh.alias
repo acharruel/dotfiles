@@ -10,6 +10,7 @@ alias ll='ls -lF'
 alias lla='ls -alhF'
 alias c='clear'
 alias s='cd ..'
+alias less='less -r'
 
 # git helpers
 alias gitlog='git log --graph --abbrev-commit --pretty=oneline --decorate'
