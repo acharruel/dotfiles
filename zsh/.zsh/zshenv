@@ -5,6 +5,7 @@ path=($(python3 -m site --user-base)/bin $path)
 path=(/snap/bin $path)
 path=(/home/adrien/.bin $path)
 path=(/home/adrien/.cargo/bin $path)
+path=(/home/adrien/.fzf/bin $path)
 path=(/home/adrien/.bin/platform-tools $path)
 
 eval $(keychain --eval --quiet acharruel)
