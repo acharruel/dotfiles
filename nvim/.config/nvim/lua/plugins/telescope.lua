@@ -35,8 +35,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.register({ s = { name = "Telescope [S]earch" } },
-        { prefix = "<leader>" })
+    wk.add({ "<leader>s", group = "Telescope [S]earch" })
 end
 
 function M.config()

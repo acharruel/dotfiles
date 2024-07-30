@@ -8,26 +8,38 @@ local M = {
     }
 }
 
-
-local opts = {
-    mode = "n",     -- NORMAL mode
-    prefix = "<leader>",
-    buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true,  -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true,  -- use `nowait` when creating keymaps
-}
-
 local mappings = {
-    d = {
-        name = "[D]ebugger",
-        b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle [B]reakpoint" },
-        B = { ":Telescope dap list_breakpoints", "List [B]reakpoints" },
-        q = { function()
+    { "<leader>d", group = "[D]ebugger", nowait = true, remap = false },
+    {
+        "<leader>db",
+        "<cmd>lua require('dap').toggle_breakpoint()<cr>",
+        desc = "Toggle [B]reakpoint",
+        nowait = true,
+        remap = false,
+    },
+    {
+        "<leader>dB",
+        ":Telescope dap list_breakpoints",
+        desc = "List [B]reakpoints",
+        nowait = true,
+        remap = false,
+    },
+    {
+        "<leader>dq",
+        function()
             require("dapui").close()
             require("dap").terminate()
-        end, "[Q]uit DAP UI" },
-        r = { "<cmd>lua require('dap').restart()<cr>", "[R]estart Session" },
+        end,
+        desc = "[Q]uit DAP UI",
+        nowait = true,
+        remap = false,
+    },
+    {
+        "<leader>dr",
+        "<cmd>lua require('dap').restart()<cr>",
+        desc = "[R]estart Session",
+        nowait = true,
+        remap = false,
     },
 }
 
@@ -39,7 +51,7 @@ function M.init()
 
     -- register which-key mappings
     local wk = require("which-key")
-    wk.register(mappings, opts)
+    wk.add(mappings)
 
     vim.fn.sign_define('DapBreakpoint', { text = '⏺', texthl = '', linehl = '', numhl = '' })
 end

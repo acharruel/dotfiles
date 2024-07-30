@@ -10,8 +10,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.register({ T = { name = "Toggle [T]erm" } },
-        { prefix = "<leader>" })
+    wk.add({ "<leader>T", name = "Toggle [T]erm" })
 end
 
 function M.config()

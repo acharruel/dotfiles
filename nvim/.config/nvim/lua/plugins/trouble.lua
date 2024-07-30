@@ -19,8 +19,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.register({ t = { name = "[T]rouble" } },
-        { prefix = "<leader>" })
+    wk.add({ "<leader>t", group = "[T]rouble" })
 end
 
 return M

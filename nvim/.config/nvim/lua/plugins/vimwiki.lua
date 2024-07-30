@@ -10,8 +10,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.register({ W = { name = "Vim [W]iki" } },
-        { prefix = "<leader>" })
+    wk.add({ "<leader>W", group = "Vim [W]iki" })
 
     vim.g.vimwiki_list = {
         {

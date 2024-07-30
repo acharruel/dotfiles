@@ -32,8 +32,7 @@ function M.init()
 
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.register({ l = { name = "[L]SP" } },
-        { prefix = "<leader>" })
+    wk.add({ "<leader>l", group = "[L]SP" })
 end
 
 function M.config()
