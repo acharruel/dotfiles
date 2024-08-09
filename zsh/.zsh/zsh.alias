@@ -11,6 +11,8 @@ alias lla='ls -alhF'
 alias c='clear'
 alias s='cd ..'
 alias less='less -r'
+alias rg='rg --no-ignore-parent'
+alias fdfind='fdfind --no-ignore-parent'
 
 # git helpers
 alias gitlog='git log --graph --abbrev-commit --pretty=oneline --decorate'
