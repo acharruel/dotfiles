@@ -9,23 +9,23 @@ local M = {
 }
 
 local mappings = {
-    { "<leader>d", group = "[D]ebugger", nowait = true, remap = false },
+    { "<leader>D", group = "[D]ebugger", nowait = true, remap = false },
     {
-        "<leader>db",
+        "<leader>Db",
         "<cmd>lua require('dap').toggle_breakpoint()<cr>",
         desc = "Toggle [B]reakpoint",
         nowait = true,
         remap = false,
     },
     {
-        "<leader>dB",
+        "<leader>DB",
         ":Telescope dap list_breakpoints",
         desc = "List [B]reakpoints",
         nowait = true,
         remap = false,
     },
     {
-        "<leader>dq",
+        "<leader>Dq",
         function()
             require("dapui").close()
             require("dap").terminate()
@@ -35,7 +35,7 @@ local mappings = {
         remap = false,
     },
     {
-        "<leader>dr",
+        "<leader>Dr",
         "<cmd>lua require('dap').restart()<cr>",
         desc = "[R]estart Session",
         nowait = true,
