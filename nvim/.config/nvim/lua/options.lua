@@ -38,6 +38,13 @@ vim.opt.listchars:append({
     precedes = "⟨",
 })
 
+-- nicer fillchars display
+vim.opt.fillchars:append({
+    vert = "│",
+    fold = " ",
+    diff = "╱",
+})
+
 -- visual selection yanked to " register
 vim.keymap.set("v", "<LeftRelease>", '"*ygv')
 vim.keymap.set("v", "<RightRelease>", '"*ygv')
