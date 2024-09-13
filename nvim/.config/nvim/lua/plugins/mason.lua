@@ -3,6 +3,7 @@ local M = {
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
         "harrisoncramer/mason-nvim-dap.nvim",
+        "RubixDev/mason-update-all",
     },
     keys = {
         { "<leader>M", "<cmd>Mason<cr>", desc = "[M]ason LSP Manager" },
@@ -35,6 +36,7 @@ function M.config()
 	    }
 	end,
     })
+    require('mason-update-all').setup()
 end
 
 return M
