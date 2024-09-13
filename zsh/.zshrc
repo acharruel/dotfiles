@@ -33,7 +33,7 @@ zinit snippet PZT::modules/editor/init.zsh
 zinit snippet PZT::modules/completion/init.zsh
 
 # Add in zsh plugins (order is important)
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
