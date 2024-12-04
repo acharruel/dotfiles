@@ -1,0 +1,11 @@
+#!/bin/sh
+
+display_date() {
+	date '+%a %d %b %Y - %H:%M'
+}
+
+display_date
+
+case $BLOCK_BUTTON in
+	3) orage
+esac

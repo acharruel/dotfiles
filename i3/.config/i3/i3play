@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import re
+import json
+import subprocess
+from subprocess import PIPE
+
+def fetch_playlist():
+    cmd = 'mpc playlist'.split()
+    stdout = subprocess.check_output(cmd)
+    return [music.decode('utf-8') for music in stdout.split(b'\n') if music]
+
+def do_choice(items):
+    cmd = 'dmenu -i -l 30  -p ▶'
+    process = subprocess.Popen(cmd.split(), stdout=PIPE, stdin=PIPE)
+    stdin = '\n'.join(items).encode('utf-8')
+    stdout = process.communicate(stdin)[0].decode('utf-8')
+    match = re.search(r'^\s*(\d+)\s+.*$', stdout.strip())
+    if match:
+        return int(match.groups()[0])
+
+def play_music(position):
+    cmd = 'mpc play {}'.format(position).split()
+    process = subprocess.Popen(cmd, stdout=PIPE)
+    process.communicate()
+
+def main():
+    musics = fetch_playlist()
+
+    items = ['{}  {}'.format(k + 1, m) for k, m in enumerate(musics)]
+    music_position = do_choice(items)
+
+    if music_position:
+        play_music(music_position)
+
+if __name__ == '__main__':
+    main()
