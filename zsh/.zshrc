@@ -69,6 +69,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt clobber
 
 # Completion styling
 zstyle ':completion:*' matcher-list \
@@ -87,3 +88,4 @@ source ~/.zsh/zsh.alias
 
 # Export kitty TERM environment when using SSH
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
