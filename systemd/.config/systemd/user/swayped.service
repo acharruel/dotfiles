@@ -2,5 +2,5 @@
 Description=swayped
 
 [Service]
-ExecStart=/home/adrien/.cargo/bin/swayped
+ExecStart=/home/adrien/.cargo/bin/swayped -S
 Restart=on-failure
