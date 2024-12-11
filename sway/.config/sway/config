@@ -41,10 +41,10 @@ default_dim_inactive 0.1
 mouse_warping container
 
 ### Idle configuration
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep '/home/adrien/.config/sway/swaylock.sh'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -238,3 +238,8 @@ for_window {
     [title="Bitwarden"] floating enable
     [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
 }
+
+assign [class="Google-chrome"] workspace 1
+
+xwayland enable
+exec xrandr --output DP-1 --primary
