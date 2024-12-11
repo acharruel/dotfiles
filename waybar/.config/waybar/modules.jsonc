@@ -99,12 +99,6 @@
     "format": "{percentage_used}% 󰋊",
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
-  "disk#data": {
-    "interval": 30,
-    "path": "/mnt/data",
-    "format": "{percentage_used}% 󰋊",
-    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
-  },
   "hyprland/language": {
     "format": "{short}"
   },
