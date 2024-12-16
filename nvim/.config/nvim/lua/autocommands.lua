@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd(
 local group = vim.api.nvim_create_augroup("CustomYankGroup", { clear = true })
 vim.api.nvim_create_autocmd({ "TextYankPost" },
     {
-        command = "lua vim.highlight.on_yank({higroup='Visual', timeout='200'})",
+        command = "lua vim.hl.on_yank({higroup='Visual', timeout='200'})",
         group = group,
     })
 

@@ -4,7 +4,6 @@ local M = {
         { "<leader>Gb", "<cmd>Telescope git_branches<cr>", desc = "Show [B]ranches" },
         { "<leader>Gc", "<cmd>Telescope git_commits<cr>", desc = "Show [C]ommits" },
         { "<leader>Gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "[D]iff" },
-        { "<leader>Gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "B[l]ame" },
         { "<leader>Gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "[P]review Hunk" },
         { "<leader>Gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "[R]eset Hunk" },
         { "<leader>GR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "[R]eset Buffer" },

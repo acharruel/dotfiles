@@ -1,7 +1,6 @@
 local M = {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "jose-elias-alvarez/null-ls.nvim",
         -- Add vscode-like pictograms to lsp
         "onsails/lspkind-nvim",
         -- Useful status updates for LSP

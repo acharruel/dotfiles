@@ -3,7 +3,6 @@ local M = {
     cmd = "Telescope",
     dependencies = {
         { "nvim-lua/plenary.nvim" },
-        { "nvim-telescope/telescope-dap.nvim" },
         { "nvim-telescope/telescope-fzf-native.nvim",    build = "make" },
         { "nvim-telescope/telescope-live-grep-args.nvim" },
         { "nvim-telescope/telescope-ui-select.nvim" },
@@ -98,7 +97,6 @@ function M.config()
     })
 
     -- extensions
-    require("telescope").load_extension("dap")
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("live_grep_args")
     require("telescope").load_extension("ui-select")

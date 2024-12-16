@@ -1,9 +1,11 @@
 local M = {
     "chrisgrieser/nvim-various-textobjs",
+    event = "VeryLazy",
+    opts = {
+        keymaps = {
+            useDefaults = true
+        }
+    },
 }
-
-function M.config()
-    require("various-textobjs").setup({ useDefaultKeymaps = true })
-end
 
 return M

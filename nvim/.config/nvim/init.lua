@@ -4,7 +4,7 @@ vim.g.mapleader = ','
 -- plugins manager
 require "lazy_bootstrap"
 
--- define autocommands
+-- define auto commands
 require "autocommands"
 
 -- some useful helper functions

@@ -69,13 +69,6 @@ function M.config()
         sections = {
             lualine_a = { "mode" },
             lualine_b = {
-                {
-                    require("nvim-possession").status,
-                    cond = function()
-                        return require("nvim-possession").status() ~= nil
-                    end,
-                },
-
                 "branch",
                 diff },
             lualine_c = {
@@ -88,7 +81,6 @@ function M.config()
         },
         extensions = {
             "lazy",
-            "nvim-dap-ui",
             "quickfix",
             "toggleterm",
             "trouble",

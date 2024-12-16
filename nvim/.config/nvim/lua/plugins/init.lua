@@ -2,6 +2,7 @@ return {
     -- syntax plugins
     "fladson/vim-kitty",
     "kergoth/vim-bitbake",
+    "NoahTheDuke/vim-just",
 
     -- sort motion plugins
     "christoomey/vim-sort-motion",
@@ -19,7 +20,4 @@ return {
 
     -- Hex editing
     "fidian/hexmode",
-
-    -- just files highlighting
-    "NoahTheDuke/vim-just",
 }
