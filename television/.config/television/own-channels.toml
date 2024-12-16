@@ -1,0 +1,4 @@
+[[cable_channel]]
+name = "dot"
+source_command = 'fdfind --no-ignore -L -t f . $HOME/.config'
+preview_command = 'batcat -n --color=always {0}'

@@ -1,0 +1,19 @@
+[[cable_channel]]
+name = "git-log"
+source_command = 'git log --oneline --date=short --pretty="format:%h %s %an %cd" "$@"'
+preview_command = 'git show -p --stat --pretty=fuller --color=always {0}'
+
+[[cable_channel]]
+name = "git-branch"
+source_command = 'git --no-pager branch --all --format="%(refname:short)"'
+preview_command = 'git show -p --stat --pretty=fuller --color=always {0}'
+
+[[cable_channel]]
+name = "git-files"
+source_command = 'git ls-files'
+preview_command = 'batcat -n --color=always {}'
+
+[[cable_channel]]
+name = "git-reflog"
+source_command = 'git reflog'
+preview_command = 'git show -p --stat --pretty=fuller --color=always {0}'

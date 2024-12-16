@@ -94,6 +94,18 @@ https://neovim.io/
 stow nvim
 ```
 
+### television
+
+Television is a blazingly fast general purpose fuzzy finder TUI.
+
+```
+cargo install --locked television
+```
+
+```
+stow television
+```
+
 ### udiskie
 
 Automounter for removable media.
