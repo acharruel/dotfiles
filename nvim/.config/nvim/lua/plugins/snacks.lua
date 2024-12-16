@@ -7,7 +7,11 @@ local M = {
     animate = { enabled = true },
     bigfile = { enabled = true },
     dashboard = { enabled = false },
-    indent = { enabled = true },
+    indent = {
+      enabled = true,
+      animate = { enabled = false },
+      scope = { enabled = false },
+    },
     input = { enabled = true },
     notifier = {
       enabled = true,
