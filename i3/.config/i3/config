@@ -28,7 +28,7 @@ set $scriptdir $HOME/.i3/scripts
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango:Hack Nerd Font Bold 10
+font pango:Hack Nerd Font Bold 11
 
 # Nord colours (not really used)
 set $nord0   #2E3440
@@ -257,6 +257,9 @@ exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 
 # wallpaper
 exec --no-startup-id feh --bg-scale $wallpaper
+
+# xbindkeys
+exec --no-startup-id xbindkeys
 
 ################################################################################
 # windows
