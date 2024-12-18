@@ -15,7 +15,7 @@ local M = {
             desc = "[G]rep Word Under Cursor",
         },
         {
-            "<leader>F", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+            "<leader>F", "<cmd>lua require('custom.multi-ripgrep')<cr>",
             desc = "[F]ind String with grep",
         },
         { "<leader>r", "<cmd>Telescope resume<cr>", desc = "[R]esume Telescope Search" },

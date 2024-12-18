@@ -12,3 +12,9 @@ require "helpers"
 
 -- vim global options
 require "options"
+
+-- custom plugin
+local status, rg = pcall(require, "custom.multi-ripgrep")
+if status then
+    rg.setup()
+end
