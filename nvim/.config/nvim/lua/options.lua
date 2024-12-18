@@ -22,7 +22,7 @@ vim.opt.breakindent = true                        -- break indent
 vim.opt.swapfile = false                          -- do not create swap file
 vim.opt.tags = "./tags;/"                         -- Load tags in each sub directories
 vim.opt.timeoutlen = 200                          -- timeout of mapped sequence
-vim.opt.title = true							  -- set terminal title to current filename
+vim.opt.title = true                              -- set terminal title to current filename
 vim.opt.undofile = true                           -- enable persistent undo
 vim.opt.wrap = false                              -- do not wrap long lines
 vim.opt.writebackup = false                       -- if a file is being edited by another program it's not allowed to be edited
@@ -64,12 +64,15 @@ vim.keymap.set("n", "<ESC>", ":noh<cr>")
 vim.g.clipboard = {
     name = 'OSC 52',
     copy = {
-	['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-	['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
     },
     paste = {
-	['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-	['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+        ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
     },
 }
 
+-- Map Ctrl+arrows to navigate quickfix list
+vim.keymap.set("n", "<C-Down>", ":cnext<cr>")
+vim.keymap.set("n", "<C-Up>", ":cprevious<cr>")
