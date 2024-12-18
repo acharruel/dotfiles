@@ -19,5 +19,8 @@ return {
     "itchyny/vim-qfedit",
 
     -- Hex editing
-    "fidian/hexmode",
+    {
+        "fidian/hexmode",
+        cmd = "Hexmode",
+    },
 }
