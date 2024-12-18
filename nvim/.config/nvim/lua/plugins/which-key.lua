@@ -77,7 +77,7 @@ local mappings = {
     },
     {
         "<leader>C",
-        "<cmd>lua require('togglecolumn').toggle_colorcolumn()<cr>",
+        "<cmd>lua require('custom.togglecolumn').toggle_colorcolumn()<cr>",
         desc = "Toggle [C]olorcolumn",
         nowait = true,
         remap = false,
