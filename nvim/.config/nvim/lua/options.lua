@@ -76,3 +76,6 @@ vim.g.clipboard = {
 -- Map Ctrl+arrows to navigate quickfix list
 vim.keymap.set("n", "<C-Down>", ":cnext<cr>")
 vim.keymap.set("n", "<C-Up>", ":cprevious<cr>")
+
+-- Nicer terminal escape, this doesn't close the window
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
