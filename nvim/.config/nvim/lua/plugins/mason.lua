@@ -10,7 +10,11 @@ local M = {
 }
 
 function M.config()
-    require("mason").setup()
+    require("mason").setup({
+        ui = {
+            border = "rounded",
+        },
+    })
     require('mason-update-all').setup()
 end
 
