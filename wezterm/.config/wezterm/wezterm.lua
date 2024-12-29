@@ -6,13 +6,21 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
+-- colorscheme
 config.color_scheme = 'Nord (Gogh)'
 
-config.font = wezterm.font 'Hack Nerd Font'
+-- font
+config.font = wezterm.font('Hack Nerd Font',
+    {
+        -- weight = 'Bold',
+        -- italic = true,
+    }
+)
 
-config.enable_tab_bar = false
+-- don't always show tab bar
+config.hide_tab_bar_if_only_one_tab = true
 
+-- padding
 config.window_padding = {
     left = 1,
     right = 1,
@@ -20,6 +28,13 @@ config.window_padding = {
     bottom = 0,
 }
 
+-- scrollback buffer
+config.scrollback_lines = 10000
 
--- and finally, return the configuration to wezterm
+-- hide mouse
+config.hide_mouse_cursor_when_typing = true
+
+-- window apha channel opacity
+config.window_background_opacity = 0.95
+
 return config
