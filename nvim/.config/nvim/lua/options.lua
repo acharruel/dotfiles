@@ -60,16 +60,23 @@ vim.keymap.set("n", "Y", "y$")
 -- Make Y yank to end of the line
 vim.keymap.set("n", "<ESC>", ":noh<cr>")
 
--- Force nvim to use OSC 52 clipboard provider
+-- Special OSC52 config to use with wezterm
+local function paste()
+  return {
+    vim.fn.split(vim.fn.getreg(""), "\n"),
+    vim.fn.getregtype(""),
+  }
+end
+
 vim.g.clipboard = {
-    name = 'OSC 52',
+    name = "OSC 52",
     copy = {
-        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
     },
     paste = {
-        ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-        ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+        ["+"] = paste,
+        ["*"] = paste,
     },
 }
 
