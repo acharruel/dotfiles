@@ -6,6 +6,7 @@ local M = {
         { "nvim-telescope/telescope-fzf-native.nvim",    build = "make" },
         { "nvim-telescope/telescope-live-grep-args.nvim" },
         { "nvim-telescope/telescope-ui-select.nvim" },
+        { "gnfisher/nvim-telescope-ctags-plus" },
     },
     keys = {
         { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "[B]uffers" },
@@ -28,6 +29,7 @@ local M = {
         { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "[M]an Pages Search" },
         { "<leader>sr", "<cmd>Telescope oldfiles<cr>", desc = "[R]ecently Opened Files Search" },
         { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "[R]egisters Search" },
+        { "<leader>]", "<cmd>lua require('telescope').extensions.ctags_plus.jump_to_tag()<cr>", desc = "Jump to tag" },
     },
 }
 
@@ -100,6 +102,7 @@ function M.config()
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("live_grep_args")
     require("telescope").load_extension("ui-select")
+    require("telescope").load_extension("ctags_plus")
 end
 
 return M
