@@ -123,23 +123,23 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
-        bind "Ctrl Shift left" { MoveFocusOrTab "left"; }
-        bind "Ctrl Shift down" { MoveFocus "down"; }
-        bind "Ctrl Shift up" { MoveFocus "up"; }
-        bind "Ctrl Shift right" { MoveFocusOrTab "right"; }
-        bind "Ctrl Shift +" { Resize "Increase"; }
-        bind "Ctrl Shift -" { Resize "Decrease"; }
-        bind "Ctrl Shift =" { Resize "Increase"; }
-        bind "Ctrl Shift [" { PreviousSwapLayout; }
-        bind "Ctrl Shift ]" { NextSwapLayout; }
-        bind "Ctrl Shift f" { ToggleFloatingPanes; }
-        bind "Ctrl Shift h" { MoveFocusOrTab "left"; }
-        bind "Ctrl Shift i" { MoveTab "left"; }
-        bind "Ctrl Shift j" { MoveFocus "down"; }
-        bind "Ctrl Shift k" { MoveFocus "up"; }
-        bind "Ctrl Shift l" { MoveFocusOrTab "right"; }
-        bind "Ctrl Shift n" { NewPane; }
-        bind "Ctrl Shift o" { MoveTab "right"; }
+        bind "Super left" { MoveFocusOrTab "left"; }
+        bind "Super down" { MoveFocus "down"; }
+        bind "Super up" { MoveFocus "up"; }
+        bind "Super right" { MoveFocusOrTab "right"; }
+        bind "Super +" { Resize "Increase"; }
+        bind "Super -" { Resize "Decrease"; }
+        bind "Super =" { Resize "Increase"; }
+        bind "Super [" { PreviousSwapLayout; }
+        bind "Super ]" { NextSwapLayout; }
+        bind "Super f" { ToggleFloatingPanes; }
+        bind "Super h" { MoveFocusOrTab "left"; }
+        bind "Super i" { MoveTab "left"; }
+        bind "Super j" { MoveFocus "down"; }
+        bind "Super k" { MoveFocus "up"; }
+        bind "Super l" { MoveFocusOrTab "right"; }
+        bind "Super n" { NewPane; }
+        bind "Super o" { MoveTab "right"; }
     }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "locked"; }
@@ -280,11 +280,6 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
-    "https://github.com/dj95/zjstatus/releases/latest/download/zjframes.wasm" {
-        hide_frame_except_for_fullscreen true
-        hide_frame_except_for_search true
-        hide_frame_for_single_pane true
-    }
 }
  
 // Use a simplified UI without special fonts (arrow glyphs)
@@ -297,7 +292,7 @@ simplified_ui false
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "nightfox"
+theme "nord"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -316,7 +311,7 @@ theme "nightfox"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-default_layout "default"
+default_layout "compact"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
