@@ -1,0 +1,20 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+        pane edit="src/main.rs"
+        pane split_direction="horizontal" {
+            pane command="cargo" {
+                args "run"
+                focus true
+            }
+            pane command="cargo" {
+                args "test"
+            }
+        }
+    }
+    pane size=2 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}
