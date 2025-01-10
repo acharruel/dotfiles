@@ -25,6 +25,8 @@ keybinds clear-defaults=true {
         bind "r" { NewPane "right"; SwitchToMode "normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "normal"; }
+        bind "[" { PreviousSwapLayout; }
+        bind "]" { NextSwapLayout; }
     }
     tab {
         bind "left" { GoToPreviousTab; }
@@ -255,6 +257,16 @@ keybinds clear-defaults=true {
         bind "o" { FocusNextPane; }
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+    }
+    shared {
+        bind "Ctrl a" {
+            Run "yazi" {
+                cwd "/tmp"
+                floating true
+                width "70%"
+                height "70%"
+            };
+        }
     }
 }
 
