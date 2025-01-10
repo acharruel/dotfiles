@@ -258,16 +258,6 @@ keybinds clear-defaults=true {
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
     }
-    shared {
-        bind "Ctrl a" {
-            Run "yazi" {
-                cwd "/tmp"
-                floating true
-                width "70%"
-                height "70%"
-            };
-        }
-    }
 }
 
 // Plugin aliases - can be used to change the implementation of Zellij
