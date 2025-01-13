@@ -127,4 +127,18 @@ wezterm.on('update-right-status', function(window, pane)
     window:set_right_status(leader)
 end)
 
+local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+bar.apply_to_config(
+    config,
+    {
+        position = "bottom",
+        modules = {
+            workspace = { enabled = false };
+            username = { enabled = false };
+            clock = { enabled = false };
+            hostname = { enabled = false };
+        },
+    }
+)
+
 return config
