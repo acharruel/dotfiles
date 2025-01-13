@@ -6,27 +6,35 @@ layout {
 
                 // hide_frame_for_single_pane "true"
 
-                format_left  "{mode}#[fg=blue,bg=#383E5A,bold]  {session} #[fg=#383E5A,bg=bg] #[fg=white,bg=fg]󰓩  {tabs}"
-                format_right  "{command_git_branch} {datetime}"
+                format_left  "{mode}#[fg=blue,bg=#383E5A,bold]  {session} #[fg=#383E5A,bg=bg] #[fg=white,bg=fg]󰓩 {tabs}"
+                format_right  "{command_hostname} {datetime}"
                 format_space "#[bg=fg]"
 
                 datetime          "#[fg=#1A1B26,bg=blue,bold]{format}"
                 datetime_format   " 󱛡 %A, %d %b %Y %H:%M "
                 datetime_timezone "Europe/Paris"
 
-                mode_normal   "#[fg=#1A1B26,bg=blue,bold] NORMAL #[fg=blue,bg=#383E5A]"
-                mode_pane     "#[fg=#1A1B26,bg=magenta,bold] PANE #[fg=magenta,bg=#383E5A]"
-                mode_session  "#[fg=#1A1B26,bg=yellow,bold] SESSION #[fg=yellow,bg=#383E5A]"
-                mode_tab      "#[fg=#1A1B26,bg=green,bold] TAB #[fg=green,bg=#383E5A]"
-                mode_locked   "#[fg=#1A1B26,bg=red,bold] 󰌾 #[fg=red,bg=#383E5A]"
+                mode_normal       "#[fg=#1A1B26,bg=blue,bold] NORMAL #[fg=blue,bg=#383E5A]"
+                mode_pane         "#[fg=#1A1B26,bg=magenta,bold] PANE #[fg=magenta,bg=#383E5A]"
+                mode_session      "#[fg=#1A1B26,bg=yellow,bold] SESSION #[fg=yellow,bg=#383E5A]"
+                mode_tab          "#[fg=#1A1B26,bg=green,bold] TAB #[fg=green,bg=#383E5A]"
+                mode_locked       "#[fg=#1A1B26,bg=red,bold] 󰌾 #[fg=red,bg=#383E5A]"
+                mode_tmux         "#[fg=#1A1B26,bg=#D08770,bold] TMUX #[fg=#D08770,bg=#383E5A]"
+                mode_scroll       "#[fg=#1A1B26,bg=#ECEFF4,bold] SCROLL #[fg=#ECEFF4,bg=#383E5A]"
+                mode_enter_search "#[fg=#1A1B26,bg=#ECEFF4,bold] ENTER SEARCH #[fg=#ECEFF4,bg=#383E5A]"
+                mode_search       "#[fg=#1A1B26,bg=#ECEFF4,bold] SEARCH #[fg=#ECEFF4,bg=#383E5A]"
+                mode_resize       "#[fg=#1A1B26,bg=magenta,bold,blink] RESIZE #[fg=magenta,bg=#383E5A]"
+                mode_rename_tab   "#[fg=#1A1B26,bg=green,bold,blink] RENAME #[fg=green,bg=#383E5A]"
+                mode_rename_pane  "#[fg=#1A1B26,bg=magenta,bold,blink] RENAME #[fg=magenta,bg=#383E5A]"
+                mode_move         "#[fg=#1A1B26,bg=#4C566A,bold] MOVE #[fg=#4C566A,bg=#383E5A]"
+                mode_prompt       "#[fg=#1A1B26,bg=#4C566A,bold,blink] PROMPT #[fg=#4C566A,bg=#383E5A]"
 
                 tab_normal  "#[fg=#A9B1D6,bg=fg] [{index}] {name}"
                 tab_active  "#[fg=green,bg=fg,bold,italic] [{index}] {name}"
 
-                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-                command_git_branch_format      "#[fg=blue] {stdout} "
-                command_git_branch_interval    "10"
-                command_git_branch_rendermode  "static"
+                command_hostname_command     "hostname"
+                command_hostname_format      "#[fg=blue] {stdout} "
+                command_hostname_rendermode  "static"
             }
         }
     }
