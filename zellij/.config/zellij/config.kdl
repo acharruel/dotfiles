@@ -313,7 +313,7 @@ theme "nord"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-default_layout "mycompact"
+default_layout "zjstatus"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)

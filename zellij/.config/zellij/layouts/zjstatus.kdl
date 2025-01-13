@@ -1,0 +1,33 @@
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+
+                // hide_frame_for_single_pane "true"
+
+                format_left  "{mode}#[fg=blue,bg=#383E5A,bold]  {session} #[fg=#383E5A,bg=bg] #[fg=white,bg=fg]󰓩  {tabs}"
+                format_right  "{command_git_branch} {datetime}"
+                format_space "#[bg=fg]"
+
+                datetime          "#[fg=#1A1B26,bg=blue,bold]{format}"
+                datetime_format   " 󱛡 %A, %d %b %Y %H:%M "
+                datetime_timezone "Europe/Paris"
+
+                mode_normal   "#[fg=#1A1B26,bg=blue,bold] NORMAL #[fg=blue,bg=#383E5A]"
+                mode_pane     "#[fg=#1A1B26,bg=magenta,bold] PANE #[fg=magenta,bg=#383E5A]"
+                mode_session  "#[fg=#1A1B26,bg=yellow,bold] SESSION #[fg=yellow,bg=#383E5A]"
+                mode_tab      "#[fg=#1A1B26,bg=green,bold] TAB #[fg=green,bg=#383E5A]"
+                mode_locked   "#[fg=#1A1B26,bg=red,bold] 󰌾 #[fg=red,bg=#383E5A]"
+
+                tab_normal  "#[fg=#A9B1D6,bg=fg] [{index}] {name}"
+                tab_active  "#[fg=green,bg=fg,bold,italic] [{index}] {name}"
+
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[fg=blue] {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "static"
+            }
+        }
+    }
+}
