@@ -37,6 +37,12 @@ config.hide_mouse_cursor_when_typing = true
 -- window apha channel opacity
 config.window_background_opacity = 0.95
 
+-- dim inactive pane
+config.inactive_pane_hsb = {
+  saturation = 0.9,
+  brightness = 0.8,
+}
+
 -- Keymaps
 -- config.disable_default_key_bindings = true
 -- timeout_milliseconds defaults to 1000 and can be omitted
