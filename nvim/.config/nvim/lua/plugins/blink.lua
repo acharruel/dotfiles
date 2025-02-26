@@ -4,7 +4,7 @@ local M = {
   dependencies = {
     'rafamadriz/friendly-snippets',
   },
-  build = "cargo build --release",
+  version = 'v0.11.0',
 
   opts = {
     -- 'default' for mappings similar to built-in completion
