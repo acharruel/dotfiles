@@ -16,7 +16,7 @@ set $term wezterm
 font "Hack Nerd Font Bold 12"
 
 # wallpaper
-set $wallpaper $HOME/Images/wallpaper.jpg
+set $wallpaper $HOME/Images/mountains-nord.jpg
 
 # configuration files
 include /etc/sway/config.d/*
@@ -33,25 +33,12 @@ gaps inner 2
 gaps outer 1
 default_border pixel 2
 
-# swayfx
-corner_radius 5
-shadows on
-default_dim_inactive 0.1
-
 mouse_warping container
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep '/home/adrien/.config/sway/swaylock.sh'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-exec swayidle -w \
-    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep '/home/adrien/.config/sway/swaylock.sh'
+         before-sleep 'swaylock -f'
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -223,8 +210,8 @@ exec_always {
     gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 }
 
-# nord
-include $HOME/.config/sway/nord.conf
+# Color theme
+include $HOME/.config/sway/catppuccin-frappe.conf
 
 for_window {
     [shell="xwayland"] title_format "[X] %title"
