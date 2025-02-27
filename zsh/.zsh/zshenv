@@ -1,6 +1,7 @@
 typeset -U path
 path=(/sbin $path)
 path=(/usr/sbin $path)
+path=(/usr/games $path)
 path=($(python3 -m site --user-base)/bin $path)
 path=(/home/adrien/.bin $path)
 path=(/home/adrien/.cargo/bin $path)
