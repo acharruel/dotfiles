@@ -1,0 +1,95 @@
+#!/bin/zsh
+
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+function update_zinit() {
+    print -P "%F{yellow}Updating zinit...%f"
+    source "${ZINIT_HOME}/zinit.zsh"
+    zinit self-update
+    zinit update
+    echo ""
+}
+
+function update_nvim() {
+    print -P "%F{yellow}Updating neovim...%f"
+    nvim --headless "+Lazy! sync" +qa
+    nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
+    echo ""
+}
+
+function update_debian() {
+    print -P "%F{yellow}Updating debian...%f"
+    sudo apt update
+    sudo apt full-upgrade
+    sudo apt autoclean
+    sudo apt autoremove
+    echo ""
+}
+
+function update_rust() {
+    print -P "%F{yellow}Updating rust...%f"
+    rustup update
+    echo ""
+}
+
+function update_cargo() {
+    print -P "%F{yellow}Updating cargo...%f"
+    cargo install-update -a
+    echo ""
+}
+
+function update_yazi() {
+    print -P "%F{yellow}Updating yazi...%f"
+    cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli
+    echo ""
+}
+
+function update_all() {
+    update_zinit
+    update_nvim
+    update_debian
+    update_rust
+    update_cargo
+    update_yazi
+}
+
+function update_essentials() {
+    update_zinit
+    update_nvim
+    update_debian
+}
+
+no_args=true
+while getopts "zndrcya" opt; do
+    case $opt in
+        z)
+            update_zinit
+            ;;
+        n)
+            update_nvim
+            ;;
+        d)
+            update_debian
+            ;;
+        r)
+            update_rust
+            ;;
+        c)
+            update_cargo
+            ;;
+        y)
+            update_yazi
+            ;;
+        a)
+            update_all
+            ;;
+        \?)
+            echo "Invalid option: $OPTARG" 1>&2
+            ;;
+    esac
+    no_args=false
+done
+
+if $no_args; then
+    update_essentials
+fi
