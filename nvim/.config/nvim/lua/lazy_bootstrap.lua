@@ -13,7 +13,7 @@ vim.opt.runtimepath:prepend(lazypath)
 
 -- Automatically source all configs in plugins directory.
 require("lazy").setup("plugins", {
-    install = { colorscheme = { "nordfox" } },
+    install = { colorscheme = { "catppuccin" } },
     ui = {
         icons = {
             cmd = "⌘",

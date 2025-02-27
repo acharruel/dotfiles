@@ -26,4 +26,4 @@ function M.config()
     vim.cmd([[colorscheme nordfox]])
 end
 
-return M
+return {}
