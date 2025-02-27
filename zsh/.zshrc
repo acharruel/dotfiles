@@ -83,6 +83,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# fast-syntax-highlighting theme
+fast-theme -q XDG:catppuccin-frappe
+
 # Aliases
 source ~/.zsh/zsh.alias
 
