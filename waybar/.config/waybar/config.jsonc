@@ -5,7 +5,6 @@
   "exclusive": true,
   "passthrough": false,
   "position": "bottom",
-  "spacing": 3,
   "fixed-center": true,
   "ipc": true,
   "margin-top": 1,
@@ -14,20 +13,21 @@
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
-    "custom/media"
   ],
   "modules-center": [
+    "custom/music"
   ],
   "modules-right": [
-    "bluetooth",
-    "pulseaudio",
+    "network",
+    "pulseaudio#output",
     "pulseaudio#microphone",
+    "bluetooth",
     "cpu",
     "temperature",
     "disk",
     "disk#home",
     "battery",
-    "network",
+    "backlight",
     "clock",
     "tray"
   ]

@@ -1,87 +1,46 @@
-@import "nord.css";
+@import "mocha.css";
 
 * {
   font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
-  min-height: 0;
   font-size: 14px;
-  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  padding: 0px;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  min-height: 0;
 }
 
-@keyframes blink {
-  70% {
-    color: @nord4;
-  }
-  to {
-    color: @nord1;
-  }
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
 }
 
-window#waybar {
-  background: rgba(0, 0, 0, 0);
-}
-
-window#waybar.hidden {
-  opacity: 0.5;
-}
-
-tooltip {
-  background: @nord6;
-  border-radius: 5px;
-}
-
-tooltip label {
-  color: @nord3;
-  margin-right: 2px;
-  margin-left: 2px;
-}
-
-.modules-right {
-  background-color: @nord0;
-  border: 0px solid @nord0;
-  border-radius: 5px;
-}
-
-.modules-left {
-  background-color: @nord0;
-  border: 0px solid @nord0;
-  border-radius: 5px;
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-  padding: 2px;
-  color: @nord3;
-  margin-right: 3px;
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-  color: @nord4;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-#workspaces button.focused {
-  color: @nord4;
-  background-color: @nord0;
-  border-bottom: 2px solid @nord7;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  transition: all 200ms ease-in-out;
-}
-
-#workspaces button.urgent {
-  color: @nord11;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  color: @peach;
+  border-radius: 1rem;
 }
 
 #workspaces button:hover {
-  color: #b7bdf8;
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#workspaces button.focused {
+  color: @peach;
+  border-bottom: 2px solid @peach;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  transition: all 200ms ease-in-out;
 }
 
 #backlight,
@@ -89,53 +48,75 @@ tooltip label {
 #bluetooth,
 #clock,
 #cpu,
-#custom-media,
-#custom-notification,
-#custom-recorder,
+#custom-music,
 #disk,
-#language,
-#memory,
-#mode,
 #network,
-#tray,
 #pulseaudio,
 #temperature,
-#sway-window,
-#workspaces {
-  color: @nord4;
-  padding: 0px 10px;
-  border-radius: 5px;
+#tray {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#clock {
+  color: @text;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight, #battery {
+    border-radius: 0;
+}
+
+#pulseaudio#output {
+  color: @lavender;
+}
+
+#pulseaudio#microphone {
+  color: @lavender;
+}
+
+#network {
+  color: @sky;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
 }
 
 #tray {
-  background-color: @nord2;
+  margin-right: 1rem;
+  border-radius: 1rem;
 }
 
-#temperature.critical {
-  background-color: @nord11;
+#temperature {
+  color: @peach;
 }
 
-#taskbar button.active {
-  background-color: @nord3;
+#disk {
+  color: @mauve;
 }
 
-#battery.critical:not(.charging) {
-  color: @nord11;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#custom-recorder {
-  color: @nord4;
-}
-
-#mode {
-  animation-timing-function: linear;
-  animation-name: blink;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+#cpu {
+  color: @yellow;
 }

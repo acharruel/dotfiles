@@ -47,7 +47,7 @@
   },
   "bluetooth": {
     "format": "",
-    "format-connected": "<span foreground=\"#81a1c1\"> {num_connections}</span>",
+    "format-connected": "<span foreground=\"#89b4fa\"> {num_connections}</span>",
     "tooltip-format": " {device_alias}",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": " {device_alias}",
@@ -56,20 +56,7 @@
   "clock": {
     "format": "{:%b %d %H:%M}",
     "format-alt": " {:%H:%M   %Y, %d %B, %A}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "left",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#5e81ac'><b>{}</b></span>",
-        "days": "<span color='#4c566a'><b>{}</b></span>",
-        "weeks": "<span color='#d08770'><b>W{}</b></span>",
-        "weekdays": "<span color='#2e3440'><b>{}</b></span>",
-        "today": "<span background='#bf616a' color='#eceff4'><b>{}</b></span>"
-      }
-    }
+    "tooltip-format": " {:%H:%M   %Y, %d %B, %A}",
   },
   "cpu": {
     "format": "{usage:3}% 󰍛",
@@ -99,16 +86,6 @@
     "format": "{percentage_used}% 󰋊",
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
-  "hyprland/language": {
-    "format": "{short}"
-  },
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{name}",
-    "on-click": "activate",
-    "show-special": false,
-    "sort-by-number": true
-  },
   "memory": {
     "interval": 10,
     "format": "{used:0.1f}G 󰾆",
@@ -129,7 +106,7 @@
       "󰤥 ",
       "󰤨 "
     ],
-    "format-wifi": "{icon}",
+    "format-wifi": "{icon} {ipaddr}",
     "max-length": 50,
     "on-click": "nm-connection-editor",
     "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
@@ -137,11 +114,11 @@
     "tooltip-format-ethernet": "{ipaddr} 󰈀  {ifname}",
     "tooltip-format-wifi": "Network {essid}\nGateway {gwaddr}\nIP {ipaddr}\nFrequency {frequency} GHz\nSignal {signaldBm} dBm ({signalStrength}%)"
   },
-  "pulseaudio": {
+  "pulseaudio#output": {
     "format": "{icon} {volume}%",
-    "format-muted": "<span foreground=\"#bf616a\">🔇</span>",
-    "format-bluetooth": "<span foreground=\"#81a1c1\"> {volume}% {icon}</span>",
-    "format-bluetooth-muted": "<span foreground=\"#81a1c1\"> 🔇</span>",
+    "format-muted": "<span foreground=\"#f38ba8\">🔇</span>",
+    "format-bluetooth": "<span foreground=\"#89b4fa\"> {volume}% {icon}</span>",
+    "format-bluetooth-muted": "<span foreground=\"#89b4fa\"> 🔇</span>",
     "format-icons": {
       "default": [
         "",
@@ -160,7 +137,7 @@
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
-    "format-source": "<span foreground=\"#a3be8c\">  {volume}%</span>",
+    "format-source": "<span foreground=\"#eba0ac\">  {volume}%</span>",
     "format-source-muted": "",
     "on-click": "pavucontrol",
     "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 5%+",
@@ -181,44 +158,13 @@
   "tray": {
     "spacing": 16
   },
-  "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-  "custom/recorder": {
-    "format": "",
-    "tooltip": "false",
-    "return-type": "json",
-    "exec": "echo '{\"class\": \"recording\"}'",
-    "exec-if": "pgrep wf-recorder",
-    "interval": 1,
-    "on-click": "screen-recorder"
-  },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 80,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
-    },
+  "custom/music": {
+    "format": "  {}",
     "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ title }}'",
+    "on-click": "playerctl play-pause",
+    "max-length": 50
   }
 }
