@@ -44,6 +44,13 @@ https://github.com/emersion/mako
 stow mako
 ```
 
+### mpv
+
+```
+stow mpv
+```
+
+
 ### nnn (Nnn's Not Noice! File manager)
 
 https://github.com/jarun/nnn
