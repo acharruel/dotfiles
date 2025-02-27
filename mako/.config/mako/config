@@ -18,18 +18,12 @@ max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
 
-[urgency=low]
-border-color=#2E3440
-background-color=#4C566A
-text-color=#D8DEE9
-
-[urgency=normal]
-border-color=#4C566A
-background-color=#E5E9F0
-text-color=#4C566A
+# Colors
+background-color=#eff1f5
+text-color=#4c4f69
+border-color=#1e66f5
+progress-color=over #ccd0da
 
 [urgency=high]
-border-color=#4C566A
-background-color=#bf616a
+border-color=#fe640b
 default-timeout=0
-
