@@ -99,10 +99,10 @@ case ${chosen} in
     $lock)
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
 			betterlockscreen -l
-		elif [[ -x '/home/adrien/.config/sway/swaylock.sh' ]]; then
-			/home/adrien/.config/sway/swaylock.sh
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
+		elif [[ -x '/home/adrien/.config/sway/swaylock.sh' ]]; then
+			/home/adrien/.config/sway/swaylock.sh
 		fi
         ;;
     $suspend)
