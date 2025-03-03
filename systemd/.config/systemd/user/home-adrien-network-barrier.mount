@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount acharruel from barrier as sshfs
+After=network-online.target
+Wants=network-online.target
+
+[Install]
+WantedBy=default.target
+
+[Mount]
+What=acharruel@barrier:/local/acharruel
+Where=/home/adrien/network/barrier
+Type=fuse.sshfs
+Options=_netdev,reconnect,ServerAliveInterval=30,ServerAliveCountMax=5,x-systemd.automount
+TimeoutSec=60
