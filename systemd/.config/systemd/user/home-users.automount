@@ -1,0 +1,11 @@
+[Unit]
+After=network-online.target
+Before=remote-fs.target
+
+[Automount]
+Where=/home/users
+TimeoutIdleSec=600
+
+[Install]
+WantedBy=default.target
+
