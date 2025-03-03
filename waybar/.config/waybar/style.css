@@ -37,10 +37,6 @@
 
 #workspaces button.focused {
   color: @peach;
-  border-bottom: 2px solid @peach;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  transition: all 200ms ease-in-out;
 }
 
 #backlight,
