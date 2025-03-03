@@ -25,3 +25,8 @@ profile dell-precision5550-dual-display-home {
     output 'Sharp Corporation 0x14D1' enable mode 1920x1200
     output 'Dell Inc. DELL S2722DC' mode 2560x1440 position 1920,0
 }
+
+profile nanoxplore {
+    output 'Iiyama North America PL2493H' enable mode 1920x1080 position 0,0
+    output 'Iiyama North America PLX2481H' enable mode 1920x1080 position 1920,0
+}
