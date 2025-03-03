@@ -118,11 +118,13 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                         desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go to the config directory" },
-	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to the Dowloads directory" },
-	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to the tmp directory" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to a directory interactively" },
+	{ on = [ "g", "h" ],       run = "cd ~",                    desc = "Go to the home directory" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",            desc = "Go to the config directory" },
+	{ on = [ "g", "t" ],       run = "cd /tmp",                 desc = "Go to the tmp directory" },
+	{ on = [ "g", "d" ],       run = "cd ~/Documents",          desc = "Go to the Dowloads directory" },
+	{ on = [ "g", "n" ],       run = "cd /home/adrien/network", desc = "Go to the NFS directories" },
+	{ on = [ "g", "m" ],       run = "cd /media/adrien",        desc = "Go to the media directory" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive",        desc = "Go to a directory interactively" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
