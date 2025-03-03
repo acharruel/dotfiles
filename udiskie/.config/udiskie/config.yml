@@ -12,8 +12,8 @@ program_options:
 
 terminal:   'kitty -d'
 
-device_config:
-  - device_file: /dev/mmcblk0p1
-    automount:  false
-  - device_file: /dev/mmcblk0p2
-    automount: false
+# device_config:
+#   - device_file: /dev/sdb
+#     automount:  false
+#   - device_file: /dev/sdb
+#     automount: false
