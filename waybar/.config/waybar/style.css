@@ -39,6 +39,27 @@
   color: @peach;
 }
 
+@keyframes blink {
+  70% {
+    color: @red;
+  }
+  to {
+    color: @lavender;
+  }
+}
+
+#mode {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  animation-timing-function: linear;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
 #backlight,
 #battery,
 #bluetooth,

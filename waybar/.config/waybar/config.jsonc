@@ -13,9 +13,9 @@
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
+    "custom/music",
   ],
   "modules-center": [
-    "custom/music"
   ],
   "modules-right": [
     "network",
