@@ -163,8 +163,8 @@
     "escape": true,
     "interval": 5,
     "tooltip": false,
-    "exec": "playerctl metadata --format='{{trunc(title, 30)}} - {{artist}} [{{status}}]'",
+    "exec": "playerctl metadata --format='{{trunc(title, 30)}} - {{trunc(artist, 20)}} [{{status}}]'",
     "on-click": "playerctl play-pause",
-    "max-length": 60
+    "max-length": 70
   }
 }
