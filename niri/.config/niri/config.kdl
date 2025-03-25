@@ -149,7 +149,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -184,7 +184,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 1
+        width 2
         active-color "#babbf1"
         inactive-color "#c6d0f5"
 
@@ -223,11 +223,11 @@ environment {
     DISPLAY ":0"
 }
 
-// notification daemon
-spawn-at-startup "mako"
+// start google-chrome
+spawn-at-startup "google-chrome" "--profile-directory=Default"
 
-// background manager
-spawn-at-startup "swaybg" "-i" "~/Images/mountains-nord.jpg" "-m" "fill"
+// default mic mute
+spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -267,7 +267,7 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width { }
-    opacity 0.9
+    opacity 0.95
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -532,6 +532,8 @@ binds {
     // Mod+Shift+P { power-off-monitors; }
 
     Mod+Z { toggle-column-tabbed-display; }
+
+    Ctrl+Space { spawn "makoctl" "dismiss"; }
 }
 
 // Indicate screencasted windows with red colors.
