@@ -80,6 +80,8 @@ run_cmd() {
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
 				swaymsg exit
+			elif [[ "$DESKTOP_SESSION" == 'niri' ]]; then
+				niri msg action quit -s
 			fi
 		fi
 	else
