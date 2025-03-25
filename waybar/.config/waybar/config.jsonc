@@ -11,6 +11,7 @@
   "margin-left": 8,
   "margin-right": 8,
   "modules-left": [
+    "niri/workspaces",
     "sway/workspaces",
     "sway/mode",
     "custom/music",
