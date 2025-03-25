@@ -1,9 +1,10 @@
 local M = {
     "lewis6991/gitsigns.nvim",
     keys = {
-        { "<leader>Gb", "<cmd>Telescope git_branches<cr>", desc = "Show [B]ranches" },
+        { "<leader>Gb", "<cmd>Gitsigns blame<cr>", desc = "[B]lame" },
+        { "<leader>Gl", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle Current [L]ine blame" },
+        { "<leader>GB", "<cmd>Telescope git_branches<cr>", desc = "Show [B]ranches" },
         { "<leader>Gc", "<cmd>Telescope git_commits<cr>", desc = "Show [C]ommits" },
-        { "<leader>Gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "[D]iff" },
         { "<leader>Gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "[P]review Hunk" },
         { "<leader>Gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "[R]eset Hunk" },
         { "<leader>GR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "[R]eset Buffer" },
