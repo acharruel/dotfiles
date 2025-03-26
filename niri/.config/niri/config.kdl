@@ -400,6 +400,7 @@ binds {
 
     // Switches focus between the current and the previous workspace.
     Mod+Tab { focus-workspace-previous; }
+    Alt+Tab { focus-monitor-previous; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
@@ -457,6 +458,7 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     // Mod+Shift+P { power-off-monitors; }
+    Ctrl+Alt+M { power-off-monitors; }
 
     Mod+Z { toggle-column-tabbed-display; }
 
