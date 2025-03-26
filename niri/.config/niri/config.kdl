@@ -160,7 +160,7 @@ layout {
         active-color "#babbf1"
 
         // Color of the ring on inactive monitors.
-        inactive-color "#505050"
+        inactive-color "#292c3c"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -211,24 +211,6 @@ layout {
     }
 }
 
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// spawn-at-startup "alacritty" "-e" "fish"
-
-// for xwayland
-spawn-at-startup "~/.cargo/bin/xwayland-satellite"
-environment {
-    DISPLAY ":0"
-}
-
-// start google-chrome
-spawn-at-startup "google-chrome" "--profile-directory=Default"
-
-// default mic mute
-spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
-
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -252,66 +234,11 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.5
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width { }
-    opacity 0.95
-}
-
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
-    match app-id=r#"google-chrome$"#
-    open-maximized true
-}
-
-window-rule {
-    // default-column-width { proportion 0.5; }
-}
-
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Block out mako notifications from screencasts.
-layer-rule {
-    match namespace="^notifications$"
-
-    block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
+hotkey-overlay {
+    skip-at-startup
 }
 
 binds {
@@ -533,7 +460,60 @@ binds {
 
     Mod+Z { toggle-column-tabbed-display; }
 
+    // dismiss latest mako notification
     Ctrl+Space { spawn "makoctl" "dismiss"; }
+
+    // window picker for screen sharing with niri-dynamic-cast
+    Mod+Shift+W { spawn "bash" "-c" "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)"; }
+}
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width { }
+    opacity 0.95
+}
+
+window-rule {
+    match app-id=r#"google-chrome$"#
+    open-maximized true
+    open-on-output "HDMI-A-2"
+}
+
+window-rule {
+    match app-id=r#"Rofi"#
+    open-floating true
+    open-focused true
+    focus-ring { off; }
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+// Block out mako notifications from screencasts.
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
 }
 
 // Indicate screencasted windows with red colors.
@@ -541,21 +521,20 @@ window-rule {
     match is-window-cast-target=true
 
     focus-ring {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
+        width 3
+        active-color "#e78284"
+        inactive-color "#f4b8e4"
     }
 
     border {
-        inactive-color "#7d0d2d"
-    }
-
-    shadow {
-        color "#7d0d2d70"
+        on
+        width 3
+        inactive-color "#f4b8e4"
     }
 
     tab-indicator {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
+        active-color "#e78284"
+        inactive-color "#f4b8e4"
     }
 }
 
@@ -564,6 +543,26 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
-hotkey-overlay {
-    skip-at-startup
+window-rule {
+    match title="Bitwarden"
+    open-floating true
+    open-focused true
 }
+
+window-rule {
+    match app-id=r#"XTerm"#
+    open-focused false
+    default-column-display "tabbed"
+}
+
+// for xwayland
+// spawn-at-startup "~/.cargo/bin/xwayland-satellite"
+environment {
+    DISPLAY ":0"
+}
+
+// start google-chrome
+spawn-at-startup "google-chrome" "--profile-directory=Default"
+
+// default mic mute
+spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
