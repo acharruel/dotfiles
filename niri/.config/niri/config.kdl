@@ -564,7 +564,8 @@ environment {
 }
 
 // start google-chrome
-spawn-at-startup "google-chrome" "--profile-directory=Default"
+spawn-at-startup "google-chrome" "--profile-directory=Profile 2"
+spawn-at-startup "google-chrome" "--profile-directory=Profile 4"
 
 // default mic mute
 spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
