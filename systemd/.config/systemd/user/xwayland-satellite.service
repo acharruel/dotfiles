@@ -8,7 +8,7 @@ Requisite=graphical-session.target
 [Service]
 Type=notify
 NotifyAccess=all
-ExecStart=/home/adrien/.cargo/bin/xwayland-satellite
+ExecStart=/home/adrien/notaf/xwayland-satellite/target/release/xwayland-satellite
 StandardOutput=journal
 
 [Install]
