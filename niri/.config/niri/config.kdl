@@ -530,6 +530,19 @@ window-rule {
     default-column-display "tabbed"
 }
 
+window-rule {
+    match is-floating=true
+    shadow {
+        on
+        softness 10
+        spread 1
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000064"
+        // inactive-color "#00000064"
+    }
+}
+
 // for xwayland
 // spawn-at-startup "~/.cargo/bin/xwayland-satellite"
 environment {
