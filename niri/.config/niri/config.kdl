@@ -503,9 +503,13 @@ binds {
     }
 }
 
-workspace ""
-workspace ""
-workspace ""
+workspace "" {
+    open-on-output "HDMI-A-2"
+}
+
+workspace "" {
+    open-on-output "HDMI-A-2"
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
@@ -609,7 +613,7 @@ window-rule {
 window-rule {
     match app-id=r#"XTerm"#
     open-focused false
-    open-on-workspace "proto"
+    open-on-workspace ""
     default-column-width { proportion 0.3333; }
     tiled-state true
 }
@@ -617,8 +621,36 @@ window-rule {
 window-rule {
     match app-id="Xedebug"
     open-focused false
-    open-on-workspace "proto"
-    default-column-width { proportion 0.6667; }
+    open-on-workspace ""
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="Console"
+    open-focused false
+    open-on-workspace ""
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="WaveWindow"
+    open-focused false
+    open-on-workspace ""
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="WindowObj"
+    open-focused false
+    open-on-workspace ""
+    default-column-width { proportion 0.667; }
+}
+
+window-rule {
+    match app-id="Vsim"
+    open-focused false
+    open-on-workspace ""
+    default-column-width { proportion 0.667; }
 }
 
 window-rule {
@@ -631,7 +663,7 @@ window-rule {
     match app-id="t32marm"
     match title=r#"^TRACE32 PowerView.*"#
     default-column-width { proportion 0.6667; }
-    open-on-workspace "proto"
+    open-on-workspace ""
 }
 
 window-rule {
@@ -652,7 +684,8 @@ xwayland-satellite {
 }
 
 // start google-chrome
-spawn-at-startup "google-chrome" "--profile-directory=Default"  "--disable-features=GlobalShortcutsPortal"
+spawn-at-startup "google-chrome" "--profile-directory=Profile 2" "--disable-features=GlobalShortcutsPortal"
+spawn-at-startup "google-chrome" "--profile-directory=Profile 4" "--disable-features=GlobalShortcutsPortal"
 
 // default mic mute
 spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
