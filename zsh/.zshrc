@@ -92,3 +92,7 @@ source ~/.zsh/zsh.alias
 # Export kitty TERM environment when using SSH
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
+
+# source zellij and niri
+# source <(zellij setup --generate-completion zsh)
+source <(niri completions zsh)

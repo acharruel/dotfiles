@@ -32,3 +32,6 @@ alias vi='nvim'
 
 # wayland screenshot
 alias grim='grim -g "$(slurp)"'
+
+# trigger justfile sourcing
+alias justsrc='source <(just --completions zsh)'
