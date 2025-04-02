@@ -527,7 +527,19 @@ window-rule {
 window-rule {
     match app-id=r#"XTerm"#
     open-focused false
-    default-column-display "tabbed"
+    open-on-workspace "proto"
+}
+
+window-rule {
+    match app-id="t32marm"
+    exclude title=r#"^TRACE32 PowerView.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id="t32marm"
+    match title=r#"^TRACE32 PowerView.*"#
+    default-column-width { proportion 0.6667; }
 }
 
 window-rule {
