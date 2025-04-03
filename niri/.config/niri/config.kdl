@@ -528,6 +528,7 @@ window-rule {
     match app-id=r#"XTerm"#
     open-focused false
     open-on-workspace "proto"
+    default-column-width { proportion 0.3333; }
 }
 
 window-rule {
@@ -540,6 +541,7 @@ window-rule {
     match app-id="t32marm"
     match title=r#"^TRACE32 PowerView.*"#
     default-column-width { proportion 0.6667; }
+    open-on-workspace "proto"
 }
 
 window-rule {
