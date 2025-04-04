@@ -441,9 +441,13 @@ binds {
     Mod+Shift+W { spawn "bash" "-c" "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)"; }
 }
 
-workspace ""
-workspace ""
-workspace ""
+workspace "" {
+    open-on-output "HDMI-A-2"
+}
+
+workspace "proto" {
+    open-on-output "HDMI-A-2"
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
