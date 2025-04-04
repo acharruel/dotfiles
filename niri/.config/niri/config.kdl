@@ -441,6 +441,10 @@ binds {
     Mod+Shift+W { spawn "bash" "-c" "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)"; }
 }
 
+workspace ""
+workspace ""
+workspace ""
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -456,6 +460,7 @@ window-rule {
     match app-id=r#"google-chrome$"#
     open-maximized true
     open-on-output "HDMI-A-2"
+    open-on-workspace ""
 }
 
 window-rule {
@@ -515,6 +520,16 @@ window-rule {
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="steam"
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id="lutris"
+    open-on-workspace ""
 }
 
 window-rule {
