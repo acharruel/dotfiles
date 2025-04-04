@@ -4,8 +4,8 @@ local M = {
 }
 
 M.config = function ()
-    vim.api.nvim_exec("xmap ga <Plug>(EasyAlign)", false)
-    vim.api.nvim_exec("nmap ga <Plug>(EasyAlign)", false)
+    vim.api.nvim_exec2("xmap ga <Plug>(EasyAlign)", { output = false })
+    vim.api.nvim_exec2("nmap ga <Plug>(EasyAlign)", { output = false })
 end
 
 return M

@@ -32,7 +32,7 @@ mason_lspconfig.setup_handlers({
                 Lua = {
                     -- Tells Lua that a global variable named vim exists to not have warnings when configuring neovim
                     diagnostics = {
-                        globals = { "vim" },
+                        globals = { "vim", "Snacks" },
                     },
 
                     workspace = {
