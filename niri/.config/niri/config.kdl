@@ -449,9 +449,13 @@ binds {
     Mod+O { toggle-overview; }
 }
 
-workspace ""
-workspace ""
-workspace ""
+workspace "" {
+    open-on-output "HDMI-A-2"
+}
+
+workspace "proto" {
+    open-on-output "HDMI-A-2"
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
