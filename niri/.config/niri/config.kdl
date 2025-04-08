@@ -453,7 +453,7 @@ workspace "" {
     open-on-output "HDMI-A-2"
 }
 
-workspace "proto" {
+workspace "" {
     open-on-output "HDMI-A-2"
 }
 
@@ -554,7 +554,7 @@ window-rule {
 window-rule {
     match app-id=r#"XTerm"#
     open-focused false
-    open-on-workspace "proto"
+    open-on-workspace ""
     default-column-width { proportion 0.3333; }
 }
 
@@ -568,7 +568,7 @@ window-rule {
     match app-id="t32marm"
     match title=r#"^TRACE32 PowerView.*"#
     default-column-width { proportion 0.6667; }
-    open-on-workspace "proto"
+    open-on-workspace ""
 }
 
 window-rule {
