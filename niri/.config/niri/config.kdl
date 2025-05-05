@@ -444,6 +444,9 @@ binds {
 
     // window picker for screen sharing with niri-dynamic-cast
     Mod+Shift+W { spawn "bash" "-c" "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)"; }
+
+    // toggle overview
+    Mod+O { toggle-overview; }
 }
 
 workspace ""
