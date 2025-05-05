@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Power Management",
+        "alias": "",
+        "type": "command",
+        "home": true,
+        "args": {
+            "commands": {
+                "Shutdown": {
+                    "icon": "system-shutdown",
+                    "exec": "systemctl poweroff",
+                    "search_string": "Poweroff;Shutdown"
+                },
+                "Sleep": {
+                    "icon": "system-suspend",
+                    "exec": "systemctl suspend",
+                    "search_string": "Sleep;"
+                },
+                "Lock": {
+                    "icon": "system-lock-screen",
+                    "exec": "swaylock",
+                    "search_string": "Lock Screen;"
+                },
+                "Reboot": {
+                    "icon": "system-reboot",
+                    "exec": "systemctl reboot",
+                    "search_string": "reboot"
+                },
+                "Logout": {
+                    "icon": "system-log-out",
+                    "exec": "niri msg action quit -s",
+                    "search_string": "logout"
+                }
+            }
+        },
+        "priority": 1
+    }
+]

@@ -260,8 +260,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "~/.local/bin/kitty"; }
     Mod+Shift+Return { spawn "~/.local/bin/kitty" "sh" "-c" "ssh ijen"; }
-    Mod+P { spawn "~/.config/rofi/scripts/launcher_t1"; }
-    Mod+Shift+P { spawn "~/.config/rofi/scripts/powermenu_t1"; }
+    Mod+P { spawn "~/.cargo/bin/sherlock"; }
+    Mod+Shift+P { spawn "~/.cargo/bin/sherlock" "--fallback" "~/.config/sherlock/fallback-pm.json"; }
     Mod+Delete { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

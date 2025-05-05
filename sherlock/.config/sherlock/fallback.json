@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Clipboard",
+        "type": "clipboard-execution",
+        "args": {},
+        "priority": 1,
+        "home": true
+    },
+    {
+        "name": "Spotify",
+        "type": "audio_sink",
+        "args": {},
+        "async": true,
+        "priority": 1,
+        "home": true,
+        "spawn_focus": false
+    },
+    {
+        "name": "Calculator",
+        "type": "calculation",
+        "args": {},
+        "priority": 1
+    },
+    {
+        "name": "App Launcher",
+        "alias": "app",
+        "type": "app_launcher",
+        "args": {},
+        "priority": 2,
+        "home": true
+    },
+    {
+        "name": "Bookmarks",
+        "alias": "",
+        "type": "command",
+        "args": {
+            "commands": {
+                "ChatGPT": {
+                    "icon": "chat-gpt",
+                    "exec": "xdg-open https://chatgpt.com &",
+                    "search_string": "chatgpt;ai;"
+                },
+                "Github": {
+                    "icon": "sherlock-github",
+                    "exec": "xdg-open https://github.com/skxxtz &",
+                    "search_string": "github;"
+                }
+            }
+        },
+        "priority": 3
+    },
+    {
+        "name": "Power Management",
+        "alias": "pm",
+        "type": "command",
+        "args": {
+            "commands": {
+                "Shutdown": {
+                    "icon": "system-shutdown",
+                    "exec": "systemctl poweroff",
+                    "search_string": "Poweroff;Shutdown"
+                },
+                "Sleep": {
+                    "icon": "system-suspend",
+                    "exec": "systemctl suspend",
+                    "search_string": "Sleep;"
+                },
+                "Lock": {
+                    "icon": "system-lock-screen",
+                    "exec": "systemctl suspend & swaylock",
+                    "search_string": "Lock Screen;"
+                },
+                "Reboot": {
+                    "icon": "system-reboot",
+                    "exec": "systemctl reboot",
+                    "search_string": "reboot"
+                }
+            }
+        },
+        "priority": 4
+    },
+    {
+        "name": "Web Search",
+        "display_name": "Google Search",
+        "tag_start": "{keyword}",
+        "alias": "gg",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "google",
+            "icon": "google"
+        },
+        "priority": 100
+    },
+    {
+        "name": "YouTube Search",
+        "display_name": "Youtube Search",
+        "tag_start": "{keyword}",
+        "alias": "yt",
+        "type": "web_launcher",
+        "args": {
+            "search_engine": "https://www.youtube.com/results?search_query={keyword}",
+            "icon": "sherlock-youtube"
+        },
+        "priority": 0
+    },
+    {
+        "name": "Kill Process",
+        "alias": "kill",
+        "type": "process",
+        "args": { },
+        "priority": 0,
+        "home": false
+    }
+]
