@@ -38,7 +38,6 @@ local M = {
     { "<leader>Gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
     { "<leader>Gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
     { "<leader>GG", function() Snacks.lazygit() end, desc = "Lazygit" },
-    { "<leader>Gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     { "<leader>T",  function() Snacks.terminal() end, desc = "Open [T]erminal" },
     {
