@@ -1,7 +1,6 @@
 local M = {
     "williamboman/mason.nvim",
     dependencies = {
-        "williamboman/mason-lspconfig.nvim",
         "RubixDev/mason-update-all",
     },
     keys = {
