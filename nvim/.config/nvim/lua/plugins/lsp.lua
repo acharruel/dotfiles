@@ -17,8 +17,8 @@ local M = {
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
             desc = "LSP [I]nlays Hints",
         },
-        { "<leader>ll", "<cmd>LspStart<cr>", desc = "LSP [S]tart" },
-        { "<leader>lL", "<cmd>LspStop<cr>", desc = "LSP [S]top" },
+        -- { "<leader>ll", "<cmd>LspStart<cr>", desc = "LSP [S]tart" },
+        -- { "<leader>lL", "<cmd>LspStop<cr>", desc = "LSP [S]top" },
         { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "[R]ename" },
     }
 }
