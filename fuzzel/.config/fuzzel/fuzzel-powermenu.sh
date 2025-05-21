@@ -13,7 +13,7 @@ case $SELECTION in
     *"Suspend")
         systemctl suspend;;
     *"Log out")
-        swaymsg exit;;
+        niri msg action quit -s;;
     *"Reboot")
         systemctl reboot;;
     *"Reboot to UEFI")
