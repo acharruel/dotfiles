@@ -1,3 +1,15 @@
 [[regexes]]
 regex = '(.*) >>> (.*)'
 style = { fg = "red", bold = true }
+
+[[keywords]]
+words = ['INFO', 'info']
+style = { fg = "green" }
+
+[[keywords]]
+words = ['WARN', 'WARNING', 'warn', 'warning']
+style = { fg = "yellow" }
+
+[[keywords]]
+words = ['ERR', 'ERROR', 'err', 'error']
+style = { fg = "red" }
