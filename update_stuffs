@@ -41,6 +41,8 @@ function update_cargo() {
 function update_yazi() {
     print -P "%F{yellow}Updating yazi...%f"
     cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli
+    # update yazi plugins
+    ya pack -u
     echo ""
 }
 
