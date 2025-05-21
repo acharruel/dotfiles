@@ -27,7 +27,7 @@ local M = {
     -- default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'snippets' },
       -- optionally disable cmdline completions
       cmdline = {},
     },
@@ -39,6 +39,12 @@ local M = {
     },
 
     completion = {
+      list = {
+        selection = {
+          preselect = true,
+          auto_insert = false,
+        },
+      },
       menu = {
         draw = {
           columns = {
@@ -62,7 +68,8 @@ local M = {
   },
   -- allows extending the providers array elsewhere in your config
   -- without having to redefine it
-  opts_extend = { "sources.default" }
+  opts_extend = { "sources.default" },
+
 }
 
 return M
