@@ -303,15 +303,10 @@ keymap = [
 ]
 
 [[manager.prepend_keymap]]
-on   = "F"
-run  = "plugin smart-filter"
-desc = "Smart filter"
-
-[[manager.prepend_keymap]]
-on   = [ "c", "a" ]
-run  = "plugin compress"
-desc = "Archive selected files"
-
-[[manager.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
+
+[[manager.prepend_keymap]]
+on   = [ ".", "s" ]
+run  = "plugin what-size"
+desc = "Calc size of selection or cwd"
