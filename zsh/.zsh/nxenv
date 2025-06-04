@@ -1,0 +1,24 @@
+##############################################################""
+# NanoXplore
+##############################################################""
+# To use the Lauterbach interface
+# export NX_EMBEDDED_TOOLS_IFACE=lauterbach
+# To use the openocd one.
+export NX_EMBEDDED_TOOLS_IFACE=openocd
+
+# nx_embedded_tools path
+path=(/home/adrien/nx_embedded_tools/py $path)
+
+# GCC toolchain
+path=(/opt/toolchains/gcc-arm-none-eabi-10.3-2021.10/bin $path)
+# ARMCLANG toolchain
+path=(/opt/toolchains/ArmCompilerforEmbeddedFuSa6.16.1/bin $path)
+export ARM_PRODUCT_DEF=/opt/toolchains/ArmCompilerforEmbeddedFuSa6.16.1/sw/mappings/ult.elmap
+export LM_LICENSE_FILE=1717@flexlm
+
+# ARM FVP (Fixed Virtual Platform)
+path=(/opt/FVP_ARM_Std_Library/FVP_MPS2 $path)
+
+# NxBase2
+export NXBASE2_HOME="/home/adrien/nxbase2/py"
+path=($NXBASE2_HOME $path)
