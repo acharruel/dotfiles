@@ -562,6 +562,14 @@ window-rule {
     open-focused false
     open-on-workspace "proto"
     default-column-width { proportion 0.3333; }
+    tiled-state true
+}
+
+window-rule {
+    match app-id="Xedebug"
+    open-focused false
+    open-on-workspace "proto"
+    default-column-width { proportion 0.6667; }
 }
 
 window-rule {
