@@ -546,6 +546,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="epicgameslauncher.exe"
+    open-on-workspace ""
+}
+
+window-rule {
     match app-id="^chrome.*"
     match title="Bitwarden"
     open-floating true
