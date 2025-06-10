@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
@@ -302,11 +302,11 @@ keymap = [
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = [ ".", "s" ]
 run  = "plugin what-size"
 desc = "Calc size of selection or cwd"
