@@ -286,6 +286,11 @@ binds {
     Alt+Page_Up { spawn "playerctl" "next"; }
     Alt+Home    { spawn "playerctl" "play-pause"; }
 
+    // mpc
+    Mod+Alt+Insert  { spawn "mpc" "--host=futon" "previous"; }
+    Mod+Alt+Page_Up { spawn "mpc" "--host=futon" "next"; }
+    Mod+Alt+Home    { spawn "mpc" "--host=futon" "toggle"; }
+
     Mod+Shift+K { close-window; }
 
     Mod+Left  { focus-column-left; }
