@@ -1,8 +1,6 @@
 local M = {
     "vimwiki/vimwiki",
     keys = {
-        { "<leader>Wg", "<cmd>lua LaunchBrowser()<cr>", desc = "Run [G]oogle Chrome" },
-        { "<leader>Wp", "<cmd>lua require('auto-pandoc').run_pandoc()<cr>", desc = "Run [P]andoc" },
         { "<leader>Ww", "<cmd>VimwikiIndex<cr>", desc = "Vim [W]iki Index" },
     }
 }
