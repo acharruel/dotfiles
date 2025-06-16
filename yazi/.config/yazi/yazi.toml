@@ -91,9 +91,6 @@ prepend_previewers = [
 	{ mime = "text/csv", run = "miller"},
 	{ name = "*.md", run = "glow" },
 ]
-append_previewers = [
-	{ name = "*", run = "hexyl" },
-]
 
 fetchers = [
 	# Mimetype
