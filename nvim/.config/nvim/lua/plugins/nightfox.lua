@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-local
 local M = {
     "EdenEast/nightfox.nvim",
     lazy = false,
