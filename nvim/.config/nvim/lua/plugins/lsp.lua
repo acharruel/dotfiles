@@ -10,8 +10,8 @@ local M = {
     },
     keys = {
         { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code [A]ction" },
-        { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "[F]ormat Code" },
-        { "<leader>li", "<cmd>LspInfo<cr>", desc = "LSP [I]nfos" },
+        { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",      desc = "[F]ormat Code" },
+        { "<leader>li", "<cmd>LspInfo<cr>",                       desc = "LSP [I]nfos" },
         {
             "<leader>lI",
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
@@ -76,6 +76,12 @@ local function lsp_specific_config()
             }
         }
     }
+
+    vim.lsp.config('systemdls', {
+        cmd = { 'systemd-lsp' },
+        filetypes = { 'systemd' },
+    })
+    vim.lsp.enable('systemdls')
 end
 
 function M.init()
@@ -101,9 +107,12 @@ function M.init()
             vim.api.nvim_buf_set_keymap(bufnr, "n", "K", '<cmd>lua vim.lsp.buf.hover({border="rounded"})<CR>', opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ float = "true" })<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ float = "true" })<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line" })<CR>', opts)
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ float = "true" })<CR>',
+                opts)
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ float = "true" })<CR>',
+                opts)
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line" })<CR>',
+                opts)
         end,
     })
 
