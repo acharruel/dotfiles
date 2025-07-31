@@ -40,6 +40,7 @@ local M = {
     { "<leader>GG", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     { "<leader>T",  function() Snacks.terminal() end, desc = "Open [T]erminal" },
+    { "<leader>p",  function() Snacks.picker() end, desc = "Open [P]icker" },
     {
       "<leader>N",
       desc = "Neovim News",
