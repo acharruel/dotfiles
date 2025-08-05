@@ -13,3 +13,11 @@ style = { fg = "yellow" }
 [[keywords]]
 words = ['ERR', 'ERROR', 'err', 'error']
 style = { fg = "red" }
+
+[[keywords]]
+words = ['offset', 'Offset', 'OFFSET']
+style = { fg = "blue" }
+
+[[keywords]]
+words = ['CfgWr0', 'CfgRd0', 'MemRd', 'MemWr']
+style = { fg = "yellow" }
