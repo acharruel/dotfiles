@@ -212,6 +212,12 @@ layout {
     }
 }
 
+cursor {
+    xcursor-theme "DMZ-White"
+    xcursor-size 24
+    hide-when-typing
+}
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -231,11 +237,50 @@ screenshot-path "~/Images/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // The wiki explains how to configure individual animations:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
-    // Uncomment to turn off all animations.
-    // off
+    slowdown 0.9
 
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 0.5
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    // exit-confirmation-open-close {
+    //     spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    // }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
 }
 
 hotkey-overlay {
@@ -605,10 +650,8 @@ window-rule {
     }
 }
 
-// for xwayland
-// spawn-at-startup "~/.cargo/bin/xwayland-satellite"
-environment {
-    DISPLAY ":0"
+xwayland-satellite {
+    path "~/notaf/xwayland-satellite/target/release/xwayland-satellite"
 }
 
 // start google-chrome
