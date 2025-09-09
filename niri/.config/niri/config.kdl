@@ -269,9 +269,9 @@ animations {
         spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
     }
 
-    // exit-confirmation-open-close {
-    //     spring damping-ratio=0.6 stiffness=500 epsilon=0.01
-    // }
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
 
     screenshot-ui-open {
         duration-ms 200
@@ -479,8 +479,7 @@ binds {
     Alt+Print { screenshot-window; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    // Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    Mod+Shift+E { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
