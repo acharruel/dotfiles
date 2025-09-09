@@ -1,0 +1,9 @@
+[Unit]
+Description=udiskie automounter
+
+[Service]
+ExecStart=udiskie -T
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
