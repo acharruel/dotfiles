@@ -262,6 +262,8 @@ keybinds clear-defaults=true {
                 show_plugins false
             };
         }
+        bind "PageDown" { GoToNextTab; SwitchToMode "normal"; }
+        bind "PageUp" { GoToPreviousTab; SwitchToMode "normal"; }
     }
 }
 
