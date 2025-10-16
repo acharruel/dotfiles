@@ -6,11 +6,6 @@ return {
 
     -- sort motion plugins
     "christoomey/vim-sort-motion",
-    "tpope/vim-repeat",
-    "tpope/vim-surround",
-
-    -- snippets
-    "L3MON4D3/LuaSnip",
 
     -- dressing
     "stevearc/dressing.nvim",

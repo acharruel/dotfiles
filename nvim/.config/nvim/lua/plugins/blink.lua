@@ -2,6 +2,8 @@ local M = {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
   dependencies = {
+    "L3MON4D3/LuaSnip",
+    "bydlw98/blink-cmp-env",
     'rafamadriz/friendly-snippets',
   },
   version = 'v0.11.0',
@@ -27,9 +29,25 @@ local M = {
     -- default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets' },
+      default = { 'lsp', 'path', 'snippets', 'env' },
       -- optionally disable cmdline completions
       cmdline = {},
+      providers = {
+        env = {
+          name = "Env",
+          module = "blink-cmp-env",
+          opts = {
+            -- item_kind = require("blink.cmp.types").CompletionItemKind.Variable,
+            show_braces = false,
+            show_documentation_window = true,
+          },
+        },
+        snippets = {
+          should_show_items = function(ctx)
+            return ctx.trigger.initial_kind ~= 'trigger_character'
+          end
+        },
+      },
     },
 
     -- experimental signature help support
