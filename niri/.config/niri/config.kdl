@@ -631,13 +631,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Plexamp"
-    open-floating true
-    default-column-width { proportion 0.5; }
-    default-window-height { fixed 500; }
-}
-
-window-rule {
     match is-floating=true
     shadow {
         on
