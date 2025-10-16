@@ -29,6 +29,7 @@ alias chrome='google-chrome --enable-features=UseOzonePlatform --ozone-platform=
 # nvim
 alias vim='nvim'
 alias vi='nvim'
+alias vimdiff='nvim -d'
 
 # wayland screenshot
 alias grim='grim -g "$(slurp)"'
