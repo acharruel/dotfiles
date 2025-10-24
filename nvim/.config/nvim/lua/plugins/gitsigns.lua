@@ -3,26 +3,17 @@ local M = {
     keys = {
         { "<leader>Gb", "<cmd>Gitsigns blame<cr>", desc = "[B]lame" },
         { "<leader>Gl", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle Current [L]ine blame" },
-        { "<leader>GB", "<cmd>Telescope git_branches<cr>", desc = "Show [B]ranches" },
-        { "<leader>Gc", "<cmd>Telescope git_commits<cr>", desc = "Show [C]ommits" },
         { "<leader>Gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "[P]review Hunk" },
         { "<leader>Gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "[R]eset Hunk" },
         { "<leader>GR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "[R]eset Buffer" },
         { "<leader>Gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "[S]tage Hunk" },
         { "<leader>GS", "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", desc = "[S]tage Buffer" },
         { "<leader>Gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "[U]ndo Stage Hunk" },
-        { "<leader>Go", "<cmd>Telescope git_status<cr>", desc = "[O]pen changed file" },
 
         { "[g", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "Next Hunk" },
         { "]g", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Previous Hunk" },
     },
 }
-
-function M.init()
-    local status, wk = pcall(require, "which-key")
-    if not status then return end
-    wk.add({ "<leader>G", group = "[G]it" })
-end
 
 function M.config()
     require("gitsigns").setup({

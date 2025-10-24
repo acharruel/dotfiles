@@ -17,9 +17,13 @@ local M = {
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
             desc = "LSP [I]nlays Hints",
         },
-        -- { "<leader>ll", "<cmd>LspStart<cr>", desc = "LSP [S]tart" },
-        -- { "<leader>lL", "<cmd>LspStop<cr>", desc = "LSP [S]top" },
         { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "[R]ename" },
+        { "<leader>ld", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+        { "<leader>lD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+        { "<leader>lI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
+        { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
+        { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
+        { "<leader>lS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     }
 }
 
@@ -106,7 +110,7 @@ function M.init()
             vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "K", '<cmd>lua vim.lsp.buf.hover({border="rounded"})<CR>', opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua Snacks.picker.lsp_references()<CR>", opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ float = "true" })<CR>',
                 opts)
             vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ float = "true" })<CR>',

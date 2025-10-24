@@ -49,19 +49,6 @@ local M = {
 
 local mappings = {
     {
-        "<leader>/",
-        function()
-            require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-                winblend = 10,
-                previewer = false,
-                layout_config = { width = 0.7, height = 0.8 },
-            })
-        end,
-        desc = "Word Search",
-        nowait = true,
-        remap = false,
-    },
-    {
         "<leader>a",
         "<cmd>:b#<cr>",
         desc = "[A]lternate File Switch",
