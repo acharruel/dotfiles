@@ -123,7 +123,7 @@ function M.init()
     -- which-key group
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.add({ "<leader>l", group = "[L]SP" })
+    wk.add({ "<leader>l", group = "[L]SP", icon = "" })
 end
 
 function M.config()

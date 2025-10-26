@@ -138,9 +138,10 @@ local M = {
 
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.add({ "<leader>f", group = "[F]iles" })
-    wk.add({ "<leader>G", group = "[G]it" })
-    wk.add({ "<leader>s", group = "[S]earch" })
+    wk.add({ "<leader>f", group = "[F]ind Files", icon = "" })
+    wk.add({ "<leader>g", group = "[G]it", icon = "" })
+    wk.add({ "<leader>s", group = "[S]earch", icon = "" })
+    wk.add({ "<leader>u", group = "[U]ser Commands", icon = "󱥳" })
   end,
 }
 

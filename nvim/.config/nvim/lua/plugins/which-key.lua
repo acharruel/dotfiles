@@ -77,7 +77,7 @@ local mappings = {
         remap = false,
     },
 
-    { "<leader>i", group = "Indentation", nowait = true, remap = false },
+    { "<leader>i", group = "[I]ndentation", nowait = true, remap = false, icon = "" },
     {
         "<leader>ig",
         "<cmd>setlocal tw=100 ts=2 sw=2 et colorcolumn=100 list<CR>",

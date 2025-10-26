@@ -11,7 +11,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.add({ "<leader>d", name = "[D]iffview" })
+    wk.add({ "<leader>d", name = "[D]iffview", icon = "" })
 end
 
 return M

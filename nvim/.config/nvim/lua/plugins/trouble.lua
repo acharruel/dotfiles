@@ -19,7 +19,7 @@ local M = {
 function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
-    wk.add({ "<leader>t", group = "[T]rouble" })
+    wk.add({ "<leader>t", group = "[T]rouble", icon = "" })
 end
 
 return M
