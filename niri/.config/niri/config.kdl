@@ -309,10 +309,6 @@ binds {
     Mod+Shift+P { spawn "~/.config/fuzzel/fuzzel-powermenu.sh"; }
     Mod+Delete { spawn "swaylock"; }
 
-    // You can also use a shell. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument in the end.
-    // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
-
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -492,10 +488,19 @@ binds {
     Ctrl+Space { spawn "makoctl" "dismiss"; }
 
     // window picker for screen sharing with niri-dynamic-cast
-    Mod+Shift+W { spawn "bash" "-c" "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)"; }
+    Mod+Shift+W {
+        spawn "bash" "-c" \
+        "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)";
+    }
 
     // toggle overview
     Mod+O { toggle-overview; }
+
+    // identify current window
+    Mod+W {
+        spawn "bash" "-c" \
+        "niri msg focused-window | rg \"Title\" | awk -F: '{print $2}' | xargs -I {} notify-send -a \"󱂬 \" {}";
+    }
 }
 
 workspace ""
