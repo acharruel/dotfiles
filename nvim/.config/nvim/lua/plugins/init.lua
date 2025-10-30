@@ -1,8 +1,17 @@
 return {
     -- syntax plugins
-    "fladson/vim-kitty",
-    "kergoth/vim-bitbake",
-    "NoahTheDuke/vim-just",
+    {
+        "fladson/vim-kitty",
+        ft = "kitty",
+    },
+    {
+        "kergoth/vim-bitbake",
+        ft = "bitbake",
+    },
+    {
+        "NoahTheDuke/vim-just",
+        ft = "just",
+    },
 
     -- sort motion plugins
     "christoomey/vim-sort-motion",
