@@ -16,6 +16,7 @@
     "sway/mode",
   ],
   "modules-center": [
+    "niri/window",
   ],
   "modules-right": [
     "network",
