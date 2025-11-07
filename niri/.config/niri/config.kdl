@@ -303,8 +303,8 @@ binds {
     Mod+Shift+H { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "~/.local/bin/kitty"; }
-    Mod+Shift+Return { spawn "~/.local/bin/kitty" "sh" "-c" "ssh ijen"; }
+    Mod+Return { spawn "kitty"; }
+    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
     Mod+P { spawn "fuzzel"; }
     Mod+Shift+P { spawn "~/.config/fuzzel/fuzzel-powermenu.sh"; }
     Mod+Delete { spawn "swaylock"; }
@@ -326,11 +326,6 @@ binds {
     Alt+Insert  { spawn "playerctl" "previous"; }
     Alt+Page_Up { spawn "playerctl" "next"; }
     Alt+Home    { spawn "playerctl" "play-pause"; }
-
-    // mpc
-    Mod+Alt+Insert  { spawn "mpc" "--host=futon" "previous"; }
-    Mod+Alt+Page_Up { spawn "mpc" "--host=futon" "next"; }
-    Mod+Alt+Home    { spawn "mpc" "--host=futon" "toggle"; }
 
     Mod+Shift+K { close-window; }
 
@@ -664,6 +659,12 @@ window-rule {
     match title=r#"^TRACE32 PowerView.*"#
     default-column-width { proportion 0.6667; }
     open-on-workspace ""
+}
+
+window-rule {
+    match app-id="Menu"
+    match title="menu"
+    default-column-width { proportion 0.3333; }
 }
 
 window-rule {
