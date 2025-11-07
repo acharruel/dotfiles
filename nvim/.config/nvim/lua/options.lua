@@ -26,6 +26,7 @@ vim.opt.title = true                              -- set terminal title to curre
 vim.opt.undofile = true                           -- enable persistent undo
 vim.opt.wrap = false                              -- do not wrap long lines
 vim.opt.writebackup = false                       -- if a file is being edited by another program it's not allowed to be edited
+vim.opt.cursorline = true                         -- enable cursorline
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 
