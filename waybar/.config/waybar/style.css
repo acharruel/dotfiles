@@ -48,6 +48,13 @@
   }
 }
 
+#window {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+}
+
 #mode {
   border-radius: 1rem;
   margin: 5px;
