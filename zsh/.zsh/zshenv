@@ -25,21 +25,22 @@ export FZF_DEFAULT_OPTS=" \
 export EDITOR="nvim"
 
 # NanoXplore
-export SONOFF_IP=sonoff2
-
-path=(/opt/toolchains/ArmCompilerforEmbeddedFuSa6.16.1/bin $path)
-# path=(/opt/toolchains/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin $path)
-path=(/opt/toolchains/gcc-arm-none-eabi-10.3-2021.10/bin $path)
-path=(/opt/toolchains/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-elf/bin $path)
-path=(/opt/toolchains/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-linux-gnu/bin $path)
-path=(/home/adrien/nx_embedded_tools/py $path)
-
-export PDAPP_HOME=/home/adrien/network/nfs/software/Cadence/PDAPP24.04.001
+export SONOFF_IP=sonoff10
 export NX_EMBEDDED_TOOLS_IFACE=openocd
-export ARM_PRODUCT_DEF=/opt/toolchains/ArmCompilerforEmbeddedFuSa6.16.1/sw/mappings/ult.elmap
-export LM_LICENSE_FILE=1717@flexlm
-export ARMLMD_LICENSE_FILE=1717@flexlm
+export NX_EMBEDDED_TOOLS_HOME=~/nx_embedded_tools/py
+path=(/home/adrien/nx_embedded_tools/py $path)
+path=(/home/adrien/nx_test_framework/py $path)
+
+# NX toolchains
+path=(/opt/toolchains/ArmCompilerforEmbeddedFuSa6.16.1/bin $path)
+path=(/opt/toolchains/gcc-arm-none-eabi-10.3-2021.10/bin $path)
+path=(/opt/toolchains/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-linux-gnu/bin $path)
+path=(/opt/toolchains/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-elf/bin $path)
+
+# Cadence tools
+export PDAPP_HOME=/home/adrien/network/nfs/software/Cadence/PDAPP24.04.001
 
 # Virtual debug
 export VDEBUGHOST=barrier
 export VD_SESSION=/acharruelvdebug:9050
+export RLM_LICENSE=5055@flexlm

@@ -303,8 +303,8 @@ binds {
     Mod+Shift+H { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "kitty"; }
-    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
+    Mod+Return { spawn "~/.local/bin/kitty"; }
+    Mod+Shift+Return { spawn "~/.local/bin/kitty" "sh" "-c" "ssh hagen"; }
     Mod+P { spawn "fuzzel"; }
     Mod+Shift+P { spawn "~/.config/fuzzel/fuzzel-powermenu.sh"; }
     Mod+Delete { spawn "swaylock"; }
