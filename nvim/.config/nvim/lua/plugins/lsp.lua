@@ -3,8 +3,6 @@ local M = {
     dependencies = {
         -- Add vscode-like pictograms to lsp
         "onsails/lspkind-nvim",
-        -- Useful status updates for LSP
-        "j-hui/fidget.nvim",
         -- bridge between lspconfig and mason
         "williamboman/mason-lspconfig.nvim",
     },
@@ -124,10 +122,6 @@ function M.init()
     local status, wk = pcall(require, "which-key")
     if not status then return end
     wk.add({ "<leader>l", group = "[L]SP", icon = "" })
-end
-
-function M.config()
-    require("fidget").setup()
 end
 
 return M
