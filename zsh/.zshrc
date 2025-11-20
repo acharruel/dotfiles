@@ -95,4 +95,4 @@ source ~/.zsh/zsh.alias
 
 # source zellij and niri
 # source <(zellij setup --generate-completion zsh)
-source <(niri completions zsh)
+# source <(niri completions zsh)
