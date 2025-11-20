@@ -166,5 +166,12 @@
     "exec": "playerctl metadata --format='{{trunc(title, 30)}} - {{trunc(artist, 20)}} [{{status}}]'",
     "on-click": "playerctl play-pause",
     "max-length": 70
+  },
+  "sway/window": {
+    "format": "{title}",
+    "icon": true,
+    "all-outputs": true,
+    "offscreen-css": true,
+    "offscreen-css-text": "(inactive)",
   }
 }
