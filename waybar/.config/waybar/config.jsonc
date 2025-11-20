@@ -16,17 +16,11 @@
     "sway/mode",
   ],
   "modules-center": [
-    "niri/window",
+    "sway/window",
   ],
   "modules-right": [
-    "network",
-    "pulseaudio#output",
-    "pulseaudio#microphone",
-    "bluetooth",
     "cpu",
-    "temperature",
     "disk",
-    "disk#home",
     "battery",
     "backlight",
     "clock",
