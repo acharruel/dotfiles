@@ -1,0 +1,10 @@
+[Unit]
+Description=dockarr backup service timer
+Requires=dockarr-backup.service
+
+[Timer]
+Unit=dockarr-backup.service
+OnCalendar=Mon *-*-* 03:00:00
+
+[Install]
+WantedBy=timers.target

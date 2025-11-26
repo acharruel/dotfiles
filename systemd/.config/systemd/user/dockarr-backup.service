@@ -1,0 +1,10 @@
+[Unit]
+Description=dockarr backup service
+Wants=dockarr-backup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/adrien/dockarr/backup.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=futon backup service
+Wants=futon-backup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/adrien/backup_scripts/futon-backup.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=futon weekly backup timer
+
+[Timer]
+OnCalendar=Mon *-*-* 3:00
+Persistent=true
+
+[Install]
+WantedBy=default.target
