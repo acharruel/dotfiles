@@ -1,7 +1,7 @@
 local M = {
     "rachartier/tiny-inline-diagnostic.nvim",
     keys = {
-        { "<leader>d", "<cmd>TinyInlineDiag toggle<cr>", desc = "Toggle Inline [D]iagnostics" },
+        { "<leader>D", "<cmd>TinyInlineDiag toggle<cr>", desc = "Toggle Inline [D]iagnostics" },
     },
     config = function()
         require("tiny-inline-diagnostic").setup({
