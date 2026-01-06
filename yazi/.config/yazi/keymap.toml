@@ -124,15 +124,11 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                       desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
-	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
-	{ on = [ "g", "t" ],       run = "cd /tmp",           desc = "Go to the tmp directory" },
-	{ on = [ "g", "d" ],       run = "cd /mnt/downloads", desc = "Go to the Dowloads directory" },
-	{ on = [ "g", "1" ],       run = "cd /mnt/vol1",      desc = "Go to the Dowloads directory" },
-	{ on = [ "g", "2" ],       run = "cd /mnt/vol2",      desc = "Go to the Dowloads directory" },
-	{ on = [ "g", "3" ],       run = "cd /mnt/vol3",      desc = "Go to the Dowloads directory" },
+	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go to the config directory" },
+	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to the Dowloads directory" },
+	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to the tmp directory" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to a directory interactively" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
