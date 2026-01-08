@@ -4,7 +4,7 @@ local M = {
     opts = {
         -- Options related to notification subsystem
         notification = {
-            override_vim_notify = true, -- Automatically override vim.notify() with Fidget
+            override_vim_notify = false, -- Automatically override vim.notify() with Fidget
 
             -- Options related to how notifications are rendered as text
             view = {
