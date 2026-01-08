@@ -69,14 +69,6 @@ local mappings = {
         nowait = true,
         remap = false,
     },
-    {
-        "<leader>x",
-        "<cmd>source %<cr>",
-        desc = "Source current file",
-        nowait = true,
-        remap = false,
-    },
-
     { "<leader>i", group = "[I]ndentation", nowait = true, remap = false, icon = "" },
     {
         "<leader>ig",
