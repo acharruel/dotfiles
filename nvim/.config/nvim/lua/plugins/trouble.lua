@@ -1,6 +1,17 @@
 local M = {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {
+    modes = {
+      symbols = {             -- Configure symbols mode
+        win = {
+          type = "split",     -- split window
+          relative = "win",   -- relative to current window
+          position = "right", -- right side
+          size = 0.4,         -- 30% of the window
+        },
+      },
+    },
+  },
   cmd = "Trouble",
   keys = {
     {
@@ -37,9 +48,9 @@ local M = {
 }
 
 function M.init()
-    local status, wk = pcall(require, "which-key")
-    if not status then return end
-    wk.add({ "<leader>x", group = "Trouble", icon = "" })
+  local status, wk = pcall(require, "which-key")
+  if not status then return end
+  wk.add({ "<leader>x", group = "Trouble", icon = "" })
 end
 
 return M
