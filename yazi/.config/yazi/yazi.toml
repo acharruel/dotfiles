@@ -69,6 +69,8 @@ evince = [
 
 [open]
 rules = [
+	# drawio
+	{ url = "*.drawio", use = [ "open", "reveal" ] },
 	# Folder
 	{ url = "*/", use = [ "edit", "open", "reveal" ] },
 	# Text
@@ -103,7 +105,7 @@ prepend_previewers = [
 	{ mime = "audio/*", run = "exifaudio"},
 	{ mime = "application/bittorrent", run = "torrent-preview"},
 	{ mime = "text/csv", run = "miller"},
-	{ name = "*.md", run = "glow" },
+	{ url = "*.md", run = "glow" },
 ]
 fetchers = [
 	# Mimetype
