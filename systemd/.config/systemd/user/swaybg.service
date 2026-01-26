@@ -1,8 +1,7 @@
 [Unit]
 PartOf=graphical-session.target
-After=graphical-session.target
-Requires==graphical-session.target
 
 [Service]
+Environment=WAYLAND_DISPLAY=wayland-1
 ExecStart=/usr/bin/swaybg -m fill -i "%h/Images/wallpaper.jpg"
 Restart=on-failure
