@@ -441,7 +441,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "kitty"; }
-    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh futon"; }
+    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
     Mod+P { spawn "fuzzel"; }
     Mod+Shift+P { spawn "~/.config/fuzzel/fuzzel-powermenu.sh"; }
     Mod+Delete { spawn "swaylock"; }
@@ -463,11 +463,6 @@ binds {
     Alt+Insert  { spawn "playerctl" "previous"; }
     Alt+Page_Up { spawn "playerctl" "next"; }
     Alt+Home    { spawn "playerctl" "play-pause"; }
-
-    // mpc
-    Mod+Alt+Insert  { spawn "mpc" "--host=futon" "previous"; }
-    Mod+Alt+Page_Up { spawn "mpc" "--host=futon" "next"; }
-    Mod+Alt+Home    { spawn "mpc" "--host=futon" "toggle"; }
 
     Mod+Shift+K { close-window; }
 
@@ -792,17 +787,25 @@ window-rule {
 }
 
 window-rule {
+    match app-id="^brave.*Profile.*"
+    match title="Bitwarden"
+    open-floating true
+    open-focused true
+    block-out-from "screencast"
+}
+
+window-rule {
     match app-id=r#"XTerm"#
     open-focused false
-    open-on-workspace "proto"
-    default-column-width { proportion 0.3333; }
+    open-on-workspace ""
+    default-column-width { proportion 0.25; }
     tiled-state true
 }
 
 window-rule {
     match app-id="Xedebug"
     open-focused false
-    open-on-workspace "proto"
+    open-on-workspace ""
     default-column-width { proportion 0.6667; }
 }
 
@@ -838,6 +841,32 @@ window-rule {
     open-focused false
     open-on-workspace ""
     default-column-width { proportion 0.667; }
+}
+
+window-rule {
+    match app-id="t32marm"
+    exclude title=r#"^TRACE32 PowerView.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id="t32marm"
+    match title=r#"^TRACE32 PowerView.*"#
+    default-column-width { proportion 0.6667; }
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id="t32marm"
+    match title=r#"^TRACE32 PowerView.*"#
+    default-column-width { proportion 0.6667; }
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id="Menu"
+    match title="menu"
+    default-column-width { proportion 0.3333; }
 }
 
 window-rule {
