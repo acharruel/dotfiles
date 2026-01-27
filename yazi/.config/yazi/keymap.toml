@@ -124,15 +124,11 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                       desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",              desc = "Go home" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",      desc = "Go ~/.config" },
-	{ on = [ "g", "t" ],       run = "cd /tmp",           desc = "Go to the tmp directory" },
-	{ on = [ "g", "d" ],       run = "cd ~/Documents",    desc = "Go to the Dowloads directory" },
-	{ on = [ "g", "S" ],       run = "cd /home/seafile",  desc = "Go to the NX Seafile directory" },
-	{ on = [ "g", "s" ],       run = "cd /home/software", desc = "Go to the NX software directory" },
-	{ on = [ "g", "u" ],       run = "cd /home/users",    desc = "Go to the NX users directory" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive",  desc = "Jump interactively" },
-	{ on = [ "g", "f" ],       run = "follow",            desc = "Follow hovered symlink" },
+	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go to the config directory" },
+	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to the Dowloads directory" },
+	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to the tmp directory" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to a directory interactively" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
@@ -375,12 +371,3 @@ keymap = [
 	# Filtering
 	{ on = "f", run = "filter", desc = "Filter help items" },
 ]
-
-[[mgr.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
-
-[[mgr.prepend_keymap]]
-on   = [ ",", "S" ]
-run  = "plugin what-size"
-desc = "Calc size of selection or cwd"
