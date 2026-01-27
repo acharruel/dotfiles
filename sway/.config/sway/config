@@ -17,7 +17,7 @@ set $dist_term kitty --title " ijen" sh -c "ssh ijen"
 font "Hack Nerd Font Bold 12"
 
 # wallpaper
-set $wallpaper $HOME/.config/sway/wallpaper.jpg
+set $wallpaper $HOME/Images/wallpaper.jpg
 
 # configuration files
 include /etc/sway/config.d/*
@@ -174,6 +174,9 @@ input type:touchpad {
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
+    # Move focus to the child container
+    bindsym $mod+q focus child
+
     # move to latest urgent workspace
     bindsym $mod+x [urgent=latest] focus
 
@@ -184,7 +187,7 @@ input type:touchpad {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    #bindsym $mod+Shift+minus move scratchpad
+    # bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
