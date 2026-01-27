@@ -17,7 +17,7 @@ set $dist_term kitty --title " ijen" sh -c "ssh ijen"
 font "Hack Nerd Font Bold 12"
 
 # wallpaper
-set $wallpaper $HOME/.config/sway/wallpaper.jpg
+set $wallpaper $HOME/Images/mountains-nord.jpg
 
 # configuration files
 include /etc/sway/config.d/*
