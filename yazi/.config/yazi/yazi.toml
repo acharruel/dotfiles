@@ -64,13 +64,15 @@ download = [
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
 evince = [
-	{ run = 'evince "$1"',        			desc = "Open with evince", for = "linux" },
+	{ run = 'evince "$1"', desc = "Open with evince", for = "linux" },
 ]
 
 [open]
 rules = [
 	# drawio
 	{ url = "*.drawio", use = [ "open", "reveal" ] },
+	# pdf
+	{ url = "*.pdf", use = [ "open", "evince", "reveal" ] },
 	# Folder
 	{ url = "*/", use = [ "edit", "open", "reveal" ] },
 	# Text
