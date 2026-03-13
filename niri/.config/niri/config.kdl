@@ -524,7 +524,12 @@ window-rule {
 window-rule {
     match app-id=r#"google-chrome$"#
     open-maximized true
-    open-on-output "HDMI-A-2"
+    open-on-workspace ""
+}
+
+window-rule {
+    match app-id=r#"brave-browser$"#
+    open-maximized true
     open-on-workspace ""
 }
 
@@ -615,6 +620,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id="^brave.*Default"
+    match title="Bitwarden"
+    open-floating true
+    open-focused true
+    block-out-from "screencast"
+}
+
+window-rule {
     match is-floating=true
     shadow {
         on
@@ -631,8 +644,8 @@ xwayland-satellite {
     path "xwayland-satellite"
 }
 
-// start google-chrome
-spawn-at-startup "google-chrome" "--profile-directory=Default"  "--disable-features=GlobalShortcutsPortal"
+// start brave-browser
+spawn-at-startup "brave-browser" "--profile-directory=Default"
 
 // default mic mute
 spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
