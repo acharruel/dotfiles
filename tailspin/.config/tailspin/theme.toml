@@ -7,9 +7,33 @@ words = ['INFO', 'info']
 style = { fg = "green" }
 
 [[keywords]]
-words = ['WARN', 'WARNING', 'warn', 'warning']
+words = ['WARNING', 'warning']
 style = { fg = "yellow" }
 
 [[keywords]]
-words = ['ERR', 'ERROR', 'err', 'error']
+words = ['ERROR', 'error']
 style = { fg = "red" }
+
+[[keywords]]
+words = ['offset', 'Offset', 'OFFSET']
+style = { fg = "blue" }
+
+[[keywords]]
+words = ['CfgWr0', 'CfgRd0', 'MemRd', 'MemWr']
+style = { fg = "yellow" }
+
+[[keywords]]
+words = ['Payload']
+style = { fg = "magenta" }
+
+[[regexes]]
+regex = '(.*) Status == UR (.*)'
+style = { fg = "red", bold = true }
+
+[[keywords]]
+words = ['IO_PORT']
+style = { bold = true }
+
+[[regexes]]
+regex = '\[(.*)\]'
+style = { fg = "bright_white" }
