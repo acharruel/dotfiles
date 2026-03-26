@@ -243,17 +243,127 @@ animations {
     slowdown 0.9
 
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
     }
 
     window-open {
-        duration-ms 150
+        duration-ms 1000
         curve "ease-out-expo"
+        custom-shader r"
+            float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+
+            float noise(vec2 p) {
+                vec2 i = floor(p); vec2 f = fract(p);
+                f = f * f * (3.0 - 2.0 * f);
+                return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+                           mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+            }
+
+            float fbm(vec2 p) {
+                float v = 0.0; float a = 0.5;
+                for (int i = 0; i < 3; ++i) { v += a * noise(p); p = p * 2.0; a *= 0.5; }
+                return v;
+            }
+
+            vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+                float t = 1.0 - niri_progress;
+                vec2 uv = coords_geo.xy;
+
+                // Effet d'eau (Ondulations)
+                float wave_freq = 15.0;
+                float wave_phase = t * 15.0;
+                float wave_amp = t * 0.03;
+
+                vec2 water_offset = vec2(
+                    sin(uv.y * wave_freq + wave_phase),
+                    cos(uv.x * wave_freq + wave_phase)
+                ) * wave_amp;
+
+                vec2 drift = vec2(0.0, -0.2) * t;
+
+                float n = fbm((uv + drift) * 8.0);
+                vec2 displaced_uv = uv + water_offset + vec2(n - 0.5, n - 0.5) * 0.15 * t;
+
+                // Flou (Blur en 5 points)
+                float blur_radius = t * 0.025;
+                vec4 color = vec4(0.0);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv, 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(blur_radius, 0.0), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(-blur_radius, 0.0), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, blur_radius), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, -blur_radius), 1.0)).st);
+                color /= 5.0;
+
+                // Dissolution nuageuse
+                float dissolve_threshold = t * 1.2;
+                float alpha_multiplier = smoothstep(dissolve_threshold, dissolve_threshold + 0.5, n + (1.0 - t) * 0.5);
+
+                // Application de la transparence (sans toucher aux couleurs)
+                color *= alpha_multiplier;
+
+                return color;
+            }
+        "
     }
 
     window-close {
-        duration-ms 150
-        curve "ease-out-quad"
+        duration-ms 1000
+        curve "ease-out-expo"
+        custom-shader r"
+            float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+
+            float noise(vec2 p) {
+                vec2 i = floor(p); vec2 f = fract(p);
+                f = f * f * (3.0 - 2.0 * f);
+                return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+                           mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+            }
+
+            float fbm(vec2 p) {
+                float v = 0.0; float a = 0.5;
+                for (int i = 0; i < 3; ++i) { v += a * noise(p); p = p * 2.0; a *= 0.5; }
+                return v;
+            }
+
+            vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+                float t = niri_progress;
+                vec2 uv = coords_geo.xy;
+
+                // Effet d'eau (Ondulations)
+                float wave_freq = 15.0;
+                float wave_phase = t * 15.0;
+                float wave_amp = t * 0.03;
+
+                vec2 water_offset = vec2(
+                    sin(uv.y * wave_freq + wave_phase),
+                    cos(uv.x * wave_freq + wave_phase)
+                ) * wave_amp;
+
+                vec2 drift = vec2(0.0, -0.2) * t;
+
+                float n = fbm((uv + drift) * 8.0);
+                vec2 displaced_uv = uv + water_offset + vec2(n - 0.5, n - 0.5) * 0.15 * t;
+
+                // Flou (Blur en 5 points)
+                float blur_radius = t * 0.025;
+                vec4 color = vec4(0.0);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv, 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(blur_radius, 0.0), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(-blur_radius, 0.0), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, blur_radius), 1.0)).st);
+                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, -blur_radius), 1.0)).st);
+                color /= 5.0;
+
+                // Dissolution nuageuse
+                float dissolve_threshold = t * 1.2;
+                float alpha_multiplier = smoothstep(dissolve_threshold, dissolve_threshold + 0.5, n + (1.0 - t) * 0.5);
+
+                // Application de la transparence (sans toucher aux couleurs)
+                color *= alpha_multiplier;
+
+                return color;
+            }
+        "
     }
 
     horizontal-view-movement {
@@ -261,11 +371,35 @@ animations {
     }
 
     window-movement {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
     }
 
     window-resize {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        duration-ms 400
+        curve "ease-out-quad"
+        custom-shader r"
+            float t = niri_progress;
+
+            // L'amplitude de la vague monte et descend (0.0 -> max -> 0.0)
+            // grâce à la courbe du sinus sur Pi (3.14159).
+            float wave_amp = sin(t * 3.14159) * 0.03;
+
+            // Fréquence (taille des vagues) et Phase (vitesse de l'eau)
+            float wave_freq = 15.0;
+            float wave_phase = t * 20.0;
+
+            // Calcul de la déformation fluide
+            vec2 water_offset = vec2(
+                sin(coords_geo.y * wave_freq + wave_phase),
+                cos(coords_geo.x * wave_freq + wave_phase)
+            ) * wave_amp;
+
+            // On applique l'ondulation aux coordonnées de la texture
+            vec3 coords_tex = niri_geo_to_tex * vec3(coords_geo.xy + water_offset, 1.0);
+
+            // On retourne la fenêtre avec ses couleurs intactes, mais ondulée
+            return texture2D(niri_tex, coords_tex.st);
+        "
     }
 
     config-notification-open-close {
