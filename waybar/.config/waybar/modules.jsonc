@@ -116,9 +116,9 @@
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
-    "format-muted": "<span foreground=\"#f38ba8\">🔇</span>",
+    "format-muted": "<span foreground=\"#f38ba8\">󰝟 </span>",
     "format-bluetooth": "<span foreground=\"#89b4fa\"> {volume}% {icon}</span>",
-    "format-bluetooth-muted": "<span foreground=\"#89b4fa\"> 🔇</span>",
+    "format-bluetooth-muted": "<span foreground=\"#89b4fa\"> 󰝟 </span>",
     "format-icons": {
       "default": [
         "",
