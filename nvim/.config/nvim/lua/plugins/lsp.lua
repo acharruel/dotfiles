@@ -78,12 +78,6 @@ local function lsp_specific_config()
             }
         }
     }
-
-    vim.lsp.config('systemdls', {
-        cmd = { 'systemd-lsp' },
-        filetypes = { 'systemd' },
-    })
-    vim.lsp.enable('systemdls')
 end
 
 function M.init()
