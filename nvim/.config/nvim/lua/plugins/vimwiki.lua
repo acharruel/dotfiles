@@ -14,7 +14,7 @@ function M.init()
         {
             path = "~/Documents/vimwiki",
             syntax = "markdown",
-            ext = ".md",
+            ext = ".wiki",
         }
     }
 
