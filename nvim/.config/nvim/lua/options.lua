@@ -58,7 +58,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- Make Y yank to end of the line
 vim.keymap.set("n", "Y", "y$")
 
--- Make Y yank to end of the line
+-- Escape will disable current highlight
 vim.keymap.set("n", "<ESC>", ":noh<cr>")
 
 -- Special OSC52 config to use with wezterm
@@ -87,3 +87,5 @@ vim.keymap.set("n", "<C-Up>", ":cprevious<cr>")
 
 -- Nicer terminal escape, this doesn't close the window
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+
+vim.cmd("packadd nvim.undotree")

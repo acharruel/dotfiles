@@ -91,6 +91,13 @@ local mappings = {
         nowait = true,
         remap = false,
     },
+    {
+        "<leader>U",
+        "<cmd>lua require('undotree').open()<CR>",
+        desc = "Tag Heuer style",
+        nowait = true,
+        remap = false,
+    },
 }
 
 function M.config()
