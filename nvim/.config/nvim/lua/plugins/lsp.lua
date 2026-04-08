@@ -7,9 +7,9 @@ local M = {
         "williamboman/mason-lspconfig.nvim",
     },
     keys = {
-        { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code [A]ction" },
-        { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",      desc = "[F]ormat Code" },
-        { "<leader>li", "<cmd>LspInfo<cr>",                       desc = "LSP [I]nfos" },
+        { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>",               desc = "Code [A]ction" },
+        { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",                    desc = "[F]ormat Code" },
+        { "<leader>li", "<cmd>lua vim.print(vim.lsp.get_clients({buf=0}))<cr>", desc = "LSP [I]nfos"   },
         {
             "<leader>lI",
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
