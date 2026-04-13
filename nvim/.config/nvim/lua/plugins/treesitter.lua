@@ -3,64 +3,14 @@ local M = {
     lazy = false,
     build = ':TSUpdate',
     dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects",
         "nvim-treesitter/nvim-treesitter-context",
     },
 }
 
 function M.config()
-    local status, treesitter_configs = pcall(require, "nvim-treesitter")
-    if not status then
-        return
-    end
-
-    treesitter_configs.setup {
-        highlight = {
-            enable = true
-        },
-        indent = {
-            enable = true,
-            disable = { 'python' }
-        },
-        textobjects = {
-            select = {
-                enable = true,
-
-                -- Automatically jump forward to textobj, similar to targets.vim
-                lookahead = true,
-
-                keymaps = {
-                    -- You can use the capture groups defined in textobjects.scm
-                    ["ab"] = "@block.outer",
-                    ["ib"] = "@block.inner",
-                    ["af"] = "@function.outer",
-                    ["if"] = "@function.inner",
-                    ["ac"] = "@class.outer",
-                    ["ic"] = "@class.inner",
-                },
-            },
-            move = {
-                enable = true,
-                set_jumps = true, -- whether to set jumps in the jumplist
-                goto_next_start = {
-                    ["]m"] = "@function.outer",
-                },
-                goto_next_end = {
-                    ["]M"] = "@function.outer",
-                },
-                goto_previous_start = {
-                    ["[m"] = "@function.outer",
-                },
-                goto_previous_end = {
-                    ["[M"] = "@function.outer",
-                },
-            },
-        },
-    }
-
     local status, treesitter_context = pcall(require, "treesitter-context")
     if not status then
-        print("error!")
+        print("Error require 'treesitter-context'")
         return
     end
 
