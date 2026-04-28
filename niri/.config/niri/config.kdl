@@ -674,6 +674,24 @@ window-rule {
     focus-ring { off; }
 }
 
+window-rule {
+    match app-id="^kitty$"
+    opacity 0.95
+    draw-border-with-background false
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.8
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 // Block out mako notifications from screencasts.
 layer-rule {
     match namespace="^notifications$"
