@@ -706,6 +706,14 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^waybar$"
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
