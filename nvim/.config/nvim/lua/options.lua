@@ -11,7 +11,6 @@ vim.opt.incsearch = true                          -- Do incremental searching
 vim.opt.mouse = "a"                               -- Catch mouse events in all modes
 vim.opt.number = true                             -- enable lines numbering
 vim.opt.pumheight = 10                            -- popup menu height
-vim.opt.relativenumber = true                     -- relative lines numbering
 vim.opt.showcmd = true                            -- Display incomplete commands
 vim.opt.showmatch = true                          -- Show matching brackets
 vim.opt.showmode = false                          -- no need to display current mode
