@@ -39,6 +39,9 @@ function update_cargo() {
 }
 
 function update_yazi() {
+    print -P "%F{yellow}Updating yazi-fm...%f"
+    cargo binstall --no-confirm yazi-fm
+    cargo binstall --no-confirm yazi-cli
     print -P "%F{yellow}Updating yazi plugins...%f"
     ya pkg upgrade
     echo ""
