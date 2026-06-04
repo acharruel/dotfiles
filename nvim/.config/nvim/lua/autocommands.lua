@@ -48,3 +48,19 @@ vim.api.nvim_create_autocmd("TermLeave",
         command = "EnableWhitespace",
         group = group,
     })
+
+-- Highlight Non Breaking Space characters
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    group = vim.api.nvim_create_augroup("HighlightNBSP", { clear = true }),
+    pattern = "*",
+    callback = function()
+        local groupName = "HighlightNBSP"
+        -- Match U+00A0 (Non-Breaking Space)
+        vim.fn.matchadd(groupName, "\u{A0}")
+
+        vim.api.nvim_set_hl(0, groupName, {
+            fg = "#e78284",
+            bold = true
+        })
+    end
+})
