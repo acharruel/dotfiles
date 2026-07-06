@@ -2,9 +2,7 @@ M = {
     'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
     dependencies = {
-        "L3MON4D3/LuaSnip",
         "bydlw98/blink-cmp-env",
-        'rafamadriz/friendly-snippets',
     },
 
     -- use a release tag to download pre-built binaries
