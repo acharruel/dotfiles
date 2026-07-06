@@ -640,9 +640,9 @@ binds {
     }
 }
 
-workspace ""
-workspace ""
-workspace ""
+workspace " "
+workspace " "
+workspace " "
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
@@ -658,13 +658,13 @@ window-rule {
 window-rule {
     match app-id=r#"google-chrome$"#
     open-maximized true
-    open-on-workspace ""
+    open-on-workspace " "
 }
 
 window-rule {
     match app-id=r#"brave-browser$"#
     open-maximized true
-    open-on-workspace ""
+    open-on-workspace " "
 }
 
 window-rule {
@@ -750,24 +750,24 @@ window-rule {
 
 window-rule {
     match app-id="steam"
-    open-on-workspace ""
+    open-on-workspace " "
     default-column-width { proportion 1.0; }
 }
 
 window-rule {
     match app-id="lutris"
-    open-on-workspace ""
+    open-on-workspace " "
     default-column-width { proportion 1.0; }
 }
 
 window-rule {
     match app-id="epicgameslauncher.exe"
-    open-on-workspace ""
+    open-on-workspace " "
 }
 
 window-rule {
     match app-id="heroic"
-    open-on-workspace ""
+    open-on-workspace " "
     default-column-width { proportion 1.0; }
 }
 
