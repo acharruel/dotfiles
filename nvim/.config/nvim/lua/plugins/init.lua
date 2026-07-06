@@ -16,9 +16,6 @@ return {
     -- sort motion plugins
     "christoomey/vim-sort-motion",
 
-    -- dressing
-    "stevearc/dressing.nvim",
-
     -- edit quickfix content
     "itchyny/vim-qfedit",
 
