@@ -36,19 +36,6 @@ vim.api.nvim_create_autocmd("Filetype",
         group = group,
     })
 
--- Disable whitespace highlight in terminal mode
-local group = vim.api.nvim_create_augroup("TerminalGroup", { clear = true })
-vim.api.nvim_create_autocmd("TermEnter",
-    {
-        command = "DisableWhitespace",
-        group = group,
-    })
-vim.api.nvim_create_autocmd("TermLeave",
-    {
-        command = "EnableWhitespace",
-        group = group,
-    })
-
 -- Highlight Non Breaking Space characters
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     group = vim.api.nvim_create_augroup("HighlightNBSP", { clear = true }),
