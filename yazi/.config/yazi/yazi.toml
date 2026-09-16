@@ -107,7 +107,6 @@ suppress_preload = false
 [plugin]
 prepend_previewers = [
 	{ mime = "audio/*", run = "exifaudio"},
-	{ mime = "application/bittorrent", run = "torrent-preview"},
 	{ mime = "text/csv", run = "miller"},
 	{ url = "*.md", run = "glow" },
 ]
