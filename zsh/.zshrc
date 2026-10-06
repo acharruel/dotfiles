@@ -89,9 +89,11 @@ fast-theme -q XDG:catppuccin-frappe
 # Aliases
 source ~/.zsh/zsh.alias
 
+# Export SSH keys
+eval $(keychain --eval --quiet acharruel)
+
 # Export kitty TERM environment when using SSH
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
-
 
 # source zellij and niri
 # source <(zellij setup --generate-completion zsh)

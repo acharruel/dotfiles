@@ -8,8 +8,6 @@ path=(/home/adrien/.cargo/bin $path)
 path=(/home/adrien/.fzf/bin $path)
 path=(/home/adrien/.local/share/flatpak/exports/bin $path)
 
-eval $(keychain --eval --quiet acharruel)
-
 export BAT_THEME="Catppuccin Frappe"
 export LS_COLORS
 
