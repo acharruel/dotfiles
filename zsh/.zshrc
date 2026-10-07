@@ -90,7 +90,8 @@ fast-theme -q XDG:catppuccin-frappe
 source ~/.zsh/zsh.alias
 
 # Export SSH keys
-eval $(keychain --eval --quiet acharruel)
+eval $(keychain --eval --quiet acharruel-nanoxplore)
+eval $(keychain --eval --quiet acharruel-perso-nx)
 
 # Export kitty TERM environment when using SSH
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
