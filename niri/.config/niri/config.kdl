@@ -441,7 +441,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "kitty"; }
-    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
+    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh futon"; }
     Mod+P { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Shift+P { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+Delete { spawn-sh "noctalia msg session lock"; }
@@ -758,7 +758,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^brave.*Default"
+    match app-id="^brave.*"
     match title="Bitwarden"
     open-floating true
     open-focused true
@@ -783,7 +783,7 @@ xwayland-satellite {
 }
 
 // start brave-browser
-spawn-at-startup "brave-browser" "--profile-directory=Default"
+spawn-at-startup "brave-browser" "--profile-directory=Profile 1"
 
 // default mic mute
 spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
