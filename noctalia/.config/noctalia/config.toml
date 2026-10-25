@@ -24,7 +24,7 @@ order = [ "main_status_bar" ]
     capsule = true
     capsule_border_width = 1.0
     capsule_fill = "surface_variant"
-    capsule_opacity = 1.0
+    capsule_opacity = 0.8
     capsule_padding = 6.0
     capsule_radius = 8.0
     capsule_thickness = 1.0
@@ -120,6 +120,8 @@ minimum_brightness = 0.0
 sync_all_monitors = false
 
 [calendar]
+dedupe_events = false
+dedupe_ignore_patterns = []
 enabled = true
 event_date_format = "%A %e %B"
 event_time_format = "%H:%M"
@@ -153,7 +155,7 @@ width = 700
 
     [control_center.calendar]
     show_events_card = true
-    show_week_numbers = false
+    show_week_numbers = true
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -207,7 +209,6 @@ magnification_scale = 1.4500000476837158
 main_axis_padding = 16
 margin_edge = 0
 margin_ends = 0
-monitors = []
 pinned = []
 position = "bottom"
 radius = 16
@@ -317,6 +318,7 @@ blurred_desktop = true
 edge_smoothness = 0.30000001192092896
 enabled = true
 fingerprint = true
+grace_period_seconds = 0
 lock_before_suspend = true
 monitors = []
 tint_intensity = 0.79999995231628418
@@ -327,12 +329,77 @@ wallpaper = "/home/adrien/Images/wallpaper.jpg"
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
-widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@HDMI-A-2", "lockscreen-widget-0000000000000001" ]
+widget_order = [
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-login-box@HDMI-A-2",
+    "lockscreen-widget-0000000000000001"
+]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    enabled = true
+    output = "DP-2"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 1280.0
+    cy = 227.0
+    enabled = true
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
@@ -358,6 +425,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@HDMI-A-2
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -386,6 +454,36 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@HDMI-A-2
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 823.0
+    cy = 213.5
+    enabled = true
+    output = "eDP-1"
+    placement_height = 1029.0
+    placement_width = 1646.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -515,6 +613,7 @@ settings_show_advanced = true
 settings_window_translucent = false
 setup_wizard_enabled = true
 shared_gl_context = true
+show_close_buttons = true
 show_location = true
 telemetry_enabled = false
 time_format = "{:%H:%M}"
@@ -533,14 +632,22 @@ umbriel_overview_type_to_launch_enabled = false
     app_grid = false
     auto_paste = "auto"
     categories = true
+    category_icons_only = false
     compact = false
+    default_view = "recent"
     fetch_exchange_rates = true
+    layout = "full"
     pinned = []
     provider_prefix = "/"
+    search_position = "bottom"
     show_app_actions = false
     show_app_origin_indicator = true
     show_icons = true
+    show_session_button = true
+    show_settings_button = true
     sort_by_usage = true
+    track_usage = true
+    width = 760
 
         [shell.launcher.dmenu]
 
@@ -551,6 +658,8 @@ umbriel_overview_type_to_launch_enabled = false
     blacklist = []
 
     [shell.panel]
+    border_color = "outline"
+    border_width = 1.0
     borders = true
     clipboard_placement = "floating"
     clipboard_position = "center"
@@ -574,6 +683,7 @@ umbriel_overview_type_to_launch_enabled = false
     transparency_mode = "soft"
     wallpaper_placement = "attached"
     wallpaper_position = "auto"
+    wallpaper_show_names = true
 
     [shell.privacy]
     cam_filter_regex = ""
@@ -595,6 +705,7 @@ umbriel_overview_type_to_launch_enabled = false
     freeze_screen = true
     pipe_command = ""
     pipe_to_command = false
+    region_modifier = "none"
     remember_last_region = false
     save_to_file = true
     show_cursor = false
@@ -677,7 +788,7 @@ key_source = "secret-service"
 [system.monitor]
 cpu_freq_activity_threshold = 2.5
 cpu_freq_critical_threshold = 4.5
-cpu_poll_seconds = 2.0
+cpu_poll_seconds = 15.0
 cpu_temp_activity_threshold = 60.0
 cpu_temp_critical_threshold = 85.0
 cpu_temp_sensor_path = ""
@@ -687,25 +798,25 @@ disk_free_activity_threshold = 80.0
 disk_free_critical_threshold = 95.0
 disk_free_pct_activity_threshold = 80.0
 disk_free_pct_critical_threshold = 95.0
-disk_poll_seconds = 10.0
+disk_poll_seconds = 60.0
 disk_used_activity_threshold = 80.0
 disk_used_critical_threshold = 95.0
 disk_used_pct_activity_threshold = 80.0
 disk_used_pct_critical_threshold = 95.0
 enabled = true
-gpu_poll_seconds = 5.0
+gpu_poll_seconds = 20.0
 gpu_temp_activity_threshold = 60.0
 gpu_temp_critical_threshold = 85.0
 gpu_usage_activity_threshold = 50.0
 gpu_usage_critical_threshold = 95.0
 gpu_vram_activity_threshold = 50.0
 gpu_vram_critical_threshold = 90.0
-memory_poll_seconds = 2.0
+memory_poll_seconds = 15.0
 net_rx_activity_threshold = 1.0
 net_rx_critical_threshold = 50.0
 net_tx_activity_threshold = 1.0
 net_tx_critical_threshold = 50.0
-network_poll_seconds = 3.0
+network_poll_seconds = 30.0
 ram_pct_activity_threshold = 60.0
 ram_pct_critical_threshold = 90.0
 swap_pct_activity_threshold = 20.0
@@ -715,10 +826,11 @@ swap_pct_critical_threshold = 80.0
 builtin = "Noctalia"
 community_palette = "Catppuccin Frappe Lavender"
 custom_palette = ""
-mode = "auto"
+mode = "light"
 pure_black_dark = false
 shell_mode = "dark"
 source = "community"
+sync_color_scheme = true
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
@@ -753,6 +865,8 @@ refresh_minutes = 30
 unit = "metric"
 
 [widget.active_window]
+anchor = true
+enabled = false
 icon_size = 14.0
 max_length = 400
 min_length = 80.0
