@@ -216,7 +216,7 @@ layout {
 }
 
 cursor {
-    xcursor-theme "DMZ-White"
+    xcursor-theme "dummy"
     xcursor-size 24
     hide-when-typing
 }
@@ -249,121 +249,11 @@ animations {
     window-open {
         duration-ms 1000
         curve "ease-out-expo"
-        custom-shader r"
-            float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
-
-            float noise(vec2 p) {
-                vec2 i = floor(p); vec2 f = fract(p);
-                f = f * f * (3.0 - 2.0 * f);
-                return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
-                           mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
-            }
-
-            float fbm(vec2 p) {
-                float v = 0.0; float a = 0.5;
-                for (int i = 0; i < 3; ++i) { v += a * noise(p); p = p * 2.0; a *= 0.5; }
-                return v;
-            }
-
-            vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-                float t = 1.0 - niri_progress;
-                vec2 uv = coords_geo.xy;
-
-                // Effet d'eau (Ondulations)
-                float wave_freq = 15.0;
-                float wave_phase = t * 15.0;
-                float wave_amp = t * 0.03;
-
-                vec2 water_offset = vec2(
-                    sin(uv.y * wave_freq + wave_phase),
-                    cos(uv.x * wave_freq + wave_phase)
-                ) * wave_amp;
-
-                vec2 drift = vec2(0.0, -0.2) * t;
-
-                float n = fbm((uv + drift) * 8.0);
-                vec2 displaced_uv = uv + water_offset + vec2(n - 0.5, n - 0.5) * 0.15 * t;
-
-                // Flou (Blur en 5 points)
-                float blur_radius = t * 0.025;
-                vec4 color = vec4(0.0);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv, 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(blur_radius, 0.0), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(-blur_radius, 0.0), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, blur_radius), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, -blur_radius), 1.0)).st);
-                color /= 5.0;
-
-                // Dissolution nuageuse
-                float dissolve_threshold = t * 1.2;
-                float alpha_multiplier = smoothstep(dissolve_threshold, dissolve_threshold + 0.5, n + (1.0 - t) * 0.5);
-
-                // Application de la transparence (sans toucher aux couleurs)
-                color *= alpha_multiplier;
-
-                return color;
-            }
-        "
     }
 
     window-close {
         duration-ms 1000
         curve "ease-out-expo"
-        custom-shader r"
-            float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
-
-            float noise(vec2 p) {
-                vec2 i = floor(p); vec2 f = fract(p);
-                f = f * f * (3.0 - 2.0 * f);
-                return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
-                           mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
-            }
-
-            float fbm(vec2 p) {
-                float v = 0.0; float a = 0.5;
-                for (int i = 0; i < 3; ++i) { v += a * noise(p); p = p * 2.0; a *= 0.5; }
-                return v;
-            }
-
-            vec4 close_color(vec3 coords_geo, vec3 size_geo) {
-                float t = niri_progress;
-                vec2 uv = coords_geo.xy;
-
-                // Effet d'eau (Ondulations)
-                float wave_freq = 15.0;
-                float wave_phase = t * 15.0;
-                float wave_amp = t * 0.03;
-
-                vec2 water_offset = vec2(
-                    sin(uv.y * wave_freq + wave_phase),
-                    cos(uv.x * wave_freq + wave_phase)
-                ) * wave_amp;
-
-                vec2 drift = vec2(0.0, -0.2) * t;
-
-                float n = fbm((uv + drift) * 8.0);
-                vec2 displaced_uv = uv + water_offset + vec2(n - 0.5, n - 0.5) * 0.15 * t;
-
-                // Flou (Blur en 5 points)
-                float blur_radius = t * 0.025;
-                vec4 color = vec4(0.0);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv, 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(blur_radius, 0.0), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(-blur_radius, 0.0), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, blur_radius), 1.0)).st);
-                color += texture2D(niri_tex, (niri_geo_to_tex * vec3(displaced_uv + vec2(0.0, -blur_radius), 1.0)).st);
-                color /= 5.0;
-
-                // Dissolution nuageuse
-                float dissolve_threshold = t * 1.2;
-                float alpha_multiplier = smoothstep(dissolve_threshold, dissolve_threshold + 0.5, n + (1.0 - t) * 0.5);
-
-                // Application de la transparence (sans toucher aux couleurs)
-                color *= alpha_multiplier;
-
-                return color;
-            }
-        "
     }
 
     horizontal-view-movement {
@@ -441,28 +331,11 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "kitty"; }
-    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
+    Mod+Shift+Return { spawn "kitty" "sh" "-c" "ssh ijen"; }
+    Mod+Ctrl+Shift+Return { spawn "kitty" "sh" "-c" "ssh barrier"; }
     Mod+P { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Shift+P { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+Delete { spawn-sh "noctalia msg session lock"; }
-
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-
-    // Brightness control
-    XF86MonBrightnessUp allow-when-locked=true { spawn "light" "-A" "10"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "light" "-U" "10"; }
-
-    // Audio controls
-    Alt+End       allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
-    Alt+Page_Down allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
-    Alt+Insert  { spawn "playerctl" "previous"; }
-    Alt+Page_Up { spawn "playerctl" "next"; }
-    Alt+Home    { spawn "playerctl" "play-pause"; }
 
     Mod+Shift+K { close-window; }
 
@@ -478,10 +351,10 @@ binds {
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+    Mod+J     { focus-window-or-workspace-down; }
+    Mod+K     { focus-window-or-workspace-up; }
+    Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+    Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
@@ -616,15 +489,6 @@ binds {
 
     Mod+Z { toggle-column-tabbed-display; }
 
-    // dismiss latest mako notification
-    Ctrl+Space { spawn-sh "noctalia msg notification-clear-active"; }
-
-    // window picker for screen sharing with niri-dynamic-cast
-    Mod+Shift+W {
-        spawn "bash" "-c" \
-        "niri msg action set-dynamic-cast-window --id $(niri msg --json pick-window | jq .id)";
-    }
-
     // toggle overview
     Mod+O { toggle-overview; }
 
@@ -635,13 +499,16 @@ binds {
     }
 }
 
-workspace " " {
-    open-on-output "HDMI-A-2"
+recent-windows {
+    binds {
+        Mod+a { next-window scope="output"; }
+        Mod+Shift+a { previous-window scope="output"; }
+    }
 }
 
-workspace " " {
-    open-on-output "HDMI-A-2"
-}
+workspace "  "
+workspace " "
+
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
@@ -875,15 +742,8 @@ xwayland-satellite {
     path "xwayland-satellite"
 }
 
-// update dbus environment
-spawn-at-startup "sh" "-c" "dbus-update-activation-environment --all"
-
-// start google-chrome
-spawn-at-startup "brave-browser" "--profile-directory=Default"
-spawn-at-startup "brave-browser" "--profile-directory=Profile 1"
-
-// default mic mute
-spawn-at-startup "wpctl" "set-mute" "@DEFAULT_SOURCE@" "1"
-
 // start noctalia shell
 spawn-at-startup "noctalia"
+
+spawn-at-startup "wl-paste" "--watch" "clipboard-to-win"
+spawn-at-startup "systemctl" "--user" "restart" "win-to-clipboard-niri"
