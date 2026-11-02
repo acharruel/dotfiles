@@ -686,7 +686,7 @@ window-rule {
 
 // Block out mako notifications from screencasts.
 layer-rule {
-    match namespace="^notifications$"
+    match namespace="^noctalia-(notification|osd)$"
     block-out-from "screencast"
 }
 
@@ -756,19 +756,96 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^chrome.*"
-    match title="Bitwarden"
-    open-floating true
-    open-focused true
+    match title="^Bitwarden$"
     block-out-from "screencast"
 }
 
 window-rule {
-    match app-id="^brave.*"
-    match title="Bitwarden"
+    match app-id="^brave-*"
+    match title="^Bitwarden$"
     open-floating true
     open-focused true
-    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id=r#"XTerm"#
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 0.25; }
+    tiled-state true
+}
+
+window-rule {
+    match app-id="Xedebug"
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="t32marm"
+    exclude title=r#"^TRACE32 PowerView.*"#
+    open-on-workspace " "
+    open-floating true
+}
+
+window-rule {
+    match app-id="Console"
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="WaveWindow"
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="WindowObj"
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 0.667; }
+}
+
+window-rule {
+    match app-id="Vsim"
+    open-focused false
+    open-on-workspace " "
+    default-column-width { proportion 0.667; }
+}
+
+window-rule {
+    match app-id="t32marm"
+    exclude title=r#"^TRACE32 PowerView.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id="t32marm"
+    match title=r#"^TRACE32 PowerView.*"#
+    default-column-width { proportion 0.6667; }
+    open-on-workspace " "
+}
+
+window-rule {
+    match app-id="t32marm"
+    match title=r#"^TRACE32 PowerView.*"#
+    default-column-width { proportion 0.6667; }
+    open-on-workspace " "
+}
+
+window-rule {
+    match app-id="Menu"
+    match title="menu"
+    default-column-width { proportion 0.3333; }
+}
+
+window-rule {
+    match app-id="Toplevel"
+    open-floating true
 }
 
 window-rule {
