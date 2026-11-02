@@ -619,6 +619,12 @@ binds {
     // dismiss latest mako notification
     Ctrl+Space { spawn-sh "noctalia msg notification-clear-active"; }
 
+    // Toggle notification panel in control-center
+    Mod+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+
+    // Toggle Do Not Disturb mode
+    Mod+Shift+N { spawn-sh "noctalia msg notification-dnd-toggle"; }
+
     // window picker for screen sharing with niri-dynamic-cast
     Mod+Shift+W {
         spawn "bash" "-c" \
@@ -631,7 +637,7 @@ binds {
     // identify current window
     Mod+W {
         spawn "bash" "-c" \
-        "niri msg focused-window | rg \"Title\" | awk -F: '{print $2}' | xargs -I {} notify-send -a \"󱂬 \" {}";
+        "niri msg focused-window | rg \"Title\" | awk -F: '{print $2}' | xargs -I {} notify-send -i focus-window -a \"niri\" {}";
     }
 }
 
