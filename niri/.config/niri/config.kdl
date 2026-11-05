@@ -761,8 +761,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^brave-*"
-    match title="^Bitwarden$"
+    match app-id="nngceckbapebfimnlniiiahkandclblb"
     open-floating true
     open-focused true
 }
