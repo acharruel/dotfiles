@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "58c4f4e"
-hash = "f281261ff04ad7ec867c3f802a50835f"
+rev = "0f28df2"
+hash = "17ebde15c4349f90aedbc45984b98db2"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
-rev = "c5d4b48"
-hash = "e6e98d12b1648d1894c2b560d85eeaa7"
+rev = "dc44b73"
+hash = "fa488655544e367e5439a9748d28519e"
 
 [[plugin.deps]]
 use = "Sonico98/exifaudio"
@@ -15,18 +15,18 @@ hash = "4761fffb60a12d37096c34a356380cdf"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "58c4f4e"
-hash = "b95f898e6dc60b52edbc415952e14395"
-
-[[plugin.deps]]
-use = "Reledia/glow"
-rev = "bd3eaa5"
-hash = "92b5c58159a51c567f82b618cee2b78"
+rev = "0f28df2"
+hash = "dbfc342600993eefbb055bff145fa22a"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
 rev = "1cb456f"
 hash = "7699acf73a1079f8a4afef5cec84ce73"
+
+[[plugin.deps]]
+use = "WhoSowSee/mdv-previewer"
+rev = "3dec987"
+hash = "69d35ef88c8094748a1030aab6aacd61"
 
 [flavor]
 deps = []

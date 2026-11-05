@@ -104,12 +104,23 @@ image_alloc      = 536870912  # 512MB
 image_bound      = [ 10000, 10000 ]
 suppress_preload = false
 
+[[plugin.prepend_previewers]]
+mime = "audio/*"
+run = "exifaudio"
+
+[[plugin.prepend_previewers]]
+mime = "text/csv"
+run = "miller"
+
+[[plugin.prepend_previewers]]
+url = "*.{md,markdown,txt}"
+run = "mdv-previewer"
+
+[[plugin.prepend_preloaders]]
+url = "*.{md,markdown,txt}"
+run = "mdv-previewer"
+
 [plugin]
-prepend_previewers = [
-	{ mime = "audio/*", run = "exifaudio"},
-	{ mime = "text/csv", run = "miller"},
-	{ url = "*.md", run = "glow" },
-]
 fetchers = [
 	# MIME-type
 	{ url = "*/",         run = "mime.dir",    prio = "high", group = "mime" },
