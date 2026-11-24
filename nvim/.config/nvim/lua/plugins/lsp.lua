@@ -9,18 +9,18 @@ local M = {
     keys = {
         { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>",               desc = "Code [A]ction" },
         { "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",                    desc = "[F]ormat Code" },
-        { "<leader>li", "<cmd>lua vim.print(vim.lsp.get_clients({buf=0}))<cr>", desc = "LSP [I]nfos"   },
+        { "<leader>li", "<cmd>lua vim.print(vim.lsp.get_clients({buf=0}))<cr>", desc = "LSP [I]nfos" },
         {
             "<leader>lI",
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>",
             desc = "LSP [I]nlays Hints",
         },
-        { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "[R]ename" },
-        { "<leader>ld", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
-        { "<leader>lD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
-        { "<leader>lI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
-        { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
-        { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
+        { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>",                  desc = "[R]ename" },
+        { "<leader>ld", function() Snacks.picker.lsp_definitions() end,       desc = "Goto Definition" },
+        { "<leader>lD", function() Snacks.picker.lsp_declarations() end,      desc = "Goto Declaration" },
+        { "<leader>lI", function() Snacks.picker.lsp_implementations() end,   desc = "Goto Implementation" },
+        { "<leader>ly", function() Snacks.picker.lsp_type_definitions() end,  desc = "Goto T[y]pe Definition" },
+        { "<leader>ls", function() Snacks.picker.lsp_symbols() end,           desc = "LSP Symbols" },
         { "<leader>lS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     }
 }
@@ -96,19 +96,28 @@ function M.init()
     vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('my.lsp', {}),
         callback = function(args)
-            local opts = { noremap = true, silent = true }
-            local bufnr = args.buf
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "K", '<cmd>lua vim.lsp.buf.hover({border="rounded"})<CR>', opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua Snacks.picker.lsp_references()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ float = "true" })<CR>',
-                opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ float = "true" })<CR>',
-                opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line" })<CR>',
-                opts)
+            local map = function(lhs, rhs, desc)
+                vim.keymap.set("n", lhs, rhs, { buffer = args.buf, silent = true, desc = "LSP: " .. desc })
+            end
+
+            map("gD", vim.lsp.buf.declaration, "Goto Declaration")
+            map("gd", vim.lsp.buf.definition, "Goto Definition")
+            map("gi", vim.lsp.buf.implementation, "Goto Implementation")
+            map("K", function()
+                vim.lsp.buf.hover({ border = "rounded" })
+            end, "Hover Documentation")
+            map("gr", function()
+                Snacks.picker.lsp_references()
+            end, "Goto References")
+            map("gl", function()
+                vim.diagnostic.open_float({ scope = "line" })
+            end, "Line Diagnostics")
+            map("[d", function()
+                vim.diagnostic.jump({ count = -1, float = true })
+            end, "Previous Diagnostic")
+            map("]d", function()
+                vim.diagnostic.jump({ count = 1, float = true })
+            end, "Next Diagnostic")
         end,
     })
 
